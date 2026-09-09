@@ -1,0 +1,91 @@
+name: Deploy and Build PDF
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build with VitePress
+        run: npm run docs:build
+
+      - name: Install CJK fonts & PDF utilities
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk fonts-noto-cjk-extra poppler-utils zip
+          sudo fc-cache -fv
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Export PDFs
+        run: |
+          PDF_USE_GOOGLE_FONT=1 node scripts/export-pdf.js --concurrency 6
+
+      - name: Package PDFs (Merge Complete Book & Zip)
+        run: |
+          node scripts/package-pdf.js
+
+      - name: Create or Update GitHub Release with PDFs
+        uses: softprops/action-gh-release@v2
+        if: github.ref == 'refs/heads/master'
+        with:
+          tag_name: latest-pdf
+          name: "Latest Biology Note PDF (高中生物笔记最新版)"
+          body: |
+            ## 📚 高中生物全套知识架构笔记 - 自动化编译 PDF 成果物
+
+            - 📕 **单文件完整版全书**: `Biology-Note-Complete.pdf` (包含全书核心专题、矢量图解与全部考点模型)
+            - 📦 **全套分册 ZIP 归档包**: `Biology-Note-All-PDFs.zip` (包含按章节排版归档的独立矢量 PDF)
+            - ⏱️ **编译时间**: ${{ github.event.head_commit.timestamp || 'Latest' }}
+            - 🔗 **对应 Commit**: `${{ github.sha }}`
+          draft: false
+          prerelease: false
+          files: |
+            pdf-repo/Biology-Note-Complete.pdf
+            pdf-repo/Biology-Note-All-PDFs.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .vitepress/dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

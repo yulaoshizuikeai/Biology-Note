@@ -1,0 +1,346 @@
+/* 图片深色模式下反色 */
+.dark img:not([alt*="&keep-color"]):not([src$=".svg"]) {
+  filter: invert(100%) hue-rotate(180deg) contrast(80%);
+}
+
+/* VitePress 默认将 img 设为 block，这会打断正文里的图文同行排版 */
+img {
+  display: inline-block !important;
+  margin: 0 0.35em;
+  vertical-align: middle;
+}
+
+.avatar-img,
+[data-waline] img,
+.VPNavBarTitle .logo,
+.VPHomeHero img,
+.atom-wrap svg,
+.flip-card svg {
+  filter: none !important;
+}
+
+/* 顶部导航栏 Logo 悬浮交互 */
+.VPNavBarTitle .logo {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease;
+}
+
+.VPNavBarTitle:hover .logo {
+  transform: scale(1.12) rotate(-6deg);
+  filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.6));
+}
+
+/* 首页 Hero 区域 Logo 容器排版 */
+.VPHomeHero .image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-img {
+  margin: 0 !important;
+}
+
+.medium-zoom-overlay {
+  backdrop-filter: blur(5rem);
+}
+
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 999;
+}
+
+/* 预览副本会继承原图的内联 zoom 和全局 margin，导致 medium-zoom 重复缩放并定位偏移 */
+.medium-zoom-image--opened {
+  zoom: 1 !important;
+  margin: 0 !important;
+}
+
+/* 页面切换时正文上滑动画 */
+.vp-doc > div,
+.VPHome {
+  animation: page-slide-up 0.3s ease-out;
+}
+
+@keyframes page-slide-up {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 打印适配 */
+@media print {
+  .VPDocFooter .prev-next,
+  .VPDocFooter .edit-link,
+  .VPLocalNav,
+  .VPNav,
+  .VPDocAside {
+    display: none !important;
+  }
+
+  body {
+    font-size: 10pt;
+    color: #000;
+  }
+
+  .vp-doc p {
+    line-height: 1.8;
+    margin: 0 0;
+  }
+
+  .vp-doc mjx-container,
+  .vp-doc img,
+  .vp-doc table {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
+
+:root {
+  --vp-home-hero-image-background-image: linear-gradient(45deg, #546ec6 50%, #3551b2 50%);
+  --vp-home-hero-image-filter: blur(40px);
+  --vp-sidebar-bg-color: var(--vp-c-bg);
+}
+
+.VPNavBarTitle.has-sidebar .title {
+  border: none;
+}
+
+.VPNavBar.has-sidebar .divider {
+  display: none;
+}
+
+html.cc-font-serif {
+  --vp-font-family-base: "Songti SC", "Noto Serif SC", STSong, SimSun, Georgia, serif;
+}
+
+html.cc-font-serif .vp-doc {
+  font-size: 18px;
+}
+
+html.cc-font-serif .vp-doc p {
+  line-height: 32px;
+}
+
+html.cc-font-serif .vp-doc blockquote > p {
+  font-size: 18px;
+}
+
+html.cc-font-serif .vp-doc th,
+html.cc-font-serif .vp-doc td {
+  font-size: 18px;
+}
+
+html.cc-hide-comments .cc-comments-region,
+html.cc-hide-contributors .cc-contributors-region,
+html.cc-hide-outline .VPDocAsideOutline,
+html.cc-hide-outline .VPLocalNavOutlineDropdown {
+  display: none !important;
+}
+
+body.cc-settings-modal-open {
+  overflow: hidden;
+}
+
+/* ============================================================
+   动态微交互与视觉灵动系统 (Dynamic Motion & Lively Micro-Interactions)
+   ============================================================ */
+
+/* 1. 首页 Hero 标题文字流光呼吸 */
+.VPHomeHero .name.clip {
+  background: linear-gradient(
+    125deg,
+    #5672CD 0%,
+    #3b82f6 25%,
+    #8b5cf6 50%,
+    #3b82f6 75%,
+    #5672CD 100%
+  );
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: hero-text-flow 8s ease-in-out infinite;
+}
+
+@keyframes hero-text-flow {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+/* 2. Hero 区域背景光晕缓慢有机脉动（保持居中在卡片后方） */
+.VPHomeHero .image-bg {
+  z-index: 0;
+  pointer-events: none;
+  animation: hero-ambient-pulse 8s ease-in-out infinite alternate;
+  will-change: transform, opacity;
+}
+
+.VPHomeHero .flip-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes hero-ambient-pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 0.65;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.08);
+    opacity: 0.88;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.98);
+    opacity: 0.72;
+  }
+}
+
+/* 3. Hero 操作按钮磁吸悬浮与光晕反馈 */
+.VPHomeHero .action .VPButton.brand {
+  position: relative;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, background-color 0.2s ease;
+  box-shadow: 0 4px 16px rgba(86, 114, 205, 0.35);
+}
+
+.VPHomeHero .action .VPButton.brand:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(86, 114, 205, 0.48);
+}
+
+.VPHomeHero .action .VPButton.brand:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.VPHomeHero .action .VPButton.alt {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.VPHomeHero .action .VPButton.alt:hover {
+  transform: translateY(-2px);
+  border-color: #5672CD;
+  box-shadow: 0 4px 14px rgba(86, 114, 205, 0.18);
+}
+
+/* 4. 首页 19 个章节卡片灵动悬浮与辉光边框 */
+.VPHomeFeatures .VPFeature {
+  position: relative;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, border-color 0.28s ease;
+  overflow: hidden;
+}
+
+.VPHomeFeatures .VPFeature:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, #5672CD 55%, transparent);
+  box-shadow: 0 14px 28px -8px rgba(86, 114, 205, 0.22);
+}
+
+.VPHomeFeatures .VPFeature::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #5672CD, #8b5cf6, transparent);
+  opacity: 0;
+  transform: scaleX(0.6);
+  transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.VPHomeFeatures .VPFeature:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.VPHomeFeatures .VPFeature .title {
+  transition: color 0.3s ease;
+}
+
+.VPHomeFeatures .VPFeature:hover .title {
+  color: var(--vp-c-brand-1);
+}
+
+/* 5. 章节概览卡片交互动效 */
+.chapter-card {
+  transition: border-color 0.25s ease, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.chapter-card:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 18px rgba(86, 114, 205, 0.15);
+}
+
+.chapter-card .card-arrow {
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.chapter-card:hover .card-arrow {
+  transform: translateX(4px);
+}
+
+/* 6. 文档数学公式块优雅微动 */
+.vp-doc .katex-display {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--vp-c-brand-1) 2%, var(--vp-c-bg-soft));
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vp-doc .katex-display:hover {
+  background: color-mix(in srgb, var(--vp-c-brand-1) 5%, var(--vp-c-bg-soft));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--vp-c-brand-1) 20%, transparent);
+}
+
+/* 7. 全局丝滑滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--vp-c-text-3) 30%, transparent);
+  border-radius: 9999px;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--vp-c-brand-1) 60%, transparent);
+}
+
+/* ============================================================
+   移动端与特定场景排版修复 (Mobile & Specific Layout Fixes)
+   ============================================================ */
+
+/* 修复移动端下 Hero 图片与标题重叠的问题（抵消 VitePress 默认负边距） */
+@media (max-width: 959px) {
+  .VPHomeHero .image {
+    margin-bottom: 14px !important;
+  }
+}
+
+/* 修复移动端下长数学公式超出容器无滚动条的问题，并增加与原版一致的美化 */
+.vp-doc mjx-container[display="true"] {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--vp-c-brand-1) 2%, var(--vp-c-bg-soft));
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vp-doc mjx-container[display="true"]:hover {
+  background: color-mix(in srgb, var(--vp-c-brand-1) 5%, var(--vp-c-bg-soft));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--vp-c-brand-1) 20%, transparent);
+}

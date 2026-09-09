@@ -1,0 +1,135 @@
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { defineConfig } from "vitepress";
+
+import { configureImageOptimization } from "./markdown/imageOptimization.ts";
+import { buildNavItems } from "./siteData/nav.ts";
+import { buildSidebarItems } from "./siteData/sidebar.ts";
+import { buildTransformHead } from "./siteData/transformHead.ts";
+import mapShortUrl from "./theme/components/shortUrl/mapShortUrl.ts";
+
+const configDir = path.dirname(fileURLToPath(import.meta.url));
+const contentRoot = path.resolve(configDir, "..");
+const siteUrl = "https://note.biology.nx.kg";
+const siteName = "高考生物知识库 - Yulaoshizuikeai's Biology Note";
+const defaultDescription =
+  "免费高中生物知识库与高考复习指南，覆盖细胞分子与结构、细胞代谢（光合与呼吸）、遗传因子的发现与伴性遗传、DNA 与中心法则、变异与进化、稳态与内环境、神经-体液-免疫调节、植物激素调节、种群与群落、生态系统与环境保护、发酵与细胞工程、基因工程及生物学实验等核心板块，结合人教版教材与直观科学思维，适合高中同步学习与高考复习。";
+const navItems = buildNavItems(contentRoot);
+const sidebarItems = buildSidebarItems(contentRoot);
+
+export default defineConfig({
+  base: "/",
+  title: siteName,
+  description: defaultDescription,
+  lang: "zh-CN",
+  head: [
+    ["link", { rel: "icon", type: "image/svg+xml", href: "/images/icon.svg" }],
+    ["meta", { name: "author", content: "Yulaoshizuikeai" }],
+    [
+      "meta",
+      {
+        name: "keywords",
+        content:
+          "高考生物知识库,高中生物知识库,高考生物,高中生物,生物知识库,生物模型,光合作用,有氧呼吸,减数分裂,伴性遗传,中心法则,内环境稳态,神经调节,免疫调节,基因工程,PCR,生物实验,Yulaoshizuikeai",
+      },
+    ],
+    ["meta", { name: "theme-color", content: "#10B981" }],
+    ["meta", { name: "robots", content: "index, follow, max-image-preview:large" }],
+    ["meta", { property: "og:site_name", content: siteName }],
+    ["meta", { property: "og:type", content: "website" }],
+    ["meta", { property: "og:locale", content: "zh_CN" }],
+    ["meta", { property: "og:image", content: `${siteUrl}/images/og-image.png` }],
+    ["meta", { property: "og:image:width", content: "1200" }],
+    ["meta", { property: "og:image:height", content: "630" }],
+    ["meta", { name: "twitter:card", content: "summary_large_image" }],
+    ["meta", { name: "twitter:image", content: `${siteUrl}/images/og-image.png` }],
+    ["meta", { name: "twitter:title", content: siteName }],
+    ["meta", { name: "twitter:description", content: defaultDescription }],
+    // 搜索引擎站长平台所有权验证（按需填入验证码即可启用）
+    // ["meta", { name: "google-site-verification", content: "YOUR_GOOGLE_VERIFICATION_CODE" }],
+    // ["meta", { name: "msvalidate.01", content: "YOUR_BING_VERIFICATION_CODE" }],
+    // ["meta", { name: "baidu-site-verification", content: "YOUR_BAIDU_VERIFICATION_CODE" }],
+    [
+      "script",
+      {},
+      `;(() => {
+        try {
+          const settings = JSON.parse(localStorage.getItem("cc-site-settings") || "{}");
+          const root = document.documentElement;
+          root.classList.toggle("cc-hide-contributors", settings.showContributors === false);
+          root.classList.toggle("cc-hide-outline", settings.showOutline === false);
+          root.classList.toggle("cc-hide-comments", settings.showComments === false);
+          root.classList.toggle("cc-font-serif", settings.fontFamily === "serif");
+        } catch {}
+      })();`,
+    ],
+  ],
+  themeConfig: {
+    logo: "/images/icon.svg",
+    siteTitle: "高考生物知识库",
+    nav: navItems,
+    sidebar: { "/": sidebarItems },
+    socialLinks: [{ icon: "github", link: "https://github.com/yulaoshizuikeai/Biology-Note" }],
+    search: {
+      provider: "local",
+      options: {
+        translations: {
+          button: {
+            buttonText: "搜索文档",
+            buttonAriaLabel: "搜索文档",
+          },
+          modal: {
+            noResultsText: "无法找到相关结果",
+            resetButtonTitle: "清除查询条件",
+            footer: {
+              selectText: "选择",
+              navigateText: "切换",
+              closeText: "关闭",
+            },
+          },
+        },
+      },
+    },
+    editLink: {
+      pattern: "https://github.com/yulaoshizuikeai/Biology-Note/edit/master/:path",
+      text: "在 GitHub 上查看此页",
+    },
+    footer: {
+      message: "高中生物知识库与高考复习指南",
+      copyright: "Copyright © 2026 Yulaoshizuikeai",
+    },
+  },
+  markdown: {
+    math: true,
+    config: configureImageOptimization,
+  },
+  rewrites: {
+    "hidePage/shortUrl.md": "s.md",
+  },
+  srcExclude: ["README.md", "AGENTS.md", "scripts/**", "pdf-repo/**", "pdf-repo-single/**"],
+  transformHead: buildTransformHead(siteUrl, siteName, defaultDescription),
+  lastUpdated: true,
+  sitemap: {
+    hostname: siteUrl,
+    transformItems(items) {
+      return items.filter((item) => {
+        const url = item.url;
+        // 排除 404、短链跳转页及任何内部隐藏页面
+        if (
+          url.includes("/404") ||
+          url.includes("/s.html") ||
+          url.includes("/s") ||
+          url.includes("/hidePage/")
+        ) {
+          return false;
+        }
+        return true;
+      });
+    },
+  },
+
+  // 生成哈希 - 路径对应表
+  buildEnd: (siteConfig) => {
+    mapShortUrl(siteConfig);
+  },
+});

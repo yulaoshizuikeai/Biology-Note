@@ -1,0 +1,27 @@
+import type { App } from "vue";
+
+import DefaultTheme from "vitepress/theme";
+
+import CCActivitySparkline from "./components/CCActivitySparkline.vue";
+import CCChapterOverview from "./components/CCChapterOverview.vue";
+import CCDailyQuote from "./components/CCDailyQuote.vue";
+import "./custom.css";
+import "@waline/client/style";
+
+import CCPdfDownloadButton from "./components/CCPdfDownloadButton.vue";
+import CCSiteSettings from "./components/CCSiteSettings.vue";
+import CCShare from "./components/shortUrl/CCShare.vue";
+import layout from "./layout.vue";
+
+export default {
+  extends: DefaultTheme,
+  Layout: layout,
+  enhanceApp({ app }: { app: App }) {
+    app.component("CCPdfDownloadButton", CCPdfDownloadButton);
+    app.component("CCSiteSettings", CCSiteSettings);
+    app.component("CCShare", CCShare);
+    app.component("CCChapterOverview", CCChapterOverview);
+    app.component("CCActivitySparkline", CCActivitySparkline);
+    app.component("CCDailyQuote", CCDailyQuote);
+  },
+};
