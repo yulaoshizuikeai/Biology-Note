@@ -78,7 +78,8 @@ const server = http.createServer((req, res) => {
 
   // 去掉查询参数后再做 decode，防止路径中包含中文或空格时无法访问
   const decodedPath = decodeURIComponent(req.url.split("?")[0]);
-  const safePath = decodedPath.replace(/^\/+/, "");
+  const trimmedPath = decodedPath.replace(/^\/Biology-Note(\/|$)/, "/");
+  const safePath = trimmedPath.replace(/^\/+/, "");
   const filePath = path.resolve(distDir, safePath || "index.html");
 
   if (!filePath.startsWith(distDir)) {
