@@ -109,7 +109,7 @@ watch(
       <CCHeroLogo />
     </template>
 
-    <!-- 首页高中物理微速记 (每次刷新随机一条，几秒读完，点击可切换) -->
+    <!-- 首页高中生物核心微速记 (每次刷新随机一条，几秒读完，点击可切换) -->
     <template #home-hero-info-after>
       <ClientOnly>
         <CCDailyQuote />
