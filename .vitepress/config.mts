@@ -10,7 +10,7 @@ import mapShortUrl from "./theme/components/shortUrl/mapShortUrl.ts";
 
 const configDir = path.dirname(fileURLToPath(import.meta.url));
 const contentRoot = path.resolve(configDir, "..");
-const siteUrl = "https://yulaoshizuikeai.github.io/Biology-Note";
+const siteUrl = "https://biology.indevs.in";
 const siteName = "高考生物知识库 - Yulaoshizuikeai's Biology Note";
 const defaultDescription =
   "免费高中生物知识库与高考复习指南，覆盖细胞分子与结构、细胞代谢（光合与呼吸）、遗传因子的发现与伴性遗传、DNA 与中心法则、变异与进化、稳态与内环境、神经-体液-免疫调节、植物激素调节、种群与群落、生态系统与环境保护、发酵与细胞工程、基因工程及生物学实验等核心板块，结合人教版教材与直观科学思维，适合高中同步学习与高考复习。";
@@ -18,7 +18,7 @@ const navItems = buildNavItems(contentRoot);
 const sidebarItems = buildSidebarItems(contentRoot);
 
 export default defineConfig({
-  base: "/Biology-Note/",
+  base: "/",
   title: siteName,
   description: defaultDescription,
   lang: "zh-CN",
