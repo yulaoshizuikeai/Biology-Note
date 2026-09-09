@@ -91,19 +91,16 @@ $$\text{ATP} \underset{\text{ATP合成酶，线粒体/叶绿体/胞质基质}}{\
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%">
   <!-- 背景板 -->
   <rect x="0" y="0" width="780" height="370" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
-  
   <!-- 顶部标题条 -->
   <g transform="translate(20, 16)">
     <rect x="0" y="0" width="740" height="42" rx="8" fill="#1E293B"/>
     <text x="370" y="26" fill="#FFFFFF" font-size="16" font-weight="bold" text-anchor="middle" letter-spacing="1">ATP 分子结构微观解析与吸能/放能偶联循环天平</text>
   </g>
-
   <!-- 左侧卡片：ATP 微观结构与断键机理 (局部坐标系) -->
   <g transform="translate(20, 72)">
     <rect x="0" y="0" width="360" height="280" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
     <rect x="0" y="0" width="360" height="36" rx="8" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
     <text x="180" y="23" fill="#1D4ED8" font-size="14" font-weight="bold" text-anchor="middle">ATP 分子结构式与单体血缘解析</text>
-
     <!-- 结构拆解图元 -->
     <g transform="translate(15, 48)">
       <!-- 结构组成 -->
@@ -111,7 +108,6 @@ $$\text{ATP} \underset{\text{ATP合成酶，线粒体/叶绿体/胞质基质}}{\
       <text x="12" y="18" fill="#0369A1" font-size="11.5" font-weight="bold">结构简式：A - P ~ P ~ P (C, H, O, N, P)</text>
       <text x="12" y="36" fill="#334155" font-size="10.5">● A (腺苷) = 腺嘌呤 (碱基) + 核糖 (五碳糖)</text>
       <text x="12" y="52" fill="#334155" font-size="10.5">● ~ 为特殊的化学键（强静电排斥，高转移势能）</text>
-
       <!-- 断键与 AMP 本质 -->
       <g transform="translate(0, 68)">
         <rect x="0" y="0" width="330" height="74" rx="6" fill="#FEFCE8" stroke="#FEF08A" stroke-width="1"/>
@@ -120,7 +116,6 @@ $$\text{ATP} \underset{\text{ATP合成酶，线粒体/叶绿体/胞质基质}}{\
         <text x="12" y="50" fill="#2563EB" font-size="10.5" font-weight="bold">连续脱去 2 个磷酸：生成 AMP (腺苷一磷酸)</text>
         <text x="12" y="66" fill="#DC2626" font-size="10.5" font-weight="bold">➔ AMP 即为【腺嘌呤核糖核苷酸】（RNA 基本单体）！</text>
       </g>
-
       <!-- 磷酸化机制 -->
       <g transform="translate(0, 150)">
         <rect x="0" y="0" width="330" height="42" rx="6" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
@@ -129,13 +124,11 @@ $$\text{ATP} \underset{\text{ATP合成酶，线粒体/叶绿体/胞质基质}}{\
       </g>
     </g>
   </g>
-
   <!-- 右侧卡片：ATP 循环与吸能/放能偶联天平 (局部坐标系) -->
   <g transform="translate(400, 72)">
     <rect x="0" y="0" width="360" height="280" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
     <rect x="0" y="0" width="360" height="36" rx="8" fill="#FEF3C7" stroke="#FDE68A" stroke-width="1"/>
     <text x="180" y="23" fill="#B45309" font-size="14" font-weight="bold" text-anchor="middle">ATP 与 ADP 动态转化与能量偶联网络</text>
-
     <!-- 循环图元 -->
     <g transform="translate(15, 48)">
       <!-- 放能合成 ATP -->
@@ -143,7 +136,6 @@ $$\text{ATP} \underset{\text{ATP合成酶，线粒体/叶绿体/胞质基质}}{\
       <text x="12" y="18" fill="#78350F" font-size="11.5" font-weight="bold">【放能反应】与 ATP 合成相偶联：</text>
       <text x="12" y="34" fill="#92400E" font-size="10.5">● 呼吸作用（氧化分解有机物释放化学能）</text>
       <text x="12" y="49" fill="#92400E" font-size="10.5">● 光合作用光反应（光合色素吸收转换光能）</text>
-
       <!-- 吸能消耗 ATP -->
       <g transform="translate(0, 68)">
         <rect x="0" y="0" width="330" height="64" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
@@ -151,7 +143,6 @@ $$\text{ATP} \underset{\text{ATP合成酶，线粒体/叶绿体/胞质基质}}{\
         <text x="12" y="34" fill="#4B5563" font-size="10.5">● 生物大分子合成（蛋白质、DNA、RNA、多糖合成）</text>
         <text x="12" y="49" fill="#2563EB" font-size="10.5">● 离子逆浓度主动运输、大脑思考、肌肉收缩</text>
       </g>
-
       <!-- 动态平衡法则 -->
       <g transform="translate(0, 140)">
         <rect x="0" y="0" width="330" height="52" rx="6" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>

@@ -52,57 +52,72 @@ const tiltStyle = computed(() => {
           class="flip-card"
           :class="{ 'is-flipped': flipped }"
         >
-        <!-- ====== FRONT: Notebook + Animated Atom ====== -->
+        <!-- ====== FRONT: Notebook + Animated DNA Double Helix ====== -->
         <div class="face front">
           <svg viewBox="0 0 330 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Back page (blue, tilted) -->
-            <rect y="29.6086" width="285.591" height="352" rx="18" transform="rotate(-5.74915 0 29.6086)" fill="#5672CD"/>
+            <!-- Back page (emerald green, tilted) -->
+            <rect y="29.6086" width="285.591" height="352" rx="18" transform="rotate(-5.74915 0 29.6086)" fill="#10B981"/>
             
             <!-- Front page -->
             <g filter="url(#f-shadow)">
               <rect x="45.5326" y="10" width="274" height="352" rx="18" fill="white"/>
               <rect x="45.5326" y="10" width="274" height="352" rx="18" fill="url(#f-lines)"/>
               
-              <!-- Bohr Atom Orbits -->
-              <!-- Orbit 1: 0 deg (Horizontal) -->
-              <ellipse cx="182.5" cy="165" rx="66" ry="26" stroke="#5672CD" stroke-width="8.5" fill="none" class="atom-orbit orbit-h"/>
-              
-              <!-- Orbit 2: 60 deg -->
-              <ellipse cx="182.5" cy="165" rx="66" ry="26" stroke="#5672CD" stroke-width="8.5" fill="none" transform="rotate(60 182.5 165)" class="atom-orbit orbit-d1"/>
-              
-              <!-- Orbit 3: 120 deg -->
-              <ellipse cx="182.5" cy="165" rx="66" ry="26" stroke="#5672CD" stroke-width="8.5" fill="none" transform="rotate(120 182.5 165)" class="atom-orbit orbit-d2"/>
-              
-              <!-- Pulsing Center Nucleus -->
-              <g class="nucleus-group">
-                <!-- Soft halo pulse -->
-                <circle cx="182.5" cy="165" r="22" fill="#5672CD" opacity="0.18" class="nucleus-halo"/>
-                <circle cx="182.5" cy="165" r="15" fill="#5672CD" class="nucleus-core"/>
-                <!-- Nucleus glint -->
-                <circle cx="178.5" cy="161" r="3.5" fill="#ffffff" opacity="0.85"/>
+              <!-- DNA Double Helix Base Pairs (Horizontal Connectors) -->
+              <g class="base-pair-group">
+                <line x1="148" y1="92" x2="217" y2="92" stroke="#10B981" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="8 4" class="rung rung-1"/>
+                <line x1="138" y1="126" x2="227" y2="126" stroke="#059669" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="9 4" class="rung rung-2"/>
+                <circle cx="182.5" cy="165" r="7" fill="#10B981" class="helix-center"/>
+                <line x1="138" y1="204" x2="227" y2="204" stroke="#059669" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="9 4" class="rung rung-3"/>
+                <line x1="148" y1="238" x2="217" y2="238" stroke="#10B981" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="8 4" class="rung rung-4"/>
               </g>
 
-              <!-- Electrons with lively orbital breathing -->
-              <!-- Electron 1 (Horizontal Orbit) -->
-              <g class="electron-node electron-1">
-                <circle cx="248.5" cy="165" r="7.5" fill="#5672CD"/>
-                <circle cx="248.5" cy="165" r="2.5" fill="#ffffff"/>
+              <!-- Strand A (Fluid Sine Wave) -->
+              <path d="M152 75 C124 110, 124 145, 182.5 165 C241 185, 241 220, 213 255" stroke="#059669" stroke-width="8" stroke-linecap="round" fill="none" class="helix-strand strand-a"/>
+
+              <!-- Strand B (Opposite Sine Wave) -->
+              <path d="M213 75 C241 110, 241 145, 182.5 165 C124 185, 124 220, 152 255" stroke="#10B981" stroke-width="8" stroke-linecap="round" fill="none" class="helix-strand strand-b"/>
+
+              <!-- Genetic Nodes with Breathing Animation -->
+              <g class="genetic-node node-1">
+                <circle cx="152" cy="75" r="7" fill="#047857"/>
+                <circle cx="152" cy="75" r="2.5" fill="#ffffff"/>
+              </g>
+              <g class="genetic-node node-2">
+                <circle cx="213" cy="75" r="7" fill="#10B981"/>
+                <circle cx="213" cy="75" r="2.5" fill="#ffffff"/>
+              </g>
+              <g class="genetic-node node-3">
+                <circle cx="132" cy="122" r="7.5" fill="#047857"/>
+                <circle cx="132" cy="122" r="2.5" fill="#ffffff"/>
+              </g>
+              <g class="genetic-node node-4">
+                <circle cx="233" cy="122" r="7.5" fill="#10B981"/>
+                <circle cx="233" cy="122" r="2.5" fill="#ffffff"/>
+              </g>
+              <g class="genetic-node node-5">
+                <circle cx="132" cy="208" r="7.5" fill="#10B981"/>
+                <circle cx="132" cy="208" r="2.5" fill="#ffffff"/>
+              </g>
+              <g class="genetic-node node-6">
+                <circle cx="233" cy="208" r="7.5" fill="#047857"/>
+                <circle cx="233" cy="208" r="2.5" fill="#ffffff"/>
+              </g>
+              <g class="genetic-node node-7">
+                <circle cx="152" cy="255" r="7" fill="#10B981"/>
+                <circle cx="152" cy="255" r="2.5" fill="#ffffff"/>
+              </g>
+              <g class="genetic-node node-8">
+                <circle cx="213" cy="255" r="7" fill="#047857"/>
+                <circle cx="213" cy="255" r="2.5" fill="#ffffff"/>
               </g>
 
-              <!-- Electron 2 (60 deg Orbit) -->
-              <g class="electron-node electron-2">
-                <circle cx="149.5" cy="107.8" r="7.5" fill="#5672CD"/>
-                <circle cx="149.5" cy="107.8" r="2.5" fill="#ffffff"/>
-              </g>
+              <!-- Life Sprout glint at top -->
+              <path d="M182.5 60 C182.5 48, 194 46, 194 46 C194 46, 186 54, 186 60 Z" fill="#10B981" class="sprout-a"/>
+              <path d="M182.5 60 C182.5 50, 172 48, 172 48 C172 48, 179 55, 182.5 60 Z" fill="#059669" class="sprout-b"/>
 
-              <!-- Electron 3 (120 deg Orbit) -->
-              <g class="electron-node electron-3">
-                <circle cx="149.5" cy="222.2" r="7.5" fill="#5672CD"/>
-                <circle cx="149.5" cy="222.2" r="2.5" fill="#ffffff"/>
-              </g>
-              
               <!-- Underline -->
-              <path d="M97.5326 271H267.033" stroke="#5672CD" stroke-width="11" stroke-linecap="round"/>
+              <path d="M97.5326 280H267.033" stroke="#10B981" stroke-width="10" stroke-linecap="round"/>
             </g>
 
             <defs>
@@ -112,61 +127,54 @@ const tiltStyle = computed(() => {
                 <feOffset/>
                 <feGaussianBlur stdDeviation="5"/>
                 <feComposite in2="hardAlpha" operator="out"/>
-                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0"/>
                 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
                 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
               </filter>
               <pattern id="f-lines" patternUnits="userSpaceOnUse" patternTransform="matrix(1370 0 0 40 45.5326 182)" preserveAspectRatio="none" viewBox="0 0 1370 40" width="1" height="1">
-                <rect width="274" height="8" fill="#D1D1D1" fill-opacity="0.37"/>
+                <rect width="274" height="8" fill="#D1D1D1" fill-opacity="0.32"/>
               </pattern>
             </defs>
           </svg>
         </div>
 
-        <!-- ====== BACK: Easter Egg with Cosmic Animations ====== -->
+        <!-- ====== BACK: Easter Egg with Central Dogma ====== -->
         <div class="face back">
           <svg viewBox="0 0 330 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Back page (deep blue, tilted) -->
-            <rect y="29.6" width="285.6" height="352" rx="18" transform="rotate(-5.75 0 29.6)" fill="#3b52a5"/>
+            <!-- Back page (forest green, tilted) -->
+            <rect y="29.6" width="285.6" height="352" rx="18" transform="rotate(-5.75 0 29.6)" fill="#064e3b"/>
             <!-- Card face -->
             <g filter="url(#b-shadow)">
-              <rect x="45.5" y="10" width="274" height="352" rx="18" fill="#5672CD"/>
+              <rect x="45.5" y="10" width="274" height="352" rx="18" fill="#047857"/>
               
-              <!-- Twinkling Stars -->
-              <circle cx="95" cy="55" r="2.2" fill="white" class="star star-1"/>
-              <circle cx="260" cy="85" r="1.8" fill="white" class="star star-2"/>
-              <circle cx="80" cy="275" r="2.2" fill="white" class="star star-3"/>
-              <circle cx="290" cy="295" r="2.4" fill="white" class="star star-1"/>
-              <circle cx="130" cy="320" r="1.6" fill="white" class="star star-2"/>
-              <circle cx="255" cy="48" r="1.4" fill="white" class="star star-3"/>
-              <circle cx="300" cy="195" r="2" fill="white" class="star star-2"/>
-              <circle cx="70" cy="145" r="1.8" fill="white" class="star star-1"/>
+              <!-- Micro Bio Particles -->
+              <circle cx="95" cy="55" r="2.2" fill="#a7f3d0" class="star star-1"/>
+              <circle cx="260" cy="85" r="1.8" fill="#a7f3d0" class="star star-2"/>
+              <circle cx="80" cy="275" r="2.2" fill="#a7f3d0" class="star star-3"/>
+              <circle cx="290" cy="295" r="2.4" fill="#a7f3d0" class="star star-1"/>
+              <circle cx="130" cy="320" r="1.6" fill="#a7f3d0" class="star star-2"/>
+              <circle cx="255" cy="48" r="1.4" fill="#a7f3d0" class="star star-3"/>
+              <circle cx="300" cy="195" r="2" fill="#a7f3d0" class="star star-2"/>
+              <circle cx="70" cy="145" r="1.8" fill="#a7f3d0" class="star star-1"/>
               
-              <!-- E = mc² with Quantum Radiance -->
-              <text x="182" y="155" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-style="italic" fill="white" class="easter-equation">E = mc²</text>
+              <!-- Central Dogma Flow -->
+              <text x="182" y="115" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#a7f3d0" letter-spacing="1">中心法则 · 信息流</text>
+              <text x="182" y="152" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="white" class="easter-dogma">DNA → RNA → 蛋白质</text>
               
-              <!-- Sparkle rays around equation -->
-              <line x1="108" y1="114" x2="118" y2="124" stroke="white" stroke-width="1.8" stroke-linecap="round" opacity="0.7" class="star star-2"/>
-              <line x1="254" y1="116" x2="244" y2="126" stroke="white" stroke-width="1.8" stroke-linecap="round" opacity="0.7" class="star star-3"/>
-              
-              <!-- Newton's Red Apple (Animated gravity bounce) -->
-              <g class="newton-apple">
-                <circle cx="182" cy="214" r="13" fill="#ef4444"/>
-                <!-- Apple leaf & stem -->
-                <path d="M182 201 Q185 194 190 197" stroke="#22c55e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                <!-- Apple highlight -->
-                <ellipse cx="178.5" cy="210.5" rx="3" ry="2" fill="white" opacity="0.6"/>
+              <!-- Mendel's Pea Pod Icon -->
+              <g class="mendel-pea">
+                <rect x="135" y="180" width="95" height="34" rx="17" fill="#065f46" stroke="#34d399" stroke-width="2"/>
+                <circle cx="152" cy="197" r="8" fill="#34d399"/>
+                <circle cx="172" cy="197" r="8" fill="#10b981"/>
+                <circle cx="192" cy="197" r="8" fill="#34d399"/>
+                <circle cx="212" cy="197" r="8" fill="#10b981"/>
               </g>
 
-              <!-- Gravity vector arrow pulsing downward -->
-              <g class="gravity-arrow">
-                <line x1="182" y1="233" x2="182" y2="253" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-                <path d="M175 246 L182 255 L189 246" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              </g>
+              <text x="182" y="244" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#fbbf24">F₂ 性状分离比 3 : 1</text>
 
               <!-- Fun text -->
-              <text x="182" y="288" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="white" opacity="0.95">🎉 发现彩蛋！</text>
-              <text x="182" y="314" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="white" opacity="0.65">— 万有引力不是苹果的错</text>
+              <text x="182" y="288" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="white" opacity="0.95">🎉 发现生命彩蛋！</text>
+              <text x="182" y="314" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#a7f3d0" opacity="0.85">— 生命的本质是信息的流动与演变</text>
             </g>
             
             <defs>
@@ -253,43 +261,31 @@ const tiltStyle = computed(() => {
 
 .flip-wrap:hover .front svg,
 .flip-wrap:hover .back svg {
-  filter: drop-shadow(0 14px 28px rgba(86, 114, 205, 0.35));
+  filter: drop-shadow(0 14px 28px rgba(16, 185, 129, 0.38));
 }
 
-/* ---- Front Bohr Atom Micro-Animations ---- */
-.nucleus-group {
+/* ---- Front DNA Micro-Animations ---- */
+.helix-strand {
+  transition: stroke-width 0.3s ease;
+}
+
+.helix-center {
+  animation: center-pulse 2.8s ease-in-out infinite;
   transform-origin: 182.5px 165px;
 }
 
-.nucleus-halo {
-  animation: halo-pulse 3s ease-in-out infinite;
-  transform-origin: 182.5px 165px;
+.genetic-node {
+  animation: node-breathe 3.5s ease-in-out infinite alternate;
 }
 
-.nucleus-core {
-  animation: core-beat 3s ease-in-out infinite;
-  transform-origin: 182.5px 165px;
-}
+.node-1, .node-4 { animation-delay: 0s; }
+.node-2, .node-3 { animation-delay: 0.8s; }
+.node-5, .node-8 { animation-delay: 1.6s; }
+.node-6, .node-7 { animation-delay: 2.4s; }
 
-.electron-node {
-  transform-origin: 182.5px 165px;
-  transition: transform 0.3s ease;
-}
-
-.electron-1 {
-  animation: electron-drift-1 4s ease-in-out infinite alternate;
-}
-
-.electron-2 {
-  animation: electron-drift-2 4.6s ease-in-out infinite alternate;
-}
-
-.electron-3 {
-  animation: electron-drift-3 4.2s ease-in-out infinite alternate;
-}
-
-.flip-card.active .electron-node {
-  filter: drop-shadow(0 0 6px #5672CD);
+.sprout-a, .sprout-b {
+  animation: sprout-sway 4s ease-in-out infinite alternate;
+  transform-origin: 182.5px 60px;
 }
 
 /* ---- Back Face Animations ---- */
@@ -302,17 +298,12 @@ const tiltStyle = computed(() => {
 .star-2 { animation-delay: 0.8s; }
 .star-3 { animation-delay: 1.6s; }
 
-.easter-equation {
-  animation: eq-radiance 4s ease-in-out infinite;
+.easter-dogma {
+  animation: dogma-radiance 4s ease-in-out infinite;
 }
 
-.newton-apple {
-  transform-origin: 182px 214px;
-  animation: apple-bounce 2.8s ease-in-out infinite;
-}
-
-.gravity-arrow {
-  animation: arrow-drop 1.8s ease-in-out infinite;
+.mendel-pea {
+  animation: pea-hover 3s ease-in-out infinite;
 }
 
 /* ---- Keyframe Animations ---- */
@@ -325,39 +316,33 @@ const tiltStyle = computed(() => {
   }
 }
 
-@keyframes halo-pulse {
+@keyframes center-pulse {
   0%, 100% {
     transform: scale(0.92);
-    opacity: 0.14;
+    opacity: 0.8;
   }
   50% {
-    transform: scale(1.2);
-    opacity: 0.28;
+    transform: scale(1.25);
+    opacity: 1;
   }
 }
 
-@keyframes core-beat {
-  0%, 100% {
-    transform: scale(1);
+@keyframes node-breathe {
+  0% {
+    transform: scale(0.95);
   }
-  50% {
-    transform: scale(1.05);
+  100% {
+    transform: scale(1.08);
   }
 }
 
-@keyframes electron-drift-1 {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(-3px, -2px); }
-}
-
-@keyframes electron-drift-2 {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(2px, -3px); }
-}
-
-@keyframes electron-drift-3 {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(-2px, 3px); }
+@keyframes sprout-sway {
+  0% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
 }
 
 @keyframes star-twinkle {
@@ -371,36 +356,21 @@ const tiltStyle = computed(() => {
   }
 }
 
-@keyframes eq-radiance {
+@keyframes dogma-radiance {
   0%, 100% {
-    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.4));
+    filter: drop-shadow(0 0 2px rgba(167, 243, 208, 0.4));
   }
   50% {
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.9));
+    filter: drop-shadow(0 0 8px rgba(167, 243, 208, 0.9));
   }
 }
 
-@keyframes apple-bounce {
+@keyframes pea-hover {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-5px);
-  }
-}
-
-@keyframes arrow-drop {
-  0% {
-    transform: translateY(-2px);
-    opacity: 0.3;
-  }
-  50% {
-    transform: translateY(2px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(6px);
-    opacity: 0;
+    transform: translateY(-4px);
   }
 }
 

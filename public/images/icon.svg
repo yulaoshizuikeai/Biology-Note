@@ -1,36 +1,48 @@
 <svg width="330" height="380" viewBox="0 0 330 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Back page (blue, tilted -5.75deg) -->
-  <rect y="29.6086" width="285.591" height="352" rx="18" transform="rotate(-5.74915 0 29.6086)" fill="#5672CD"/>
+  <!-- Back page (Emerald Green, tilted -5.75deg) -->
+  <rect y="29.6086" width="285.591" height="352" rx="18" transform="rotate(-5.74915 0 29.6086)" fill="#10B981"/>
   
-  <!-- Front page with shadow -->
+  <!-- Front page with tactile shadow -->
   <g filter="url(#shadow)">
     <rect x="45.5326" y="10" width="274" height="352" rx="18" fill="white"/>
     <!-- Notebook lined paper pattern -->
     <rect x="45.5326" y="10" width="274" height="352" rx="18" fill="url(#lines)"/>
     
-    <!-- Bold Physics Bohr Atom Icon (thick, tactile stroke weight) -->
-    <!-- Orbit 1: 0 deg (Horizontal) -->
-    <ellipse cx="182.5" cy="165" rx="66" ry="26" stroke="#5672CD" stroke-width="8.5" fill="none"/>
+    <!-- Biology Core Icon: Elegant DNA Double Helix & Life Energy -->
+    <!-- Base pair rungs (Horizontal Base Rungs) -->
+    <!-- Rung 1 -->
+    <line x1="150" y1="95" x2="215" y2="95" stroke="#10B981" stroke-width="5" stroke-linecap="round" stroke-dasharray="8 5"/>
+    <!-- Rung 2 -->
+    <line x1="140" y1="130" x2="225" y2="130" stroke="#059669" stroke-width="5" stroke-linecap="round" stroke-dasharray="9 5"/>
+    <!-- Rung 3 (Center crossover zone) -->
+    <circle cx="182.5" cy="165" r="7" fill="#10B981"/>
+    <!-- Rung 4 -->
+    <line x1="140" y1="200" x2="225" y2="200" stroke="#059669" stroke-width="5" stroke-linecap="round" stroke-dasharray="9 5"/>
+    <!-- Rung 5 -->
+    <line x1="150" y1="235" x2="215" y2="235" stroke="#10B981" stroke-width="5" stroke-linecap="round" stroke-dasharray="8 5"/>
+
+    <!-- Strand 1 (Sine wave curve A) -->
+    <path d="M152 75 C125 110, 125 145, 182.5 165 C240 185, 240 220, 213 255" stroke="#059669" stroke-width="8.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Strand 2 (Sine wave curve B, intertwining) -->
+    <path d="M213 75 C240 110, 240 145, 182.5 165 C125 185, 125 220, 152 255" stroke="#10B981" stroke-width="8.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Prominent Genetic Nodes (Phosphodiester Backbones) -->
+    <circle cx="152" cy="75" r="7" fill="#047857"/>
+    <circle cx="213" cy="75" r="7" fill="#10B981"/>
+    <circle cx="132" cy="120" r="7.5" fill="#047857"/>
+    <circle cx="233" cy="120" r="7.5" fill="#10B981"/>
+    <circle cx="132" cy="210" r="7.5" fill="#10B981"/>
+    <circle cx="233" cy="210" r="7.5" fill="#047857"/>
+    <circle cx="152" cy="255" r="7" fill="#10B981"/>
+    <circle cx="213" cy="255" r="7" fill="#047857"/>
     
-    <!-- Orbit 2: 60 deg -->
-    <ellipse cx="182.5" cy="165" rx="66" ry="26" stroke="#5672CD" stroke-width="8.5" fill="none" transform="rotate(60 182.5 165)"/>
-    
-    <!-- Orbit 3: 120 deg -->
-    <ellipse cx="182.5" cy="165" rx="66" ry="26" stroke="#5672CD" stroke-width="8.5" fill="none" transform="rotate(120 182.5 165)"/>
-    
-    <!-- Center Nucleus -->
-    <circle cx="182.5" cy="165" r="15" fill="#5672CD"/>
-    
-    <!-- Electrons (Bold tactile nodes at orbit vertices) -->
-    <!-- Electron on Orbit 1 -->
-    <circle cx="248.5" cy="165" r="7.5" fill="#5672CD"/>
-    <!-- Electron on Orbit 2 -->
-    <circle cx="149.5" cy="107.8" r="7.5" fill="#5672CD"/>
-    <!-- Electron on Orbit 3 -->
-    <circle cx="149.5" cy="222.2" r="7.5" fill="#5672CD"/>
-    
+    <!-- Life Sparkle / Sprout glint at top -->
+    <path d="M182.5 62 C182.5 50, 195 48, 195 48 C195 48, 186 56, 186 62 Z" fill="#10B981"/>
+    <path d="M182.5 62 C182.5 52, 172 50, 172 50 C172 50, 179 57, 182.5 62 Z" fill="#059669"/>
+
     <!-- Notebook Underline -->
-    <path d="M97.5326 271H267.033" stroke="#5672CD" stroke-width="11" stroke-linecap="round"/>
+    <path d="M97.5326 280H267.033" stroke="#10B981" stroke-width="10" stroke-linecap="round"/>
   </g>
 
   <defs>
@@ -40,12 +52,12 @@
       <feOffset/>
       <feGaussianBlur stdDeviation="5"/>
       <feComposite in2="hardAlpha" operator="out"/>
-      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0"/>
       <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
     </filter>
     <pattern id="lines" patternUnits="userSpaceOnUse" patternTransform="matrix(1370 0 0 40 45.5326 182)" preserveAspectRatio="none" viewBox="0 0 1370 40" width="1" height="1">
-      <rect width="274" height="8" fill="#D1D1D1" fill-opacity="0.37"/>
+      <rect width="274" height="8" fill="#D1D1D1" fill-opacity="0.32"/>
     </pattern>
   </defs>
 </svg>

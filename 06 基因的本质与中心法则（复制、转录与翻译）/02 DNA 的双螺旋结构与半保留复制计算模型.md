@@ -103,20 +103,16 @@ description: "深度剖析DNA双螺旋空间结构与微观化学键（磷酸二
       <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.08"/>
     </filter>
   </defs>
-
   <!-- 背景底板 -->
   <rect width="780" height="370" rx="16" fill="url(#bgGrad62)" stroke="#cbd5e1" stroke-width="1.5"/>
-
   <!-- 顶部标题横幅 -->
   <rect x="20" y="16" width="740" height="42" rx="10" fill="url(#titleGrad62)" filter="url(#shadow62)"/>
   <text x="390" y="42" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" letter-spacing="1">DNA 双螺旋化学键结构与半保留复制密度离心带推导图谱</text>
-
   <!-- 左侧：DNA 分子微观化学键与反向平行 -->
   <g transform="translate(20, 72)">
     <rect width="360" height="280" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow62)"/>
     <rect x="0" y="0" width="360" height="34" rx="12" fill="#e0f2fe"/>
     <text x="180" y="23" text-anchor="middle" font-size="13" font-weight="bold" fill="#0369a1">DNA 键能结构：磷酸二酯键 vs 互补氢键</text>
-
     <!-- 示意分子梯子 -->
     <g transform="translate(45, 50)">
       <!-- 左链骨架 (5' -> 3') -->
@@ -125,14 +121,12 @@ description: "深度剖析DNA双螺旋空间结构与微观化学键（磷酸二
       <text x="40" y="19" text-anchor="middle" font-size="10" font-weight="bold" fill="#ffffff">5'</text>
       <circle cx="40" cy="185" r="9" fill="#0284c7"/>
       <text x="40" y="189" text-anchor="middle" font-size="10" font-weight="bold" fill="#ffffff">3'</text>
-
       <!-- 右链骨架 (3' -> 5') -->
       <line x1="230" y1="20" x2="230" y2="180" stroke="#059669" stroke-width="6" stroke-linecap="round"/>
       <circle cx="230" cy="15" r="9" fill="#059669"/>
       <text x="230" y="19" text-anchor="middle" font-size="10" font-weight="bold" fill="#ffffff">3'</text>
       <circle cx="230" cy="185" r="9" fill="#059669"/>
       <text x="230" y="189" text-anchor="middle" font-size="10" font-weight="bold" fill="#ffffff">5'</text>
-
       <!-- 第1对碱基: A=T -->
       <rect x="43" y="40" width="70" height="20" rx="4" fill="#fecaca"/>
       <text x="78" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#991b1b">A (腺嘌呤)</text>
@@ -140,7 +134,6 @@ description: "深度剖析DNA双螺旋空间结构与微观化学键（磷酸二
       <line x1="113" y1="54" x2="157" y2="54" stroke="#ef4444" stroke-width="2" stroke-dasharray="3,2"/>
       <rect x="157" y="40" width="70" height="20" rx="4" fill="#fecaca"/>
       <text x="192" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#991b1b">T (胸腺嘧啶)</text>
-
       <!-- 第2对碱基: G≡C -->
       <rect x="43" y="90" width="70" height="20" rx="4" fill="#fed7aa"/>
       <text x="78" y="105" text-anchor="middle" font-size="11" font-weight="bold" fill="#9a3412">G (鸟嘌呤)</text>
@@ -149,25 +142,20 @@ description: "深度剖析DNA双螺旋空间结构与微观化学键（磷酸二
       <line x1="113" y1="105" x2="157" y2="105" stroke="#f97316" stroke-width="2" stroke-dasharray="3,2"/>
       <rect x="157" y="90" width="70" height="20" rx="4" fill="#fed7aa"/>
       <text x="192" y="105" text-anchor="middle" font-size="11" font-weight="bold" fill="#9a3412">C (胞嘧啶)</text>
-
       <!-- 键能标注 -->
       <text x="135" y="78" text-anchor="middle" font-size="9.5" fill="#dc2626">2个氢键</text>
       <text x="135" y="123" text-anchor="middle" font-size="9.5" fill="#ea580c">3个氢键 (更稳固)</text>
-
       <!-- 磷酸二酯键标注 -->
       <path d="M 32,140 L 15,140" fill="none" stroke="#2563eb" stroke-width="1.5"/>
       <text x="12" y="143" text-anchor="end" font-size="9" fill="#1e40af">磷酸二酯键</text>
     </g>
-
     <text x="180" y="260" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">两链反向平行，外侧骨架稳定，内侧碱基互补</text>
   </g>
-
   <!-- 右侧：密度梯度超速离心带演变模型 -->
   <g transform="translate(400, 72)">
     <rect width="360" height="280" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow62)"/>
     <rect x="0" y="0" width="360" height="34" rx="12" fill="#ecfdf5"/>
     <text x="180" y="23" text-anchor="middle" font-size="13" font-weight="bold" fill="#047857">同位素实验：¹⁵N ➔ ¹⁴N 离心条带推导</text>
-
     <!-- 三个离心管 -->
     <!-- 试管 0代 -->
     <g transform="translate(30, 42)">
@@ -177,7 +165,6 @@ description: "深度剖析DNA双螺旋空间结构与微观化学键（磷酸二
       <text x="35" y="122" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">亲代 (0代)</text>
       <text x="35" y="138" text-anchor="middle" font-size="9.5" fill="#ef4444">100% 重带</text>
     </g>
-
     <!-- 试管 1代 -->
     <g transform="translate(130, 42)">
       <rect x="15" y="5" width="40" height="95" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
@@ -186,7 +173,6 @@ description: "深度剖析DNA双螺旋空间结构与微观化学键（磷酸二
       <text x="35" y="122" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">第 1 代</text>
       <text x="35" y="138" text-anchor="middle" font-size="9.5" fill="#d97706">100% 中带</text>
     </g>
-
     <!-- 试管 2代 -->
     <g transform="translate(230, 42)">
       <rect x="15" y="5" width="40" height="95" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
@@ -197,7 +183,6 @@ description: "深度剖析DNA双螺旋空间结构与微观化学键（磷酸二
       <text x="35" y="122" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">第 2 代</text>
       <text x="35" y="138" text-anchor="middle" font-size="9.5" fill="#047857">1/2 轻 + 1/2 中</text>
     </g>
-
     <!-- 决策总结框 -->
     <rect x="15" y="200" width="330" height="65" rx="6" fill="#f1f5f9" stroke="#cbd5e1"/>
     <text x="25" y="222" font-size="10.5" font-weight="bold" fill="#0f172a">关键实验逻辑证伪点：</text>

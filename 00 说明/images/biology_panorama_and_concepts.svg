@@ -1,0 +1,134 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bio-head-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="bio-card-grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ecfdf5" />
+      <stop offset="100%" stop-color="#ffffff" />
+    </linearGradient>
+    <filter id="bio-shadow" x="-4%" y="-4%" width="108%" height="108%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <!-- 背景底板 -->
+  <rect width="780" height="380" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- 顶部标题栏 -->
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#bio-head-grad)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      高考生物知识全景架构与四大生命观念 · 六大核心体系导图
+    </text>
+  </g>
+
+  <!-- 左侧：四大生命观念核心立足点 -->
+  <g transform="translate(15, 58)">
+    <rect width="230" height="308" rx="10" fill="url(#bio-card-grad1)" stroke="#a7f3d0" stroke-width="1.2" filter="url(#bio-shadow)"/>
+    
+    <!-- 标题 -->
+    <rect x="0" y="0" width="230" height="32" rx="10" fill="#047857"/>
+    <text x="115" y="21" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      🧬 四大核心生命观念 (Core Concepts)
+    </text>
+
+    <!-- 观念 1: 结构与功能观 -->
+    <g transform="translate(12, 42)">
+      <rect width="206" height="58" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#065f46">1. 结构与功能观</text>
+      <text x="10" y="35" font-family="system-ui, sans-serif" font-size="9.5" fill="#475569">形式服务于功能，微观区室化保障</text>
+      <text x="10" y="49" font-family="system-ui, sans-serif" font-size="9.5" fill="#475569">高效并行（流动镶嵌 / 细胞器分工）</text>
+    </g>
+
+    <!-- 观念 2: 物质与能量观 -->
+    <g transform="translate(12, 107)">
+      <rect width="206" height="58" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#065f46">2. 物质与能量观</text>
+      <text x="10" y="35" font-family="system-ui, sans-serif" font-size="9.5" fill="#475569">生命是高度有序的开放耗散系统</text>
+      <text x="10" y="49" font-family="system-ui, sans-serif" font-size="9.5" fill="#475569">能量单向流动递减，物质循环往复</text>
+    </g>
+
+    <!-- 观念 3: 稳态与平衡观 -->
+    <g transform="translate(12, 172)">
+      <rect width="206" height="58" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#065f46">3. 稳态与平衡观</text>
+      <text x="10" y="35" font-family="system-ui, sans-serif" font-size="9.5" fill="#475569">动态负反馈调控内环境与生态自稳</text>
+      <text x="10" y="49" font-family="system-ui, sans-serif" font-size="9.5" fill="#475569">神经-体液-免疫全域协同调度网络</text>
+    </g>
+
+    <!-- 观念 4: 进化与适应观 -->
+    <g transform="translate(12, 237)">
+      <rect width="206" height="58" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#065f46">4. 进化与适应观</text>
+      <text x="10" y="35" font-family="system-ui, sans-serif" font-size="9.5" fill="#475569">突变提供原料，自然选择定向演化</text>
+      <text x="10" y="49" font-family="system-ui, sans-serif" font-size="9.5" fill="#475569">多物种协同进化共筑生物多样性</text>
+    </g>
+  </g>
+
+  <!-- 右侧：六大体系与 16 大专题全景矩阵 (2列 x 3行) -->
+  <g transform="translate(258, 58)">
+    <rect width="507" height="308" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#bio-shadow)"/>
+    
+    <!-- 标题 -->
+    <rect x="0" y="0" width="507" height="32" rx="10" fill="#065f46"/>
+    <text x="253" y="21" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      📚 高考生物 16 大专题全景知识纵深网络
+    </text>
+
+    <!-- 块 1: 分子与细胞基石 (Row 1 Col 1) -->
+    <g transform="translate(12, 40)">
+      <rect width="235" height="78" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#166534">① 分子细胞基石 (专题01~02)</text>
+      <text x="10" y="36" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 水、无机盐、糖脂、蛋白质、核酸</text>
+      <text x="10" y="52" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 细胞膜流动镶嵌、细胞器生物膜系统</text>
+      <text x="10" y="68" font-family="system-ui, sans-serif" font-size="9.5" fill="#059669">核心考点：跨膜运输动力学模型与核孔</text>
+    </g>
+
+    <!-- 块 2: 细胞代谢与能量 (Row 1 Col 2) -->
+    <g transform="translate(260, 40)">
+      <rect width="235" height="78" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#166534">② 代谢能量与增殖 (专题03~04)</text>
+      <text x="10" y="36" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 酶活化能本质、ATP 能量货币转运</text>
+      <text x="10" y="52" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 光合暗反应动态突变、呼吸熵计算</text>
+      <text x="10" y="68" font-family="system-ui, sans-serif" font-size="9.5" fill="#059669">核心考点：有丝/减数分裂与受精模型</text>
+    </g>
+
+    <!-- 块 3: 遗传信息与中心法则 (Row 2 Col 1) -->
+    <g transform="translate(12, 128)">
+      <rect width="235" height="78" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#0f172a">③ 遗传因子的传递 (专题05~06)</text>
+      <text x="10" y="36" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 分离定律假说演绎、自由组合9331变式</text>
+      <text x="10" y="52" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 伴性遗传系谱图、DNA半保留复制</text>
+      <text x="10" y="68" font-family="system-ui, sans-serif" font-size="9.5" fill="#059669">核心考点：转录翻译中心法则与表观遗传</text>
+    </g>
+
+    <!-- 块 4: 变异育种与进化 (Row 2 Col 2) -->
+    <g transform="translate(260, 128)">
+      <rect width="235" height="78" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#0f172a">④ 变异、育种与演化 (专题07)</text>
+      <text x="10" y="36" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 基因突变/重组/染色体变异三维辨析</text>
+      <text x="10" y="52" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 单倍体/多倍体/杂交五大育种方案</text>
+      <text x="10" y="68" font-family="system-ui, sans-serif" font-size="9.5" fill="#059669">核心考点：基因频率计算与哈迪-温伯格</text>
+    </g>
+
+    <!-- 块 5: 稳态调节与生态网络 (Row 3 Col 1) -->
+    <g transform="translate(12, 216)">
+      <rect width="235" height="80" rx="6" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#065f46">⑤ 调节机制与生态 (专题08~12)</text>
+      <text x="10" y="36" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 内环境金三角稳态与组织水肿成因</text>
+      <text x="10" y="52" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 神经膜电位、激素轴、体液细胞免疫</text>
+      <text x="10" y="68" font-family="system-ui, sans-serif" font-size="9.5" fill="#059669">核心考点：种群S/J曲线与生态能量流动</text>
+    </g>
+
+    <!-- 块 6: 现代生物工程与实验 (Row 3 Col 2) -->
+    <g transform="translate(260, 216)">
+      <rect width="235" height="80" rx="6" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#065f46">⑥ 生物工程与经典实验 (专题13~16)</text>
+      <text x="10" y="36" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 传统发酵与微生物无菌培养平板技术</text>
+      <text x="10" y="52" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 植物组织培养、单克隆抗体与PCR工程</text>
+      <text x="10" y="68" font-family="system-ui, sans-serif" font-size="9.5" fill="#059669">核心考点：高考实验变量对照与长句模板</text>
+    </g>
+  </g>
+</svg>

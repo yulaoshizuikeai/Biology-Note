@@ -1,4 +1,4 @@
-﻿# 高考生物知识库 - Yulaoshizuikeai's Biology Note
+# 高考生物知识库 - Yulaoshizuikeai's Biology Note
 
 <p align="center">
   <img src="./public/images/icon.svg" alt="Yulaoshizuikeai's Biology Note - 高考生物知识库" width="160" />
@@ -10,7 +10,7 @@
   <a href="./LICENSE"><img src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey?style=flat-square" alt="License" /></a>
 </p>
 
-1. **在线阅读**: [https://note.biology.nx.kg/](https://note.biology.nx.kg/)
+1. **在线阅读**: [https://biology.indevs.in/](https://biology.indevs.in/)
 2. **最新 PDF 下载**:
    - 📕 **[完整版 PDF (单文件全书)](https://github.com/yulaoshizuikeai/Biology-Note/releases/download/latest-pdf/Biology-Note-Complete.pdf)** (由 GitHub Actions 随代码更新自动生成)
    - 📦 **[全套分册归档 (.zip)](https://github.com/yulaoshizuikeai/Biology-Note/releases/download/latest-pdf/Biology-Note-All-PDFs.zip)** (包含全书独立高清矢量 PDF)

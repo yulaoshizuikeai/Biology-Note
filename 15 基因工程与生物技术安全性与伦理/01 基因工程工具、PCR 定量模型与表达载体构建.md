@@ -84,43 +84,34 @@ PCR（聚合酶链式反应）是一项在**生物体外**快速扩增特定 DNA
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
   <!-- 背景底板 -->
   <rect width="780" height="370" rx="16" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
-  
   <!-- 顶栏标题 -->
   <rect x="20" y="16" width="740" height="42" rx="8" fill="#0284C7"/>
   <text x="390" y="42" fill="#FFFFFF" font-size="16" font-family="system-ui, -apple-system, sans-serif" font-weight="bold" text-anchor="middle">基因表达载体构建拓扑与PCR三步扩增定量模型</text>
-
   <!-- 左卡片：基因表达载体五大必备元件 (x=20, y=68, w=360, h=286) -->
   <g transform="translate(20, 68)">
     <rect width="360" height="286" rx="12" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.5"/>
     <rect width="360" height="34" rx="12" fill="#E0F2FE"/>
     <text x="180" y="23" fill="#0369A1" font-size="14" font-weight="bold" text-anchor="middle">基因表达载体五大必备元件环状拓扑</text>
-
     <!-- 模拟质粒大圆环 -->
     <circle cx="180" cy="120" r="54" fill="none" stroke="#CBD5E1" stroke-width="8"/>
-    
     <!-- 元件弧段与标签 -->
     <!-- 启动子 -->
     <circle cx="135" cy="85" r="8" fill="#10B981"/>
     <text x="115" y="80" fill="#047857" font-size="10.5" font-weight="bold" text-anchor="end">启动子 (Promoter)</text>
     <text x="115" y="93" fill="#065F46" font-size="8.5" text-anchor="end">RNA聚合酶结合位点</text>
-
     <!-- 目的基因 -->
     <circle cx="180" cy="66" r="9" fill="#EF4444"/>
     <text x="180" y="52" fill="#B91C1C" font-size="11" font-weight="bold" text-anchor="middle">目的基因 (外源基因)</text>
-
     <!-- 终止子 -->
     <circle cx="225" cy="85" r="8" fill="#F59E0B"/>
     <text x="245" y="80" fill="#B45309" font-size="10.5" font-weight="bold" text-anchor="start">终止子 (Terminator)</text>
     <text x="245" y="93" fill="#78350F" font-size="8.5" text-anchor="start">终止转录信号序列</text>
-
     <!-- 复制原点 -->
     <circle cx="225" cy="155" r="7" fill="#6366F1"/>
     <text x="245" y="155" fill="#4338CA" font-size="10" font-weight="bold" text-anchor="start">复制原点 (ori)</text>
-
     <!-- 标记基因 -->
     <circle cx="135" cy="155" r="7" fill="#8B5CF6"/>
     <text x="115" y="155" fill="#6D28D9" font-size="10" font-weight="bold" text-anchor="end">标记基因 (抗性基因)</text>
-
     <!-- 底部双酶切策略避坑框 -->
     <rect x="15" y="196" width="330" height="78" rx="6" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1"/>
     <text x="25" y="214" fill="#0F172A" font-size="11" font-weight="bold">双酶切构建表达载体的战略意义：</text>
@@ -128,36 +119,30 @@ PCR（聚合酶链式反应）是一项在**生物体外**快速扩增特定 DNA
     <text x="25" y="248" fill="#B91C1C" font-size="9.5" font-weight="bold">② 彻底防止【目的基因和质粒自身环化】；</text>
     <text x="25" y="264" fill="#047857" font-size="9.5" font-weight="bold">③ 彻底防止【目的基因与质粒反向连接】，确保顺向转录！</text>
   </g>
-
   <!-- 右卡片：PCR 三步热循环与引物延伸模型 (x=400, y=68, w=360, h=286) -->
   <g transform="translate(400, 68)">
     <rect width="360" height="286" rx="12" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.5"/>
     <rect width="360" height="34" rx="12" fill="#E0F2FE"/>
     <text x="180" y="23" fill="#0369A1" font-size="14" font-weight="bold" text-anchor="middle">PCR 热循环三步曲与定量计算模型</text>
-
     <!-- 三步循环横向流程条 -->
     <rect x="15" y="44" width="104" height="66" rx="6" fill="#FEF2F2" stroke="#EF4444" stroke-width="1.2"/>
     <text x="67" y="62" fill="#B91C1C" font-size="11" font-weight="bold" text-anchor="middle">① 变性 (90~95℃)</text>
     <text x="67" y="78" fill="#7F1D1D" font-size="9.5" text-anchor="middle">高温解旋破坏氢键</text>
     <text x="67" y="94" fill="#991B1B" font-size="9" text-anchor="middle">双链解离为单链</text>
-
     <rect x="128" y="44" width="104" height="66" rx="6" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.2"/>
     <text x="180" y="62" fill="#1D4ED8" font-size="11" font-weight="bold" text-anchor="middle">② 复性 (55~60℃)</text>
     <text x="180" y="78" fill="#1E40AF" font-size="9.5" text-anchor="middle">降温使引物结合</text>
     <text x="180" y="94" fill="#1E3A8A" font-size="9" text-anchor="middle">碱基互补配对结合</text>
-
     <rect x="241" y="44" width="104" height="66" rx="6" fill="#ECFDF5" stroke="#10B981" stroke-width="1.2"/>
     <text x="293" y="62" fill="#047857" font-size="11" font-weight="bold" text-anchor="middle">③ 延伸 (70~75℃)</text>
     <text x="293" y="78" fill="#065F46" font-size="9.5" text-anchor="middle">Taq 聚合酶催化</text>
     <text x="293" y="94" fill="#064E3B" font-size="9" font-weight="bold" text-anchor="middle">从 3' 端 5'➔3'延伸</text>
-
     <!-- 引物延伸关键图示 -->
     <rect x="15" y="118" width="330" height="68" rx="6" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
     <text x="25" y="136" fill="#B45309" font-size="10.5" font-weight="bold">引物设计与延伸方向红线：</text>
     <text x="25" y="152" fill="#334155" font-size="9.5">● 模板链方向 3' ➔ 5'，子链延伸方向严格为 【5' ➔ 3'】；</text>
     <text x="25" y="167" fill="#334155" font-size="9.5">● 引物结合在模板的 3' 端，Taq 酶将 dNTP 逐个连接到引物 3'-OH 上；</text>
     <text x="25" y="180" fill="#DC2626" font-size="9" font-weight="bold">★ 两条引物碱基序列不能互补，否则引物自连形成“引物二聚体”！</text>
-
     <!-- 定量计算结论框 -->
     <rect x="15" y="196" width="330" height="78" rx="6" fill="#F8FAFC" stroke="#64748B" stroke-width="1"/>
     <text x="25" y="214" fill="#0F172A" font-size="10.5" font-weight="bold">扩增定量规律与考场极值模型：</text>
