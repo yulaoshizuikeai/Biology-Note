@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-mtk" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <filter id="shadow-mtk" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-mtk)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      物质跨膜运输动力学模型：转运速率限制与影响因素曲线
+    </text>
+  </g>
+
+  <!-- 左图：物质浓度差 vs 转运速率 -->
+  <g transform="translate(15, 60)">
+    <rect width="365" height="295" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-mtk)"/>
+    <text x="182.5" y="24" font-family="system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#0f172a" text-anchor="middle">
+      模型一：转运速率与膜两侧浓度差的关系
+    </text>
+
+    <!-- 坐标轴 -->
+    <g transform="translate(45, 40)">
+      <line x1="0" y1="200" x2="290" y2="200" stroke="#475569" stroke-width="1.5"/>
+      <polygon points="290,197 296,200 290,203" fill="#475569"/>
+      <line x1="0" y1="200" x2="0" y2="10" stroke="#475569" stroke-width="1.5"/>
+      <polygon points="-3,10 0,4 3,10" fill="#475569"/>
+
+      <text x="290" y="218" font-family="system-ui, sans-serif" font-size="10" fill="#475569" text-anchor="end">膜外物质浓度差</text>
+      <text x="-10" y="10" font-family="system-ui, sans-serif" font-size="10" fill="#475569" text-anchor="end">转运速率 V</text>
+      <text x="-8" y="200" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">0</text>
+
+      <!-- 自由扩散曲线 (正比例无饱和) -->
+      <line x1="0" y1="200" x2="250" y2="50" stroke="#10b981" stroke-width="2.5"/>
+      <text x="235" y="42" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#059669">自由扩散</text>
+
+      <!-- 协助扩散曲线 (平台饱和期) -->
+      <path d="M 0 200 Q 80 85 180 85 L 270 85" stroke="#3b82f6" stroke-width="2.5" fill="none"/>
+      <text x="272" y="80" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#1d4ed8">协助扩散</text>
+      
+      <!-- 主动运输曲线 -->
+      <path d="M 0 200 Q 50 120 140 120 L 270 120" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="4,2" fill="none"/>
+      <text x="272" y="115" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#b91c1c">主动运输</text>
+
+      <!-- 饱和虚线与标注 -->
+      <line x1="180" y1="85" x2="180" y2="200" stroke="#94a3b8" stroke-dasharray="3,3"/>
+      <text x="180" y="215" font-family="system-ui, sans-serif" font-size="9" fill="#dc2626" text-anchor="middle">饱和点 P</text>
+      <rect x="110" y="62" width="95" height="18" rx="4" fill="#f8fafc" stroke="#cbd5e1"/>
+      <text x="157.5" y="75" font-family="system-ui, sans-serif" font-size="8.5" fill="#1d4ed8" text-anchor="middle">限制因子：载体数量</text>
+    </g>
+  </g>
+
+  <!-- 右图：氧气浓度 / 能量供应 vs 主动运输速率 -->
+  <g transform="translate(400, 60)">
+    <rect width="365" height="295" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-mtk)"/>
+    <text x="182.5" y="24" font-family="system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#0f172a" text-anchor="middle">
+      模型二：主动运输速率与氧气浓度 / ATP 供应
+    </text>
+
+    <!-- 坐标轴 -->
+    <g transform="translate(45, 40)">
+      <line x1="0" y1="200" x2="290" y2="200" stroke="#475569" stroke-width="1.5"/>
+      <polygon points="290,197 296,200 290,203" fill="#475569"/>
+      <line x1="0" y1="200" x2="0" y2="10" stroke="#475569" stroke-width="1.5"/>
+      <polygon points="-3,10 0,4 3,10" fill="#475569"/>
+
+      <text x="290" y="218" font-family="system-ui, sans-serif" font-size="10" fill="#475569" text-anchor="end">氧气浓度 [O₂]</text>
+      <text x="-10" y="10" font-family="system-ui, sans-serif" font-size="10" fill="#475569" text-anchor="end">转运速率 V</text>
+      <text x="-8" y="200" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">0</text>
+
+      <!-- 主动运输曲线 (起点不为0，平台饱和) -->
+      <path d="M 0 155 Q 80 65 170 65 L 270 65" stroke="#ef4444" stroke-width="2.5" fill="none"/>
+      
+      <!-- 起点不为0标注 (放置在左侧区域，避开 x=170 虚线) -->
+      <circle cx="0" cy="155" r="4" fill="#ef4444"/>
+      <line x1="0" y1="155" x2="16" y2="170" stroke="#b91c1c" stroke-width="1"/>
+      <rect x="16" y="156" width="135" height="28" rx="4" fill="#fef2f2" stroke="#fca5a5"/>
+      <text x="83.5" y="169" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#991b1b" text-anchor="middle">无氧时速率不为 0</text>
+      <text x="83.5" y="180" font-family="system-ui, sans-serif" font-size="7.5" fill="#dc2626" text-anchor="middle">(无氧呼吸供 ATP)</text>
+
+      <!-- 饱和期标注 -->
+      <line x1="170" y1="65" x2="170" y2="200" stroke="#94a3b8" stroke-dasharray="3,3"/>
+      <text x="170" y="215" font-family="system-ui, sans-serif" font-size="9" fill="#b91c1c" text-anchor="middle">平台期拐点</text>
+      <text x="175" y="52" font-family="system-ui, sans-serif" font-size="8.5" fill="#64748b">饱和限制：载体蛋白数量</text>
+
+      <!-- 被动运输对比水平线 (text-anchor="end" 确保在轴线内) -->
+      <line x1="0" y1="110" x2="270" y2="110" stroke="#10b981" stroke-width="1.5" stroke-dasharray="5,3"/>
+      <text x="270" y="104" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#047857" text-anchor="end">被动运输 (不受 O₂ 影响)</text>
+    </g>
+  </g>
+</svg>

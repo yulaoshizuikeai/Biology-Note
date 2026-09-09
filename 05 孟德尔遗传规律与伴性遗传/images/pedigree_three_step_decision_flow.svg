@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-pts" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#312e81" />
+    </linearGradient>
+    <filter id="shadow-pts" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-pts)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      遗传系谱图升级版“三步排查法”全景决策模型（常染色体 vs XY 同源区段）
+    </text>
+  </g>
+
+  <!-- 第 1 步：判显隐 -->
+  <g transform="translate(15, 60)">
+    <rect width="235" height="295" rx="10" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2" filter="url(#shadow-pts)"/>
+    <rect x="0" y="0" width="235" height="32" rx="10" fill="#2563eb"/>
+    <text x="117.5" y="21" font-family="system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      第 1 步：判显隐 (口诀判定)
+    </text>
+
+    <g transform="translate(12, 42)">
+      <rect width="211" height="85" rx="6" fill="#eff6ff" stroke="#bfdbfe"/>
+      <text x="10" y="22" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#1e40af">无中生有 ➔ 隐性病</text>
+      <text x="10" y="44" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">双亲正常，后代出现患者</text>
+      <text x="10" y="60" font-family="system-ui, sans-serif" font-size="8.5" fill="#64748b">双亲必为隐性致病基因杂合携带者</text>
+      <text x="10" y="74" font-family="system-ui, sans-serif" font-size="8.5" fill="#2563eb">致病基因为 a</text>
+    </g>
+
+    <g transform="translate(12, 140)">
+      <rect width="211" height="85" rx="6" fill="#fef2f2" stroke="#fca5a5"/>
+      <text x="10" y="22" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#b91c1c">有中生无 ➔ 显性病</text>
+      <text x="10" y="44" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">双亲患病，生出正常后代</text>
+      <text x="10" y="60" font-family="system-ui, sans-serif" font-size="8.5" fill="#64748b">双亲必含有正常隐性基因</text>
+      <text x="10" y="74" font-family="system-ui, sans-serif" font-size="8.5" fill="#dc2626">致病基因为 A</text>
+    </g>
+
+    <g transform="translate(12, 235)">
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="9" fill="#475569">• 若代代连续遗传多为显性</text>
+      <text x="10" y="36" font-family="system-ui, sans-serif" font-size="9" fill="#475569">• 若隔代遗传多为隐性</text>
+    </g>
+  </g>
+
+  <!-- 箭头 1->2 -->
+  <g transform="translate(254, 195)">
+    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#94a3b8">➔</text>
+  </g>
+
+  <!-- 第 2 步：排除突破口 -->
+  <g transform="translate(270, 60)">
+    <rect width="240" height="295" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-pts)"/>
+    <rect x="0" y="0" width="240" height="32" rx="10" fill="#475569"/>
+    <text x="120" y="21" font-family="system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      第 2 步：找突破口排除
+    </text>
+
+    <g transform="translate(10, 42)">
+      <rect width="220" height="52" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="8" y="18" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#0f172a">1. 排除母系遗传：</text>
+      <text x="8" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">出现【母病子正】或【母正子病】</text>
+      <text x="8" y="46" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">➔ 绝非母系线粒体遗传</text>
+    </g>
+
+    <g transform="translate(10, 102)">
+      <rect width="220" height="52" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="8" y="18" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#0f172a">2. 排除伴 Y 遗传：</text>
+      <text x="8" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">出现女性患者，或病父生正常儿</text>
+      <text x="8" y="46" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">➔ 绝非伴 Y 遗传</text>
+    </g>
+
+    <g transform="translate(10, 162)">
+      <rect width="220" height="60" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+      <text x="8" y="18" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#b91c1c">3. 排除仅 X 隐性：</text>
+      <text x="8" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">找女性患者：若【女病父正】或</text>
+      <text x="8" y="48" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#dc2626">【女病子正】 ➔ 排除仅 X 隐！</text>
+    </g>
+
+    <g transform="translate(10, 230)">
+      <rect width="220" height="56" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+      <text x="8" y="18" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#b91c1c">4. 排除仅 X 显性：</text>
+      <text x="8" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">找男性患者：若【男病母正】或</text>
+      <text x="8" y="48" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#dc2626">【男病女正】 ➔ 排除仅 X 显！</text>
+    </g>
+  </g>
+
+  <!-- 箭头 2->3 -->
+  <g transform="translate(514, 195)">
+    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#94a3b8">➔</text>
+  </g>
+
+  <!-- 第 3 步：决战区段 -->
+  <g transform="translate(530, 60)">
+    <rect width="235" height="295" rx="10" fill="#ffffff" stroke="#fbcfe8" stroke-width="1.2" filter="url(#shadow-pts)"/>
+    <rect x="0" y="0" width="235" height="32" rx="10" fill="#db2777"/>
+    <text x="117.5" y="21" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      第 3 步：常染色体 vs XY 同源
+    </text>
+
+    <g transform="translate(10, 42)">
+      <rect width="215" height="115" rx="6" fill="#fdf2f8" stroke="#f472b6"/>
+      <text x="8" y="18" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#9d174d">隐性病深度决战：</text>
+      <text x="8" y="36" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">若排除了仅 X 隐（有女病父正）：</text>
+      <text x="8" y="52" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#e11d48">◆ 若观察到【生出病女，但儿子全正】</text>
+      <text x="16" y="66" font-family="system-ui, sans-serif" font-size="8" fill="#be123c">等极端偏向 ➔ 判定为 XY 同源隐！</text>
+      <text x="16" y="78" font-family="system-ui, sans-serif" font-size="7.5" fill="#475569">(父 XᵃYᴬ × 母 XᴬXᵃ ➔ 儿子全正 XᴬYᴬ)</text>
+      <text x="8" y="96" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#047857">◆ 若男女发病随机均等 ➔ 常染色体隐</text>
+    </g>
+
+    <g transform="translate(10, 168)">
+      <rect width="215" height="115" rx="6" fill="#fff7ed" stroke="#fdba74"/>
+      <text x="8" y="18" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#c2410c">显性病深度决战：</text>
+      <text x="8" y="36" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">若排除了仅 X 显（有男病女正）：</text>
+      <text x="8" y="52" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#ea580c">◆ 若病父×正母 ➔【全男病女正】</text>
+      <text x="16" y="66" font-family="system-ui, sans-serif" font-size="8" fill="#9a3412">或【全女病男正】 ➔ 判定 XY 同源显！</text>
+      <text x="16" y="78" font-family="system-ui, sans-serif" font-size="7.5" fill="#475569">(父 XᵃYᴬ ➔ 儿子必得 Yᴬ 全病，女儿全正)</text>
+      <text x="8" y="96" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#047857">◆ 若子代男女发病随机 ➔ 常染色体显</text>
+    </g>
+  </g>
+</svg>

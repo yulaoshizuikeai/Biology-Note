@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-c08" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e7490" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <filter id="shadow-c08" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-c08)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      专题 08 人体内环境与稳态 · 章节全景脉络导图
+    </text>
+  </g>
+
+  <!-- 根节点 -->
+  <g transform="translate(250, 60)">
+    <rect width="280" height="40" rx="8" fill="#1e293b" stroke="#334155" filter="url(#shadow-c08)"/>
+    <text x="140" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      💧 人体内环境稳态与动态调控
+    </text>
+  </g>
+
+  <!-- 连线 -->
+  <g transform="translate(390, 100)">
+    <line x1="0" y1="0" x2="-180" y2="40" stroke="#475569" stroke-width="2"/>
+    <line x1="0" y1="0" x2="180" y2="40" stroke="#475569" stroke-width="2"/>
+  </g>
+
+  <!-- 篇章 1 -->
+  <g transform="translate(15, 140)">
+    <rect width="360" height="215" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2" filter="url(#shadow-c08)"/>
+    <rect x="0" y="0" width="360" height="28" rx="8" fill="#0284c7"/>
+    <text x="180" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      01 细胞生活的环境与体液各组分动态转化
+    </text>
+
+    <g transform="translate(15, 36)">
+      <g transform="translate(0, 0)">
+        <rect width="330" height="48" rx="4" fill="#f0f9ff" stroke="#bae6fd"/>
+        <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#0369a1">体液流体金三角动力学循环</text>
+        <text x="10" y="34" font-family="system-ui, sans-serif" font-size="9" fill="#334155">血浆 ⇋ 组织液 ➔ 淋巴液 ➔ 左右锁骨下静脉回流血浆</text>
+      </g>
+
+      <g transform="translate(0, 54)">
+        <rect width="330" height="48" rx="4" fill="#f0f9ff" stroke="#bae6fd"/>
+        <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#0369a1">内环境成分判别白皮书</text>
+        <text x="10" y="34" font-family="system-ui, sans-serif" font-size="9" fill="#334155">红细胞内血红蛋白 vs 细胞外液血浆蛋白；消化液/汗液除外</text>
+      </g>
+
+      <g transform="translate(0, 108)">
+        <rect width="330" height="50" rx="4" fill="#f0f9ff" stroke="#bae6fd"/>
+        <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#0369a1">内环境三大理化性质</text>
+        <text x="10" y="34" font-family="system-ui, sans-serif" font-size="9" fill="#334155">渗透压 (Na⁺/Cl⁻主导)、pH缓冲 (HCO₃⁻/H₂CO₃)、适宜体温</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- 篇章 2 -->
+  <g transform="translate(405, 140)">
+    <rect width="360" height="215" rx="8" fill="#ffffff" stroke="#86efac" stroke-width="1.2" filter="url(#shadow-c08)"/>
+    <rect x="0" y="0" width="360" height="28" rx="8" fill="#16a34a"/>
+    <text x="180" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      02 内环境稳态的调节机制与组织水肿成因全景
+    </text>
+
+    <g transform="translate(15, 36)">
+      <g transform="translate(0, 0)">
+        <rect width="330" height="48" rx="4" fill="#f0fdf4" stroke="#bbf7d0"/>
+        <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#15803d">稳态调节机制历史演变</text>
+        <text x="10" y="34" font-family="system-ui, sans-serif" font-size="9" fill="#334155">贝尔纳神经 ➔ 坎农神经体液 ➔ 现代神经-体液-免疫调节网络</text>
+      </g>
+
+      <g transform="translate(0, 54)">
+        <rect width="330" height="48" rx="4" fill="#f0fdf4" stroke="#bbf7d0"/>
+        <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#15803d">组织水肿五大微观成因动力学</text>
+        <text x="10" y="34" font-family="system-ui, sans-serif" font-size="9" fill="#334155">血浆蛋白减少、过敏增通透性、淋巴回流受阻、水盐潴留等</text>
+      </g>
+
+      <g transform="translate(0, 108)">
+        <rect width="330" height="50" rx="4" fill="#f0fdf4" stroke="#bbf7d0"/>
+        <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#15803d">高考综合因果逻辑答题模板</text>
+        <text x="10" y="34" font-family="system-ui, sans-serif" font-size="9" fill="#dc2626">血浆胶体渗透压降低 ➔ 水分渗入组织间隙 ➔ 组织液积累水肿</text>
+      </g>
+    </g>
+  </g>
+</svg>

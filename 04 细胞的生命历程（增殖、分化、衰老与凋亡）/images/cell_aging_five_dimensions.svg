@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-caf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#831843" />
+      <stop offset="100%" stop-color="#be185d" />
+    </linearGradient>
+    <filter id="shadow-caf" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-caf)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      细胞衰老的微观生理变化口诀：“一大、一小、一多、三低”全景图解
+    </text>
+  </g>
+
+  <!-- 上排：一大、一小、一多 -->
+  <g transform="translate(15, 60)">
+    <!-- 一大 -->
+    <g transform="translate(0, 0)">
+      <rect width="240" height="135" rx="8" fill="#ffffff" stroke="#f43f5e" stroke-width="1.2" filter="url(#shadow-caf)"/>
+      <rect x="0" y="0" width="240" height="28" rx="8" fill="#e11d48"/>
+      <text x="120" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+        一大：细胞核体积增大
+      </text>
+      <g transform="translate(12, 38)">
+        <text x="0" y="18" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#9f1239">• 细胞核体积变大，核膜向内折叠</text>
+        <text x="0" y="36" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 染色质收缩、聚合，染色加深</text>
+        <text x="0" y="54" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 核孔复合体转运效率改变</text>
+        <text x="0" y="72" font-family="system-ui, sans-serif" font-size="8.5" fill="#be123c">高考排雷：细胞整体变小，但细胞核变大！</text>
+      </g>
+    </g>
+
+    <!-- 一小 -->
+    <g transform="translate(255, 0)">
+      <rect width="240" height="135" rx="8" fill="#ffffff" stroke="#0ea5e9" stroke-width="1.2" filter="url(#shadow-caf)"/>
+      <rect x="0" y="0" width="240" height="28" rx="8" fill="#0284c7"/>
+      <text x="120" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+        一小：细胞萎缩、水分减少
+      </text>
+      <g transform="translate(12, 38)">
+        <text x="0" y="18" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#0369a1">• 细胞整体体积萎缩变小</text>
+        <text x="0" y="36" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 细胞内【自由水】含量明显下降</text>
+        <text x="0" y="54" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 自由水/结合水比值下降 ➔ 代谢减缓</text>
+        <text x="0" y="72" font-family="system-ui, sans-serif" font-size="8.5" fill="#0284c7">宏观表现：皮肤干燥、出现皱纹</text>
+      </g>
+    </g>
+
+    <!-- 一多 -->
+    <g transform="translate(510, 0)">
+      <rect width="240" height="135" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.2" filter="url(#shadow-caf)"/>
+      <rect x="0" y="0" width="240" height="28" rx="8" fill="#d97706"/>
+      <text x="120" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+        一多：细胞内色素沉积增多
+      </text>
+      <g transform="translate(12, 38)">
+        <text x="0" y="18" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#b45309">• 细胞内色素逐渐积累沉积</text>
+        <text x="0" y="36" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 脂褐素 (Lipofuscin) 聚集形成老年斑</text>
+        <text x="0" y="54" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 阻碍细胞内物质运输与能量信息交流</text>
+        <text x="0" y="72" font-family="system-ui, sans-serif" font-size="8.5" fill="#92400e">生理后果：降低微区室生化反应效率</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- 下排：三低 -->
+  <g transform="translate(15, 205)">
+    <rect width="750" height="150" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-caf)"/>
+    <rect x="0" y="0" width="750" height="28" rx="8" fill="#475569"/>
+    <text x="375" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      三低：酶活性降低 · 代谢速率低 · 物质运输效率低
+    </text>
+
+    <g transform="translate(15, 38)">
+      <!-- 低 1 -->
+      <rect width="230" height="98" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="15" y="20" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#0f172a">① 多种酶活性降低</text>
+      <text x="15" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 经典高考实例：</text>
+      <text x="25" y="54" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#dc2626">黑色素细胞酪氨酸酶活性降低</text>
+      <text x="25" y="68" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">➔ 黑色素合成减少 ➔ 头发变白</text>
+      <text x="15" y="86" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">注意：并非所有酶活性都降低！</text>
+
+      <!-- 低 2 -->
+      <rect x="245" y="0" width="230" height="98" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="260" y="20" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#0f172a">② 呼吸与代谢速率降低</text>
+      <text x="260" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 细胞呼吸速率减慢</text>
+      <text x="260" y="54" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 线粒体嵴排列紊乱，ATP 产量减少</text>
+      <text x="260" y="70" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 全局新陈代谢迟缓，基础代谢下降</text>
+      <text x="260" y="86" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">能量供应不足导致生理机能退化</text>
+
+      <!-- 低 3 -->
+      <rect x="490" y="0" width="230" height="98" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="505" y="20" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#0f172a">③ 物质跨膜运输效率降低</text>
+      <text x="505" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 细胞膜通透性改变，流动性下降</text>
+      <text x="505" y="54" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 转运载体蛋白构象改变或数量减少</text>
+      <text x="505" y="70" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 营养物质吸收慢，代谢废物排出受阻</text>
+      <text x="505" y="86" font-family="system-ui, sans-serif" font-size="8" fill="#dc2626">膜屏障完整性受损，稳态失衡</text>
+    </g>
+  </g>
+</svg>

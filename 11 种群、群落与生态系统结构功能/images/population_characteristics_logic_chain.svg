@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-pcl" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <filter id="shadow-pcl" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-pcl)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      种群六大数量特征相互关系与内在因果逻辑图解
+    </text>
+  </g>
+
+  <!-- 核心结构卡 -->
+  <g transform="translate(15, 60)">
+    <rect width="750" height="295" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-pcl)"/>
+
+    <!-- 左侧：年龄结构 -->
+    <g transform="translate(25, 45)">
+      <rect width="160" height="190" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+      <rect x="0" y="0" width="160" height="32" rx="8" fill="#2563eb"/>
+      <text x="80" y="21" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+        【年龄结构】
+      </text>
+      <g transform="translate(10, 42)">
+        <text x="0" y="16" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#1e40af">作用：预测未来动态</text>
+        <text x="0" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 增长型：幼年 &gt; 老年</text>
+        <text x="8" y="52" font-family="system-ui, sans-serif" font-size="8" fill="#059669">➔ 未来种群密度增大</text>
+        <text x="0" y="70" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 稳定型：各期比例适中</text>
+        <text x="8" y="84" font-family="system-ui, sans-serif" font-size="8" fill="#475569">➔ 未来种群密度稳定</text>
+        <text x="0" y="102" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 衰退型：老年 &gt; 幼年</text>
+        <text x="8" y="116" font-family="system-ui, sans-serif" font-size="8" fill="#dc2626">➔ 未来种群密度减小</text>
+      </g>
+    </g>
+
+    <!-- 年龄结构 指向 出生率/死亡率 箭头 -->
+    <g transform="translate(190, 110)">
+      <line x1="0" y1="0" x2="30" y2="-40" stroke="#2563eb" stroke-width="2"/>
+      <polygon points="27,-43 33,-41 31,-37" fill="#2563eb"/>
+      <line x1="0" y1="60" x2="30" y2="100" stroke="#2563eb" stroke-width="2"/>
+      <polygon points="27,103 33,101 31,97" fill="#2563eb"/>
+    </g>
+
+    <!-- 中间：直接决定因素 (出生率、死亡率、迁入率、迁出率) -->
+    <!-- 上方两块：增加种群密度 -->
+    <g transform="translate(225, 45)">
+      <rect width="130" height="50" rx="6" fill="#f0fdf4" stroke="#86efac"/>
+      <text x="65" y="24" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#15803d" text-anchor="middle">出生率 (+)</text>
+      <text x="65" y="40" font-family="system-ui, sans-serif" font-size="8.5" fill="#16a34a" text-anchor="middle">直接增加种群数量</text>
+    </g>
+
+    <g transform="translate(225, 105)">
+      <rect width="130" height="50" rx="6" fill="#f0fdf4" stroke="#86efac"/>
+      <text x="65" y="24" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#15803d" text-anchor="middle">迁入率 (+)</text>
+      <text x="65" y="40" font-family="system-ui, sans-serif" font-size="8.5" fill="#16a34a" text-anchor="middle">直接增加种群数量</text>
+    </g>
+
+    <!-- 下方两块：减少种群密度 -->
+    <g transform="translate(225, 175)">
+      <rect width="130" height="50" rx="6" fill="#fef2f2" stroke="#fca5a5"/>
+      <text x="65" y="24" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#b91c1c" text-anchor="middle">死亡率 (—)</text>
+      <text x="65" y="40" font-family="system-ui, sans-serif" font-size="8.5" fill="#dc2626" text-anchor="middle">直接减少种群数量</text>
+    </g>
+
+    <g transform="translate(225, 235)">
+      <rect width="130" height="50" rx="6" fill="#fef2f2" stroke="#fca5a5"/>
+      <text x="65" y="24" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#b91c1c" text-anchor="middle">迁出率 (—)</text>
+      <text x="65" y="40" font-family="system-ui, sans-serif" font-size="8.5" fill="#dc2626" text-anchor="middle">直接减少种群数量</text>
+    </g>
+
+    <!-- 汇集指向核心 种群密度 箭头 -->
+    <g transform="translate(365, 150)">
+      <line x1="0" y1="-70" x2="45" y2="-10" stroke="#16a34a" stroke-width="2"/>
+      <line x1="0" y1="-20" x2="45" y2="-5" stroke="#16a34a" stroke-width="2"/>
+      <line x1="0" y1="40" x2="45" y2="10" stroke="#dc2626" stroke-width="2"/>
+      <line x1="0" y1="95" x2="45" y2="15" stroke="#dc2626" stroke-width="2"/>
+      <polygon points="45,-1 52,0 45,5" fill="#0f172a"/>
+    </g>
+
+    <!-- 核心：种群密度 -->
+    <g transform="translate(425, 100)">
+      <rect width="165" height="100" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+      <text x="82.5" y="32" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309" text-anchor="middle">
+        【种群密度】
+      </text>
+      <text x="82.5" y="52" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#78350f" text-anchor="middle">
+        最基本的数量特征
+      </text>
+      <text x="82.5" y="74" font-family="system-ui, sans-serif" font-size="8.5" fill="#92400e" text-anchor="middle">
+        单位面积或体积内的个体数
+      </text>
+      <text x="82.5" y="88" font-family="system-ui, sans-serif" font-size="8" fill="#475569" text-anchor="middle">
+        调查方法：样方法 / 标记重捕法
+      </text>
+    </g>
+
+    <!-- 右侧：性别比例 -->
+    <g transform="translate(610, 100)">
+      <rect width="115" height="100" rx="8" fill="#fdf2f8" stroke="#f472b6" stroke-width="1.5"/>
+      <text x="57.5" y="28" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#9d174d" text-anchor="middle">
+        【性别比例】
+      </text>
+      <text x="57.5" y="48" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#be185d" text-anchor="middle">
+        间接影响因素
+      </text>
+      <text x="57.5" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#334155" text-anchor="middle">
+        通过影响【出生率】
+      </text>
+      <text x="57.5" y="84" font-family="system-ui, sans-serif" font-size="8" fill="#334155" text-anchor="middle">
+        间接改变种群密度
+      </text>
+    </g>
+
+    <g transform="translate(610, 150)">
+      <line x1="0" y1="0" x2="-15" y2="0" stroke="#db2777" stroke-width="2"/>
+      <polygon points="-15,-3 -20,0 -15,3" fill="#db2777"/>
+    </g>
+  </g>
+</svg>

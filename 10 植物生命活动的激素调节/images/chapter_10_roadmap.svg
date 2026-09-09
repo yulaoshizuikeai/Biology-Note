@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-c10" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14532d" />
+      <stop offset="100%" stop-color="#15803d" />
+    </linearGradient>
+    <filter id="shadow-c10" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-c10)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      专题 10 植物生命活动的调节 · 章节全景脉络导图
+    </text>
+  </g>
+
+  <!-- 根节点 -->
+  <g transform="translate(250, 60)">
+    <rect width="280" height="40" rx="8" fill="#1e293b" stroke="#334155" filter="url(#shadow-c10)"/>
+    <text x="140" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      🌿 植物生命活动调节网络
+    </text>
+  </g>
+
+  <!-- 连线 -->
+  <g transform="translate(390, 100)">
+    <line x1="0" y1="0" x2="-250" y2="40" stroke="#475569" stroke-width="2"/>
+    <line x1="0" y1="0" x2="0" y2="40" stroke="#475569" stroke-width="2"/>
+    <line x1="0" y1="0" x2="250" y2="40" stroke="#475569" stroke-width="2"/>
+  </g>
+
+  <!-- 篇章 1 -->
+  <g transform="translate(15, 140)">
+    <rect width="235" height="215" rx="8" fill="#ffffff" stroke="#86efac" stroke-width="1.2" filter="url(#shadow-c10)"/>
+    <rect x="0" y="0" width="235" height="28" rx="8" fill="#16a34a"/>
+    <text x="117.5" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      01 生长素发现与两重性模型
+    </text>
+
+    <g transform="translate(12, 36)">
+      <g transform="translate(0, 0)">
+        <rect width="211" height="46" rx="4" fill="#f0fdf4" stroke="#bbf7d0"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#15803d">五大经典发现史</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">达尔文 ➔ 鲍森詹森 ➔ 拜尔 ➔ 温特 ➔ 郭葛</text>
+      </g>
+
+      <g transform="translate(0, 52)">
+        <rect width="211" height="46" rx="4" fill="#f0fdf4" stroke="#bbf7d0"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#15803d">极性运输主动运输模型</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">形态学上端 ➔ 下端；耗能逆浓度运输</text>
+      </g>
+
+      <g transform="translate(0, 104)">
+        <rect width="211" height="58" rx="4" fill="#f0fdf4" stroke="#bbf7d0"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#15803d">两重性三曲线与顶端优势</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">根(10⁻¹⁰) &gt; 芽(10⁻⁸) &gt; 茎(10⁻⁴)</text>
+        <text x="8" y="46" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">向光性背光侧横向运输实质</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- 篇章 2 -->
+  <g transform="translate(270, 140)">
+    <rect width="240" height="215" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-c10)"/>
+    <rect x="0" y="0" width="240" height="28" rx="8" fill="#0284c7"/>
+    <text x="120" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      02 五大激素协同与环境调控
+    </text>
+
+    <g transform="translate(12, 36)">
+      <g transform="translate(0, 0)">
+        <rect width="216" height="46" rx="4" fill="#f0f9ff" stroke="#bae6fd"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#0369a1">五大激素功能矩阵</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">IAA / GA / CK / ABA / ETH 核心作用</text>
+      </g>
+
+      <g transform="translate(0, 52)">
+        <rect width="216" height="46" rx="4" fill="#f0f9ff" stroke="#bae6fd"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#0369a1">协同与拮抗网络天平</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">赤霉素促萌 vs 脱落酸休眠；生长素乙烯反馈</text>
+      </g>
+
+      <g transform="translate(0, 104)">
+        <rect width="216" height="58" rx="4" fill="#f0f9ff" stroke="#bae6fd"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#0369a1">环境因素参与调控机制</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">光敏色素 (Pr ⇋ Pfr) 构象转换入核调控</text>
+        <text x="8" y="46" font-family="system-ui, sans-serif" font-size="8" fill="#0284c7">根冠平衡石假说 (淀粉体沉降感应重力)</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- 篇章 3 -->
+  <g transform="translate(530, 140)">
+    <rect width="235" height="215" rx="8" fill="#ffffff" stroke="#fed7aa" stroke-width="1.2" filter="url(#shadow-c10)"/>
+    <rect x="0" y="0" width="235" height="28" rx="8" fill="#ea580c"/>
+    <text x="117.5" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      03 植物生长调节剂应用规范
+    </text>
+
+    <g transform="translate(12, 36)">
+      <g transform="translate(0, 0)">
+        <rect width="211" height="46" rx="4" fill="#fff7ed" stroke="#fed7aa"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#c2410c">植物生长调节剂特点</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">原料广泛易合成、效果稳定持久</text>
+      </g>
+
+      <g transform="translate(0, 52)">
+        <rect width="211" height="46" rx="4" fill="#fff7ed" stroke="#fed7aa"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#c2410c">探究插条生根最适浓度</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">预实验规避盲目性；沾蘸法 vs 浸泡法</text>
+      </g>
+
+      <g transform="translate(0, 104)">
+        <rect width="211" height="58" rx="4" fill="#fff7ed" stroke="#fed7aa"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#c2410c">生产实践综合决策</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">乙烯利催熟、萘乙酸保果、矮壮素抗倒伏</text>
+        <text x="8" y="46" font-family="system-ui, sans-serif" font-size="8" fill="#dc2626">科学评估残留与生态食品安全</text>
+      </g>
+    </g>
+  </g>
+</svg>

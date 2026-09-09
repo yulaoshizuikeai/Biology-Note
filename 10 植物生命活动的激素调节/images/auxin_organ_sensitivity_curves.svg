@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-aoc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#047857" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <filter id="shadow-aoc" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-aoc)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      生长素作用两重性与不同器官（根、芽、茎）敏感度三曲线模型
+    </text>
+  </g>
+
+  <!-- 左侧：三曲线坐标系绘制 -->
+  <g transform="translate(15, 60)">
+    <rect width="470" height="295" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-aoc)"/>
+
+    <g transform="translate(60, 40)">
+      <!-- 零刻度水平基准线 (y=130) -->
+      <line x1="0" y1="130" x2="380" y2="130" stroke="#475569" stroke-width="1.5"/>
+      <polygon points="380,127 386,130 380,133" fill="#475569"/>
+      <text x="380" y="148" font-family="system-ui, sans-serif" font-size="9.5" fill="#475569" text-anchor="end">生长素浓度 (mol/L)</text>
+
+      <!-- 垂直 Y 轴 -->
+      <line x1="0" y1="210" x2="0" y2="10" stroke="#475569" stroke-width="1.5"/>
+      <polygon points="-3,10 0,4 3,10" fill="#475569"/>
+      <polygon points="-3,210 0,216 3,210" fill="#475569"/>
+      <text x="-8" y="18" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#047857" text-anchor="end">促进 ▲</text>
+      <text x="-8" y="208" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#dc2626" text-anchor="end">抑制 ▼</text>
+      <text x="-8" y="133" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">0</text>
+
+      <!-- 浓度刻度 -->
+      <text x="70" y="144" font-family="system-ui, sans-serif" font-size="8.5" fill="#64748b" text-anchor="middle">10⁻¹⁰</text>
+      <text x="170" y="144" font-family="system-ui, sans-serif" font-size="8.5" fill="#64748b" text-anchor="middle">10⁻⁸</text>
+      <text x="280" y="144" font-family="system-ui, sans-serif" font-size="8.5" fill="#64748b" text-anchor="middle">10⁻⁴</text>
+
+      <!-- 根曲线 (最敏感，峰在 10^-10) -->
+      <!-- 起点(0, 130) -> 峰(70, 50) -> 过零(115, 130) -> 抑制(140, 180) -->
+      <path d="M 0 130 Q 70 30 115 130 Q 130 170 150 180" stroke="#dc2626" stroke-width="2.5" fill="none"/>
+      <circle cx="70" cy="50" r="4" fill="#dc2626"/>
+      <text x="70" y="38" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#dc2626" text-anchor="middle">根最适(10⁻¹⁰)</text>
+
+      <!-- 芽曲线 (次敏感，峰在 10^-8) -->
+      <!-- 起点(0, 130) -> 峰(170, 50) -> 过零(225, 130) -> 抑制(250, 180) -->
+      <path d="M 0 130 Q 170 30 225 130 Q 240 170 260 180" stroke="#2563eb" stroke-width="2.5" fill="none"/>
+      <circle cx="170" cy="50" r="4" fill="#2563eb"/>
+      <text x="170" y="38" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#1e40af" text-anchor="middle">芽最适(10⁻⁸)</text>
+
+      <!-- 茎曲线 (最不敏感，峰在 10^-4) -->
+      <!-- 起点(0, 130) -> 峰(280, 50) -> 过零(335, 130) -> 抑制(360, 180) -->
+      <path d="M 0 130 Q 280 30 335 130 Q 345 160 365 180" stroke="#16a34a" stroke-width="2.5" fill="none"/>
+      <circle cx="280" cy="50" r="4" fill="#16a34a"/>
+      <text x="280" y="38" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#15803d" text-anchor="middle">茎最适(10⁻⁴)</text>
+
+      <!-- 抑制区分界线说明 -->
+      <line x1="115" y1="130" x2="115" y2="200" stroke="#fca5a5" stroke-dasharray="2,2"/>
+      <text x="115" y="210" font-family="system-ui, sans-serif" font-size="7.5" fill="#dc2626" text-anchor="middle">根抑制阈值</text>
+    </g>
+  </g>
+
+  <!-- 右侧：敏感度法则与高考解题 -->
+  <g transform="translate(500, 60)">
+    <rect width="265" height="295" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-aoc)"/>
+    <text x="132.5" y="24" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">
+      敏感度规律与两重性本质
+    </text>
+
+    <g transform="translate(12, 38)">
+      <rect width="241" height="52" rx="6" fill="#f0fdf4" stroke="#bbf7d0"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#15803d">器官敏感度排序金标准：</text>
+      <text x="10" y="38" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#047857">根 &gt; 芽 &gt; 茎</text>
+      <text x="90" y="38" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">(根最敏感，茎最不敏感)</text>
+    </g>
+
+    <g transform="translate(12, 98)">
+      <rect width="241" height="65" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#b91c1c">生长素两重性本质：</text>
+      <text x="10" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">• 低浓度促进生长，高浓度抑制生长</text>
+      <text x="10" y="48" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">• 促进与抑制的参照标准是：</text>
+      <text x="18" y="60" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#dc2626">【空白对照组（不用激素时）的生长量】</text>
+    </g>
+
+    <g transform="translate(12, 172)">
+      <rect width="241" height="105" rx="6" fill="#eff6ff" stroke="#bfdbfe"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#1e40af">典型高考考查现象辨析：</text>
+      <text x="10" y="34" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#dc2626">1. 顶端优势：体现两重性</text>
+      <text x="18" y="48" font-family="system-ui, sans-serif" font-size="8" fill="#475569">(顶芽低浓度促进，侧芽高浓度抑制)</text>
+      <text x="10" y="64" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#dc2626">2. 根的向地性：体现两重性</text>
+      <text x="18" y="78" font-family="system-ui, sans-serif" font-size="8" fill="#475569">(近地侧高浓度抑制，远地侧促进)</text>
+      <text x="10" y="94" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#059669">3. 茎的背地/向光性：不体现两重性!</text>
+    </g>
+  </g>
+</svg>

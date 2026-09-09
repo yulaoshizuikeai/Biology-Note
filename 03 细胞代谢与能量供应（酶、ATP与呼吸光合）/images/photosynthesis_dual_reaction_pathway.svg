@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-pdr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <filter id="shadow-pdr" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-pdr)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      光合作用全过程微观生化通路拆解（光反应与卡尔文循环）
+    </text>
+  </g>
+
+  <!-- 左侧：光反应 (类囊体薄膜) -->
+  <g transform="translate(15, 60)">
+    <rect width="340" height="295" rx="10" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.2" filter="url(#shadow-pdr)"/>
+    <rect x="0" y="0" width="340" height="32" rx="10" fill="#059669"/>
+    <text x="170" y="21" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      光反应 (类囊体薄膜 Thylakoid Membrane)
+    </text>
+
+    <!-- 光吸收 -->
+    <g transform="translate(15, 45)">
+      <circle cx="25" cy="25" r="20" fill="#fef08a" stroke="#eab308" stroke-width="2"/>
+      <text x="25" y="29" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#854d0e" text-anchor="middle">光能</text>
+      
+      <path d="M 50 25 L 85 25" stroke="#059669" stroke-width="2"/>
+      <polygon points="85,22 91,25 85,28" fill="#059669"/>
+
+      <rect x="95" y="5" width="205" height="40" rx="6" fill="#ecfdf5" stroke="#10b981"/>
+      <text x="197.5" y="21" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#065f46" text-anchor="middle">激发叶绿体色素 (叶绿素/类胡萝卜素)</text>
+      <text x="197.5" y="37" font-family="system-ui, sans-serif" font-size="8.5" fill="#047857" text-anchor="middle">吸收红光与蓝紫光 ➔ 释放高能电子 e⁻</text>
+    </g>
+
+    <!-- 水的光解 -->
+    <g transform="translate(15, 105)">
+      <rect width="310" height="85" rx="6" fill="#eff6ff" stroke="#bfdbfe"/>
+      <text x="12" y="20" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#1e40af">水的光解 (Photolysis of Water)：</text>
+      <text x="12" y="44" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#0284c7">2 H₂O ──► 4 H⁺ + 4 e⁻ + O₂ ↑ (释放)</text>
+      <text x="12" y="64" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">• O₂ 穿过类囊体膜与叶绿体双层膜释放外界</text>
+      <text x="12" y="78" font-family="system-ui, sans-serif" font-size="8.5" fill="#dc2626">• 鲁宾-卡门同位素实验：O₂ 全部来自水！</text>
+    </g>
+
+    <!-- ATP 与 NADPH 生成 -->
+    <g transform="translate(15, 200)">
+      <rect width="310" height="85" rx="6" fill="#fffbeb" stroke="#fde68a"/>
+      <text x="12" y="20" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#b45309">同化力生成 (ATP + NADPH)：</text>
+      <text x="12" y="42" font-family="system-ui, sans-serif" font-size="10" fill="#92400e">• NADP⁺ + 2e⁻ + H⁺ ──► <tspan font-weight="bold" fill="#047857">NADPH</tspan></text>
+      <text x="12" y="60" font-family="system-ui, sans-serif" font-size="10" fill="#92400e">• ADP + Pi + 能量 ──► <tspan font-weight="bold" fill="#dc2626">ATP</tspan> (光合磷酸化)</text>
+      <text x="12" y="77" font-family="system-ui, sans-serif" font-size="8" fill="#78350f">转移至基质，为暗反应提供还原剂与能量</text>
+    </g>
+  </g>
+
+  <!-- 中间转移通路 (65px 间隙，清晰宽裕) -->
+  <g transform="translate(360, 140)">
+    <path d="M 5 30 L 50 30" stroke="#059669" stroke-width="2.5"/>
+    <polygon points="50,27 56,30 50,33" fill="#059669"/>
+    <text x="30" y="18" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#059669" text-anchor="middle">ATP / NADPH</text>
+
+    <path d="M 55 70 L 10 70" stroke="#94a3b8" stroke-width="2.5"/>
+    <polygon points="10,67 4,70 10,73" fill="#94a3b8"/>
+    <text x="30" y="88" font-family="system-ui, sans-serif" font-size="8.5" fill="#64748b" text-anchor="middle">ADP / NADP⁺</text>
+  </g>
+
+  <!-- 右侧：暗反应 (叶绿体基质) -->
+  <g transform="translate(425, 60)">
+    <rect width="340" height="295" rx="10" fill="#ffffff" stroke="#fed7aa" stroke-width="1.2" filter="url(#shadow-pdr)"/>
+    <rect x="0" y="0" width="340" height="32" rx="10" fill="#ea580c"/>
+    <text x="170" y="21" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      暗反应 / 卡尔文循环 (叶绿体基质 Stroma)
+    </text>
+
+    <!-- CO2 固定 -->
+    <g transform="translate(15, 45)">
+      <rect width="310" height="70" rx="6" fill="#fff7ed" stroke="#ffedd5"/>
+      <text x="12" y="20" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#c2410c">1. CO₂ 的固定 (Carbon Fixation)：</text>
+      <text x="12" y="42" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#9a3412">CO₂ + C₅ ──[Rubisco酶]──► 2 C₃</text>
+      <text x="12" y="60" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">固定过程不消耗 ATP 和 NADPH，仅需酶催化</text>
+    </g>
+
+    <!-- C3 还原 -->
+    <g transform="translate(15, 125)">
+      <rect width="310" height="85" rx="6" fill="#fef2f2" stroke="#fee2e2"/>
+      <text x="12" y="20" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#b91c1c">2. C₃ 的还原 (Reduction of C₃)：</text>
+      <text x="12" y="42" font-family="system-ui, sans-serif" font-size="10" fill="#1e293b">2 C₃ + NADPH + ATP ──► (CH₂O) 糖类 + C₅ 再生</text>
+      <text x="12" y="62" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">• 形成三碳糖磷酸，合成蔗糖运出或合成淀粉</text>
+      <text x="12" y="78" font-family="system-ui, sans-serif" font-size="8.5" fill="#b91c1c">• 卡尔文循环中 C₅ 持续循环再生，必须 ATP 供能！</text>
+    </g>
+
+    <!-- 瞬时突变考点总结 -->
+    <g transform="translate(15, 220)">
+      <rect width="310" height="65" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+      <text x="12" y="18" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#0f172a">★ 瞬时突变动态极速秒杀：</text>
+      <text x="12" y="36" font-family="system-ui, sans-serif" font-size="8" fill="#dc2626">• 停止光照 ➔ [ATP/NADPH]↓ ➔ C₃ 还原受阻 ➔ C₃↑，C₅↓</text>
+      <text x="12" y="52" font-family="system-ui, sans-serif" font-size="8" fill="#0284c7">• 停止供 CO₂ ➔ 固定停滞 ➔ C₃ 生成减少 ➔ C₃↓，C₅↑</text>
+    </g>
+  </g>
+</svg>

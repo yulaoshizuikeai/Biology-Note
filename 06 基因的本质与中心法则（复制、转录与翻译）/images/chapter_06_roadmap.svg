@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-c06" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#312e81" />
+      <stop offset="100%" stop-color="#4338ca" />
+    </linearGradient>
+    <filter id="shadow-c06" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-c06)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      专题 06 基因的本质与中心法则 · 章节全景脉络导图
+    </text>
+  </g>
+
+  <!-- 根节点 -->
+  <g transform="translate(250, 60)">
+    <rect width="280" height="40" rx="8" fill="#1e293b" stroke="#334155" filter="url(#shadow-c06)"/>
+    <text x="140" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      🧬 基因的本质与中心法则全景
+    </text>
+  </g>
+
+  <!-- 连线 -->
+  <g transform="translate(390, 100)">
+    <line x1="0" y1="0" x2="-250" y2="40" stroke="#475569" stroke-width="2"/>
+    <line x1="0" y1="0" x2="0" y2="40" stroke="#475569" stroke-width="2"/>
+    <line x1="0" y1="0" x2="250" y2="40" stroke="#475569" stroke-width="2"/>
+  </g>
+
+  <!-- 篇章 1 -->
+  <g transform="translate(15, 140)">
+    <rect width="235" height="215" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2" filter="url(#shadow-c06)"/>
+    <rect x="0" y="0" width="235" height="28" rx="8" fill="#2563eb"/>
+    <text x="117.5" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      01 探索遗传物质的经典实验
+    </text>
+
+    <g transform="translate(12, 36)">
+      <g transform="translate(0, 0)">
+        <rect width="211" height="46" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#1e40af">格里菲思体内转化实验</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">加热杀死的 S 型菌存在“转化因子”</text>
+      </g>
+
+      <g transform="translate(0, 52)">
+        <rect width="211" height="46" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#1e40af">艾弗里体外转化实验</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">酶解“减法原理”，确证 DNA 为遗传物质</text>
+      </g>
+
+      <g transform="translate(0, 104)">
+        <rect width="211" height="58" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#1e40af">噬菌体侵染同位素标记实验</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">³²P 标记 DNA，³⁵S 标记蛋白质</text>
+        <text x="8" y="46" font-family="system-ui, sans-serif" font-size="8" fill="#dc2626">搅拌离心放射性异常成因排雷</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- 篇章 2 -->
+  <g transform="translate(270, 140)">
+    <rect width="240" height="215" rx="8" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.2" filter="url(#shadow-c06)"/>
+    <rect x="0" y="0" width="240" height="28" rx="8" fill="#059669"/>
+    <text x="120" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      02 DNA 结构与半保留复制
+    </text>
+
+    <g transform="translate(12, 36)">
+      <g transform="translate(0, 0)">
+        <rect width="216" height="46" rx="4" fill="#ecfdf5" stroke="#a7f3d0"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#047857">双螺旋结构微观化学键</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">磷酸二酯键骨架 + 碱基对互补氢键</text>
+      </g>
+
+      <g transform="translate(0, 52)">
+        <rect width="216" height="46" rx="4" fill="#ecfdf5" stroke="#a7f3d0"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#047857">梅塞尔森-斯塔尔实验</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">¹⁵N/¹⁴N 同位素密度梯度离心带推导</text>
+      </g>
+
+      <g transform="translate(0, 104)">
+        <rect width="216" height="58" rx="4" fill="#ecfdf5" stroke="#a7f3d0"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#047857">DNA 复制 n 次四大计算模型</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">分子数 2ⁿ、含亲代链分子数恒为 2</text>
+        <text x="8" y="46" font-family="system-ui, sans-serif" font-size="8" fill="#065f46">消耗游离脱氧核苷酸数定量模型</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- 篇章 3 -->
+  <g transform="translate(530, 140)">
+    <rect width="235" height="215" rx="8" fill="#ffffff" stroke="#fed7aa" stroke-width="1.2" filter="url(#shadow-c06)"/>
+    <rect x="0" y="0" width="235" height="28" rx="8" fill="#ea580c"/>
+    <text x="117.5" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      03 基因表达与表观遗传
+    </text>
+
+    <g transform="translate(12, 36)">
+      <g transform="translate(0, 0)">
+        <rect width="211" height="46" rx="4" fill="#fff7ed" stroke="#fed7aa"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#c2410c">转录与翻译分子机器</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">密码子破译、多聚核糖体高效翻译</text>
+      </g>
+
+      <g transform="translate(0, 52)">
+        <rect width="211" height="46" rx="4" fill="#fff7ed" stroke="#fed7aa"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#c2410c">中心法则补充通路</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">逆转录酶与 RNA 复制酶适用边界</text>
+      </g>
+
+      <g transform="translate(0, 104)">
+        <rect width="211" height="58" rx="4" fill="#fff7ed" stroke="#fed7aa"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#c2410c">表观遗传新前沿</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">DNA 甲基化与组蛋白乙酰化修饰</text>
+        <text x="8" y="46" font-family="system-ui, sans-serif" font-size="8" fill="#dc2626">不改变碱基序列的可遗传变异</text>
+      </g>
+    </g>
+  </g>
+</svg>

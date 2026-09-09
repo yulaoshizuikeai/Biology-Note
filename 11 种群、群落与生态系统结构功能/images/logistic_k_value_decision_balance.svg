@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-lkd" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+    <filter id="shadow-lkd" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-lkd)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      环境容纳量（K 值）与 K/2 值的现代生态决策天平（害虫防治 vs 渔业捕捞）
+    </text>
+  </g>
+
+  <!-- 左侧：S 型增长曲线与关键拐点 -->
+  <g transform="translate(15, 60)">
+    <rect width="450" height="295" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-lkd)"/>
+
+    <g transform="translate(55, 30)">
+      <!-- 坐标轴 -->
+      <line x1="0" y1="220" x2="360" y2="220" stroke="#475569" stroke-width="1.5"/>
+      <polygon points="360,217 366,220 360,223" fill="#475569"/>
+      <text x="360" y="238" font-family="system-ui, sans-serif" font-size="9.5" fill="#475569" text-anchor="end">时间 t</text>
+
+      <line x1="0" y1="220" x2="0" y2="10" stroke="#475569" stroke-width="1.5"/>
+      <polygon points="-3,10 0,4 3,10" fill="#475569"/>
+      <text x="-8" y="10" font-family="system-ui, sans-serif" font-size="10" fill="#475569" text-anchor="end">种群数量 N</text>
+
+      <!-- K 刻度线 (y=50) -->
+      <line x1="0" y1="50" x2="350" y2="50" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="-8" y="54" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#dc2626" text-anchor="end">K</text>
+
+      <!-- K/2 刻度线 (y=135) -->
+      <line x1="0" y1="135" x2="350" y2="135" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="-8" y="139" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#2563eb" text-anchor="end">K/2</text>
+
+      <text x="-8" y="224" font-family="system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="end">0</text>
+
+      <!-- S 型曲线绘制 -->
+      <path d="M 0 215 C 60 215 120 180 160 135 C 200 90 240 55 330 50" stroke="#059669" stroke-width="3" fill="none"/>
+
+      <!-- K/2 点 -->
+      <circle cx="160" cy="135" r="5" fill="#2563eb"/>
+      <text x="160" y="122" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#1e40af" text-anchor="middle">★ K/2 拐点</text>
+      <text x="160" y="152" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#2563eb" text-anchor="middle">增长速率最大值 (Vmax)</text>
+
+      <!-- K 点 -->
+      <circle cx="330" cy="50" r="5" fill="#dc2626"/>
+      <text x="330" y="38" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#b91c1c" text-anchor="middle">K (环境容纳量)</text>
+      <text x="330" y="70" font-family="system-ui, sans-serif" font-size="8.5" fill="#64748b" text-anchor="middle">增长速率降为 0</text>
+    </g>
+  </g>
+
+  <!-- 右侧：决策天平卡 -->
+  <g transform="translate(480, 60)">
+    <rect width="285" height="295" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-lkd)"/>
+    <text x="142.5" y="24" font-family="system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#0f172a" text-anchor="middle">
+      两大实践应用决策天平
+    </text>
+
+    <!-- 害虫防治 -->
+    <g transform="translate(15, 40)">
+      <rect width="255" height="110" rx="6" fill="#fef2f2" stroke="#fca5a5"/>
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#b91c1c">① 害虫防治核心策略：</text>
+      <text x="10" y="38" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#dc2626">必须【降低环境容纳量 K 值】！</text>
+      <text x="10" y="56" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">• 硬化地面、密封粮仓断绝食物来源</text>
+      <text x="10" y="70" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">• 引入天敌（生物防治规避农药抗药性）</text>
+      <text x="10" y="86" font-family="system-ui, sans-serif" font-size="8.5" fill="#dc2626">★ 警示：严禁捕杀至 K/2！否则增长极快！</text>
+    </g>
+
+    <!-- 渔业捕捞 -->
+    <g transform="translate(15, 162)">
+      <rect width="255" height="110" rx="6" fill="#eff6ff" stroke="#bfdbfe"/>
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#1e40af">② 渔业捕捞核心策略：</text>
+      <text x="10" y="38" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#2563eb">捕捞后剩余量维持在【K/2】！</text>
+      <text x="10" y="56" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">• 在 &gt; K/2 时开始捕捞 (获最大捕捞量)</text>
+      <text x="10" y="70" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">• 留存量保持在 K/2 处，种群增长速率最大</text>
+      <text x="10" y="86" font-family="system-ui, sans-serif" font-size="8.5" fill="#059669">➔ 可持续获取最大年产捕获量</text>
+    </g>
+  </g>
+</svg>

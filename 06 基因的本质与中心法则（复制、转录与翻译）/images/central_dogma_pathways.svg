@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-cdp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#312e81" />
+    </linearGradient>
+    <filter id="shadow-cdp" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-cdp)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      克里克中心法则及其补充完善全景通路图（遗传信息流动方向）
+    </text>
+  </g>
+
+  <!-- 中心核心骨架大图 -->
+  <g transform="translate(15, 60)">
+    <rect width="750" height="190" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-cdp)"/>
+
+    <!-- DNA 节点 -->
+    <g transform="translate(60, 65)">
+      <rect width="130" height="60" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+      <text x="65" y="32" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af" text-anchor="middle">DNA</text>
+      <text x="65" y="48" font-family="system-ui, sans-serif" font-size="9" fill="#2563eb" text-anchor="middle">遗传信息的总库</text>
+
+      <!-- DNA 自我复制环弧 -->
+      <path d="M 25 0 C 15 -35 115 -35 105 0" stroke="#3b82f6" stroke-width="2.5" fill="none"/>
+      <polygon points="108,0 102,-3 104,-7" fill="#3b82f6"/>
+      <text x="65" y="-38" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#1e40af" text-anchor="middle">DNA 复制 (DNA聚合酶)</text>
+    </g>
+
+    <!-- DNA 到 RNA 转录箭头 -->
+    <g transform="translate(195, 85)">
+      <line x1="0" y1="0" x2="110" y2="0" stroke="#059669" stroke-width="3"/>
+      <polygon points="110,-4 118,0 110,4" fill="#059669"/>
+      <text x="55" y="-10" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#047857" text-anchor="middle">转录 (Transcription)</text>
+      <text x="55" y="18" font-family="system-ui, sans-serif" font-size="8.5" fill="#065f46" text-anchor="middle">RNA聚合酶 / 细胞核为主</text>
+    </g>
+
+    <!-- RNA 到 DNA 逆转录反向箭头 -->
+    <g transform="translate(195, 115)">
+      <line x1="110" y1="0" x2="0" y2="0" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="4,2"/>
+      <polygon points="0,-3 -8,0 0,3" fill="#dc2626"/>
+      <text x="55" y="-5" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#b91c1c" text-anchor="middle">逆转录 (Reverse)</text>
+      <text x="55" y="14" font-family="system-ui, sans-serif" font-size="8" fill="#dc2626" text-anchor="middle">逆转录病毒 (如 HIV)</text>
+    </g>
+
+    <!-- RNA 节点 -->
+    <g transform="translate(315, 65)">
+      <rect width="130" height="60" rx="8" fill="#dcfce7" stroke="#10b981" stroke-width="2"/>
+      <text x="65" y="32" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#065f46" text-anchor="middle">RNA</text>
+      <text x="65" y="48" font-family="system-ui, sans-serif" font-size="9" fill="#047857" text-anchor="middle">信息的传递中介</text>
+
+      <!-- RNA 自我复制环弧 (下方) -->
+      <path d="M 25 60 C 15 95 115 95 105 60" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="4,2" fill="none"/>
+      <polygon points="102,60 108,63 105,67" fill="#f59e0b"/>
+      <text x="65" y="105" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#b45309" text-anchor="middle">RNA 复制 (RNA病毒特有)</text>
+    </g>
+
+    <!-- RNA 到 蛋白质 翻译箭头 -->
+    <g transform="translate(450, 95)">
+      <line x1="0" y1="0" x2="110" y2="0" stroke="#7c3aed" stroke-width="3"/>
+      <polygon points="110,-4 118,0 110,4" fill="#7c3aed"/>
+      <text x="55" y="-10" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#6d28d9" text-anchor="middle">翻译 (Translation)</text>
+      <text x="55" y="18" font-family="system-ui, sans-serif" font-size="8.5" fill="#4c1d95" text-anchor="middle">核糖体 / tRNA 运载氨基酸</text>
+    </g>
+
+    <!-- 蛋白质节点 -->
+    <g transform="translate(570, 65)">
+      <rect width="130" height="60" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+      <text x="65" y="32" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309" text-anchor="middle">蛋白质</text>
+      <text x="65" y="48" font-family="system-ui, sans-serif" font-size="9" fill="#78350f" text-anchor="middle">生命活动的承担者</text>
+    </g>
+  </g>
+
+  <!-- 底部：生物界遗传信息流动类型速查 -->
+  <g transform="translate(15, 260)">
+    <rect width="750" height="95" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <g transform="translate(15, 12)">
+      <text x="0" y="16" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">各类生物的中心法则流动通则（高考必考归纳）：</text>
+      <text x="0" y="36" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">1. 【细胞生物】(真核与原核)：DNA 复制、DNA ➔ RNA (转录)、RNA ➔ 蛋白质 (翻译)</text>
+      <text x="0" y="52" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">2. 【DNA 病毒】(如噬菌体、乙肝、天花)：DNA 复制、转录、翻译 (在宿主细胞内进行)</text>
+      <text x="0" y="68" font-family="system-ui, sans-serif" font-size="9.5" fill="#dc2626">3. 【RNA 复制病毒】(如烟草花叶、流感、新冠)：RNA 复制、RNA ➔ 蛋白质 (翻译)</text>
+      <text x="440" y="68" font-family="system-ui, sans-serif" font-size="9.5" fill="#dc2626">4. 【逆转录病毒】(如 HIV)：RNA ➔ DNA ➔ mRNA ➔ 蛋白质</text>
+    </g>
+  </g>
+</svg>

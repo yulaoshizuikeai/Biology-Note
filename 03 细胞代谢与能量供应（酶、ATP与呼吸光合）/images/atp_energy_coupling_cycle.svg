@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-aec" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#047857" />
+      <stop offset="100%" stop-color="#0d9488" />
+    </linearGradient>
+    <filter id="shadow-aec" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-aec)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      细胞内能量偶联枢纽模型：吸能反应与放能反应循环
+    </text>
+  </g>
+
+  <!-- 左侧：放能反应 (Exergonic Reactions) -->
+  <g transform="translate(15, 60)">
+    <rect width="230" height="295" rx="10" fill="#ffffff" stroke="#fca5a5" stroke-width="1.2" filter="url(#shadow-aec)"/>
+    <rect x="0" y="0" width="230" height="32" rx="10" fill="#dc2626"/>
+    <text x="115" y="21" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      放能反应 (释放能量)
+    </text>
+
+    <g transform="translate(12, 42)">
+      <rect width="206" height="60" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#991b1b">1. 呼吸作用 (糖/脂氧化)</text>
+      <text x="10" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#475569">动植物细胞中普遍进行，有机物</text>
+      <text x="10" y="52" font-family="system-ui, sans-serif" font-size="9" fill="#475569">分解释放化学能，大部分转化为热</text>
+    </g>
+
+    <g transform="translate(12, 112)">
+      <rect width="206" height="60" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#991b1b">2. 光反应 (光能转化)</text>
+      <text x="10" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#475569">叶绿体类囊体膜吸收转化光能</text>
+      <text x="10" y="52" font-family="system-ui, sans-serif" font-size="9" fill="#475569">专用于驱动暗反应合成糖类</text>
+    </g>
+
+    <g transform="translate(12, 185)">
+      <rect width="206" height="90" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="103" y="22" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#dc2626" text-anchor="middle">能量去向与偶联</text>
+      <path d="M 30 40 L 176 40" stroke="#dc2626" stroke-width="2"/>
+      <text x="103" y="58" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155" text-anchor="middle">释放的能量驱动</text>
+      <text x="103" y="74" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#047857" text-anchor="middle">ADP + Pi ➔ ATP 合成</text>
+    </g>
+  </g>
+
+  <!-- 中间：ATP ⇋ ADP 核心回线 -->
+  <g transform="translate(260, 60)">
+    <rect width="260" height="295" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-aec)"/>
+    <text x="130" y="25" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">
+      ATP 核心周转能量货币
+    </text>
+
+    <!-- 顶部 ATP 卡 -->
+    <g transform="translate(40, 45)">
+      <rect width="180" height="50" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+      <text x="90" y="28" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309" text-anchor="middle">ATP (能量储存)</text>
+      <text x="90" y="42" font-family="system-ui, sans-serif" font-size="8.5" fill="#78350f" text-anchor="middle">末端特殊化学键蕴含活跃化学能</text>
+    </g>
+
+    <!-- 左右回线箭头 -->
+    <g transform="translate(20, 105)">
+      <!-- 左侧向上合成弧线 -->
+      <path d="M 30 75 C -10 50 -10 20 30 -5" stroke="#10b981" stroke-width="3" fill="none"/>
+      <polygon points="26,-8 34,-5 29,-2" fill="#10b981"/>
+      <text x="15" y="35" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#047857">ATP合成酶</text>
+      <text x="15" y="48" font-family="system-ui, sans-serif" font-size="8.5" fill="#065f46">储能反应</text>
+
+      <!-- 右侧向下水解弧线 -->
+      <path d="M 190 -5 C 230 20 230 50 190 75" stroke="#ef4444" stroke-width="3" fill="none"/>
+      <polygon points="194,78 186,75 191,72" fill="#ef4444"/>
+      <text x="205" y="35" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#dc2626">ATP水解酶</text>
+      <text x="205" y="48" font-family="system-ui, sans-serif" font-size="8.5" fill="#b91c1c">释能反应</text>
+    </g>
+
+    <!-- 底部 ADP + Pi 卡 -->
+    <g transform="translate(40, 185)">
+      <rect width="180" height="50" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+      <text x="90" y="28" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#4338ca" text-anchor="middle">ADP + Pi (基态)</text>
+      <text x="90" y="42" font-family="system-ui, sans-serif" font-size="8.5" fill="#3730a3" text-anchor="middle">循环往复，含量极低但转化极快</text>
+    </g>
+
+    <g transform="translate(20, 250)">
+      <rect width="220" height="34" rx="4" fill="#f8fafc" stroke="#cbd5e1"/>
+      <text x="110" y="21" font-family="system-ui, sans-serif" font-size="9" fill="#475569" text-anchor="middle">★ 高考核心考点：ATP 含量少但代谢极其动态旺盛</text>
+    </g>
+  </g>
+
+  <!-- 右侧：吸能反应 (Endergonic Reactions) -->
+  <g transform="translate(535, 60)">
+    <rect width="230" height="295" rx="10" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2" filter="url(#shadow-aec)"/>
+    <rect x="0" y="0" width="230" height="32" rx="10" fill="#2563eb"/>
+    <text x="115" y="21" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      吸能反应 (消耗能量)
+    </text>
+
+    <g transform="translate(12, 42)">
+      <rect width="206" height="52" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#1e40af">1. 生物大分子生物合成</text>
+      <text x="10" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">蛋白质合成、DNA复制、多糖脱水缩合</text>
+      <text x="10" y="46" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">都需要 ATP 供能驱动形成共价键</text>
+    </g>
+
+    <g transform="translate(12, 100)">
+      <rect width="206" height="52" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#1e40af">2. 主动运输跨膜做功</text>
+      <text x="10" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">Na⁺-K⁺泵、Ca²⁺泵逆电化学梯度</text>
+      <text x="10" y="46" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">泵出离子，维持膜电位与细胞稳态</text>
+    </g>
+
+    <g transform="translate(12, 158)">
+      <rect width="206" height="52" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#1e40af">3. 肌肉收缩与细胞运动</text>
+      <text x="10" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">肌球蛋白头部滑行做机械功</text>
+      <text x="10" y="46" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">鞭毛纤毛摆动、染色体移动等</text>
+    </g>
+
+    <g transform="translate(12, 216)">
+      <rect width="206" height="66" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#1e40af">4. 生物发光与电信号</text>
+      <text x="10" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">荧光素酶催化发光、电鳗放电等</text>
+      <text x="10" y="52" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#2563eb">能量形式转换：化学能 ➔ 光/电/机械能</text>
+    </g>
+  </g>
+</svg>

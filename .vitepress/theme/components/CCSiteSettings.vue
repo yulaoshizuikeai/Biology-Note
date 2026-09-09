@@ -117,7 +117,6 @@ onBeforeUnmount(() => {
         </header>
 
         <div class="cc-settings-dialog__body">
-
           <label class="cc-settings-option">
             <span class="cc-settings-option__text">显示「大纲」</span>
             <input

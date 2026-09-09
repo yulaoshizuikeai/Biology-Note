@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-mde" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#831843" />
+      <stop offset="100%" stop-color="#9d174d" />
+    </linearGradient>
+    <filter id="shadow-mde" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-mde)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      摩尔根果蝇红白眼杂交实验演进与伴性遗传实验证据
+    </text>
+  </g>
+
+  <!-- 左侧：经典实验流程 -->
+  <g transform="translate(15, 60)">
+    <rect width="450" height="295" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-mde)"/>
+
+    <!-- P 代 -->
+    <g transform="translate(20, 20)">
+      <rect width="410" height="50" rx="6" fill="#fdf2f8" stroke="#fbcfe8"/>
+      <text x="15" y="24" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#9d174d">亲本 P：</text>
+      <text x="75" y="24" font-family="system-ui, sans-serif" font-size="10.5" fill="#1e293b">红眼雌蝇 (Xʷ⁺Xʷ⁺)  ×  白眼雄蝇 (XʷY)</text>
+      <text x="15" y="42" font-family="system-ui, sans-serif" font-size="9" fill="#be185d">野生型纯合红眼与特异突变白眼雄性杂交</text>
+    </g>
+
+    <!-- 箭头 -->
+    <g transform="translate(225, 75)">
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#94a3b8" stroke-width="2"/>
+      <polygon points="-3,20 0,26 3,20" fill="#94a3b8"/>
+    </g>
+
+    <!-- F1 代 -->
+    <g transform="translate(20, 105)">
+      <rect width="410" height="55" rx="6" fill="#eff6ff" stroke="#bfdbfe"/>
+      <text x="15" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#1e40af">子一代 F₁：全部为红眼！</text>
+      <text x="15" y="42" font-family="system-ui, sans-serif" font-size="10" fill="#334155">雌蝇全为红眼 (Xʷ⁺Xʷ，杂合)；雄蝇全为红眼 (Xʷ⁺Y)</text>
+      <text x="320" y="22" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#2563eb">➔ 红眼为显性</text>
+    </g>
+
+    <!-- 箭头 自交 -->
+    <g transform="translate(225, 165)">
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#dc2626" stroke-width="2"/>
+      <polygon points="-3,20 0,26 3,20" fill="#dc2626"/>
+      <text x="15" y="15" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#dc2626">⊗ 雌雄交配</text>
+    </g>
+
+    <!-- F2 代 -->
+    <g transform="translate(20, 195)">
+      <rect width="410" height="85" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+      <text x="15" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#b91c1c">子二代 F₂：性状分离与性别高度关联！</text>
+      <text x="15" y="44" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#991b1b">红眼雌 : 红眼雄 : 白眼雄 ＝ 2 : 1 : 1</text>
+      <text x="15" y="62" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 雌蝇全为红眼 (1/2 Xʷ⁺Xʷ⁺ + 1/2 Xʷ⁺Xʷ)</text>
+      <text x="15" y="76" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#dc2626">• 白眼个体全为雄性 (XʷY)！雌蝇中无白眼个体！</text>
+    </g>
+  </g>
+
+  <!-- 右侧：理论假说与科学史升华 -->
+  <g transform="translate(480, 60)">
+    <rect width="285" height="295" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-mde)"/>
+    <text x="142.5" y="24" font-family="system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#0f172a" text-anchor="middle">
+      摩尔根假说与科学史地位
+    </text>
+
+    <g transform="translate(15, 40)">
+      <rect width="255" height="110" rx="6" fill="#fff7ed" stroke="#fed7aa"/>
+      <text x="12" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#c2410c">摩尔根提出的科学假说：</text>
+      <text x="12" y="40" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">控制果蝇白眼的隐性基因 w 位于</text>
+      <text x="12" y="56" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#dc2626">【X 染色体上】！</text>
+      <text x="12" y="74" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">而 Y 染色体上没有其等位基因！</text>
+      <text x="12" y="92" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">雄果蝇只要 X 带有 w，即表现白眼</text>
+    </g>
+
+    <g transform="translate(15, 160)">
+      <rect width="255" height="115" rx="6" fill="#f0fdf4" stroke="#bbf7d0"/>
+      <text x="12" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#047857">★ 科学史里程碑：</text>
+      <text x="12" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 萨顿提出【假说】（类比推理）：</text>
+      <text x="20" y="52" font-family="system-ui, sans-serif" font-size="8.5" fill="#64748b">基因和染色体行为存在明显平行关系</text>
+      <text x="12" y="70" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#047857">• 摩尔根用实验首次证明：</text>
+      <text x="20" y="86" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#15803d">【基因在染色体上呈线性排列】！</text>
+      <text x="12" y="104" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">测交验证：白眼雌 × 红眼雄 ➔ 红雌与白雄</text>
+    </g>
+  </g>
+</svg>

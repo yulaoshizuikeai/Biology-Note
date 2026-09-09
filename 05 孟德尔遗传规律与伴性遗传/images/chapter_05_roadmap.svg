@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-c05" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <filter id="shadow-c05" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-c05)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      专题 05 孟德尔遗传规律与伴性遗传 · 章节全景脉络导图
+    </text>
+  </g>
+
+  <!-- 根节点 -->
+  <g transform="translate(250, 60)">
+    <rect width="280" height="40" rx="8" fill="#1e293b" stroke="#334155" filter="url(#shadow-c05)"/>
+    <text x="140" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      🧬 孟德尔遗传体系与染色体定位
+    </text>
+  </g>
+
+  <!-- 分支连线 -->
+  <g transform="translate(390, 100)">
+    <line x1="0" y1="0" x2="-250" y2="40" stroke="#475569" stroke-width="2"/>
+    <line x1="0" y1="0" x2="0" y2="40" stroke="#475569" stroke-width="2"/>
+    <line x1="0" y1="0" x2="250" y2="40" stroke="#475569" stroke-width="2"/>
+  </g>
+
+  <!-- 模块 1：分离定律 -->
+  <g transform="translate(15, 140)">
+    <rect width="235" height="215" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2" filter="url(#shadow-c05)"/>
+    <rect x="0" y="0" width="235" height="28" rx="8" fill="#2563eb"/>
+    <text x="117.5" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      01 分离定律：一对相对性状
+    </text>
+
+    <g transform="translate(12, 36)">
+      <g transform="translate(0, 0)">
+        <rect width="211" height="46" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#1e40af">假说-演绎法完整闭环</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">豌豆材料优势、去雄套袋与测交验证</text>
+      </g>
+
+      <g transform="translate(0, 52)">
+        <rect width="211" height="54" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#1e40af">自交纯合化与配子概率法</text>
+        <text x="8" y="31" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">连续自交纯合子比例 1-(1/2)ⁿ 模型</text>
+        <text x="8" y="44" font-family="system-ui, sans-serif" font-size="8" fill="#047857">自由交配极速配子棋盘解题</text>
+      </g>
+
+      <g transform="translate(0, 112)">
+        <rect width="211" height="52" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+        <text x="8" y="18" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#0f172a">微观实质与分离期：</text>
+        <text x="8" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">等位基因随同源染色体在减Ⅰ后期分离</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- 模块 2：自由组合定律 -->
+  <g transform="translate(270, 140)">
+    <rect width="240" height="215" rx="8" fill="#ffffff" stroke="#fed7aa" stroke-width="1.2" filter="url(#shadow-c05)"/>
+    <rect x="0" y="0" width="240" height="28" rx="8" fill="#ea580c"/>
+    <text x="120" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      02 自由组合定律：两对及以上
+    </text>
+
+    <g transform="translate(12, 36)">
+      <g transform="translate(0, 0)">
+        <rect width="216" height="46" rx="4" fill="#fff7ed" stroke="#fed7aa"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#c2410c">16 格受精棋盘拆分</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">拆分为两个分离定律乘法原理独立分析</text>
+      </g>
+
+      <g transform="translate(0, 52)">
+        <rect width="216" height="54" rx="4" fill="#fff7ed" stroke="#fed7aa"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#c2410c">9:3:3:1 变式全景矩阵</text>
+        <text x="8" y="31" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">9:7(互补)、9:3:4(隐性上位)、15:1(重叠)</text>
+        <text x="8" y="44" font-family="system-ui, sans-serif" font-size="8" fill="#dc2626">12:3:1(显性上位)、13:3(显性抑制)</text>
+      </g>
+
+      <g transform="translate(0, 112)">
+        <rect width="216" height="52" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+        <text x="8" y="18" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#0f172a">致死突变与连锁分析：</text>
+        <text x="8" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">显性纯合致死 (6:2:3:1) 与配子致死模型</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- 模块 3：伴性遗传 -->
+  <g transform="translate(530, 140)">
+    <rect width="235" height="215" rx="8" fill="#ffffff" stroke="#fbcfe8" stroke-width="1.2" filter="url(#shadow-c05)"/>
+    <rect x="0" y="0" width="235" height="28" rx="8" fill="#db2777"/>
+    <text x="117.5" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      03 伴性遗传与系谱图三步法
+    </text>
+
+    <g transform="translate(12, 36)">
+      <g transform="translate(0, 0)">
+        <rect width="211" height="46" rx="4" fill="#fdf2f8" stroke="#fbcfe8"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#be185d">伴性遗传四大模式</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">伴X隐、伴X显、伴Y遗传与母系遗传</text>
+      </g>
+
+      <g transform="translate(0, 52)">
+        <rect width="211" height="54" rx="4" fill="#fdf2f8" stroke="#fbcfe8"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#be185d">系谱图三步排查升级法</text>
+        <text x="8" y="31" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">①判显隐 ➔ ②找突破口排除 ➔ ③终极对决</text>
+        <text x="8" y="44" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#e11d48">常染色体 vs XY 同源区段深度判定</text>
+      </g>
+
+      <g transform="translate(0, 112)">
+        <rect width="211" height="52" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+        <text x="8" y="18" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#0f172a">正反交实验设计：</text>
+        <text x="8" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">隐性雌 × 显性雄快速判定基因位置</text>
+      </g>
+    </g>
+  </g>
+</svg>

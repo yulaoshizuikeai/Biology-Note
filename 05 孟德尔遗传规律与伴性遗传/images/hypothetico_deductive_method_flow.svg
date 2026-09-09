@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-hdm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15803d" />
+      <stop offset="100%" stop-color="#16a34a" />
+    </linearGradient>
+    <filter id="shadow-hdm" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-hdm)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      假说-演绎法（Hypothetico-Deductive Method）五阶科学探究逻辑闭环
+    </text>
+  </g>
+
+  <!-- 5 阶段卡片横向排布 -->
+  <!-- 1. 观察现象 -->
+  <g transform="translate(15, 60)">
+    <rect width="138" height="295" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-hdm)"/>
+    <rect x="0" y="0" width="138" height="30" rx="8" fill="#3b82f6"/>
+    <text x="69" y="20" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      1. 观察现象
+    </text>
+    <g transform="translate(8, 38)">
+      <text x="0" y="16" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#1e40af">杂交与自交现象：</text>
+      <text x="0" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">P: 纯种高茎 × 矮茎</text>
+      <text x="0" y="50" font-family="system-ui, sans-serif" font-size="8.5" fill="#047857">➔ F₁ 全为高茎</text>
+      <text x="0" y="66" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">(显性性状显现)</text>
+      <text x="0" y="86" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">F₁ 自交得到 F₂：</text>
+      <text x="0" y="102" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#dc2626">出现性状分离！</text>
+      <text x="0" y="118" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#b91c1c">高茎 : 矮茎 ≈ 3 : 1</text>
+      <text x="0" y="145" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">提出核心问题：</text>
+      <text x="0" y="160" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">为什么 F₂ 重新出现矮茎且比例为 3:1？</text>
+    </g>
+  </g>
+
+  <g transform="translate(156, 190)">
+    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#94a3b8">➔</text>
+  </g>
+
+  <!-- 2. 提出假说 -->
+  <g transform="translate(172, 60)">
+    <rect width="145" height="295" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-hdm)"/>
+    <rect x="0" y="0" width="145" height="30" rx="8" fill="#8b5cf6"/>
+    <text x="72.5" y="20" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      2. 提出假说
+    </text>
+    <g transform="translate(8, 38)">
+      <text x="0" y="16" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#6d28d9">四点核心假设：</text>
+      <text x="0" y="34" font-family="system-ui, sans-serif" font-size="8" fill="#334155">① 性状由遗传因子决定</text>
+      <text x="0" y="48" font-family="system-ui, sans-serif" font-size="7.5" fill="#64748b">(不融合、不消失)</text>
+      <text x="0" y="66" font-family="system-ui, sans-serif" font-size="8" fill="#334155">② 体细胞遗传因子成对</text>
+      <text x="0" y="80" font-family="system-ui, sans-serif" font-size="7.5" fill="#64748b">(纯合 DD/dd，杂合 Dd)</text>
+      <text x="0" y="98" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#dc2626">③ 配子成对因子分离</text>
+      <text x="0" y="112" font-family="system-ui, sans-serif" font-size="8" fill="#b91c1c">(配子只含一个，D:d=1:1)</text>
+      <text x="0" y="130" font-family="system-ui, sans-serif" font-size="8" fill="#334155">④ 雌雄配子随机结合</text>
+      <text x="0" y="146" font-family="system-ui, sans-serif" font-size="8" fill="#047857">(产生4种合子，比为3:1)</text>
+    </g>
+  </g>
+
+  <g transform="translate(320, 190)">
+    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#94a3b8">➔</text>
+  </g>
+
+  <!-- 3. 演绎推理 -->
+  <g transform="translate(336, 60)">
+    <rect width="138" height="295" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-hdm)"/>
+    <rect x="0" y="0" width="138" height="30" rx="8" fill="#f59e0b"/>
+    <text x="69" y="20" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      3. 演绎推理
+    </text>
+    <g transform="translate(8, 38)">
+      <text x="0" y="16" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#b45309">设计测交实验：</text>
+      <text x="0" y="36" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">理论推导预期：</text>
+      <text x="0" y="52" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">若 F₁ 为杂合子 Dd，</text>
+      <text x="0" y="68" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">与隐性纯合子 dd 杂交</text>
+      <text x="0" y="92" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#b45309">理论预期配比：</text>
+      <text x="0" y="110" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#dc2626">Dd (高) : dd (矮)</text>
+      <text x="0" y="126" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#dc2626">＝ 1 : 1</text>
+      <text x="0" y="155" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">高考易错：演绎推理是纸面推演，不是做实验！</text>
+    </g>
+  </g>
+
+  <g transform="translate(477, 190)">
+    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#94a3b8">➔</text>
+  </g>
+
+  <!-- 4. 实验验证 -->
+  <g transform="translate(493, 60)">
+    <rect width="135" height="295" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-hdm)"/>
+    <rect x="0" y="0" width="135" height="30" rx="8" fill="#ea580c"/>
+    <text x="67.5" y="20" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      4. 实验验证
+    </text>
+    <g transform="translate(8, 38)">
+      <text x="0" y="16" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#c2410c">实施测交实验：</text>
+      <text x="0" y="36" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">孟德尔亲自完成测交：</text>
+      <text x="0" y="54" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">实际统计后代数据：</text>
+      <text x="0" y="74" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#047857">• 高茎：64 株</text>
+      <text x="0" y="92" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#047857">• 矮茎：64 株</text>
+      <text x="0" y="115" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#059669">实测比例 ＝ 1 : 1</text>
+      <text x="0" y="145" font-family="system-ui, sans-serif" font-size="8" fill="#475569">实测结果与理论预期完全吻合！</text>
+    </g>
+  </g>
+
+  <g transform="translate(631, 190)">
+    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#94a3b8">➔</text>
+  </g>
+
+  <!-- 5. 得出结论 -->
+  <g transform="translate(647, 60)">
+    <rect width="118" height="295" rx="8" fill="#ffffff" stroke="#86efac" stroke-width="1.2" filter="url(#shadow-hdm)"/>
+    <rect x="0" y="0" width="118" height="30" rx="8" fill="#16a34a"/>
+    <text x="59" y="20" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      5. 得出结论
+    </text>
+    <g transform="translate(8, 38)">
+      <text x="0" y="16" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#15803d">确立定律：</text>
+      <text x="0" y="38" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#065f46">假说被严密证实！</text>
+      <text x="0" y="60" font-family="system-ui, sans-serif" font-size="9" fill="#1e293b">正式确立</text>
+      <text x="0" y="80" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#16a34a">【分离定律】</text>
+      <text x="0" y="98" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">Law of</text>
+      <text x="0" y="112" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">Segregation</text>
+      <text x="0" y="145" font-family="system-ui, sans-serif" font-size="8" fill="#047857">奠定现代遗传学基石</text>
+    </g>
+  </g>
+</svg>

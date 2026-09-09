@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-ptc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#047857" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <filter id="shadow-ptc" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-ptc)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      植物组织培养全流程微观生理演化：脱分化与再分化操作链
+    </text>
+  </g>
+
+  <!-- 流程链条卡片横向排布 -->
+  <g transform="translate(15, 60)">
+    <rect width="750" height="180" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-ptc)"/>
+
+    <!-- 1. 外植体 -->
+    <g transform="translate(20, 30)">
+      <rect width="115" height="85" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+      <text x="57.5" y="24" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#15803d" text-anchor="middle">【外植体】</text>
+      <text x="57.5" y="44" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155" text-anchor="middle">离体植物组织/器官</text>
+      <text x="57.5" y="60" font-family="system-ui, sans-serif" font-size="8" fill="#475569" text-anchor="middle">(根尖/茎尖/叶片)</text>
+      <text x="57.5" y="74" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#047857" text-anchor="middle">酒精+次氯酸钠消毒</text>
+    </g>
+
+    <!-- 箭头 1 脱分化 -->
+    <g transform="translate(140, 60)">
+      <line x1="0" y1="10" x2="45" y2="10" stroke="#047857" stroke-width="2"/>
+      <polygon points="45,7 52,10 45,13" fill="#047857"/>
+      <text x="25" y="-4" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#047857" text-anchor="middle">① 脱分化</text>
+      <text x="25" y="24" font-family="system-ui, sans-serif" font-size="7.5" fill="#dc2626" text-anchor="middle">【避光培养】</text>
+    </g>
+
+    <!-- 2. 愈伤组织 -->
+    <g transform="translate(200, 30)">
+      <rect width="130" height="85" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="65" y="24" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#b45309" text-anchor="middle">【愈伤组织】</text>
+      <text x="65" y="44" font-family="system-ui, sans-serif" font-size="8" fill="#78350f" text-anchor="middle">排列疏松、无规则</text>
+      <text x="65" y="58" font-family="system-ui, sans-serif" font-size="8" fill="#78350f" text-anchor="middle">高度液泡化薄壁细胞</text>
+      <text x="65" y="74" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#d97706" text-anchor="middle">无定形细胞团</text>
+    </g>
+
+    <!-- 箭头 2 再分化 -->
+    <g transform="translate(335, 60)">
+      <line x1="0" y1="10" x2="45" y2="10" stroke="#0284c7" stroke-width="2"/>
+      <polygon points="45,7 52,10 45,13" fill="#0284c7"/>
+      <text x="25" y="-4" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#0284c7" text-anchor="middle">② 再分化</text>
+      <text x="25" y="24" font-family="system-ui, sans-serif" font-size="7.5" fill="#0284c7" text-anchor="middle">【见光培养】</text>
+    </g>
+
+    <!-- 3. 胚状体/丛芽 -->
+    <g transform="translate(395, 30)">
+      <rect width="125" height="85" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+      <text x="62.5" y="24" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#1e40af" text-anchor="middle">【胚状体/丛芽】</text>
+      <text x="62.5" y="44" font-family="system-ui, sans-serif" font-size="8" fill="#334155" text-anchor="middle">分化出芽与根原基</text>
+      <text x="62.5" y="60" font-family="system-ui, sans-serif" font-size="8" fill="#1d4ed8" text-anchor="middle">具有双极性结构</text>
+      <text x="62.5" y="74" font-family="system-ui, sans-serif" font-size="8" fill="#475569" text-anchor="middle">可人工制备人工种子</text>
+    </g>
+
+    <!-- 箭头 3 生根 -->
+    <g transform="translate(525, 60)">
+      <line x1="0" y1="10" x2="35" y2="10" stroke="#475569" stroke-width="2"/>
+      <polygon points="35,7 42,10 35,13" fill="#475569"/>
+      <text x="18" y="-4" font-family="system-ui, sans-serif" font-size="9" fill="#475569" text-anchor="middle">诱导生根</text>
+    </g>
+
+    <!-- 4. 再生完整植株 -->
+    <g transform="translate(575, 30)">
+      <rect width="150" height="85" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+      <text x="75" y="24" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#15803d" text-anchor="middle">【完整再生植株】</text>
+      <text x="75" y="44" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155" text-anchor="middle">生根壮苗 ➔ 炼苗移栽</text>
+      <text x="75" y="60" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#16a34a" text-anchor="middle">证明植物细胞全能性！</text>
+      <text x="75" y="74" font-family="system-ui, sans-serif" font-size="8" fill="#475569" text-anchor="middle">保持亲本优良遗传性状</text>
+    </g>
+
+    <!-- 下方光照与激素调控提示条 -->
+    <g transform="translate(20, 125)">
+      <rect width="705" height="40" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="15" y="24" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#0f172a">光照条件对比：</text>
+      <text x="95" y="24" font-family="system-ui, sans-serif" font-size="9" fill="#334155">脱分化必须【避光】(防止提早分化形成不规则维管束)；再分化必须【照光】(诱导叶绿素合成与叶绿体发育)</text>
+    </g>
+  </g>
+
+  <!-- 底部：生长素/细胞分裂素比例决策卡 -->
+  <g transform="translate(15, 250)">
+    <rect width="750" height="105" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <g transform="translate(15, 12)">
+      <text x="0" y="16" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">生长素 (Auxin) 与 细胞分裂素 (CK) 比值的调控效应：</text>
+      <text x="0" y="38" font-family="system-ui, sans-serif" font-size="10" fill="#334155">1. 【生长素 / 细胞分裂素 适中】 ➔ 促进愈伤组织形成与持续分裂 (脱分化)</text>
+      <text x="0" y="56" font-family="system-ui, sans-serif" font-size="10" fill="#047857">2. 【生长素 / 细胞分裂素 高 (高生长素)】 ➔ 有利于【生根】，抑制芽的分化</text>
+      <text x="0" y="74" font-family="system-ui, sans-serif" font-size="10" fill="#0284c7">3. 【生长素 / 细胞分裂素 低 (高细胞分裂素)】 ➔ 有利于【分化发芽】，抑制根的分化</text>
+      <text x="500" y="74" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#dc2626">速记口诀：高根、低芽、中愈伤！</text>
+    </g>
+  </g>
+</svg>

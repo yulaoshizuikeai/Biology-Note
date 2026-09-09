@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-rad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+    <filter id="shadow-rad" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-rad)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      双装置测定细胞呼吸类型的液滴移动判定矩阵与物理校正
+    </text>
+  </g>
+
+  <!-- 左：装置一 (NaOH) -->
+  <g transform="translate(15, 60)">
+    <rect width="235" height="200" rx="10" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2" filter="url(#shadow-rad)"/>
+    <rect x="0" y="0" width="235" height="30" rx="10" fill="#2563eb"/>
+    <text x="117.5" y="20" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      装置一：放 NaOH 溶液
+    </text>
+
+    <g transform="translate(12, 40)">
+      <rect width="211" height="50" rx="6" fill="#eff6ff" stroke="#bfdbfe"/>
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#1e40af">吸收全部生成的 CO₂ 气体</text>
+      <text x="10" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#475569">容器内气体变化纯粹由 O₂ 消耗引起</text>
+    </g>
+
+    <g transform="translate(12, 100)">
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#dc2626">液滴移动意义：</text>
+      <text x="10" y="42" font-family="system-ui, sans-serif" font-size="10" fill="#334155">◆ 液滴【左移】距离 =</text>
+      <text x="25" y="60" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#047857">生物体 O₂ 的实际消耗量</text>
+      <text x="10" y="82" font-family="system-ui, sans-serif" font-size="9.5" fill="#64748b">◆ 液滴【不动】 = 未消耗 O₂ (纯无氧)</text>
+    </g>
+  </g>
+
+  <!-- 中：装置二 (清水) -->
+  <g transform="translate(265, 60)">
+    <rect width="245" height="200" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-rad)"/>
+    <rect x="0" y="0" width="245" height="30" rx="10" fill="#475569"/>
+    <text x="122.5" y="20" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      装置二：放等量清水
+    </text>
+
+    <g transform="translate(12, 40)">
+      <rect width="221" height="50" rx="6" fill="#f1f5f9" stroke="#cbd5e1"/>
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#334155">不吸收任何气体 (保留 CO₂)</text>
+      <text x="10" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#475569">容器内体积差 = CO₂ 释放量 - O₂ 消耗量</text>
+    </g>
+
+    <g transform="translate(12, 100)">
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#dc2626">液滴移动意义：</text>
+      <text x="10" y="42" font-family="system-ui, sans-serif" font-size="10" fill="#334155">◆ 液滴【右移】 = CO₂ 释放 &gt; O₂ 消耗</text>
+      <text x="10" y="62" font-family="system-ui, sans-serif" font-size="10" fill="#334155">◆ 液滴【不动】 = CO₂ 释放 = O₂ 消耗</text>
+      <text x="10" y="82" font-family="system-ui, sans-serif" font-size="10" fill="#334155">◆ 液滴【左移】 = 消耗底物为脂质(耗氧多)</text>
+    </g>
+  </g>
+
+  <!-- 右：物理校正对照 -->
+  <g transform="translate(525, 60)">
+    <rect width="240" height="200" rx="10" fill="#ffffff" stroke="#fed7aa" stroke-width="1.2" filter="url(#shadow-rad)"/>
+    <rect x="0" y="0" width="240" height="30" rx="10" fill="#ea580c"/>
+    <text x="120" y="20" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      装置三：物理校正装置
+    </text>
+
+    <g transform="translate(12, 40)">
+      <rect width="216" height="50" rx="6" fill="#fff7ed" stroke="#ffedd5"/>
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#c2410c">放等量【灭菌死种子】</text>
+      <text x="10" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#475569">其余条件完全相同 (同量液体/同玻璃罩)</text>
+    </g>
+
+    <g transform="translate(12, 100)">
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#dc2626">核心实验目的：</text>
+      <text x="10" y="42" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">排除外界环境温度、气压物理波动</text>
+      <text x="10" y="60" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">引起的液滴物理性移位误差！</text>
+      <text x="10" y="82" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#c2410c">实测值 = 实验组读数 - 校正组读数</text>
+    </g>
+  </g>
+
+  <!-- 底部：判定综合表 -->
+  <g transform="translate(15, 270)">
+    <rect width="750" height="85" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <g transform="translate(15, 12)">
+      <text x="0" y="16" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#0f172a">极速判定矩阵：</text>
+      <text x="0" y="38" font-family="system-ui, sans-serif" font-size="10" fill="#334155">① 装置一【左移】、装置二【不动】 ➔ 仅进行【有氧呼吸】(以葡萄糖为底物)</text>
+      <text x="0" y="56" font-family="system-ui, sans-serif" font-size="10" fill="#334155">② 装置一【不动】、装置二【右移】 ➔ 仅进行【产生酒精的无氧呼吸】</text>
+      <text x="400" y="38" font-family="system-ui, sans-serif" font-size="10" fill="#dc2626">③ 装置一【左移】、装置二【右移】 ➔【有氧呼吸 + 产酒精无氧呼吸】并存</text>
+      <text x="400" y="56" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">④ 产乳酸无氧呼吸不消耗 O₂ 亦不释放 CO₂，两装置液滴均不动！</text>
+    </g>
+  </g>
+</svg>

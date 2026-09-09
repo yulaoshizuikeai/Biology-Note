@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-pha" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14532d" />
+      <stop offset="100%" stop-color="#15803d" />
+    </linearGradient>
+    <filter id="shadow-pha" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-pha)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      五大植物激素协同与拮抗调控网络全景图解
+    </text>
+  </g>
+
+  <!-- 左区：促进生长、伸长与萌发 (协同网络) -->
+  <g transform="translate(15, 60)">
+    <rect width="365" height="295" rx="10" fill="#ffffff" stroke="#86efac" stroke-width="1.2" filter="url(#shadow-pha)"/>
+    <rect x="0" y="0" width="365" height="30" rx="10" fill="#16a34a"/>
+    <text x="182.5" y="20" font-family="system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      协同网络 A：促进生长、分裂与萌发
+    </text>
+
+    <!-- 伸长协同 -->
+    <g transform="translate(15, 42)">
+      <rect width="335" height="65" rx="6" fill="#f0fdf4" stroke="#bbf7d0"/>
+      <text x="12" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#15803d">1. 促进细胞伸长：【生长素】+【赤霉素】(协同)</text>
+      <text x="12" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 赤霉素促进色氨酸合成生长素，同时抑制生长素氧化酶活性</text>
+      <text x="12" y="52" font-family="system-ui, sans-serif" font-size="9" fill="#047857">➔ 共同促进细胞纵向伸长，促使植株快速长高</text>
+    </g>
+
+    <!-- 分裂协同 -->
+    <g transform="translate(15, 115)">
+      <rect width="335" height="65" rx="6" fill="#f0fdf4" stroke="#bbf7d0"/>
+      <text x="12" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#15803d">2. 促进细胞分裂：【细胞分裂素】+【生长素】(协同)</text>
+      <text x="12" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 细胞分裂素主要促进【细胞核分裂】</text>
+      <text x="12" y="52" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 生长素主要促进【细胞质分裂】与体积增大</text>
+    </g>
+
+    <!-- 种子萌发拮抗 -->
+    <g transform="translate(15, 188)">
+      <rect width="335" height="65" rx="6" fill="#fff7ed" stroke="#fed7aa"/>
+      <text x="12" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#c2410c">3. 种子萌发天平：【赤霉素】 vs 【脱落酸】(拮抗)</text>
+      <text x="12" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 赤霉素：解除种子休眠，诱导水解酶合成促萌发</text>
+      <text x="12" y="52" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#dc2626">• 脱落酸：维持种子休眠，抑制萌发 (阴雨天易引发“穗发芽”)</text>
+    </g>
+  </g>
+
+  <!-- 右区：衰老、休眠与脱落 (拮抗与负反馈) -->
+  <g transform="translate(400, 60)">
+    <rect width="365" height="295" rx="10" fill="#ffffff" stroke="#fed7aa" stroke-width="1.2" filter="url(#shadow-pha)"/>
+    <rect x="0" y="0" width="365" height="30" rx="10" fill="#ea580c"/>
+    <text x="182.5" y="20" font-family="system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      协同网络 B：衰老、脱落与负反馈调控
+    </text>
+
+    <!-- 脱落协同与拮抗 -->
+    <g transform="translate(15, 42)">
+      <rect width="335" height="75" rx="6" fill="#fff7ed" stroke="#fed7aa"/>
+      <text x="12" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#c2410c">1. 叶片与果实脱落：【脱落酸】+【乙烯】(协同)</text>
+      <text x="12" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 共同促进离层形成，促使器官衰老脱落</text>
+      <text x="12" y="54" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#047857">• 拮抗【生长素】：生长素抑制离层形成，延缓脱落</text>
+      <text x="12" y="68" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">生产应用：喷洒生长素类调节剂防止果实脱落保果</text>
+    </g>
+
+    <!-- 生长素与乙烯负反馈 -->
+    <g transform="translate(15, 125)">
+      <rect width="335" height="85" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+      <text x="12" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#b91c1c">2. 经典负反馈调节：生长素 ⇋ 乙烯</text>
+      <text x="12" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 低浓度生长素 ➔ 促进植株细胞伸长</text>
+      <text x="12" y="52" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#dc2626">• 当生长素浓度过高时 ➔ 诱导产生【乙烯】</text>
+      <text x="12" y="66" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#dc2626">• 乙烯反过来强烈抑制生长素的伸长作用！</text>
+    </g>
+
+    <!-- 核心本质总结 -->
+    <g transform="translate(15, 218)">
+      <rect width="335" height="50" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+      <text x="167.5" y="20" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="middle">
+        ★ 植物生命活动绝非单一激素独奏，
+      </text>
+      <text x="167.5" y="36" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#047857" text-anchor="middle">
+        而是多种激素动态基因程序协同网络！
+      </text>
+    </g>
+  </g>
+</svg>

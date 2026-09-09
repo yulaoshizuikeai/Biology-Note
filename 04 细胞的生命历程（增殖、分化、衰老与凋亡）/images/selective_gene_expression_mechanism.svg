@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-sge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <filter id="shadow-sge" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-sge)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      细胞分化的微观分子本质：基因的选择性表达机制
+    </text>
+  </g>
+
+  <!-- 左侧：全能受精卵全套基因组基石 -->
+  <g transform="translate(15, 60)">
+    <rect width="230" height="295" rx="10" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2" filter="url(#shadow-sge)"/>
+    <rect x="0" y="0" width="230" height="32" rx="10" fill="#1d4ed8"/>
+    <text x="115" y="21" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      起点：受精卵完整基因组
+    </text>
+
+    <g transform="translate(12, 45)">
+      <rect width="206" height="70" rx="6" fill="#eff6ff" stroke="#bfdbfe"/>
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#1e40af">全套相同遗传信息 (DNA)：</text>
+      <text x="10" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 含有维持生命所需的【全部基因】</text>
+      <text x="10" y="54" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 体细胞均由受精卵经有丝分裂产生</text>
+    </g>
+
+    <g transform="translate(12, 130)">
+      <rect width="206" height="145" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+      <text x="10" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">两类基因分类：</text>
+      
+      <text x="10" y="44" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#047857">1. 管家基因 (Housekeeping Genes)</text>
+      <text x="18" y="60" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">• 所有细胞中均持续表达维持生命</text>
+      <text x="18" y="74" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">• 如：呼吸酶基因、ATP合成酶基因</text>
+
+      <text x="10" y="96" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#dc2626">2. 奢侈基因 (Luxury Genes)</text>
+      <text x="18" y="112" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">• 仅在特定特化细胞中特异性表达</text>
+      <text x="18" y="126" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">• 如：胰岛素基因、血红蛋白基因</text>
+    </g>
+  </g>
+
+  <!-- 中间分化箭头 -->
+  <g transform="translate(255, 170)">
+    <path d="M 0 0 L 25 -40" stroke="#2563eb" stroke-width="2.5"/>
+    <polygon points="23,-44 28,-39 23,-37" fill="#2563eb"/>
+    <text x="0" y="-20" font-family="system-ui, sans-serif" font-size="9" fill="#2563eb">分化</text>
+
+    <path d="M 0 40 L 25 80" stroke="#2563eb" stroke-width="2.5"/>
+    <polygon points="23,83 28,78 23,76" fill="#2563eb"/>
+    <text x="0" y="65" font-family="system-ui, sans-serif" font-size="9" fill="#2563eb">分化</text>
+  </g>
+
+  <!-- 右侧上：胰岛 B 细胞特异表达 -->
+  <g transform="translate(290, 60)">
+    <rect width="475" height="140" rx="10" fill="#ffffff" stroke="#86efac" stroke-width="1.2" filter="url(#shadow-sge)"/>
+    <rect x="0" y="0" width="475" height="28" rx="10" fill="#059669"/>
+    <text x="15" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">
+      分化实例 A：胰岛 B 细胞（专职降血糖）
+    </text>
+
+    <g transform="translate(15, 38)">
+      <rect width="215" height="85" rx="6" fill="#ecfdf5" stroke="#6ee7b7"/>
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#047857">✔ 胰岛素基因：【开启表达】</text>
+      <text x="10" y="40" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 染色质解旋松散，启动子结合RNA聚合酶</text>
+      <text x="10" y="56" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 顺利转录出胰岛素 mRNA</text>
+      <text x="10" y="72" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#059669">• 核糖体翻译分泌【胰岛素蛋白】</text>
+
+      <rect x="235" y="0" width="210" height="85" rx="6" fill="#fef2f2" stroke="#fca5a5"/>
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#dc2626">✘ 血红蛋白基因：【紧密关闭】</text>
+      <text x="10" y="40" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• DNA 甲基化修饰，染色质致密折叠</text>
+      <text x="10" y="56" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 转录机制完全沉默，不产生对应 mRNA</text>
+      <text x="10" y="72" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">• 细胞内无血红蛋白表达</text>
+    </g>
+  </g>
+
+  <!-- 右侧下：红系母细胞特异表达 -->
+  <g transform="translate(290, 215)">
+    <rect width="475" height="140" rx="10" fill="#ffffff" stroke="#fca5a5" stroke-width="1.2" filter="url(#shadow-sge)"/>
+    <rect x="0" y="0" width="475" height="28" rx="10" fill="#dc2626"/>
+    <text x="15" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">
+      分化实例 B：红系母细胞（专职运输氧气）
+    </text>
+
+    <g transform="translate(15, 38)">
+      <rect width="215" height="85" rx="6" fill="#fef2f2" stroke="#fca5a5"/>
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#dc2626">✘ 胰岛素基因：【紧密关闭】</text>
+      <text x="10" y="40" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 基因组中仍有该基因，但被表观沉默</text>
+      <text x="10" y="56" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 无法转录，红细胞不分泌胰岛素</text>
+      <text x="10" y="72" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">高考判断：DNA相同，mRNA与蛋白质不同！</text>
+
+      <rect x="235" y="0" width="210" height="85" rx="6" fill="#ecfdf5" stroke="#6ee7b7"/>
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#047857">✔ 血红蛋白基因：【开启表达】</text>
+      <text x="10" y="40" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 启动子开放，高效结合转录因子</text>
+      <text x="10" y="56" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 大量转录血红蛋白 mRNA</text>
+      <text x="10" y="72" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#059669">• 翻译形成大量【血红蛋白】行使运氧</text>
+    </g>
+  </g>
+</svg>

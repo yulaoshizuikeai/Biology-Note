@@ -4,9 +4,8 @@ import { useRoute } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import { nextTick, onMounted, onBeforeUnmount, watch } from "vue";
 
-
-import Breadcrumb from "./components/CCBreadCrumb.vue";
 import CCAmbientParticles from "./components/CCAmbientParticles.vue";
+import Breadcrumb from "./components/CCBreadCrumb.vue";
 import CCDailyQuote from "./components/CCDailyQuote.vue";
 import CCFooter from "./components/CCFooter.vue";
 import CCHeroLogo from "./components/CCHeroLogo.vue";
@@ -116,7 +115,6 @@ watch(
       </ClientOnly>
     </template>
 
-
     <!-- 面包屑 -->
     <template #doc-before>
       <Breadcrumb />
@@ -136,7 +134,6 @@ watch(
       <ClientOnly>
         <CCPageviews />
       </ClientOnly>
-
     </template>
 
     <!-- 页脚信息 -->

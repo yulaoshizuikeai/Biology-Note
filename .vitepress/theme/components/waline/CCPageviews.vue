@@ -34,7 +34,7 @@ const runPageview = (path) => {
 const setupObserver = () => {
   const el = document.getElementById("busuanzi_value_page_pv");
   if (!el || typeof window === "undefined") return;
-  
+
   observer = new MutationObserver((mutations) => {
     for (const mutation of mutations) {
       if (mutation.type === "childList" || mutation.type === "characterData") {
@@ -44,7 +44,7 @@ const setupObserver = () => {
       }
     }
   });
-  
+
   observer.observe(el, { childList: true, characterData: true, subtree: true });
 };
 
@@ -84,11 +84,13 @@ onBeforeUnmount(() => {
       <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
       <circle cx="12" cy="12" r="3" />
     </svg>
-    <span 
-      id="busuanzi_value_page_pv" 
+    <span
+      id="busuanzi_value_page_pv"
       class="waline-pageview-count"
       :class="{ 'is-loading': isLoading }"
-    >--</span> views
+      >--</span
+    >
+    views
   </span>
 </template>
 

@@ -1,4 +1,4 @@
-﻿<script setup lang="ts">
+<script setup lang="ts">
 import { onMounted, ref } from "vue";
 
 // 7 天周期滚动窗口访问曲线
@@ -151,18 +151,32 @@ onMounted(() => {
       >
         <defs>
           <!-- 面积渐变 -->
-          <linearGradient id="cycle-area" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#5672CD" stop-opacity="0.32" />
-            <stop offset="65%" stop-color="#38bdf8" stop-opacity="0.08" />
-            <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+          <linearGradient
+            id="cycle-area"
+            x1="0"
+            y1="0"
+            x2="0"
+            y2="50"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0%" stop-color="#2E6B56" stop-opacity="0.22" />
+            <stop offset="65%" stop-color="#52B788" stop-opacity="0.06" />
+            <stop offset="100%" stop-color="#52B788" stop-opacity="0" />
           </linearGradient>
 
           <!-- 7日周期折线流光渐变 -->
-          <linearGradient id="cycle-stroke" x1="0" y1="25" x2="260" y2="25" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#5672CD" stop-opacity="0.55" />
-            <stop offset="40%" stop-color="#38bdf8" />
-            <stop offset="80%" stop-color="#818cf8" />
-            <stop offset="100%" stop-color="#60a5fa" />
+          <linearGradient
+            id="cycle-stroke"
+            x1="0"
+            y1="25"
+            x2="260"
+            y2="25"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0%" stop-color="#2E6B56" stop-opacity="0.7" />
+            <stop offset="40%" stop-color="#3B7A57" />
+            <stop offset="80%" stop-color="#52B788" />
+            <stop offset="100%" stop-color="#74C69D" />
           </linearGradient>
 
           <!-- 辉光滤镜 -->
@@ -173,11 +187,7 @@ onMounted(() => {
         </defs>
 
         <!-- 阴影/面积填充 -->
-        <path
-          :d="areaD"
-          fill="url(#cycle-area)"
-          class="sparkline-fill"
-        />
+        <path :d="areaD" fill="url(#cycle-area)" class="sparkline-fill" />
 
         <!-- 高级感 7 天周期平滑滚动曲线 -->
         <path
@@ -198,8 +208,8 @@ onMounted(() => {
             :cx="pt.x"
             :cy="pt.y"
             :r="pt.isToday ? 3.2 : 2"
-            :fill="pt.isToday ? '#ffffff' : '#38bdf8'"
-            :opacity="pt.isToday ? 1 : 0.4"
+            :fill="pt.isToday ? '#ffffff' : '#52b788'"
+            :opacity="pt.isToday ? 1 : 0.45"
             class="cycle-node"
           />
         </g>
@@ -210,8 +220,8 @@ onMounted(() => {
             :cx="points[points.length - 1].x"
             :cy="points[points.length - 1].y"
             r="7.5"
-            fill="#38bdf8"
-            opacity="0.28"
+            fill="#52b788"
+            opacity="0.25"
             class="beacon-halo"
           />
         </template>
@@ -244,21 +254,25 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   padding: 8px 14px 10px;
-  background: color-mix(in srgb, var(--vp-c-brand-1, #5672CD) 5%, transparent);
-  border: 1px solid color-mix(in srgb, var(--vp-c-brand-1, #5672CD) 16%, transparent);
-  border-radius: 18px;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 4px 20px -6px rgba(86, 114, 205, 0.15);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
 }
 
 .cycle-sparkline-card:hover {
-  transform: translateY(-2px);
-  background: color-mix(in srgb, var(--vp-c-brand-1, #5672CD) 9%, transparent);
-  border-color: color-mix(in srgb, var(--vp-c-brand-1, #5672CD) 32%, transparent);
-  box-shadow: 0 8px 28px -4px rgba(86, 114, 205, 0.28);
+  transform: translateY(-1.5px);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 3%, var(--vp-c-bg-soft));
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 35%, transparent);
+  box-shadow: 0 4px 14px -2px rgba(0, 0, 0, 0.05);
+}
+
+.dark .cycle-sparkline-card:hover {
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.4);
 }
 
 .sparkline-svg {
@@ -300,14 +314,14 @@ onMounted(() => {
   width: 14px;
   height: 2.5px;
   border-radius: 2px;
-  background: color-mix(in srgb, var(--vp-c-brand-1, #5672CD) 22%, transparent);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 22%, transparent);
   transition: all 0.3s ease;
 }
 
 .cycle-tick.is-today {
   width: 22px;
-  background: linear-gradient(90deg, #38bdf8, #818cf8);
-  box-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
+  background: var(--vp-c-brand-1);
+  box-shadow: none;
 }
 
 @keyframes sparkline-draw {
@@ -323,7 +337,8 @@ onMounted(() => {
 }
 
 @keyframes beacon-pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(0.85);
     opacity: 0.15;
   }

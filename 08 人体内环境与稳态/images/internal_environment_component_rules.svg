@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-iec" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <filter id="shadow-iec" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-iec)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      人体内环境成分判别“四看”红线法则（属于内环境 vs 不属于内环境）
+    </text>
+  </g>
+
+  <!-- 左侧：属于内环境的物质 (YES) -->
+  <g transform="translate(15, 60)">
+    <rect width="365" height="295" rx="10" fill="#ffffff" stroke="#86efac" stroke-width="1.5" filter="url(#shadow-iec)"/>
+    <rect x="0" y="0" width="365" height="32" rx="10" fill="#16a34a"/>
+    <text x="182.5" y="21" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      ✔ 属于内环境的物质（存在于血浆、组织液、淋巴中）
+    </text>
+
+    <g transform="translate(15, 42)">
+      <rect width="335" height="65" rx="6" fill="#f0fdf4" stroke="#bbf7d0"/>
+      <text x="12" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#15803d">1. 营养物质 (Nutrients)</text>
+      <text x="12" y="38" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 水、无机盐离子 (Na⁺, Cl⁻, K⁺, Ca²⁺, HCO₃⁻, HPO₄²⁻)</text>
+      <text x="12" y="54" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 葡萄糖、氨基酸、甘油、脂肪酸、维生素、血浆蛋白</text>
+    </g>
+
+    <g transform="translate(15, 115)">
+      <rect width="335" height="65" rx="6" fill="#f0fdf4" stroke="#bbf7d0"/>
+      <text x="12" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#15803d">2. 调节与信息分子 (Signaling)</text>
+      <text x="12" y="38" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 激素 (胰岛素、甲状腺激素、肾上腺素等)</text>
+      <text x="12" y="54" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 神经递质 (乙酰胆碱)、抗体、细胞因子、组织胺</text>
+    </g>
+
+    <g transform="translate(15, 188)">
+      <rect width="335" height="60" rx="6" fill="#f0fdf4" stroke="#bbf7d0"/>
+      <text x="12" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#15803d">3. 代谢终产物 (Metabolites)</text>
+      <text x="12" y="38" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 细胞外排废物：CO₂、尿素、尿酸等</text>
+      <text x="12" y="52" font-family="system-ui, sans-serif" font-size="9" fill="#047857">注：气体与代谢废物通过组织液与血浆循环运输</text>
+    </g>
+  </g>
+
+  <!-- 右侧：不属于内环境的物质与结构 (NO) -->
+  <g transform="translate(400, 60)">
+    <rect width="365" height="295" rx="10" fill="#ffffff" stroke="#fca5a5" stroke-width="1.5" filter="url(#shadow-iec)"/>
+    <rect x="0" y="0" width="365" height="32" rx="10" fill="#dc2626"/>
+    <text x="182.5" y="21" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      ✘ 不属于内环境的物质（高考绝命陷阱红线）
+    </text>
+
+    <g transform="translate(15, 42)">
+      <rect width="335" height="75" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+      <text x="12" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#b91c1c">1. 细胞内部专属结构与成分 (Intracellular)</text>
+      <text x="12" y="38" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#991b1b">• 血红蛋白 (位于红细胞内，不是血浆蛋白！)</text>
+      <text x="12" y="54" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 胞内酶：呼吸酶、DNA聚合酶、RNA聚合酶、解旋酶</text>
+      <text x="12" y="68" font-family="system-ui, sans-serif" font-size="9" fill="#475569">• 膜转运蛋白、受体蛋白、细胞骨架、胞内核酸</text>
+    </g>
+
+    <g transform="translate(15, 125)">
+      <rect width="335" height="75" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+      <text x="12" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#b91c1c">2. 消化道及体外分泌腔内液体 (External)</text>
+      <text x="12" y="38" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 消化液：胃液(盐酸/胃蛋白酶)、唾液、胰液、胆汁、肠液</text>
+      <text x="12" y="54" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 体外排泄物：汗液、尿液、泪液</text>
+      <text x="12" y="68" font-family="system-ui, sans-serif" font-size="8.5" fill="#dc2626">★ 铁律：人体的消化道、呼吸道、膀胱与外界直接相通！</text>
+    </g>
+
+    <g transform="translate(15, 208)">
+      <rect width="335" height="40" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+      <text x="167.5" y="24" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="middle">
+        判定法则：看分子所处物理空间是否属于【细胞外液】！
+      </text>
+    </g>
+  </g>
+</svg>

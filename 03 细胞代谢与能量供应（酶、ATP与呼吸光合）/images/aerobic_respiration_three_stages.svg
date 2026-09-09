@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-ars" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#991b1b" />
+      <stop offset="100%" stop-color="#c2410c" />
+    </linearGradient>
+    <filter id="shadow-ars" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-ars)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      有氧呼吸（Aerobic Respiration）三大阶段微观区室拆解
+    </text>
+  </g>
+
+  <!-- 阶段一：细胞质基质 -->
+  <g transform="translate(15, 60)">
+    <rect width="235" height="295" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-ars)"/>
+    <rect x="0" y="0" width="235" height="32" rx="10" fill="#3b82f6"/>
+    <text x="117.5" y="21" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      第一阶段：糖酵解 (Glycolysis)
+    </text>
+
+    <g transform="translate(12, 42)">
+      <rect width="211" height="30" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#1e40af">场所：细胞质基质 (Cytosol)</text>
+    </g>
+
+    <g transform="translate(12, 80)">
+      <rect width="211" height="110" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">微观生化反应：</text>
+      <text x="10" y="42" font-family="system-ui, sans-serif" font-size="10" fill="#1e293b">1 葡萄糖 (C₆H₁₂O₆)</text>
+      <text x="25" y="60" font-family="system-ui, sans-serif" font-size="11" fill="#dc2626">▼ 酶催化分解 (不需 O₂)</text>
+      <text x="10" y="80" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#059669">2 丙酮酸 + 4 [H] (NADH)</text>
+      <text x="10" y="100" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#ea580c">+ 少量能量 (2 ATP)</text>
+    </g>
+
+    <g transform="translate(12, 200)">
+      <rect width="211" height="85" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#b91c1c">★ 高考核心考点：</text>
+      <text x="10" y="36" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">• 有氧呼吸与无氧呼吸共有阶段</text>
+      <text x="10" y="52" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">• 葡萄糖不能直接进入线粒体！</text>
+      <text x="10" y="68" font-family="system-ui, sans-serif" font-size="8.5" fill="#b91c1c">• 线粒体只能利用丙酮酸</text>
+    </g>
+  </g>
+
+  <!-- 阶段二：线粒体基质 -->
+  <g transform="translate(265, 60)">
+    <rect width="245" height="295" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-ars)"/>
+    <rect x="0" y="0" width="245" height="32" rx="10" fill="#f59e0b"/>
+    <text x="122.5" y="21" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      第二阶段：三羧酸循环 (柠檬酸循环)
+    </text>
+
+    <g transform="translate(12, 42)">
+      <rect width="221" height="30" rx="4" fill="#fef3c7" stroke="#fde68a"/>
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#92400e">场所：线粒体基质 (Matrix)</text>
+    </g>
+
+    <g transform="translate(12, 80)">
+      <rect width="221" height="110" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">微观生化反应：</text>
+      <text x="10" y="42" font-family="system-ui, sans-serif" font-size="10" fill="#1e293b">2 丙酮酸 + 6 H₂O (反应物消耗水!)</text>
+      <text x="25" y="60" font-family="system-ui, sans-serif" font-size="11" fill="#dc2626">▼ 酶催化脱羧、脱氢</text>
+      <text x="10" y="80" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#059669">6 CO₂ (全部在此阶段释放) + 20 [H]</text>
+      <text x="10" y="100" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#ea580c">+ 少量能量 (2 ATP)</text>
+    </g>
+
+    <g transform="translate(12, 200)">
+      <rect width="221" height="85" rx="6" fill="#fffbeb" stroke="#fef3c7"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#b45309">★ 同位素追踪考点：</text>
+      <text x="10" y="36" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">• CO₂ 中的 O 全部来自丙酮酸与 H₂O</text>
+      <text x="10" y="52" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">• 水是第二阶段的【反应物】！</text>
+      <text x="10" y="68" font-family="system-ui, sans-serif" font-size="8.5" fill="#b45309">• 虽不直接消耗 O₂，但无氧时会停滞</text>
+    </g>
+  </g>
+
+  <!-- 阶段三：线粒体内膜 -->
+  <g transform="translate(525, 60)">
+    <rect width="240" height="295" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-ars)"/>
+    <rect x="0" y="0" width="240" height="32" rx="10" fill="#dc2626"/>
+    <text x="120" y="21" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      第三阶段：氧化磷酸化 (ETC)
+    </text>
+
+    <g transform="translate(12, 42)">
+      <rect width="216" height="30" rx="4" fill="#fef2f2" stroke="#fca5a5"/>
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#991b1b">场所：线粒体内膜 (Cristae)</text>
+    </g>
+
+    <g transform="translate(12, 80)">
+      <rect width="216" height="110" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">微观生化反应：</text>
+      <text x="10" y="42" font-family="system-ui, sans-serif" font-size="10" fill="#1e293b">24 [H] (前两阶段积累) + 6 O₂</text>
+      <text x="25" y="60" font-family="system-ui, sans-serif" font-size="11" fill="#dc2626">▼ 电子传递链传递</text>
+      <text x="10" y="80" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#0284c7">12 H₂O (生成产物水)</text>
+      <text x="10" y="100" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#ea580c">+ 大量能量 (约 28~30 ATP!)</text>
+    </g>
+
+    <g transform="translate(12, 200)">
+      <rect width="216" height="85" rx="6" fill="#fef2f2" stroke="#fca5a5"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#991b1b">★ 能量与氧气归宿：</text>
+      <text x="10" y="36" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">• 释放能量最多的阶段 (生成绝大多数ATP)</text>
+      <text x="10" y="52" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">• O₂ 只参与第三阶段，O 元素进入产物水</text>
+      <text x="10" y="68" font-family="system-ui, sans-serif" font-size="8.5" fill="#dc2626">• 内膜折叠为嵴极大增加了反应面积</text>
+    </g>
+  </g>
+</svg>

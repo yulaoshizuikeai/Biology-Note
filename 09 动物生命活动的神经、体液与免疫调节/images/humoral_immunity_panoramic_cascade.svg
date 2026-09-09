@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-hip" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#065f46" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <filter id="shadow-hip" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-hip)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      体液免疫（Humoral Immunity）全景演进链与双信号活化机制
+    </text>
+  </g>
+
+  <!-- 阶段 1：感应与双信号激活 (左区) -->
+  <g transform="translate(15, 60)">
+    <rect width="250" height="295" rx="10" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2" filter="url(#shadow-hip)"/>
+    <rect x="0" y="0" width="250" height="30" rx="10" fill="#2563eb"/>
+    <text x="125" y="20" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      阶段一：病原体识别与双信号
+    </text>
+
+    <!-- 信号 1 -->
+    <g transform="translate(10, 40)">
+      <rect width="230" height="58" rx="6" fill="#eff6ff" stroke="#bfdbfe"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#1e40af">第一信号：病原体直接接触</text>
+      <text x="10" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">病原体与 B 细胞表面的受体结合</text>
+      <text x="10" y="48" font-family="system-ui, sans-serif" font-size="8.5" fill="#2563eb">➔ 为 B 细胞活化提供第 1 信号</text>
+    </g>
+
+    <!-- APC 呈递 -->
+    <g transform="translate(10, 108)">
+      <rect width="230" height="58" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#0f172a">APC 摄取、处理与呈递</text>
+      <text x="10" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">树突状细胞/巨噬细胞 摄取病原体</text>
+      <text x="10" y="48" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">呈递抗原信息给【辅助性 T 细胞】</text>
+    </g>
+
+    <!-- 信号 2 与细胞因子 -->
+    <g transform="translate(10, 176)">
+      <rect width="230" height="105" rx="6" fill="#eff6ff" stroke="#bfdbfe"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#1e40af">第二信号与细胞因子：</text>
+      <text x="10" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">• 活化辅助性 T 细胞表面特定分子</text>
+      <text x="18" y="48" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#dc2626">与 B 细胞结合 (提供第 2 信号!)</text>
+      <text x="10" y="66" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">• 辅助性 T 细胞分泌【细胞因子】</text>
+      <text x="18" y="80" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#059669">极大促进 B 细胞的分裂与分化！</text>
+      <text x="10" y="96" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">高考要点：B细胞活化需双信号+细胞因子</text>
+    </g>
+  </g>
+
+  <!-- 箭头 1->2 -->
+  <g transform="translate(270, 195)">
+    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#94a3b8">➔</text>
+  </g>
+
+  <!-- 阶段 2：B细胞分裂分化 (中区) -->
+  <g transform="translate(290, 60)">
+    <rect width="230" height="295" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-hip)"/>
+    <rect x="0" y="0" width="230" height="30" rx="10" fill="#7c3aed"/>
+    <text x="115" y="20" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      阶段二：B 细胞增殖分化
+    </text>
+
+    <!-- B细胞中心 -->
+    <g transform="translate(15, 42)">
+      <rect width="200" height="42" rx="6" fill="#f3e8ff" stroke="#d8b4fe"/>
+      <text x="100" y="26" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#6b21a8" text-anchor="middle">受激活 B 细胞</text>
+    </g>
+
+    <!-- 分化分叉 -->
+    <g transform="translate(115, 88)">
+      <line x1="0" y1="0" x2="-45" y2="28" stroke="#7c3aed" stroke-width="2"/>
+      <line x1="0" y1="0" x2="45" y2="28" stroke="#7c3aed" stroke-width="2"/>
+    </g>
+
+    <!-- 浆细胞 -->
+    <g transform="translate(10, 122)">
+      <rect width="100" height="155" rx="6" fill="#fef2f2" stroke="#fca5a5"/>
+      <text x="50" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#b91c1c" text-anchor="middle">浆细胞</text>
+      <text x="50" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#7f1d1d" text-anchor="middle">(效应B细胞)</text>
+      <text x="8" y="56" font-family="system-ui, sans-serif" font-size="8" fill="#334155">• 不具分裂能力</text>
+      <text x="8" y="72" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#dc2626">• 专职大量合成</text>
+      <text x="12" y="86" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#dc2626">与分泌抗体</text>
+      <text x="8" y="104" font-family="system-ui, sans-serif" font-size="8" fill="#334155">• 内质网/高尔基体</text>
+      <text x="12" y="118" font-family="system-ui, sans-serif" font-size="8" fill="#334155">极度发达</text>
+      <text x="8" y="136" font-family="system-ui, sans-serif" font-size="8" fill="#dc2626">✘ 无识别抗原能力!</text>
+    </g>
+
+    <!-- 记忆 B 细胞 -->
+    <g transform="translate(120, 122)">
+      <rect width="100" height="155" rx="6" fill="#f0fdf4" stroke="#86efac"/>
+      <text x="50" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#15803d" text-anchor="middle">记忆 B 细胞</text>
+      <text x="50" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#14532d" text-anchor="middle">(长期存活)</text>
+      <text x="8" y="56" font-family="system-ui, sans-serif" font-size="8" fill="#334155">• 寿命长达数年</text>
+      <text x="8" y="72" font-family="system-ui, sans-serif" font-size="8" fill="#334155">• 再次接触相同</text>
+      <text x="12" y="86" font-family="system-ui, sans-serif" font-size="8" fill="#334155">抗原时：</text>
+      <text x="8" y="104" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#15803d">• 极速增殖分化</text>
+      <text x="12" y="118" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">产生大量浆细胞</text>
+      <text x="8" y="136" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#047857">二次免疫更快更强!</text>
+    </g>
+  </g>
+
+  <!-- 箭头 2->3 -->
+  <g transform="translate(525, 195)">
+    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#94a3b8">➔</text>
+  </g>
+
+  <!-- 阶段 3：效应与清除 (右区) -->
+  <g transform="translate(545, 60)">
+    <rect width="220" height="295" rx="10" fill="#ffffff" stroke="#fed7aa" stroke-width="1.2" filter="url(#shadow-hip)"/>
+    <rect x="0" y="0" width="220" height="30" rx="10" fill="#ea580c"/>
+    <text x="110" y="20" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      阶段三：抗体效应与抗原清除
+    </text>
+
+    <g transform="translate(10, 40)">
+      <rect width="200" height="65" rx="6" fill="#fff7ed" stroke="#fed7aa"/>
+      <text x="8" y="18" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#c2410c">特异性抗体 (免疫球蛋白)</text>
+      <text x="8" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">• 分泌到细胞外液 (血浆/组织液)</text>
+      <text x="8" y="48" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">• 与胞外病原体特异性结合</text>
+    </g>
+
+    <g transform="translate(10, 115)">
+      <rect width="200" height="75" rx="6" fill="#fff7ed" stroke="#fed7aa"/>
+      <text x="8" y="18" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#c2410c">结合产物与清除命运：</text>
+      <text x="8" y="36" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">形成沉淀或细胞集团</text>
+      <text x="8" y="52" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">➔ 抑制病原体繁殖与对宿主黏附</text>
+      <text x="8" y="66" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#ea580c">➔ 最终由巨噬细胞吞噬消化！</text>
+    </g>
+
+    <g transform="translate(10, 200)">
+      <rect width="200" height="80" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+      <text x="8" y="18" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#dc2626">★ 考点排雷：</text>
+      <text x="8" y="34" font-family="system-ui, sans-serif" font-size="8" fill="#475569">抗体不能直接杀死病原体！</text>
+      <text x="8" y="48" font-family="system-ui, sans-serif" font-size="8" fill="#475569">抗体只能结合特异性抗原使其沉淀，</text>
+      <text x="8" y="62" font-family="system-ui, sans-serif" font-size="8" fill="#475569">消灭与清除由吞噬细胞完成！</text>
+    </g>
+  </g>
+</svg>

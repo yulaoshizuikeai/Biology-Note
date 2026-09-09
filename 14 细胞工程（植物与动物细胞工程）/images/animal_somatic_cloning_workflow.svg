@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-asc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <filter id="shadow-asc" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-asc)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      体细胞核移植克隆动物全流程操作链（供体体细胞 + 去核卵母细胞）
+    </text>
+  </g>
+
+  <!-- 左侧：供体与受体两条支流 -->
+  <g transform="translate(15, 60)">
+    <rect width="260" height="295" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-asc)"/>
+    <rect x="0" y="0" width="260" height="28" rx="10" fill="#334155"/>
+    <text x="130" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      第一阶段：双供体制备
+    </text>
+
+    <!-- 供体奶牛 -->
+    <g transform="translate(12, 38)">
+      <rect width="236" height="110" rx="6" fill="#eff6ff" stroke="#bfdbfe"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#1e40af">供体牛 (高产性状提供者)：</text>
+      <text x="10" y="36" font-family="system-ui, sans-serif" font-size="9" fill="#334155">取出体细胞 (如耳部成纤维细胞)</text>
+      <text x="10" y="52" font-family="system-ui, sans-serif" font-size="9" fill="#334155">➔ 原代与传代动物细胞培养 (10代以内)</text>
+      <text x="10" y="68" font-family="system-ui, sans-serif" font-size="8.5" fill="#64748b">(保持正常二倍体核型)</text>
+      <text x="10" y="90" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#0284c7">➔ 提取【供体体细胞核】</text>
+    </g>
+
+    <!-- 受体母牛 -->
+    <g transform="translate(12, 160)">
+      <rect width="236" height="120" rx="6" fill="#fdf2f8" stroke="#fbcfe8"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#9d174d">受体牛 (细胞质提供者)：</text>
+      <text x="10" y="36" font-family="system-ui, sans-serif" font-size="9" fill="#334155">注射【促性腺激素】超数排卵</text>
+      <text x="10" y="52" font-family="system-ui, sans-serif" font-size="9" fill="#334155">➔ 采集处于【MⅡ期】的卵母细胞</text>
+      <text x="10" y="68" font-family="system-ui, sans-serif" font-size="8.5" fill="#64748b">(卵母细胞质含有激活全能性因子)</text>
+      <text x="10" y="86" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#be185d">➔ 显微操作【去核】</text>
+      <text x="10" y="104" font-family="system-ui, sans-serif" font-size="8" fill="#9d174d">同时去除第一极体与细胞核</text>
+    </g>
+  </g>
+
+  <!-- 汇聚箭头 -->
+  <g transform="translate(285, 195)">
+    <path d="M 0 0 L 25 0" stroke="#7c3aed" stroke-width="3"/>
+    <polygon points="25,-3 32,0 25,3" fill="#7c3aed"/>
+    <text x="12" y="-10" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#7c3aed" text-anchor="middle">电融合</text>
+  </g>
+
+  <!-- 中间：重构胚与早期培养 -->
+  <g transform="translate(325, 60)">
+    <rect width="210" height="295" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-asc)"/>
+    <rect x="0" y="0" width="210" height="28" rx="10" fill="#7c3aed"/>
+    <text x="105" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      第二阶段：重构胚与培养
+    </text>
+
+    <g transform="translate(10, 40)">
+      <rect width="190" height="60" rx="6" fill="#f3e8ff" stroke="#d8b4fe"/>
+      <text x="95" y="24" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#6b21a8" text-anchor="middle">【重构胚】</text>
+      <text x="95" y="44" font-family="system-ui, sans-serif" font-size="8.5" fill="#4c1d95" text-anchor="middle">电融合法诱导两细胞融合</text>
+    </g>
+
+    <g transform="translate(10, 115)">
+      <rect width="190" height="60" rx="6" fill="#fff7ed" stroke="#fed7aa"/>
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#c2410c">化学/物理激活：</text>
+      <text x="10" y="36" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">电脉冲、Ca²⁺载体、乙醇激活</text>
+      <text x="10" y="50" font-family="system-ui, sans-serif" font-size="8.5" fill="#b45309">使其完成细胞周期并分裂</text>
+    </g>
+
+    <g transform="translate(10, 190)">
+      <rect width="190" height="85" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+      <text x="10" y="20" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#0f172a">【早期胚胎培养】：</text>
+      <text x="10" y="38" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">• 液体培养基发育至</text>
+      <text x="18" y="52" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#047857">【桑葚胚 或 囊胚】</text>
+      <text x="10" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#475569">需添加血清等天然成分</text>
+    </g>
+  </g>
+
+  <!-- 箭头 -->
+  <g transform="translate(545, 195)">
+    <path d="M 0 0 L 25 0" stroke="#059669" stroke-width="3"/>
+    <polygon points="25,-3 32,0 25,3" fill="#059669"/>
+    <text x="12" y="-10" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#059669" text-anchor="middle">胚胎移植</text>
+  </g>
+
+  <!-- 右侧：代孕与克隆后代 -->
+  <g transform="translate(580, 60)">
+    <rect width="185" height="295" rx="10" fill="#ffffff" stroke="#86efac" stroke-width="1.2" filter="url(#shadow-asc)"/>
+    <rect x="0" y="0" width="185" height="28" rx="10" fill="#16a34a"/>
+    <text x="92.5" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      第三阶段：代孕与产仔
+    </text>
+
+    <g transform="translate(10, 40)">
+      <rect width="165" height="70" rx="6" fill="#f0fdf4" stroke="#86efac"/>
+      <text x="82.5" y="24" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#15803d" text-anchor="middle">【代孕受体母牛】</text>
+      <text x="10" y="44" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">• 必须进行【同期发情】处理</text>
+      <text x="10" y="58" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">受体子宫对异体胚胎不免疫排斥</text>
+    </g>
+
+    <g transform="translate(10, 125)">
+      <rect width="165" height="80" rx="6" fill="#f0fdf4" stroke="#86efac"/>
+      <text x="82.5" y="24" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#15803d" text-anchor="middle">【克隆犊牛】</text>
+      <text x="10" y="44" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">• 核基因：100% 来自供体牛</text>
+      <text x="10" y="60" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">• 质基因：来自受体卵母牛</text>
+      <text x="10" y="74" font-family="system-ui, sans-serif" font-size="8" fill="#dc2626">(不完全等于供体克隆复制)</text>
+    </g>
+
+    <g transform="translate(10, 220)">
+      <rect width="165" height="60" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+      <text x="82.5" y="20" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#0f172a" text-anchor="middle">证明科学结论：</text>
+      <text x="82.5" y="38" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#059669" text-anchor="middle">动物体细胞【细胞核】</text>
+      <text x="82.5" y="52" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#059669" text-anchor="middle">具有全能性！</text>
+    </g>
+  </g>
+</svg>

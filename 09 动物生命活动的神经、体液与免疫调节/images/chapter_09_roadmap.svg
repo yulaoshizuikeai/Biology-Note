@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-c09" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#701a75" />
+      <stop offset="100%" stop-color="#86198f" />
+    </linearGradient>
+    <filter id="shadow-c09" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-c09)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      专题 09 神经、体液与免疫调节 · 章节全景脉络导图
+    </text>
+  </g>
+
+  <!-- 根节点 -->
+  <g transform="translate(240, 60)">
+    <rect width="300" height="40" rx="8" fill="#1e293b" stroke="#334155" filter="url(#shadow-c09)"/>
+    <text x="150" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      🧠 神经-体液-免疫全域协同调节网络
+    </text>
+  </g>
+
+  <!-- 连线 -->
+  <g transform="translate(390, 100)">
+    <line x1="0" y1="0" x2="-250" y2="40" stroke="#475569" stroke-width="2"/>
+    <line x1="0" y1="0" x2="0" y2="40" stroke="#475569" stroke-width="2"/>
+    <line x1="0" y1="0" x2="250" y2="40" stroke="#475569" stroke-width="2"/>
+  </g>
+
+  <!-- 篇章 1：神经调节 -->
+  <g transform="translate(15, 140)">
+    <rect width="235" height="215" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2" filter="url(#shadow-c09)"/>
+    <rect x="0" y="0" width="235" height="28" rx="8" fill="#2563eb"/>
+    <text x="117.5" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      01 神经调节微观机理
+    </text>
+
+    <g transform="translate(12, 36)">
+      <g transform="translate(0, 0)">
+        <rect width="211" height="46" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#1e40af">反射弧完整性与电位分析</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">静息 K⁺ 外流 vs 动作 Na⁺ 内流模型</text>
+      </g>
+
+      <g transform="translate(0, 52)">
+        <rect width="211" height="46" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#1e40af">突触兴奋传递单向性机理</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">突触小泡胞吐释放递质 ➔ 突触后膜受体</text>
+      </g>
+
+      <g transform="translate(0, 104)">
+        <rect width="211" height="58" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#1e40af">电流计指针偏转经典模型</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">神经纤维双电极 vs 突触间电极偏转</text>
+        <text x="8" y="46" font-family="system-ui, sans-serif" font-size="8" fill="#2563eb">抑制性递质引起 Cl⁻ 内流超极化分析</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- 篇章 2：体液调节 -->
+  <g transform="translate(270, 140)">
+    <rect width="240" height="215" rx="8" fill="#ffffff" stroke="#fed7aa" stroke-width="1.2" filter="url(#shadow-c09)"/>
+    <rect x="0" y="0" width="240" height="28" rx="8" fill="#ea580c"/>
+    <text x="120" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      02 体液调节与下丘脑中枢
+    </text>
+
+    <g transform="translate(12, 36)">
+      <g transform="translate(0, 0)">
+        <rect width="216" height="46" rx="4" fill="#fff7ed" stroke="#fed7aa"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#c2410c">促胰液素经典科学史</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">沃泰默实验 ➔ 斯他林与贝利斯确证激素</text>
+      </g>
+
+      <g transform="translate(0, 52)">
+        <rect width="216" height="46" rx="4" fill="#fff7ed" stroke="#fed7aa"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#c2410c">下丘脑分级负反馈调控轴</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">TRH ➔ TSH ➔ 甲状腺激素 (分级+反馈)</text>
+      </g>
+
+      <g transform="translate(0, 104)">
+        <rect width="216" height="58" rx="4" fill="#fff7ed" stroke="#fed7aa"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#c2410c">水盐与体温动态平衡</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">抗利尿激素 (ADH) 重吸收水机理</text>
+        <text x="8" y="46" font-family="system-ui, sans-serif" font-size="8" fill="#ea580c">寒冷环境产热增加与散热减少协同</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- 篇章 3：免疫调节 -->
+  <g transform="translate(530, 140)">
+    <rect width="235" height="215" rx="8" fill="#ffffff" stroke="#86efac" stroke-width="1.2" filter="url(#shadow-c09)"/>
+    <rect x="0" y="0" width="235" height="28" rx="8" fill="#16a34a"/>
+    <text x="117.5" y="19" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      03 免疫系统微观防御全景
+    </text>
+
+    <g transform="translate(12, 36)">
+      <g transform="translate(0, 0)">
+        <rect width="211" height="46" rx="4" fill="#f0fdf4" stroke="#bbf7d0"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#15803d">三道防线与细胞兵团</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">非特异性防线 + 特异性 T/B/APC 协同</text>
+      </g>
+
+      <g transform="translate(0, 52)">
+        <rect width="211" height="46" rx="4" fill="#f0fdf4" stroke="#bbf7d0"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#15803d">体液与细胞免疫双轨制</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">体液抗体对胞外抗原；细胞毒T裂解靶细胞</text>
+      </g>
+
+      <g transform="translate(0, 104)">
+        <rect width="211" height="58" rx="4" fill="#f0fdf4" stroke="#bbf7d0"/>
+        <text x="8" y="17" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#15803d">免疫失调病与疫苗应用</text>
+        <text x="8" y="32" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">过敏反应 (肥大细胞IgE) vs 自身免疫病</text>
+        <text x="8" y="46" font-family="system-ui, sans-serif" font-size="8" fill="#16a34a">HIV 靶向侵染辅助性 T 细胞致死机理</text>
+      </g>
+    </g>
+  </g>
+</svg>

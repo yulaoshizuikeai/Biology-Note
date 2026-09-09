@@ -15,23 +15,9 @@ description: "专题06《基因的本质与中心法则》知识全景导读：�
 
 ## 章节脉络与核心导航
 
-```mermaid
-graph TD
-    A[基因的本质与表达] --> B[遗传物质探索经典实验]
-    A --> C[DNA 结构与半保留复制]
-    A --> D[中心法则与表观遗传]
-
-    B --> B1[格里菲思体内转化 & 艾弗里减法原理]
-    B --> B2[噬菌体侵染同位素标记离心排雷]
-
-    C --> C1[双螺旋化学键: 磷酸二酯键 vs 氢键]
-    C --> C2[梅塞尔森-斯塔尔离心带推导]
-    C --> C3[DNA 复制 n 次四大定量计算模型]
-
-    D --> D1[转录与翻译分子机器: 密码子与多聚核糖体]
-    D --> D2[原核偶联 vs 真核时空隔离]
-    D --> D3[表观遗传新前沿: DNA 甲基化与组蛋白修饰]
-```
+<div style="text-align: center; margin: 20px 0;">
+  <img src="./images/chapter_06_roadmap.svg" alt="专题 06 基因的本质与中心法则 章节全景脉络导图" style="max-width:740px; width:100%; border-radius:8px; border:1px solid var(--vp-c-divider);" />
+</div>
 
 ### 本专题包含以下核心篇章：
 

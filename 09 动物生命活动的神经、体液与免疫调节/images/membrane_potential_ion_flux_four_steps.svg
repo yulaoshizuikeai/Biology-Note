@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-mpf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+    <filter id="shadow-mpf" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-mpf)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      神经元膜电位变化离子通道动力学四部曲（静息 ➔ 除极 ➔ 复极 ➔ 恢复）
+    </text>
+  </g>
+
+  <!-- 4 步骤卡片 -->
+  <!-- 1. 静息状态 -->
+  <g transform="translate(15, 60)">
+    <rect width="175" height="295" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2" filter="url(#shadow-mpf)"/>
+    <rect x="0" y="0" width="175" height="28" rx="8" fill="#2563eb"/>
+    <text x="87.5" y="19" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      1. 静息状态 (Resting)
+    </text>
+
+    <g transform="translate(10, 36)">
+      <rect width="155" height="34" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+      <text x="77.5" y="21" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#1e40af" text-anchor="middle">【内负外正】</text>
+
+      <text x="0" y="52" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#0f172a">微观机制：</text>
+      <text x="0" y="68" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">• K⁺ 泄漏通道持续开放</text>
+      <text x="0" y="84" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#2563eb">• K⁺ 顺浓度梯度外流</text>
+      <text x="0" y="100" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">• 方式：协助扩散 (不耗能)</text>
+      <text x="0" y="118" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">• 负电荷大分子无法外流</text>
+      <text x="0" y="134" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">导致膜内电位低于膜外</text>
+
+      <rect x="0" y="150" width="155" height="95" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="8" y="18" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#b91c1c">★ 高考拓展考点：</text>
+      <text x="8" y="34" font-family="system-ui, sans-serif" font-size="8" fill="#475569">若适当提高细胞外液 K⁺ 浓度</text>
+      <text x="8" y="48" font-family="system-ui, sans-serif" font-size="8" fill="#475569">➔ K⁺ 外流减少</text>
+      <text x="8" y="62" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#dc2626">➔ 静息电位绝对值减小！</text>
+      <text x="8" y="78" font-family="system-ui, sans-serif" font-size="8" fill="#475569">(更容易受刺激产生兴奋)</text>
+    </g>
+  </g>
+
+  <!-- 2. 除极化/动作电位 -->
+  <g transform="translate(205, 60)">
+    <rect width="175" height="295" rx="8" fill="#ffffff" stroke="#fca5a5" stroke-width="1.2" filter="url(#shadow-mpf)"/>
+    <rect x="0" y="0" width="175" height="28" rx="8" fill="#dc2626"/>
+    <text x="87.5" y="19" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      2. 除极/反极化 (Action)
+    </text>
+
+    <g transform="translate(10, 36)">
+      <rect width="155" height="34" rx="4" fill="#fef2f2" stroke="#fecaca"/>
+      <text x="77.5" y="21" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#b91c1c" text-anchor="middle">【内正外负】</text>
+
+      <text x="0" y="52" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#0f172a">微观机制：</text>
+      <text x="0" y="68" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">• 受刺激达到【阈电位】</text>
+      <text x="0" y="84" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#dc2626">• 电压门控 Na⁺ 通道开放</text>
+      <text x="0" y="100" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#dc2626">• Na⁺ 顺浓度梯度大量内流</text>
+      <text x="0" y="118" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">• 方式：协助扩散 (不耗能)</text>
+      <text x="0" y="134" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">膜电位倒转形成动作电位</text>
+
+      <rect x="0" y="150" width="155" height="95" rx="4" fill="#fef2f2" stroke="#fecaca"/>
+      <text x="8" y="18" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#b91c1c">★ 高考拓展考点：</text>
+      <text x="8" y="34" font-family="system-ui, sans-serif" font-size="8" fill="#475569">若降低细胞外液 Na⁺ 浓度</text>
+      <text x="8" y="48" font-family="system-ui, sans-serif" font-size="8" fill="#475569">➔ Na⁺ 内流减弱</text>
+      <text x="8" y="62" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#dc2626">➔ 动作电位峰值降低！</text>
+      <text x="8" y="78" font-family="system-ui, sans-serif" font-size="8" fill="#475569">(但静息电位基本不受影响)</text>
+    </g>
+  </g>
+
+  <!-- 3. 复极化 -->
+  <g transform="translate(395, 60)">
+    <rect width="175" height="295" rx="8" fill="#ffffff" stroke="#fed7aa" stroke-width="1.2" filter="url(#shadow-mpf)"/>
+    <rect x="0" y="0" width="175" height="28" rx="8" fill="#ea580c"/>
+    <text x="87.5" y="19" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      3. 复极化 (Repolarize)
+    </text>
+
+    <g transform="translate(10, 36)">
+      <rect width="155" height="34" rx="4" fill="#fff7ed" stroke="#fed7aa"/>
+      <text x="77.5" y="21" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#c2410c" text-anchor="middle">【恢复内负外正】</text>
+
+      <text x="0" y="52" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#0f172a">微观机制：</text>
+      <text x="0" y="68" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">• Na⁺ 通道迅速失活关闭</text>
+      <text x="0" y="84" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">• 电压门控 K⁺ 通道开放</text>
+      <text x="0" y="100" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#ea580c">• K⁺ 顺梯度快速外流</text>
+      <text x="0" y="118" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">• 方式：协助扩散 (不耗能)</text>
+      <text x="0" y="134" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">膜内电位重新回归负值</text>
+
+      <rect x="0" y="150" width="155" height="95" rx="4" fill="#fffbeb" stroke="#fde68a"/>
+      <text x="8" y="18" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#b45309">★ 隐患与假象：</text>
+      <text x="8" y="34" font-family="system-ui, sans-serif" font-size="8" fill="#475569">虽然电位恢复为内负外正，</text>
+      <text x="8" y="48" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#dc2626">但此时膜内 Na⁺ 增多、</text>
+      <text x="8" y="62" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#dc2626">膜外 K⁺ 增多！</text>
+      <text x="8" y="78" font-family="system-ui, sans-serif" font-size="8" fill="#475569">离子浓度分布并未复原！</text>
+    </g>
+  </g>
+
+  <!-- 4. 离子恢复 -->
+  <g transform="translate(585, 60)">
+    <rect width="180" height="295" rx="8" fill="#ffffff" stroke="#86efac" stroke-width="1.2" filter="url(#shadow-mpf)"/>
+    <rect x="0" y="0" width="180" height="28" rx="8" fill="#16a34a"/>
+    <text x="90" y="19" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      4. 泵出泵入 (Recovery)
+    </text>
+
+    <g transform="translate(10, 36)">
+      <rect width="160" height="34" rx="4" fill="#f0fdf4" stroke="#bbf7d0"/>
+      <text x="80" y="21" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#15803d" text-anchor="middle">【彻底恢复离子平衡】</text>
+
+      <text x="0" y="52" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#0f172a">微观机制：</text>
+      <text x="0" y="68" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#16a34a">• Na⁺-K⁺ 泵启动运转</text>
+      <text x="0" y="84" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">• 水解 ATP 提供能量</text>
+      <text x="0" y="100" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#16a34a">• 逆浓度泵出 3 个 Na⁺</text>
+      <text x="0" y="116" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#16a34a">• 逆浓度泵入 2 个 K⁺</text>
+      <text x="0" y="134" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">• 方式：主动运输 (耗 ATP)</text>
+
+      <rect x="0" y="150" width="160" height="95" rx="4" fill="#ecfdf5" stroke="#a7f3d0"/>
+      <text x="8" y="18" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#047857">★ 能量耗费归宿：</text>
+      <text x="8" y="34" font-family="system-ui, sans-serif" font-size="8" fill="#475569">产生动作电位本身【不消耗ATP】</text>
+      <text x="8" y="48" font-family="system-ui, sans-serif" font-size="8" fill="#475569">(顺浓度协助扩散)；</text>
+      <text x="8" y="62" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#059669">消耗 ATP 仅用于恢复离子！</text>
+      <text x="8" y="78" font-family="system-ui, sans-serif" font-size="8" fill="#475569">为下一次兴奋做好准备</text>
+    </g>
+  </g>
+</svg>

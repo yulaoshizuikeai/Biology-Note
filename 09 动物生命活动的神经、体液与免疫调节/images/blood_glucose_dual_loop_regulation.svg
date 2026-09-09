@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-bgr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#991b1b" />
+      <stop offset="100%" stop-color="#b91c1c" />
+    </linearGradient>
+    <filter id="shadow-bgr" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-bgr)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      血糖动态平衡两大调节回线与拮抗作用（胰岛素 vs 胰高血糖素）
+    </text>
+  </g>
+
+  <!-- 左侧：血糖过高 降糖回线 (胰岛素) -->
+  <g transform="translate(15, 60)">
+    <rect width="365" height="235" rx="10" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2" filter="url(#shadow-bgr)"/>
+    <rect x="0" y="0" width="365" height="30" rx="10" fill="#2563eb"/>
+    <text x="182.5" y="20" font-family="system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      降糖回线：【血糖浓度升高】(饭后 &gt; 6.1 mmol/L)
+    </text>
+
+    <!-- 刺激与分泌 -->
+    <g transform="translate(15, 40)">
+      <rect width="335" height="40" rx="6" fill="#eff6ff" stroke="#bfdbfe"/>
+      <text x="10" y="16" font-family="system-ui, sans-serif" font-size="9.5" fill="#475569">直接刺激胰岛 / 副交感神经兴奋</text>
+      <text x="10" y="30" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#1e40af">➔ 【胰岛 B 细胞】分泌 【胰岛素 (Insulin)】增加</text>
+    </g>
+
+    <!-- 胰岛素生理作用 -->
+    <g transform="translate(15, 90)">
+      <rect width="335" height="135" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#047857">◆ 促进三大去路：</text>
+      <text x="20" y="34" font-family="system-ui, sans-serif" font-size="9" fill="#334155">① 促进葡萄糖进入组织细胞进行【氧化分解供能】</text>
+      <text x="20" y="50" font-family="system-ui, sans-serif" font-size="9" fill="#334155">② 促进合成糖原 (肝脏合成肝糖原、肌肉合成肌糖原)</text>
+      <text x="20" y="66" font-family="system-ui, sans-serif" font-size="9" fill="#334155">③ 促进转化为甘油三酯、某些氨基酸等非糖物质</text>
+
+      <text x="10" y="90" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#b91c1c">◆ 抑制两大来源：</text>
+      <text x="20" y="106" font-family="system-ui, sans-serif" font-size="9" fill="#dc2626">① 抑制肝糖原分解为葡萄糖</text>
+      <text x="20" y="122" font-family="system-ui, sans-serif" font-size="9" fill="#dc2626">② 抑制非糖物质转化为葡萄糖</text>
+    </g>
+  </g>
+
+  <!-- 右侧：血糖过低 升糖回线 (胰高血糖素) -->
+  <g transform="translate(400, 60)">
+    <rect width="365" height="235" rx="10" fill="#ffffff" stroke="#fed7aa" stroke-width="1.2" filter="url(#shadow-bgr)"/>
+    <rect x="0" y="0" width="365" height="30" rx="10" fill="#ea580c"/>
+    <text x="182.5" y="20" font-family="system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      升糖回线：【血糖浓度降低】(空腹 &lt; 3.9 mmol/L)
+    </text>
+
+    <!-- 刺激与分泌 -->
+    <g transform="translate(15, 40)">
+      <rect width="335" height="40" rx="6" fill="#fff7ed" stroke="#fed7aa"/>
+      <text x="10" y="16" font-family="system-ui, sans-serif" font-size="9.5" fill="#475569">直接刺激胰岛 / 下丘脑交感神经兴奋</text>
+      <text x="10" y="30" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#c2410c">➔ 【胰岛 A 细胞】分泌 【胰高血糖素】增加</text>
+    </g>
+
+    <!-- 胰高血糖素生理作用 -->
+    <g transform="translate(15, 90)">
+      <rect width="335" height="135" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#c2410c">◆ 促进两大来源：</text>
+      <text x="20" y="38" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#b45309">① 强烈促进【肝糖原】分解为葡萄糖进入血液</text>
+      <text x="32" y="52" font-family="system-ui, sans-serif" font-size="8.5" fill="#78350f">(注意：肌糖原不能直接分解补充血糖！)</text>
+      <text x="20" y="72" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#b45309">② 促进非糖物质 (氨基酸、甘油等) 转化为葡萄糖</text>
+
+      <text x="10" y="100" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#475569">◆ 协同激素助力：</text>
+      <text x="20" y="118" font-family="system-ui, sans-serif" font-size="9" fill="#334155">肾上腺素、糖皮质激素协同升糖（无拮抗胰岛素的降糖激素）</text>
+    </g>
+  </g>
+
+  <!-- 底部：动态稳态指标与拮抗总结 -->
+  <g transform="translate(15, 305)">
+    <rect width="750" height="50" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <g transform="translate(15, 12)">
+      <text x="0" y="16" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">正常人体空腹血糖范围：【 3.9 ~ 6.1 mmol/L 】</text>
+      <text x="350" y="16" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#dc2626">关系：胰岛素与胰高血糖素呈【拮抗作用】；胰高血糖素促进胰岛素分泌</text>
+      <text x="0" y="32" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">反馈机制：血糖水平恢复正常后，反过来抑制胰岛素或胰高血糖素的进一步分泌（负反馈闭环）</text>
+    </g>
+  </g>
+</svg>

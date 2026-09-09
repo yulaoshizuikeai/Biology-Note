@@ -15,20 +15,9 @@ description: "专题08《人体内环境与稳态》知识全景导读：贯通�
 
 ## 章节脉络与核心导航
 
-```mermaid
-graph TD
-    A[人体内环境与稳态] --> B[细胞生活的内环境]
-    A --> C[内环境稳态的重要性]
-
-    B --> B1[体液组成: 细胞内液 vs 细胞外液]
-    B --> B2[流体金三角: 血浆 ⇋ 组织液 ➔ 淋巴液 ➔ 血浆]
-    B --> B3[内环境成分判别白皮书 & 跨膜层数模型]
-    B --> B4[三大理化性质: 渗透压 / pH缓冲 / 适宜温度]
-
-    C --> C1[稳态概念与动态平衡本质]
-    C --> C2[科学史演进: 贝尔纳 ➔ 坎农 ➔ NEI网络]
-    C --> C3[组织水肿五大微观成因与动力学模型]
-```
+<div style="text-align: center; margin: 20px 0;">
+  <img src="./images/chapter_08_roadmap.svg" alt="专题 08 人体内环境与稳态 章节全景脉络导图" style="max-width:740px; width:100%; border-radius:8px; border:1px solid var(--vp-c-divider);" />
+</div>
 
 ### 本专题包含以下核心篇章：
 

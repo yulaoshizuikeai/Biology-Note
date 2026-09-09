@@ -22,16 +22,9 @@ description: "深度剖析 ATP 分子结构、特殊的化学键与水解势能�
 #### (2) 结构简式与分子拆解
 $$\text{A}-\text{P}\sim\text{P}\sim\text{P}$$
 
-```
-ATP 分子微观拓扑拆解
-├── 腺苷 (A, Adenosine)
-│   ├── 腺嘌呤 (Adenine, 含氮碱基)
-│   └── 核糖 (Ribose, 五碳糖)
-└── 3 个磷酸基团 (Phosphate groups)
-    ├── 第 1 个磷酸基团（普通磷酸酯键连接于核糖 5' 位）
-    ├── 第 2 个磷酸基团（特殊的化学键连接）
-    └── 第 3 个磷酸基团（末端特殊的化学键连接，高转移势能）
-```
+<div style="text-align: center; margin: 20px 0;">
+  <img src="./images/atp_molecular_structure_topology.svg" alt="ATP 分子微观拓扑结构拆解" style="max-width:740px; width:100%; border-radius:8px; border:1px solid var(--vp-c-divider);" />
+</div>
 
 - **特殊的化学键（旧称高能磷酸键）**：
   - 由于相邻磷酸基团都带有负电荷，彼此之间存在强烈的静电排斥；
@@ -66,13 +59,9 @@ $$\text{ATP} \underset{\text{ATP合成酶，线粒体/叶绿体/胞质基质}}{\
 
 ### 3. 吸能反应与放能反应的能量偶联（Energy Coupling）
 
-```
-细胞内能量偶联枢纽模型
-放能反应（释放能量） ──> 驱动 ADP + Pi ──> 合成 ATP ──> 储存能量
-                                                 │
-                                                 ▼
-吸能反应（消耗能量） <── 接受 ATP 水解 ──< 释放能量
-```
+<div style="text-align: center; margin: 20px 0;">
+  <img src="./images/atp_energy_coupling_cycle.svg" alt="细胞内能量偶联枢纽模型：吸能反应与放能反应循环" style="max-width:740px; width:100%; border-radius:8px; border:1px solid var(--vp-c-divider);" />
+</div>
 
 1. **吸能反应（Endothermic reactions）**：
    - 往往与 **ATP 的水解反应相偶联**；

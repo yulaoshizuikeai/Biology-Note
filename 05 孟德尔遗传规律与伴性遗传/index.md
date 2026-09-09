@@ -15,22 +15,9 @@ description: "专题05《孟德尔遗传规律与伴性遗传》知识全景导�
 
 ## 章节脉络与核心导航
 
-```mermaid
-graph TD
-    A[孟德尔遗传体系] --> B[分离定律: 一对相对性状]
-    A --> C[自由组合定律: 两对及以上性状]
-    A --> D[萨顿假说与摩尔根伴性遗传]
-    
-    B --> B1[假说-演绎法闭环]
-    B --> B2[自交纯合化与配子概率法]
-    
-    C --> C1[16格受精棋盘]
-    C --> C2[9:3:3:1 变式矩阵: 9:7 / 9:3:4 / 15:1]
-    C --> C3[致死突变与连锁分析]
-    
-    D --> D1[伴X隐性 / 伴X显性 / 伴Y / 母系]
-    D --> D2[系谱图三步排查升级: 常染色体 vs XY同源区段]
-```
+<div style="text-align: center; margin: 20px 0;">
+  <img src="./images/chapter_05_roadmap.svg" alt="专题 05 孟德尔遗传规律与伴性遗传 章节全景脉络导图" style="max-width:740px; width:100%; border-radius:8px; border:1px solid var(--vp-c-divider);" />
+</div>
 
 ### 本专题包含以下核心篇章：
 

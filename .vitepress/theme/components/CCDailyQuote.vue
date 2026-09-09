@@ -1,103 +1,239 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from "vue";
 
-interface BiologyFlash {
-  text: string;
-  tag: string;
+interface FlashcardGroup {
+  id: string;
+  module: string;
+  topic: string;
+  points: string[];
 }
 
-// 精选高中生物核心速记与解题模型（覆盖 16 大专题高频秒杀与易错判断）
-const BIOLOGY_FLASHES: BiologyFlash[] = [
-  { text: "自由水越多代谢越旺盛，结合水越多抗逆性（抗寒/抗旱）越强。", tag: "细胞分子" },
-  { text: "核酸是遗传信息的携带者，蛋白质是生命活动的主要承担者与体现者。", tag: "生命基础" },
-  { text: "生物膜系统的流动镶嵌模型：磷脂双分子层是骨架，蛋白质分子镶嵌其间。", tag: "细胞结构" },
-  { text: "协助扩散不耗能但需转运蛋白，主动运输既耗能又逆浓度梯度。", tag: "跨膜运输" },
-  { text: "酶具有高效性与专一性，只降低反应活化能，不改变平衡点。", tag: "酶的机理" },
-  { text: "ATP 含有两个高能磷酸键，末端高能磷酸键水解快速释放能量。", tag: "能量货币" },
-  { text: "有氧呼吸第三阶段释放能量最多，发生在线粒体内膜上。", tag: "细胞呼吸" },
-  { text: "光反应在类囊体薄膜上产生 ATP 和 NADPH，为暗反应提供能量与还原剂。", tag: "光合作用" },
-  { text: "突止光照时：C₃ 瞬时增加，C₅ 瞬时减少；突断 CO₂ 时：C₃ 骤降，C₅ 骤升。", tag: "动态模型" },
-  { text: "有丝分裂后期着丝粒分裂，染色体数目加倍，DNA 数目不变。", tag: "细胞增殖" },
-  { text: "减数第一次分裂后期：同源染色体分离，非同源染色体自由组合。", tag: "减数分裂" },
-  { text: "细胞全能性的标志：已分化的细胞发育为完整个体。", tag: "细胞历程" },
-  { text: "细胞衰老特征：水分减少、呼吸变慢、酶活性降低、色素沉积。", tag: "细胞衰老" },
-  { text: "原癌基因负责调节细胞周期，抑癌基因阻止细胞不正常增殖。", tag: "细胞癌变" },
-  { text: "假说-演绎法闭环：观察现象 ➔ 提出假说 ➔ 演绎推理 ➔ 测交验证 ➔ 得出结论。", tag: "科学方法" },
-  { text: "连续自交 n 代：杂合子比例为 (1/2)ⁿ，纯合子比例为 1 - (1/2)ⁿ。", tag: "分离定律" },
-  { text: "自由组合 9:3:3:1 变式中：9:7 为双显互补，15:1 为具显即显。", tag: "自由组合" },
-  { text: "伴 X 隐性遗传特征：母病子必病，女病父必病；男性患者多于女性。", tag: "伴性遗传" },
-  { text: "伴 X 显性遗传特征：父病女必病，子病母必病；女性患者多于男性。", tag: "伴性遗传" },
-  { text: "肺炎链球菌体外转化实验运用减法原理，证明 DNA 是遗传物质。", tag: "经典实验" },
-  { text: "³²P 标记噬菌体 DNA（沉淀放射高），³⁵S 标记噬菌体蛋白质外壳（上清放射高）。", tag: "同位素示踪" },
-  { text: "DNA 双螺旋两条链反向平行，A-T 之间 2 个氢键，G-C 之间 3 个氢键。", tag: "DNA结构" },
-  { text: "DNA 连续复制 n 次共产生 2ⁿ 个分子，含原亲代母链的分子恒为 2 个。", tag: "复制模型" },
-  { text: "转录以 DNA 一条链为模板，翻译在核糖体上以 mRNA 为模板。", tag: "中心法则" },
-  { text: "密码子在 mRNA 上（64种，61种编码氨基酸），反密码子在 tRNA 上。", tag: "基因表达" },
-  { text: "DNA 甲基化不改变碱基序列，但可抑制基因转录，属于表观遗传。", tag: "表观遗传" },
-  { text: "基因突变是产生新基因的根本途径，是生物变异的根本来源。", tag: "生物变异" },
-  { text: "单倍体育种先花药离体培养再秋水仙素加倍，可明显缩短育种年限。", tag: "育种方案" },
-  { text: "现代生物进化理论核心：种群是进化的基本单位，自然选择决定进化方向。", tag: "生物进化" },
-  { text: "生殖隔离是新物种形成的标志，基因频率改变是进化的实质。", tag: "物种形成" },
-  { text: "内环境是细胞赖以生存的液体环境，主要由血浆、组织液和淋巴液构成。", tag: "内环境" },
-  { text: "细胞外液渗透压的 90% 以上由 Na⁺ 和 Cl⁻ 决定，血浆胶体渗透压取决于蛋白质。", tag: "渗透压" },
-  { text: "组织水肿动力学本质：血浆胶体渗透压降低或组织液胶体渗透压升高。", tag: "稳态病理" },
-  { text: "反射发生的必备前提：反射弧结构必须完整，且接受适宜强度的刺激。", tag: "神经调节" },
-  { text: "静息电位为外正内负（K⁺ 外流），动作电位为外负内正（Na⁺ 内流）。", tag: "膜电位" },
-  { text: "神经递质只由突触前膜胞吐释放，作用于突触后膜受体，故突触传递单向。", tag: "突触传递" },
-  { text: "胰岛素是体内唯一降血糖的激素，胰高血糖素与肾上腺素协同升糖。", tag: "体液调节" },
-  { text: "下丘脑是体温调节、水盐调节和血糖调节的核心神经中枢与内分泌枢纽。", tag: "调节枢纽" },
-  { text: "B 细胞活化需要两个信号：抗原直接结合第一信号 + 辅助性 T 细胞第二信号。", tag: "免疫应答" },
-  { text: "细胞毒性 T 细胞接触靶细胞裂解之，使病原体暴露后被抗体结合或吞噬消灭。", tag: "细胞免疫" },
-  { text: "生长素在胚芽鞘中极性运输由形态学上端流向形态学下端，属于主动运输。", tag: "植物激素" },
-  { text: "生长素作用具有两重性：低浓度促进生长，高浓度抑制生长（如顶端优势）。", tag: "生长素" },
-  { text: "J 型增长无环境阻力，S 型增长受环境容纳量（K 值）限制。", tag: "种群动力学" },
-  { text: "群落演替：初生演替起点无土壤，次生演替起点保留了土壤与植物繁殖体。", tag: "群落演替" },
-  { text: "生态系统能量流动两大铁律：单向流动、逐级递减（传递效率 10%~20%）。", tag: "生态系统" },
-  { text: "生物多样性三层次：基因多样性、物种多样性、生态系统多样性。", tag: "人与环境" },
-  { text: "果酒发酵 18~30℃ 酵母菌无氧发酵，果醋发酵 30~35℃ 醋酸菌有氧发酵。", tag: "传统发酵" },
-  { text: "植物组织培养需脱分化形成愈伤组织，再经再分化形成胚状体或丛芽。", tag: "细胞工程" },
-  { text: "单克隆抗体制备：B 淋巴细胞与骨髓瘤细胞融合，经 HAT 筛选与专一抗体检测。", tag: "单抗技术" },
-  { text: "PCR 反应循环三步曲：95℃ 变性解旋 ➔ 55℃ 复性引物结合 ➔ 72℃ 耐热 Taq 酶延伸。", tag: "基因工程" },
+// 精选高中生物 16 大核心专题速记卡片（每组 3 条高频考点/秒杀结论，核心术语已标重点）
+const FLASHCARD_GROUPS: FlashcardGroup[] = [
+  {
+    id: "01-water-salts",
+    module: "必修1 · 细胞的分子组成",
+    topic: "水与无机盐生理功能判别",
+    points: [
+      "**自由水**越多，细胞代谢越旺盛；**结合水**比例越高，细胞抗逆性（**抗寒/抗旱/抗盐碱**）越强。",
+      "**无机盐**多数以**离子**形式存在，维持渗透压与酸碱平衡（如 **Na⁺/Cl⁻** 维持细胞外液渗透压，**HCO₃⁻/HPO₄²⁻** 维持酸碱缓冲）。",
+      "**Mg²⁺** 是叶绿素合成必需元素，**Fe²⁺** 构成血红蛋白，**I⁻** 参与甲状腺激素合成，**Ca²⁺** 过低引起肌肉抽搐。",
+    ],
+  },
+  {
+    id: "02-protein-nucleic",
+    module: "必修1 · 细胞的分子组成",
+    topic: "蛋白质与核酸的结构与功能",
+    points: [
+      "**蛋白质**是生命活动的主要**承担者与体现者**；氨基酸脱水缩合形成**肽键（-CO-NH-）**，空间构象决定其生物活性。",
+      "**核酸**是遗传信息的携带者；**DNA** 含有脱氧核糖和胸腺嘧啶（**T**），**RNA** 含有核糖和尿嘧啶（**U**）。",
+      "高温、强酸使蛋白质**变性**，破坏的是**空间构象与氢键**，但**肽键未断裂**，仍能与双缩脲试剂发生紫色反应。",
+    ],
+  },
+  {
+    id: "03-membrane-system",
+    module: "必修1 · 细胞的基本结构",
+    topic: "流动镶嵌模型与生物膜系统",
+    points: [
+      "**磷脂双分子层**构成膜的基本支架，亲水头部在外，疏水尾部在内；蛋白质分子**镶嵌、贯穿或覆盖**其间。",
+      "生物膜的结构特性是**具有流动性**（受温度影响），功能特性是**选择透过性**（由转运蛋白的种类决定）。",
+      "**生物膜系统**包括细胞膜、核膜与细胞器膜（注意：**核糖体、中心体无膜结构**，不属于生物膜系统）。",
+    ],
+  },
+  {
+    id: "04-transport",
+    module: "必修1 · 细胞的物质输入输出",
+    topic: "物质跨膜运输方式深度辨析",
+    points: [
+      "**自由扩散**：顺浓度梯度，不消耗能量，无需转运蛋白（如 **O₂、CO₂、甘油、乙醇、苯、脂溶性小分子**）。",
+      "**协助扩散**：顺浓度梯度，不消耗能量，需要**转运蛋白**（通道蛋白或载体蛋白，如**葡萄糖进入红细胞**）。",
+      "**主动运输**：逆浓度梯度，消耗 **ATP**，必须依赖**载体蛋白**（如 **Na⁺-K⁺ 泵、小肠上皮细胞吸收葡萄糖**）。",
+    ],
+  },
+  {
+    id: "05-enzymes-atp",
+    module: "必修1 · 细胞的能量供应",
+    topic: "酶的催化机理与 ATP 能量货币",
+    points: [
+      "酶的作用机理是**显著降低化学反应的活化能**，只提高反应速率，**不改变反应平衡点**与终产物生成量。",
+      "酶具有**高效性**与**专一性**，绝大多数酶是蛋白质，少数是 **RNA（核酶）**；低温抑制酶活性但**不破坏**空间结构。",
+      "**ATP** 含有两个特殊的**高能磷酸键**（末端易水解），水解脱下末端磷酸基团释放能量，驱动细胞内**吸能反应**。",
+    ],
+  },
+  {
+    id: "06-photosynthesis-respiration",
+    module: "必修1 · 光合与细胞呼吸",
+    topic: "光合与细胞呼吸动态转换模型",
+    points: [
+      "**光反应**在**类囊体薄膜**进行：水光解产生 **O₂、NADPH 与 ATP**；**暗反应**在**叶绿体基质**进行 **CO₂ 固定与 C₃ 还原**。",
+      "**突止光照**时：光反应骤停，**C₃ 瞬时增加，C₅ 瞬时减少**；**突断 CO₂** 时：CO₂ 固定受阻，**C₃ 骤降，C₅ 骤升**。",
+      "**有氧呼吸第三阶段**在线粒体内膜上 **[H] 与 O₂ 结合生成 H₂O**，释放**大量能量**；无氧呼吸只在**第一阶段**释放少量能量。",
+    ],
+  },
+  {
+    id: "07-mitosis-meiosis",
+    module: "必修1/2 · 细胞增殖与减数分裂",
+    topic: "染色体行为与减数分裂关键判据",
+    points: [
+      "**有丝分裂后期**：**着丝粒分裂**，姐妹染色单体分开，**染色体数目瞬时加倍**，核 DNA 分子数目不变。",
+      "**减数第一次分裂后期**：**同源染色体分离**，非同源染色体自由组合，是**孟德尔两大遗传定律**的细胞学物理基础。",
+      "**减数第二次分裂后期**：**着丝粒分裂**，姐妹染色单体分离，细胞内**不存在同源染色体**。",
+    ],
+  },
+  {
+    id: "08-differentiation-aging",
+    module: "必修1 · 细胞的生命历程",
+    topic: "分化、全能性、衰老与凋亡",
+    points: [
+      "**细胞分化**的实质是**基因的选择性表达**，遗传物质未变，核内转录的 mRNA 和合成的蛋白质种类发生改变。",
+      "**细胞全能性**的标志：高度分化的细胞**发育为完整个体**（植物组织培养、克隆动物体现动物细胞核全能性）。",
+      "**细胞衰老**特征：**水分减少、呼吸变慢、多种酶活性降低、色素积累、核体积增大**；**细胞凋亡**是基因决定的程序性死亡。",
+    ],
+  },
+  {
+    id: "09-mendel-genetics",
+    module: "必修2 · 遗传的基本规律",
+    topic: "假说-演绎法与基因分离定律",
+    points: [
+      "**假说-演绎法闭环**：观察现象提出问题 ➔ **提出假说**（解释现象）➔ **演绎推理**（设计测交方案）➔ **测交实验验证** ➔ 得出结论。",
+      "杂合子 **Aa** 连续自交 **n** 代：纯合子比例为 **1 - (1/2)ⁿ**，杂合子比例为 **(1/2)ⁿ**，显隐性纯合子各占一半。",
+      "验证基因分离定律最直接有效的方法是**测交实验（Aa × aa）**，后代显隐性性状分离比理论值为 **1 : 1**。",
+    ],
+  },
+  {
+    id: "10-dihybrid-variations",
+    module: "必修2 · 自由组合定律",
+    topic: "自由组合 9:3:3:1 变式秒杀口诀",
+    points: [
+      "双杂合子 **AaBb** 自交产生 **9:3:3:1**，若出现变式：**9:7** 为双显互补；**15:1** 为具显即显（单显与双显同表型）。",
+      "**9:6:1** 为单显同一表型；**9:3:4** 为隐性上位（双隐性与某一单隐性表型重叠）；**13:3** 为显性上位/抑制基因效应。",
+      "致死模型：若显性纯合致死（**AA/BB 胚胎致死**），自交后代表型比变为 **(2:1)(2:1) = 4:2:2:1**。",
+    ],
+  },
+  {
+    id: "11-sex-linked-inheritance",
+    module: "必修2 · 伴性遗传与人类遗传病",
+    topic: "伴性遗传典型特征与系谱图判定",
+    points: [
+      "**伴 X 染色体隐性遗传**（如红绿色盲、血友病）：**女病父必病，母病子必病**，男性患者发病率显著高于女性。",
+      "**伴 X 染色体显性遗传**（如抗维生素D佝偻病）：**父病女必病，子病母必病**，女性患者多于男性，代代连续遗传。",
+      "系谱图判定黄金口诀：**无中生有为隐性**（生女患病为常隐），**有中生无为显性**（生女正常为常显）。",
+    ],
+  },
+  {
+    id: "12-central-dogma",
+    module: "必修2 · 基因的本质与表达",
+    topic: "同位素标记与中心法则信息传递",
+    points: [
+      "噬菌体侵染细菌实验：**³²P 标记 DNA**（放射性主要在沉淀物），**³⁵S 标记蛋白质外壳**（放射性主要在上清液）。",
+      "**DNA 复制**为**半保留复制、边解旋边双向复制**；连续复制 **n** 次产生 **2ⁿ** 个分子，含亲代母链的分子恒为 **2** 个。",
+      "**密码子**位于 **mRNA** 上（共 64 种，61 种编码氨基酸，3 种终止密码子），**反密码子**位于 **tRNA** 上。",
+    ],
+  },
+  {
+    id: "13-internal-environment",
+    module: "选择性必修1 · 稳态与调节",
+    topic: "内环境稳态与组织水肿成因模型",
+    points: [
+      "**内环境**即细胞外液，主要由**血浆、组织液和淋巴液**构成；细胞内液、消化液、泪液、尿液**不属于内环境**。",
+      "细胞外液渗透压的 **90% 以上由 Na⁺ 和 Cl⁻ 决定**；血浆胶体渗透压主要由**血浆蛋白**维持。",
+      "**组织水肿动力学机制**：血浆蛋白减少（营养不良/肾炎）导致**血浆胶体渗透压降低**，或过敏反应导致毛细血管通透性增大。",
+    ],
+  },
+  {
+    id: "14-neural-regulation",
+    module: "选择性必修1 · 神经调节",
+    topic: "静息电位、动作电位与突触传递",
+    points: [
+      "**静息电位**：膜主要对 **K⁺ 有通透性**，表现为**外正内负**；膜外高 Na⁺、膜内高 K⁺ 依赖 **Na⁺-K⁺ 泵主动运输维持**。",
+      "**动作电位**：受到适宜刺激后 **Na⁺ 通道开放，Na⁺ 顺浓度内流**，膜电位逆转为**外负内正**（属于协助扩散）。",
+      "**突触传递单向性**：神经递质仅由**突触前膜以胞吐方式释放**，经突触间隙扩散，特异性结合于**突触后膜受体**。",
+    ],
+  },
+  {
+    id: "15-humoral-immunity",
+    module: "选择性必修1 · 体液与免疫调节",
+    topic: "血糖调节枢纽与特异性免疫双重网络",
+    points: [
+      "**胰岛素**是体内**唯一降低血糖**的激素；**胰高血糖素与肾上腺素**协同升高血糖；**下丘脑**是血糖、体温、水盐调节中枢。",
+      "**体液免疫**：**B 细胞活化**需要抗原呈递与辅助性 T 细胞分泌的细胞因子；**浆细胞**产生抗体，浆细胞不能识别抗原。",
+      "**细胞免疫**：**细胞毒性 T 细胞**特异性识别并紧密接触靶细胞，使其裂解死亡，病原体暴露后被体液免疫或吞噬细胞清除。",
+    ],
+  },
+  {
+    id: "16-engineering-ecology",
+    module: "选择性必修2/3 · 生态与生物工程",
+    topic: "生态能量流动与基因工程核心技术",
+    points: [
+      "生态系统**能量流动**两大铁律：**单向流动、逐级递减**；相邻两个营养级间的能量传递效率约为 **10%~20%**。",
+      "**PCR 反应循环三步曲**：**95℃ 变性解旋** ➔ **55℃ 复性引物结合** ➔ **72℃ 耐热 Taq DNA 聚合酶延伸**。",
+      "**限制酶**能特异性识别双链 DNA 的特定核苷酸序列并切割磷酸二酯键；**DNA 连接酶**催化缝合磷酸二酯键缺口。",
+    ],
+  },
 ];
 
-// 每次刷新随机抽取一条（SSR 保底第一条）
 const currentIndex = ref<number>(0);
 const isChanging = ref<boolean>(false);
 const copied = ref<boolean>(false);
 
 onMounted(() => {
-  // 每次页面刷新或载入时随机选择一条
-  currentIndex.value = Math.floor(Math.random() * BIOLOGY_FLASHES.length);
+  currentIndex.value = Math.floor(Math.random() * FLASHCARD_GROUPS.length);
 });
 
-const currentItem = computed<BiologyFlash>(() => {
-  return BIOLOGY_FLASHES[currentIndex.value] || BIOLOGY_FLASHES[0];
+const currentCard = computed<FlashcardGroup>(() => {
+  return FLASHCARD_GROUPS[currentIndex.value] || FLASHCARD_GROUPS[0];
 });
 
-// 点击换一条
+// 解析 **重点词汇** 为高亮标签
+const formatHighlighted = (text: string): string => {
+  return text.replace(/\*\*(.+?)\*\*/g, '<span class="flash-kw">$1</span>');
+};
+
+// 切换下一组卡片
 const handleNext = () => {
   if (isChanging.value) return;
   isChanging.value = true;
   setTimeout(() => {
-    let nextIdx = Math.floor(Math.random() * BIOLOGY_FLASHES.length);
-    if (nextIdx === currentIndex.value) {
-      nextIdx = (nextIdx + 1) % BIOLOGY_FLASHES.length;
-    }
-    currentIndex.value = nextIdx;
+    currentIndex.value = (currentIndex.value + 1) % FLASHCARD_GROUPS.length;
     isChanging.value = false;
-  }, 160);
+  }, 150);
 };
 
-// 复制速记
+// 切换上一组卡片
+const handlePrev = (event: MouseEvent) => {
+  event.stopPropagation();
+  if (isChanging.value) return;
+  isChanging.value = true;
+  setTimeout(() => {
+    currentIndex.value =
+      (currentIndex.value - 1 + FLASHCARD_GROUPS.length) % FLASHCARD_GROUPS.length;
+    isChanging.value = false;
+  }, 150);
+};
+
+// 点击卡片换一组（若用户正在划选文字，则不触发切换）
+const onCardClick = (event: MouseEvent) => {
+  const selection = window.getSelection();
+  if (selection && selection.toString().trim().length > 0) return;
+  if ((event.target as HTMLElement)?.closest(".flash-actions, button, a")) return;
+  handleNext();
+};
+
+// 复制当前整组速记
 const handleCopy = async (event: MouseEvent) => {
   event.stopPropagation();
-  const text = `【高中生物速记】${currentItem.value.text}（#${currentItem.value.tag}）`;
+  const card = currentCard.value;
+  const formattedPoints = card.points
+    .map((pt, i) => `${String(i + 1).padStart(2, "0")}. ${pt.replace(/\*\*/g, "")}`)
+    .join("\n");
+  const copyText = `【高中生物核心速记】${card.module} · ${card.topic}\n${formattedPoints}\n—— 来源：高考生物知识库`;
+
   try {
     if (navigator?.clipboard?.writeText) {
-      await navigator.clipboard.writeText(text);
+      await navigator.clipboard.writeText(copyText);
     } else {
       const textarea = document.createElement("textarea");
-      textarea.value = text;
+      textarea.value = copyText;
       document.body.appendChild(textarea);
       textarea.select();
       document.execCommand("copy");
@@ -117,86 +253,133 @@ const handleCopy = async (event: MouseEvent) => {
   <div class="cc-biology-flash-wrap">
     <div
       class="cc-biology-flash-card"
-      role="button"
+      role="region"
       tabindex="0"
-      title="点击换一条高中生物速记"
-      @click="handleNext"
+      aria-label="高中生物每日核心速记卡片"
+      @click="onCardClick"
       @keydown.enter="handleNext"
       @keydown.space.prevent="handleNext"
     >
-      <!-- 左侧极简徽章 -->
-      <div class="flash-badge">
-        <span class="flash-badge-icon">🌿</span>
-        <span class="flash-badge-text">每日速记</span>
-        <span class="flash-tag">{{ currentItem.tag }}</span>
+      <!-- 卡片头部栏：分类徽标 + 专题名称 + 交互工具条 -->
+      <div class="flash-card-header">
+        <div class="flash-header-left">
+          <span class="flash-badge">
+            <span class="flash-badge-icon">🌿</span>
+            <span class="flash-badge-text">每日速记</span>
+          </span>
+          <span class="flash-module">{{ currentCard.module }}</span>
+          <span class="flash-topic-title">{{ currentCard.topic }}</span>
+        </div>
+
+        <div class="flash-actions" @click.stop>
+          <span class="flash-counter" title="卡片编号">
+            {{ String(currentIndex + 1).padStart(2, "0") }} /
+            {{ String(FLASHCARD_GROUPS.length).padStart(2, "0") }}
+          </span>
+
+          <button
+            type="button"
+            class="flash-action-btn"
+            title="上一组"
+            :disabled="isChanging"
+            @click="handlePrev"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="13"
+              height="13"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            class="flash-action-btn"
+            title="换一组 (点击或按空格)"
+            :disabled="isChanging"
+            @click="handleNext"
+          >
+            <svg
+              class="action-svg"
+              :class="{ 'is-spinning': isChanging }"
+              viewBox="0 0 24 24"
+              width="13"
+              height="13"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
+            </svg>
+            <span class="flash-btn-label">换一组</span>
+          </button>
+
+          <button
+            type="button"
+            class="flash-action-btn flash-copy-btn"
+            :class="{ 'is-copied': copied }"
+            :title="copied ? '已复制本组考点' : '复制整组考点'"
+            @click="handleCopy"
+          >
+            <svg
+              v-if="!copied"
+              class="action-svg"
+              viewBox="0 0 24 24"
+              width="13"
+              height="13"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <svg
+              v-else
+              class="action-svg is-check"
+              viewBox="0 0 24 24"
+              width="13"
+              height="13"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span class="flash-btn-label">{{ copied ? "已复制" : "复制" }}</span>
+          </button>
+        </div>
       </div>
 
-      <!-- 中间核心简短金句 -->
-      <div class="flash-text-box" :class="{ 'is-swapping': isChanging }">
-        <span class="flash-quote-mark">“</span><span class="flash-content">{{ currentItem.text }}</span><span class="flash-quote-mark">”</span>
+      <!-- 卡片主体：完整多条高频考点列表，重点词汇高亮 -->
+      <div class="flash-card-body" :class="{ 'is-swapping': isChanging }">
+        <div
+          v-for="(point, idx) in currentCard.points"
+          :key="`${currentCard.id}-${idx}`"
+          class="flash-item-row"
+        >
+          <span class="flash-item-index">{{ String(idx + 1).padStart(2, "0") }}</span>
+          <div class="flash-item-text" v-html="formatHighlighted(point)"></div>
+        </div>
       </div>
 
-      <!-- 右侧轻量操作：换一条 & 复制 -->
-      <div class="flash-actions" @click.stop>
-        <button
-          type="button"
-          class="flash-action-icon-btn"
-          title="换一条"
-          :disabled="isChanging"
-          @click="handleNext"
-        >
-          <svg
-            class="action-svg"
-            :class="{ 'is-spinning': isChanging }"
-            viewBox="0 0 24 24"
-            width="13"
-            height="13"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2.2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
-          </svg>
-        </button>
-
-        <button
-          type="button"
-          class="flash-action-icon-btn"
-          :title="copied ? '已复制' : '复制速记'"
-          @click="handleCopy"
-        >
-          <svg
-            v-if="!copied"
-            class="action-svg"
-            viewBox="0 0 24 24"
-            width="13"
-            height="13"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-          </svg>
-          <svg
-            v-else
-            class="action-svg is-check"
-            viewBox="0 0 24 24"
-            width="13"
-            height="13"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>
-        </button>
+      <!-- 卡片底部极简辅助提示条 -->
+      <div class="flash-card-footer">
+        <span class="flash-footer-tip">
+          💡 点击卡片或右侧按钮切换 · 高亮背景为高考必背核心得分词汇
+        </span>
       </div>
     </div>
   </div>
@@ -204,34 +387,41 @@ const handleCopy = async (event: MouseEvent) => {
 
 <style scoped>
 .cc-biology-flash-wrap {
-  margin-top: 22px;
+  margin-top: 24px;
   width: 100%;
 }
 
 .cc-biology-flash-card {
   position: relative;
   display: flex;
-  align-items: center;
-  gap: 12px;
+  flex-direction: column;
+  gap: 10px;
   max-width: 680px;
   width: 100%;
-  padding: 8px 14px;
-  background: color-mix(in srgb, var(--vp-c-brand-1, #10B981) 5%, var(--vp-c-bg-soft));
-  border: 1px solid color-mix(in srgb, var(--vp-c-brand-1, #10B981) 18%, transparent);
-  border-radius: 12px;
+  padding: 14px 16px 12px 16px;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 10px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 4px 18px -4px rgba(16, 185, 129, 0.12);
+  box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.03);
   cursor: pointer;
-  user-select: none;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .cc-biology-flash-card:hover {
-  background: color-mix(in srgb, var(--vp-c-brand-1, #10B981) 9%, var(--vp-c-bg-soft));
-  border-color: color-mix(in srgb, var(--vp-c-brand-1, #10B981) 35%, transparent);
-  box-shadow: 0 6px 24px -4px rgba(16, 185, 129, 0.2);
-  transform: translateY(-1px);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 2.5%, var(--vp-c-bg-soft));
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 35%, transparent);
+  box-shadow: 0 6px 18px -4px rgba(0, 0, 0, 0.06);
+}
+
+:global(html.dark) .cc-biology-flash-card {
+  box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.3);
+}
+
+:global(html.dark) .cc-biology-flash-card:hover {
+  box-shadow: 0 6px 20px -4px rgba(0, 0, 0, 0.5);
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 40%, transparent);
 }
 
 .cc-biology-flash-card:focus-visible {
@@ -239,16 +429,34 @@ const handleCopy = async (event: MouseEvent) => {
   outline-offset: 2px;
 }
 
-/* 左侧徽章 */
+/* 顶部头部栏 */
+.flash-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.flash-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+/* 每日速记小徽章 */
 .flash-badge {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
   flex-shrink: 0;
-  padding: 2.5px 8px;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--vp-c-brand-1, #10B981) 12%, transparent);
-  border: 1px solid color-mix(in srgb, var(--vp-c-brand-1, #10B981) 24%, transparent);
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--vp-c-brand-1) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--vp-c-brand-1) 24%, transparent);
 }
 
 .flash-badge-icon {
@@ -257,77 +465,73 @@ const handleCopy = async (event: MouseEvent) => {
 }
 
 .flash-badge-text {
-  font-size: 11px;
+  font-size: 11.5px;
   font-weight: 700;
   color: var(--vp-c-brand-1);
   letter-spacing: 0.02em;
 }
 
-.flash-tag {
+/* 模块分类 */
+.flash-module {
   display: inline-block;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
-  padding: 1px 5px;
+  color: var(--vp-c-text-2);
+  padding: 2px 6px;
   border-radius: 4px;
-  background: color-mix(in srgb, var(--vp-c-brand-1, #10B981) 16%, transparent);
-  color: var(--vp-c-brand-1);
+  background: color-mix(in srgb, var(--vp-c-text-3) 12%, transparent);
 }
 
-/* 核心内容文本 */
-.flash-text-box {
-  flex: 1;
-  min-width: 0;
-  font-size: 13.5px;
-  line-height: 1.45;
+/* 专题名称 */
+.flash-topic-title {
+  font-size: 12.5px;
+  font-weight: 650;
   color: var(--vp-c-text-1);
   letter-spacing: 0.01em;
-  transition: opacity 0.16s ease, transform 0.16s ease;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-.flash-text-box.is-swapping {
-  opacity: 0;
-  transform: translateY(4px);
-}
-
-.flash-quote-mark {
-  color: var(--vp-c-brand-1);
-  font-weight: 700;
-  opacity: 0.8;
-  margin: 0 1px;
-}
-
-.flash-content {
-  font-weight: 500;
-}
-
-/* 右侧操作按钮 */
+/* 右侧操作工具条 */
 .flash-actions {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   flex-shrink: 0;
 }
 
-.flash-action-icon-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 6px;
-  border: 1px solid transparent;
-  background: transparent;
-  color: var(--vp-c-text-2);
-  cursor: pointer;
-  transition: all 0.2s ease;
+.flash-counter {
+  font-size: 11px;
+  font-weight: 600;
+  font-family: var(--vp-font-family-mono);
+  color: var(--vp-c-text-3);
+  padding: 0 4px;
+  user-select: none;
 }
 
-.flash-action-icon-btn:hover {
-  background: color-mix(in srgb, var(--vp-c-brand-1, #5672CD) 10%, transparent);
-  border-color: color-mix(in srgb, var(--vp-c-brand-1, #5672CD) 20%, transparent);
+.flash-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 7px;
+  border-radius: 6px;
+  border: 1px solid color-mix(in srgb, var(--vp-c-border) 80%, transparent);
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-2);
+  font-size: 11.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.flash-action-btn:hover {
+  background: color-mix(in srgb, var(--vp-c-brand-1) 10%, var(--vp-c-bg));
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 35%, transparent);
+  color: var(--vp-c-brand-1);
+}
+
+.flash-action-btn.is-copied {
+  color: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
 }
 
 .action-svg.is-spinning {
@@ -335,7 +539,7 @@ const handleCopy = async (event: MouseEvent) => {
 }
 
 .action-svg.is-check {
-  color: #10b981;
+  color: var(--vp-c-brand-1);
 }
 
 @keyframes spin-once {
@@ -347,19 +551,109 @@ const handleCopy = async (event: MouseEvent) => {
   }
 }
 
+/* 卡片主体：列表 */
+.flash-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  transition:
+    opacity 0.16s ease,
+    transform 0.16s ease;
+}
+
+.flash-card-body.is-swapping {
+  opacity: 0;
+  transform: translateY(4px);
+}
+
+.flash-item-row {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  line-height: 1.6;
+}
+
+.flash-item-index {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: var(--vp-font-family-mono);
+  color: var(--vp-c-brand-1);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 12%, transparent);
+  padding: 1px 5px;
+  border-radius: 4px;
+  line-height: 1.3;
+}
+
+.flash-item-text {
+  font-size: 13.5px;
+  color: var(--vp-c-text-1);
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+  word-break: break-word;
+  white-space: normal;
+}
+
+/* 重点核心词汇高亮样式 */
+:deep(.flash-kw) {
+  color: var(--vp-c-brand-1);
+  background-color: color-mix(in srgb, var(--vp-c-brand-1) 12%, transparent);
+  padding: 1px 4px;
+  margin: 0 1px;
+  border-radius: 4px;
+  font-weight: 650;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+:global(html.dark) :deep(.flash-kw) {
+  color: #74c69d;
+  background-color: color-mix(in srgb, #52b788 18%, transparent);
+}
+
+/* 底部提示条 */
+.flash-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 4px;
+  border-top: 1px dashed var(--vp-c-divider);
+}
+
+.flash-footer-tip {
+  font-size: 11px;
+  color: var(--vp-c-text-3);
+  letter-spacing: 0.01em;
+  user-select: none;
+}
+
 @media (max-width: 640px) {
-  .cc-physics-flash-card {
+  .cc-biology-flash-card {
+    padding: 12px 14px;
+  }
+
+  .flash-card-header {
+    flex-direction: column;
     align-items: flex-start;
-    padding: 10px 12px;
+    gap: 8px;
   }
 
-  .flash-badge {
-    margin-top: 2px;
+  .flash-actions {
+    width: 100%;
+    justify-content: flex-end;
   }
 
-  .flash-text-box {
+  .flash-topic-title {
+    font-size: 12px;
+  }
+
+  .flash-item-text {
     font-size: 13px;
-    line-height: 1.5;
+    line-height: 1.6;
+  }
+
+  .flash-footer-tip {
+    font-size: 10px;
   }
 }
 </style>

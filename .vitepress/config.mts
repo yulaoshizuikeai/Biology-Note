@@ -33,7 +33,7 @@ export default defineConfig({
           "高考生物知识库,高中生物知识库,高考生物,高中生物,生物知识库,生物模型,光合作用,有氧呼吸,减数分裂,伴性遗传,中心法则,内环境稳态,神经调节,免疫调节,基因工程,PCR,生物实验,Yulaoshizuikeai",
       },
     ],
-    ["meta", { name: "theme-color", content: "#10B981" }],
+    ["meta", { name: "theme-color", content: "#2E6B56" }],
     ["meta", { name: "robots", content: "index, follow, max-image-preview:large" }],
     ["meta", { property: "og:site_name", content: siteName }],
     ["meta", { property: "og:type", content: "website" }],

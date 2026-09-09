@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-dpc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4c1d95" />
+      <stop offset="100%" stop-color="#6d28d9" />
+    </linearGradient>
+    <filter id="shadow-dpc" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-dpc)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      高考压轴核心模型：每条染色体上 DNA 含量变化曲线与时期映射
+    </text>
+  </g>
+
+  <!-- 左侧：曲线图绘制 -->
+  <g transform="translate(15, 60)">
+    <rect width="470" height="295" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-dpc)"/>
+
+    <g transform="translate(55, 30)">
+      <!-- 坐标轴 -->
+      <line x1="0" y1="210" x2="380" y2="210" stroke="#475569" stroke-width="1.5"/>
+      <polygon points="380,207 386,210 380,213" fill="#475569"/>
+      <text x="380" y="228" font-family="system-ui, sans-serif" font-size="10" fill="#475569" text-anchor="end">细胞分裂进程 (Cell Division Phase)</text>
+
+      <line x1="0" y1="210" x2="0" y2="10" stroke="#475569" stroke-width="1.5"/>
+      <polygon points="-3,10 0,4 3,10" fill="#475569"/>
+      <text x="-8" y="10" font-family="system-ui, sans-serif" font-size="10" fill="#475569" text-anchor="end">每条染色体上 DNA 含量</text>
+
+      <!-- 刻度 1 与 2 -->
+      <line x1="-5" y1="150" x2="0" y2="150" stroke="#475569"/>
+      <text x="-10" y="154" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#475569" text-anchor="end">1</text>
+
+      <line x1="-5" y1="70" x2="0" y2="70" stroke="#475569"/>
+      <text x="-10" y="74" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#475569" text-anchor="end">2</text>
+
+      <!-- 折线：0 -> 60(A) -> 120(B) -> 240(C) -> 240(D)降到150 -> 350(E) -->
+      <!-- OA 段：DNA=1 (G1期) -->
+      <line x1="0" y1="150" x2="60" y2="150" stroke="#3b82f6" stroke-width="3"/>
+      <!-- AB 段：DNA 复制斜率上升 (S期) -->
+      <line x1="60" y1="150" x2="130" y2="70" stroke="#f59e0b" stroke-width="3"/>
+      <!-- BC 段：DNA=2 (含姐妹单体) -->
+      <line x1="130" y1="70" x2="250" y2="70" stroke="#ef4444" stroke-width="3"/>
+      <!-- CD 段：着丝粒分裂瞬间垂直暴跌 -->
+      <line x1="250" y1="70" x2="250" y2="150" stroke="#dc2626" stroke-width="3" stroke-dasharray="2,2"/>
+      <line x1="250" y1="70" x2="250" y2="150" stroke="#dc2626" stroke-width="3"/>
+      <!-- DE 段：无染色单体 (后期、末期) -->
+      <line x1="250" y1="150" x2="350" y2="150" stroke="#10b981" stroke-width="3"/>
+
+      <!-- 节点标记 -->
+      <circle cx="60" cy="150" r="4" fill="#3b82f6"/>
+      <text x="55" y="140" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#1e40af">A</text>
+
+      <circle cx="130" cy="70" r="4" fill="#f59e0b"/>
+      <text x="125" y="60" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#b45309">B</text>
+
+      <circle cx="250" cy="70" r="4" fill="#ef4444"/>
+      <text x="245" y="60" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#b91c1c">C</text>
+
+      <circle cx="250" cy="150" r="4" fill="#10b981"/>
+      <text x="260" y="145" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#047857">D</text>
+
+      <text x="350" y="140" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#047857">E</text>
+
+      <!-- 垂线与分段标注 -->
+      <line x1="60" y1="150" x2="60" y2="210" stroke="#94a3b8" stroke-dasharray="3,3"/>
+      <line x1="130" y1="70" x2="130" y2="210" stroke="#94a3b8" stroke-dasharray="3,3"/>
+      <line x1="250" y1="150" x2="250" y2="210" stroke="#94a3b8" stroke-dasharray="3,3"/>
+
+      <text x="95" y="195" font-family="system-ui, sans-serif" font-size="9" fill="#d97706" text-anchor="middle">S期 (DNA复制)</text>
+      <text x="190" y="95" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#b91c1c" text-anchor="middle">BC段：含染色单体 (1条体2单体)</text>
+      <text x="250" y="175" font-family="system-ui, sans-serif" font-size="8.5" fill="#dc2626" text-anchor="end">着丝粒分裂！</text>
+      <text x="300" y="170" font-family="system-ui, sans-serif" font-size="9.5" fill="#047857" text-anchor="middle">DE段：无单体</text>
+    </g>
+  </g>
+
+  <!-- 右侧：时期对照映射与高考破局 -->
+  <g transform="translate(500, 60)">
+    <rect width="265" height="295" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-dpc)"/>
+    <text x="132.5" y="24" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">
+      有丝分裂 vs 减数分裂时期对应
+    </text>
+
+    <g transform="translate(12, 38)">
+      <rect width="241" height="72" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#b91c1c">BC 段 (每条染色体 2 个 DNA)：</text>
+      <text x="10" y="34" font-family="system-ui, sans-serif" font-size="9" fill="#1e293b">• 有丝分裂：【G₂期、前期、中期】</text>
+      <text x="10" y="50" font-family="system-ui, sans-serif" font-size="9" fill="#1e293b">• 减数分裂：【减Ⅰ全程 + 减Ⅱ前、中期】</text>
+      <text x="10" y="64" font-family="system-ui, sans-serif" font-size="8" fill="#7f1d1d">形态：每条染色体呈现“X”形，含姐妹单体</text>
+    </g>
+
+    <g transform="translate(12, 118)">
+      <rect width="241" height="68" rx="6" fill="#ecfdf5" stroke="#a7f3d0"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#047857">DE 段 (每条染色体 1 个 DNA)：</text>
+      <text x="10" y="34" font-family="system-ui, sans-serif" font-size="9" fill="#1e293b">• 有丝分裂：【后期、末期】</text>
+      <text x="10" y="50" font-family="system-ui, sans-serif" font-size="9" fill="#1e293b">• 减数分裂：【减Ⅱ后期、末期】</text>
+      <text x="10" y="64" font-family="system-ui, sans-serif" font-size="8" fill="#065f46">形态：着丝粒已裂开，染色单体成为独立子染色体</text>
+    </g>
+
+    <g transform="translate(12, 194)">
+      <rect width="241" height="85" rx="6" fill="#fef3c7" stroke="#fde68a"/>
+      <text x="10" y="18" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#b45309">★ 高考致命陷阱警示：</text>
+      <text x="10" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">1. CD 段骤降原因【仅为着丝粒分裂】！</text>
+      <text x="18" y="48" font-family="system-ui, sans-serif" font-size="8.5" fill="#dc2626">严禁答成“细胞分裂分成两个子细胞”！</text>
+      <text x="10" y="64" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">2. 细胞分裂导致细胞内总 DNA 减半，</text>
+      <text x="18" y="78" font-family="system-ui, sans-serif" font-size="8.5" fill="#475569">但并不改变“每条染色体”的 DNA 含量！</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="head-fpb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#831843" />
+      <stop offset="100%" stop-color="#9d174d" />
+    </linearGradient>
+    <filter id="shadow-fpb" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <g transform="translate(15, 12)">
+    <rect width="750" height="38" rx="8" fill="url(#head-fpb)"/>
+    <text x="375" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      受精微观过程与两道防止多精入卵屏障及受精标志
+    </text>
+  </g>
+
+  <!-- 纵向 5 步流程卡片横向排布 -->
+  <g transform="translate(15, 60)">
+    <rect width="750" height="295" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow-fpb)"/>
+
+    <!-- 1. 顶体反应 -->
+    <g transform="translate(20, 20)">
+      <rect width="130" height="190" rx="8" fill="#eff6ff" stroke="#bfdbfe"/>
+      <rect x="0" y="0" width="130" height="26" rx="8" fill="#2563eb"/>
+      <text x="65" y="18" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">
+        1. 顶体反应
+      </text>
+      <g transform="translate(8, 36)">
+        <text x="0" y="16" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#1e40af">获能精子接触卵子：</text>
+        <text x="0" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">精子顶体释放</text>
+        <text x="0" y="48" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#2563eb">【顶体酶】</text>
+        <text x="0" y="66" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">溶解卵丘细胞间的</text>
+        <text x="0" y="80" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">物质，穿越放射冠</text>
+        <text x="0" y="96" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">与透明带</text>
+      </g>
+    </g>
+
+    <g transform="translate(156, 115)"><text x="0" y="0" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#94a3b8">➔</text></g>
+
+    <!-- 2. 第一道屏障：透明带反应 -->
+    <g transform="translate(172, 20)">
+      <rect width="135" height="190" rx="8" fill="#fef2f2" stroke="#fca5a5"/>
+      <rect x="0" y="0" width="135" height="26" rx="8" fill="#dc2626"/>
+      <text x="67.5" y="18" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">
+        2. 透明带反应
+      </text>
+      <g transform="translate(8, 36)">
+        <text x="0" y="16" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#b91c1c">【第一道生理屏障】</text>
+        <text x="0" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">当精子触及卵细胞膜</text>
+        <text x="0" y="48" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">瞬间引发反应：</text>
+        <text x="0" y="66" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#dc2626">透明带结构改变！</text>
+        <text x="0" y="82" font-family="system-ui, sans-serif" font-size="8" fill="#7f1d1d">坚固化，阻止多余精子</text>
+        <text x="0" y="96" font-family="system-ui, sans-serif" font-size="8" fill="#7f1d1d">继续穿过透明带！</text>
+      </g>
+    </g>
+
+    <g transform="translate(313, 115)"><text x="0" y="0" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#94a3b8">➔</text></g>
+
+    <!-- 3. 第二道屏障：卵细胞膜反应 -->
+    <g transform="translate(329, 20)">
+      <rect width="135" height="190" rx="8" fill="#fef2f2" stroke="#fca5a5"/>
+      <rect x="0" y="0" width="135" height="26" rx="8" fill="#dc2626"/>
+      <text x="67.5" y="18" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">
+        3. 卵细胞膜反应
+      </text>
+      <g transform="translate(8, 36)">
+        <text x="0" y="16" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" fill="#b91c1c">【第二道生理屏障】</text>
+        <text x="0" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">精子入卵后：</text>
+        <text x="0" y="48" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">卵细胞膜立即发生拒绝</text>
+        <text x="0" y="64" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#dc2626">其余精子入卵的电位</text>
+        <text x="0" y="78" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#dc2626">与胞吐反应！</text>
+        <text x="0" y="96" font-family="system-ui, sans-serif" font-size="8" fill="#7f1d1d">确保单精入卵受精</text>
+      </g>
+    </g>
+
+    <g transform="translate(470, 115)"><text x="0" y="0" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#94a3b8">➔</text></g>
+
+    <!-- 4. 受精标志 -->
+    <g transform="translate(486, 20)">
+      <rect width="115" height="190" rx="8" fill="#fff7ed" stroke="#fed7aa"/>
+      <rect x="0" y="0" width="115" height="26" rx="8" fill="#ea580c"/>
+      <text x="57.5" y="18" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">
+        4. 受精标志
+      </text>
+      <g transform="translate(8, 36)">
+        <text x="0" y="16" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#c2410c">观察判定依据：</text>
+        <text x="0" y="34" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">在卵细胞膜与</text>
+        <text x="0" y="48" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">透明带间隙中</text>
+        <text x="0" y="64" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#ea580c">观察到【两个极体】</text>
+        <text x="0" y="80" font-family="system-ui, sans-serif" font-size="8" fill="#7c2d12">(第1极体与第2极体)</text>
+        <text x="0" y="96" font-family="system-ui, sans-serif" font-size="8" fill="#334155">说明受精已发生</text>
+      </g>
+    </g>
+
+    <g transform="translate(607, 115)"><text x="0" y="0" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#94a3b8">➔</text></g>
+
+    <!-- 5. 受精完成标志 -->
+    <g transform="translate(623, 20)">
+      <rect width="110" height="190" rx="8" fill="#f0fdf4" stroke="#86efac"/>
+      <rect x="0" y="0" width="110" height="26" rx="8" fill="#16a34a"/>
+      <text x="55" y="18" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">
+        5. 受精完成
+      </text>
+      <g transform="translate(6, 36)">
+        <text x="0" y="16" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#15803d">终极标志：</text>
+        <text x="0" y="34" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#047857">【雌、雄原核融合】</text>
+        <text x="0" y="50" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">形成受精卵 (合子)</text>
+        <text x="0" y="68" font-family="system-ui, sans-serif" font-size="8" fill="#14532d">恢复体细胞二倍体核型</text>
+        <text x="0" y="84" font-family="system-ui, sans-serif" font-size="8" fill="#14532d">启动早期有丝分裂</text>
+      </g>
+    </g>
+
+    <!-- 底部双标志辨析总结 -->
+    <g transform="translate(20, 225)">
+      <rect width="713" height="55" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+      <text x="15" y="20" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" fill="#dc2626">★ 高考核心字眼辨析题（两词之差！）：</text>
+      <text x="15" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 【受精的标志】：观察到【两个极体】；</text>
+      <text x="250" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#334155">• 【受精完成的标志】：【雌、雄原核充分融合形成受精卵】！</text>
+    </g>
+  </g>
+</svg>

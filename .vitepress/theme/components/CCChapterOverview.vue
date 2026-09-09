@@ -108,14 +108,15 @@ const topicItems = computed(() => chapterLinkItems.value.filter((item) => isTopi
 .cc-chapter-overview {
   margin: 1.25rem 0;
   padding: 1rem 1.125rem 1.125rem;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 12px;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
   background: var(--vp-c-bg-soft);
 }
 
 .section-title {
   margin: 1rem 0 0.55rem;
   font-size: 0.95rem;
+  font-weight: 650;
   color: var(--vp-c-text-2);
 }
 
@@ -130,22 +131,24 @@ const topicItems = computed(() => chapterLinkItems.value.filter((item) => isTopi
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  min-height: 48px;
-  padding: 0.6rem 0.7rem;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 10px;
+  min-height: 46px;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 6px;
   background: var(--vp-c-bg);
   color: var(--vp-c-text-1);
   text-decoration: none;
+  box-shadow: none;
   transition:
     border-color 0.2s ease,
-    transform 0.2s ease,
+    transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
     background-color 0.2s ease;
 }
 
 .chapter-card:hover {
-  border-color: var(--vp-c-brand-1);
-  background: color-mix(in srgb, var(--vp-c-brand-1) 7%, var(--vp-c-bg));
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 45%, transparent);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 3%, var(--vp-c-bg));
+  transform: translateY(-1.5px);
 }
 
 .card-title {
