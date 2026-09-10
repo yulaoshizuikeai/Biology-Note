@@ -80,7 +80,7 @@ onMounted(() => {
 
   // 2. 7天滚动窗口周期数据计算 (Sliding Window: 过去6天 + 今天)
   try {
-    const STORAGE_KEY = "cc_physics_7d_window";
+    const STORAGE_KEY = "cc_biology_7d_window";
     const raw = localStorage.getItem(STORAGE_KEY);
     const store: Record<string, number> = raw ? JSON.parse(raw) : {};
 
@@ -97,7 +97,7 @@ onMounted(() => {
       windowKeys.push(formatDateKey(d));
     }
 
-    // 仿生自然基础序列（确保初始无足量历史时呈现优美的物理波动律动）
+    // 仿生自然基础序列（呈现优美的生命节律波动）
     const organicBase = [14, 18, 15, 23, 19, 22, 26];
     const values: number[] = windowKeys.map((k, idx) => {
       const count = store[k] || 0;

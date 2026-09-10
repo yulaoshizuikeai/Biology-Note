@@ -264,8 +264,24 @@ const handleCopy = async (event: MouseEvent) => {
       <div class="flash-card-header">
         <div class="flash-header-left">
           <span class="flash-badge">
-            <span class="flash-badge-icon">🌿</span>
-            <span class="flash-badge-text">每日速记</span>
+            <svg
+              class="flash-badge-icon"
+              viewBox="0 0 24 24"
+              width="12"
+              height="12"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"
+              />
+              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+            </svg>
+            <span class="flash-badge-text">考点速记</span>
           </span>
           <span class="flash-module">{{ currentCard.module }}</span>
           <span class="flash-topic-title">{{ currentCard.topic }}</span>
@@ -377,9 +393,7 @@ const handleCopy = async (event: MouseEvent) => {
 
       <!-- 卡片底部极简辅助提示条 -->
       <div class="flash-card-footer">
-        <span class="flash-footer-tip">
-          💡 点击卡片或右侧按钮切换 · 高亮背景为高考必背核心得分词汇
-        </span>
+        <span class="flash-footer-tip"> 点击卡片或快捷按钮切换 · 高亮词为高考核心得分关键词 </span>
       </div>
     </div>
   </div>
@@ -401,10 +415,10 @@ const handleCopy = async (event: MouseEvent) => {
   padding: 14px 16px 12px 16px;
   background: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-border);
-  border-radius: 10px;
+  border-radius: 8px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.03);
+  box-shadow: var(--vp-shadow-1);
   cursor: pointer;
   transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -412,15 +426,15 @@ const handleCopy = async (event: MouseEvent) => {
 .cc-biology-flash-card:hover {
   background: color-mix(in srgb, var(--vp-c-brand-1) 2.5%, var(--vp-c-bg-soft));
   border-color: color-mix(in srgb, var(--vp-c-brand-1) 35%, transparent);
-  box-shadow: 0 6px 18px -4px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--vp-shadow-2);
 }
 
 :global(html.dark) .cc-biology-flash-card {
-  box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--vp-shadow-1);
 }
 
 :global(html.dark) .cc-biology-flash-card:hover {
-  box-shadow: 0 6px 20px -4px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--vp-shadow-2);
   border-color: color-mix(in srgb, var(--vp-c-brand-1) 40%, transparent);
 }
 
@@ -447,14 +461,14 @@ const handleCopy = async (event: MouseEvent) => {
   min-width: 0;
 }
 
-/* 每日速记小徽章 */
+/* 速记小徽章 */
 .flash-badge {
   display: inline-flex;
   align-items: center;
   gap: 4px;
   flex-shrink: 0;
-  padding: 2px 8px;
-  border-radius: 6px;
+  padding: 2px 7px;
+  border-radius: 5px;
   background: color-mix(in srgb, var(--vp-c-brand-1) 12%, transparent);
   border: 1px solid color-mix(in srgb, var(--vp-c-brand-1) 24%, transparent);
 }

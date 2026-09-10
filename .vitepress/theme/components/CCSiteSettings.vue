@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { nextTick, onBeforeUnmount, shallowRef, useTemplateRef } from "vue";
+import { nextTick, onBeforeUnmount, onMounted, shallowRef, useTemplateRef } from "vue";
 
 import type { SiteFontFamily } from "../composables/useSiteSettings";
 
@@ -40,15 +40,14 @@ const updateFontFamily = (event: Event) => {
   updateSiteSettings("fontFamily", (event.target as HTMLSelectElement).value as SiteFontFamily);
 };
 
-onBeforeUnmount(() => {
-  document.body.classList.remove("cc-settings-modal-open");
+onMounted(() => {
+  if (typeof window !== "undefined") {
+    window.addEventListener("keydown", onKeydown);
+  }
 });
 
-if (typeof window !== "undefined") {
-  window.addEventListener("keydown", onKeydown);
-}
-
 onBeforeUnmount(() => {
+  document.body.classList.remove("cc-settings-modal-open");
   if (typeof window !== "undefined") {
     window.removeEventListener("keydown", onKeydown);
   }
@@ -69,7 +68,7 @@ onBeforeUnmount(() => {
         d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"
         fill="none"
         stroke="currentColor"
-        stroke-width="1"
+        stroke-width="1.75"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -77,7 +76,7 @@ onBeforeUnmount(() => {
         d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1.08-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6 1.65 1.65 0 0 0 10 3.09V3a2 2 0 0 1 4 0v.09A1.65 1.65 0 0 0 15 4.6a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9c.14.46.49.82.93 1H21a2 2 0 0 1 0 4h-.09c-.47.18-.82.54-1.51 1Z"
         fill="none"
         stroke="currentColor"
-        stroke-width="1"
+        stroke-width="1.75"
         stroke-linecap="round"
         stroke-linejoin="round"
       />

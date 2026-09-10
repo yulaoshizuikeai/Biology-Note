@@ -1,6 +1,6 @@
-import { chromium } from "playwright";
 import fs from "node:fs";
 import path from "node:path";
+import { chromium } from "playwright";
 
 const chromePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
 

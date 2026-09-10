@@ -4,7 +4,6 @@ import { useRoute } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import { nextTick, onMounted, onBeforeUnmount, watch } from "vue";
 
-import CCAmbientParticles from "./components/CCAmbientParticles.vue";
 import Breadcrumb from "./components/CCBreadCrumb.vue";
 import CCDailyQuote from "./components/CCDailyQuote.vue";
 import CCFooter from "./components/CCFooter.vue";
@@ -96,13 +95,6 @@ watch(
 
 <template>
   <Layout>
-    <!-- 首页背景量子光子粒子场 -->
-    <template #home-hero-before>
-      <ClientOnly>
-        <CCAmbientParticles />
-      </ClientOnly>
-    </template>
-
     <!-- 首页动态交互 Logo -->
     <template #home-hero-image>
       <CCHeroLogo />

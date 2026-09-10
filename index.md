@@ -1,4 +1,4 @@
-﻿---
+---
 layout: home
 
 description: "Yulaoshizuikeai's 高考生物知识库 是基于中国普通高中生物教科书（人教版）与现代生命科学前沿思维的免费高中生物知识库项目，涵盖分子与细胞、代谢与能量、遗传与进化、稳态与调节、生态与环境、生物工程与经典实验等 16 大板块，提供生命观念提炼、核心生物模型、解题逻辑与避坑算法。"
@@ -15,17 +15,17 @@ hero:
       text: 开始阅读
       link: /00%20说明/index
     - theme: alt
-      text: ⚡ 50 大黄金结论
+      text: 50 大黄金结论
       link: /golden-conclusions
     - theme: alt
-      text: 🚨 防踩坑排雷白皮书
+      text: 防踩坑排雷白皮书
       link: /warning-cheatsheet
 
 features:
-  - title: ⚡ 50 大黄金结论与遗传计算
+  - title: 50 大黄金结论与遗传计算
     details: 高频必考遗传规律比、中心法则数量关系、光合呼吸净量毛量代换与秒杀定理速查。
     link: /golden-conclusions
-  - title: 🚨 全专题防踩坑排雷白皮书
+  - title: 全专题防踩坑排雷白皮书
     details: 聚合 16 大专题易错概念陷阱、实验对照设计漏洞与考场长句表达雷区，考前 1 小时提分利器。
     link: /warning-cheatsheet
   - title: 01 走进细胞与组成细胞的分子
