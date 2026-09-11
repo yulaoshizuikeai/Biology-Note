@@ -33,7 +33,7 @@
       <polygon points="-3,10 0,4 3,10" fill="#475569"/>
 
       <text x="290" y="218" font-family="system-ui, sans-serif" font-size="10" fill="#475569" text-anchor="end">膜外物质浓度差</text>
-      <text x="-10" y="10" font-family="system-ui, sans-serif" font-size="10" fill="#475569" text-anchor="end">转运速率 V</text>
+      <text x="6" y="8" font-family="system-ui, sans-serif" font-size="10" fill="#475569" text-anchor="start">转运速率 V</text>
       <text x="-8" y="200" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">0</text>
 
       <!-- 自由扩散曲线 (正比例无饱和) -->
@@ -71,7 +71,7 @@
       <polygon points="-3,10 0,4 3,10" fill="#475569"/>
 
       <text x="290" y="218" font-family="system-ui, sans-serif" font-size="10" fill="#475569" text-anchor="end">氧气浓度 [O₂]</text>
-      <text x="-10" y="10" font-family="system-ui, sans-serif" font-size="10" fill="#475569" text-anchor="end">转运速率 V</text>
+      <text x="6" y="8" font-family="system-ui, sans-serif" font-size="10" fill="#475569" text-anchor="start">转运速率 V</text>
       <text x="-8" y="200" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">0</text>
 
       <!-- 主动运输曲线 (起点不为0，平台饱和) -->

@@ -35,19 +35,19 @@
     </g>
 
     <!-- DNA 到 RNA 转录箭头 -->
-    <g transform="translate(195, 85)">
+    <g transform="translate(195, 80)">
       <line x1="0" y1="0" x2="110" y2="0" stroke="#059669" stroke-width="3"/>
       <polygon points="110,-4 118,0 110,4" fill="#059669"/>
-      <text x="55" y="-10" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#047857" text-anchor="middle">转录 (Transcription)</text>
-      <text x="55" y="18" font-family="system-ui, sans-serif" font-size="8.5" fill="#065f46" text-anchor="middle">RNA聚合酶 / 细胞核为主</text>
+      <text x="55" y="-18" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#047857" text-anchor="middle">转录 (Transcription)</text>
+      <text x="55" y="-6" font-family="system-ui, sans-serif" font-size="8.5" fill="#065f46" text-anchor="middle">RNA聚合酶 / 细胞核为主</text>
     </g>
 
     <!-- RNA 到 DNA 逆转录反向箭头 -->
     <g transform="translate(195, 115)">
       <line x1="110" y1="0" x2="0" y2="0" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="4,2"/>
       <polygon points="0,-3 -8,0 0,3" fill="#dc2626"/>
-      <text x="55" y="-5" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#b91c1c" text-anchor="middle">逆转录 (Reverse)</text>
-      <text x="55" y="14" font-family="system-ui, sans-serif" font-size="8" fill="#dc2626" text-anchor="middle">逆转录病毒 (如 HIV)</text>
+      <text x="55" y="14" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#b91c1c" text-anchor="middle">逆转录 (Reverse)</text>
+      <text x="55" y="26" font-family="system-ui, sans-serif" font-size="8" fill="#dc2626" text-anchor="middle">逆转录病毒 (如 HIV)</text>
     </g>
 
     <!-- RNA 节点 -->

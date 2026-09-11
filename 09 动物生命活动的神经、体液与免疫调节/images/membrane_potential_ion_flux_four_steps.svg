@@ -38,12 +38,14 @@
       <text x="0" y="118" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">• 负电荷大分子无法外流</text>
       <text x="0" y="134" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">导致膜内电位低于膜外</text>
 
-      <rect x="0" y="150" width="155" height="95" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
-      <text x="8" y="18" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#b91c1c">★ 高考拓展考点：</text>
-      <text x="8" y="34" font-family="system-ui, sans-serif" font-size="8" fill="#475569">若适当提高细胞外液 K⁺ 浓度</text>
-      <text x="8" y="48" font-family="system-ui, sans-serif" font-size="8" fill="#475569">➔ K⁺ 外流减少</text>
-      <text x="8" y="62" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#dc2626">➔ 静息电位绝对值减小！</text>
-      <text x="8" y="78" font-family="system-ui, sans-serif" font-size="8" fill="#475569">(更容易受刺激产生兴奋)</text>
+      <g transform="translate(0, 150)">
+        <rect width="155" height="95" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+        <text x="8" y="18" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#b91c1c">★ 高考拓展考点：</text>
+        <text x="8" y="34" font-family="system-ui, sans-serif" font-size="8" fill="#475569">若适当提高细胞外液 K⁺ 浓度</text>
+        <text x="8" y="48" font-family="system-ui, sans-serif" font-size="8" fill="#475569">➔ K⁺ 外流减少</text>
+        <text x="8" y="62" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#dc2626">➔ 静息电位绝对值减小！</text>
+        <text x="8" y="78" font-family="system-ui, sans-serif" font-size="8" fill="#475569">(更容易受刺激产生兴奋)</text>
+      </g>
     </g>
   </g>
 
@@ -66,12 +68,14 @@
       <text x="0" y="118" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">• 方式：协助扩散 (不耗能)</text>
       <text x="0" y="134" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">膜电位倒转形成动作电位</text>
 
-      <rect x="0" y="150" width="155" height="95" rx="4" fill="#fef2f2" stroke="#fecaca"/>
-      <text x="8" y="18" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#b91c1c">★ 高考拓展考点：</text>
-      <text x="8" y="34" font-family="system-ui, sans-serif" font-size="8" fill="#475569">若降低细胞外液 Na⁺ 浓度</text>
-      <text x="8" y="48" font-family="system-ui, sans-serif" font-size="8" fill="#475569">➔ Na⁺ 内流减弱</text>
-      <text x="8" y="62" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#dc2626">➔ 动作电位峰值降低！</text>
-      <text x="8" y="78" font-family="system-ui, sans-serif" font-size="8" fill="#475569">(但静息电位基本不受影响)</text>
+      <g transform="translate(0, 150)">
+        <rect width="155" height="95" rx="4" fill="#fef2f2" stroke="#fecaca"/>
+        <text x="8" y="18" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#b91c1c">★ 高考拓展考点：</text>
+        <text x="8" y="34" font-family="system-ui, sans-serif" font-size="8" fill="#475569">若降低细胞外液 Na⁺ 浓度</text>
+        <text x="8" y="48" font-family="system-ui, sans-serif" font-size="8" fill="#475569">➔ Na⁺ 内流减弱</text>
+        <text x="8" y="62" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#dc2626">➔ 动作电位峰值降低！</text>
+        <text x="8" y="78" font-family="system-ui, sans-serif" font-size="8" fill="#475569">(但静息电位基本不受影响)</text>
+      </g>
     </g>
   </g>
 
@@ -94,12 +98,14 @@
       <text x="0" y="118" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">• 方式：协助扩散 (不耗能)</text>
       <text x="0" y="134" font-family="system-ui, sans-serif" font-size="8.5" fill="#334155">膜内电位重新回归负值</text>
 
-      <rect x="0" y="150" width="155" height="95" rx="4" fill="#fffbeb" stroke="#fde68a"/>
-      <text x="8" y="18" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#b45309">★ 隐患与假象：</text>
-      <text x="8" y="34" font-family="system-ui, sans-serif" font-size="8" fill="#475569">虽然电位恢复为内负外正，</text>
-      <text x="8" y="48" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#dc2626">但此时膜内 Na⁺ 增多、</text>
-      <text x="8" y="62" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#dc2626">膜外 K⁺ 增多！</text>
-      <text x="8" y="78" font-family="system-ui, sans-serif" font-size="8" fill="#475569">离子浓度分布并未复原！</text>
+      <g transform="translate(0, 150)">
+        <rect width="155" height="95" rx="4" fill="#fffbeb" stroke="#fde68a"/>
+        <text x="8" y="18" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#b45309">★ 隐患与假象：</text>
+        <text x="8" y="34" font-family="system-ui, sans-serif" font-size="8" fill="#475569">虽然电位恢复为内负外正，</text>
+        <text x="8" y="48" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#dc2626">但此时膜内 Na⁺ 增多、</text>
+        <text x="8" y="62" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#dc2626">膜外 K⁺ 增多！</text>
+        <text x="8" y="78" font-family="system-ui, sans-serif" font-size="8" fill="#475569">离子浓度分布并未复原！</text>
+      </g>
     </g>
   </g>
 
@@ -122,12 +128,14 @@
       <text x="0" y="116" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#16a34a">• 逆浓度泵入 2 个 K⁺</text>
       <text x="0" y="134" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">• 方式：主动运输 (耗 ATP)</text>
 
-      <rect x="0" y="150" width="160" height="95" rx="4" fill="#ecfdf5" stroke="#a7f3d0"/>
-      <text x="8" y="18" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#047857">★ 能量耗费归宿：</text>
-      <text x="8" y="34" font-family="system-ui, sans-serif" font-size="8" fill="#475569">产生动作电位本身【不消耗ATP】</text>
-      <text x="8" y="48" font-family="system-ui, sans-serif" font-size="8" fill="#475569">(顺浓度协助扩散)；</text>
-      <text x="8" y="62" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#059669">消耗 ATP 仅用于恢复离子！</text>
-      <text x="8" y="78" font-family="system-ui, sans-serif" font-size="8" fill="#475569">为下一次兴奋做好准备</text>
+      <g transform="translate(0, 150)">
+        <rect width="160" height="95" rx="4" fill="#ecfdf5" stroke="#a7f3d0"/>
+        <text x="8" y="18" font-family="system-ui, sans-serif" font-size="8.5" font-weight="bold" fill="#047857">★ 能量耗费归宿：</text>
+        <text x="8" y="34" font-family="system-ui, sans-serif" font-size="8" fill="#475569">产生动作电位本身【不消耗ATP】</text>
+        <text x="8" y="48" font-family="system-ui, sans-serif" font-size="8" fill="#475569">(顺浓度协助扩散)；</text>
+        <text x="8" y="62" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" fill="#059669">消耗 ATP 仅用于恢复离子！</text>
+        <text x="8" y="78" font-family="system-ui, sans-serif" font-size="8" fill="#475569">为下一次兴奋做好准备</text>
+      </g>
     </g>
   </g>
 </svg>
