@@ -18,9 +18,11 @@
     "env.d.ts",
     ".vitepress/**/*.ts",
     ".vitepress/**/*.mts",
+    ".vitepress/**/*.js",
     ".vitepress/**/*.vue",
     "scripts/**/*.ts",
-    "scripts/**/*.mts"
+    "scripts/**/*.mts",
+    "scripts/**/*.js"
   ],
   "exclude": ["node_modules", ".vitepress/cache", ".vitepress/dist"]
 }

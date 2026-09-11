@@ -57,9 +57,9 @@ jobs:
         if: github.ref == 'refs/heads/master'
         with:
           tag_name: latest-pdf
-          name: "Latest Biology Note PDF (高中生物笔记最新版)"
+          name: "Latest Biology Note PDF (高中生物知识库最新版)"
           body: |
-            ## 📚 高中生物全套知识架构笔记 - 自动化编译 PDF 成果物
+            ## 📚 高中生物知识库全套知识架构 - 自动化编译 PDF 成果物
 
             - 📕 **单文件完整版全书**: `Biology-Note-Complete.pdf` (包含全书核心专题、矢量图解与全部考点模型)
             - 📦 **全套分册 ZIP 归档包**: `Biology-Note-All-PDFs.zip` (包含按章节排版归档的独立矢量 PDF)

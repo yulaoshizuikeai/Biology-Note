@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
 
+import { ensureBusuanzi } from "../composables/useBusuanzi";
+
 // 7 天周期滚动窗口访问曲线
 // 严格遵守：零数字展示，纯高级感视觉律动与发光粒子
 interface DayPoint {
@@ -66,17 +68,8 @@ const formatDateKey = (date: Date): string => {
 };
 
 onMounted(() => {
-  // 1. 隐式静默统计（Busuanzi 增量上报，零数字展示）
-  if (typeof window !== "undefined") {
-    const existing = document.getElementById("cc-busuanzi-script");
-    if (existing) existing.remove();
-    const script = document.createElement("script");
-    script.id = "cc-busuanzi-script";
-    script.src = "//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js";
-    script.referrerPolicy = "no-referrer-when-downgrade";
-    script.async = true;
-    document.head.appendChild(script);
-  }
+  // 1. 隐式静默统计（复用单例 Busuanzi，避免与 CCPageviews 重复注入）
+  void ensureBusuanzi();
 
   // 2. 7天滚动窗口周期数据计算 (Sliding Window: 过去6天 + 今天)
   try {

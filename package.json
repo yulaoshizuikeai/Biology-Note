@@ -5,7 +5,6 @@
   "description": "高中生物知识库与高考复习指南",
   "dependencies": {
     "@waline/client": "^3.15.2",
-    "axios": "^1.16.1",
     "blueimp-md5": "^2.19.0",
     "qrcode.vue": "^3.9.1"
   },
@@ -14,10 +13,10 @@
     "@types/node": "^25.9.1",
     "fast-glob": "^3.3.3",
     "husky": "^9.1.7",
-    "lint-staged": "^17.0.6",
+    "lint-staged": "^17.5.1",
     "markdown-it-mathjax3": "^4.3.2",
     "medium-zoom": "^1.1.0",
-    "oxfmt": "^0.50.0",
+    "oxfmt": "^0.67.0",
     "playwright": "^1.60.0",
     "schema-dts": "^1.1.5",
     "typescript": "6.0.3",

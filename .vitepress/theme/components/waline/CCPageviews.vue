@@ -1,27 +1,20 @@
-<script setup>
+<script setup lang="ts">
 import { pageviewCount } from "@waline/client";
-import { onBeforeUnmount, onMounted, ref, watch } from "vue";
+import { nextTick, onBeforeUnmount, onMounted, ref, watch } from "vue";
 
+import { ensureBusuanzi } from "../../composables/useBusuanzi";
 import { useWalineBase } from "./useWalineBase";
 
 const { serverURL, route } = useWalineBase();
-let abortPageview = null;
+let abortPageview: (() => void) | null = null;
 const isLoading = ref(true);
-let observer = null;
+let observer: MutationObserver | null = null;
 
 const runBusuanzi = () => {
-  if (typeof window === "undefined") return;
-  const existing = document.getElementById("cc-busuanzi-script");
-  if (existing) existing.remove();
-  const script = document.createElement("script");
-  script.id = "cc-busuanzi-script";
-  script.src = "//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js";
-  script.referrerPolicy = "no-referrer-when-downgrade";
-  script.async = true;
-  document.head.appendChild(script);
+  void ensureBusuanzi();
 };
 
-const runPageview = (path) => {
+const runPageview = (path: string) => {
   isLoading.value = true;
   if (serverURL) {
     if (abortPageview) abortPageview();
@@ -32,8 +25,10 @@ const runPageview = (path) => {
 };
 
 const setupObserver = () => {
+  if (typeof window === "undefined") return;
+  if (observer) observer.disconnect();
   const el = document.getElementById("busuanzi_value_page_pv");
-  if (!el || typeof window === "undefined") return;
+  if (!el) return;
 
   observer = new MutationObserver((mutations) => {
     for (const mutation of mutations) {
@@ -55,9 +50,11 @@ onMounted(() => {
 
 watch(
   () => route.path,
-  (path) => {
+  async (path) => {
     if (typeof window === "undefined") return;
     runPageview(path);
+    await nextTick();
+    setupObserver();
   },
 );
 

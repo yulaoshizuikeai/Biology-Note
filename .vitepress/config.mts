@@ -113,13 +113,14 @@ export default defineConfig({
     hostname: siteUrl,
     transformItems(items) {
       return items.filter((item) => {
-        const url = item.url;
+        const pathname = item.url.split(/[?#]/)[0];
         // 排除 404、短链跳转页及任何内部隐藏页面
         if (
-          url.includes("/404") ||
-          url.includes("/s.html") ||
-          url.includes("/s") ||
-          url.includes("/hidePage/")
+          pathname.includes("/404") ||
+          pathname === "/s" ||
+          pathname === "/s.html" ||
+          pathname.startsWith("/s/") ||
+          pathname.includes("/hidePage/")
         ) {
           return false;
         }

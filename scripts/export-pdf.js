@@ -128,6 +128,7 @@ const serverPort = await new Promise((resolve) => {
 });
 
 const browser = await chromium.launch();
+try {
 const pagePool = [];
 const pdfBaseStyle = `
     :root {
@@ -304,5 +305,7 @@ const worker = async (page) => {
 };
 
 await Promise.all(pagePool.map((page) => worker(page)));
-await browser.close();
-await new Promise((resolve) => server.close(resolve));
+} finally {
+  await browser.close().catch(() => {});
+  await new Promise((resolve) => server.close(resolve));
+}

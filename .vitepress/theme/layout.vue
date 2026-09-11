@@ -1,5 +1,5 @@
-<script setup>
-import mediumZoom from "medium-zoom";
+<script setup lang="ts">
+import mediumZoom, { type Zoom } from "medium-zoom";
 import { useRoute } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import { nextTick, onMounted, onBeforeUnmount, watch } from "vue";
@@ -14,12 +14,18 @@ import { bootstrapSiteSettings } from "./composables/useSiteSettings";
 const { Layout } = DefaultTheme;
 const route = useRoute();
 const contentImageSelector = ".vp-doc img:not([data-no-zoom])";
-let imageZoom;
+let imageZoom: Zoom | undefined;
+let refreshTimer: number | undefined;
 
-const normalizePath = (p) => p.replace(/\/$/, "");
-const runOnClientFrame = (cb) => {
+const normalizePath = (p: string) => p.replace(/\/$/, "");
+const runOnClientFrame = (cb: FrameRequestCallback) => {
   if (typeof window === "undefined") return;
   window.requestAnimationFrame(cb);
+};
+const scheduleRefresh = () => {
+  if (typeof window === "undefined") return;
+  window.clearTimeout(refreshTimer);
+  refreshTimer = window.setTimeout(() => runOnClientFrame(refreshPageEnhancements), 80);
 };
 
 const expandCurrentSidebarGroup = () => {
@@ -56,7 +62,7 @@ const refreshPageEnhancements = () => {
   setupImageZoom();
 };
 
-const onSectionTitleClick = (event) => {
+const onSectionTitleClick = (event: Event) => {
   const target = event.target;
   if (!(target instanceof Element)) return;
 
@@ -80,6 +86,7 @@ onMounted(() => {
 onBeforeUnmount(() => {
   imageZoom?.detach();
   imageZoom = undefined;
+  if (typeof window !== "undefined") window.clearTimeout(refreshTimer);
   document.removeEventListener("click", onSectionTitleClick, true);
 });
 
@@ -87,7 +94,7 @@ watch(
   () => route.path,
   async () => {
     await nextTick();
-    runOnClientFrame(refreshPageEnhancements);
+    scheduleRefresh();
   },
   { immediate: true },
 );

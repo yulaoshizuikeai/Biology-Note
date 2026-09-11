@@ -2,10 +2,23 @@ import fs from "node:fs";
 import path from "node:path";
 import { chromium } from "playwright";
 
-const chromePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+const chromePath = process.env.PLAYWRIGHT_CHROME_PATH || "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
 
 export async function renderSvg(svgContent, outputPath, width = 780, height = 370) {
-  const browser = await chromium.launch({ executablePath: chromePath });
+  const launchOptions = {};
+  if (process.env.PLAYWRIGHT_CHROME_PATH) {
+    launchOptions.executablePath = process.env.PLAYWRIGHT_CHROME_PATH;
+  } else if (process.platform === "win32" && fs.existsSync(chromePath)) {
+    launchOptions.executablePath = chromePath;
+  } else {
+    launchOptions.channel = "chrome";
+  }
+  let browser;
+  try {
+    browser = await chromium.launch(launchOptions);
+  } catch {
+    browser = await chromium.launch();
+  }
   const page = await browser.newPage({
     viewport: { width, height },
     deviceScaleFactor: 2,
@@ -25,10 +38,13 @@ export async function renderSvg(svgContent, outputPath, width = 780, height = 37
 </body>
 </html>`;
 
-  await page.setContent(html, { waitUntil: "networkidle" });
-  await page.screenshot({ path: outputPath, fullPage: false });
-  await browser.close();
-  console.log(`Saved screenshot to: ${outputPath}`);
+  try {
+    await page.setContent(html, { waitUntil: "networkidle" });
+    await page.screenshot({ path: outputPath, fullPage: false });
+    console.log(`Saved screenshot to: ${outputPath}`);
+  } finally {
+    await browser.close();
+  }
 }
 
 // CLI usage: node scripts/render-svg.js <svg-file-or-md-file> <output-png>

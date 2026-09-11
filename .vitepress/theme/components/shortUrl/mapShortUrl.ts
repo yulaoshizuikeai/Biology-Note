@@ -1,7 +1,5 @@
 // 参考自 https://notes.linho.cc/s?q=adaf352048
 
-import type { SiteConfig } from "vitepress";
-
 import md5 from "blueimp-md5";
 import fg from "fast-glob";
 import fs from "node:fs";
@@ -27,7 +25,7 @@ const buildShortUrlMap = (pages: string[]): ShortUrlMap => {
 };
 
 const writeShortMap = (targetFile: string, shortMap: ShortUrlMap) => {
-  fs.writeFileSync(targetFile, JSON.stringify(shortMap));
+  fs.writeFileSync(targetFile, JSON.stringify(shortMap), "utf-8");
 };
 
 export const generateShortMapFromRoot = (rootDir: string, targetFile: string) => {
@@ -41,7 +39,7 @@ export const generateShortMapFromRoot = (rootDir: string, targetFile: string) =>
 };
 
 /** 生成生产构建使用的短链接哈希表 */
-export default async function mapShortUrl(siteConfig: SiteConfig) {
+export default async function mapShortUrl(siteConfig: { pages: string[]; outDir: string }) {
   try {
     const shortMap = buildShortUrlMap(siteConfig.pages);
     writeShortMap(path.join(siteConfig.outDir, "shortmap.json"), shortMap);

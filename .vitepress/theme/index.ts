@@ -1,4 +1,5 @@
 import type { App } from "vue";
+import { defineAsyncComponent } from "vue";
 
 import DefaultTheme from "vitepress/theme";
 
@@ -14,21 +15,49 @@ import CCSiteSettings from "./components/CCSiteSettings.vue";
 import CCShare from "./components/shortUrl/CCShare.vue";
 import layout from "./layout.vue";
 
-// Interactive Biology Components
-import ProteinCondensationCalc from "./components/interactive/ProteinCondensationCalc.vue";
-import MembraneTransportSimulator from "./components/interactive/MembraneTransportSimulator.vue";
-import RespirationRqDropletShift from "./components/interactive/RespirationRqDropletShift.vue";
-import PhotosynthesisSimulator from "./components/interactive/PhotosynthesisSimulator.vue";
-import CellDivisionTimeline from "./components/interactive/CellDivisionTimeline.vue";
-import PunnettSquarePuzzle from "./components/interactive/PunnettSquarePuzzle.vue";
-import MeselsonStahlCentrifuge from "./components/interactive/MeselsonStahlCentrifuge.vue";
-import HardyWeinbergSimulator from "./components/interactive/HardyWeinbergSimulator.vue";
-import ActionPotentialOscilloscope from "./components/interactive/ActionPotentialOscilloscope.vue";
-import AuxinSensitivityProbe from "./components/interactive/AuxinSensitivityProbe.vue";
-import PopulationGrowthSandbox from "./components/interactive/PopulationGrowthSandbox.vue";
-import EnergyFlowBalance from "./components/interactive/EnergyFlowBalance.vue";
-import PcrCycleVisualizer from "./components/interactive/PcrCycleVisualizer.vue";
-import BiochemicalStainingPalette from "./components/interactive/BiochemicalStainingPalette.vue";
+// Interactive Biology Components（按需懒加载，避免首屏全量打包）
+const ProteinCondensationCalc = defineAsyncComponent(
+  () => import("./components/interactive/ProteinCondensationCalc.vue"),
+);
+const MembraneTransportSimulator = defineAsyncComponent(
+  () => import("./components/interactive/MembraneTransportSimulator.vue"),
+);
+const RespirationRqDropletShift = defineAsyncComponent(
+  () => import("./components/interactive/RespirationRqDropletShift.vue"),
+);
+const PhotosynthesisSimulator = defineAsyncComponent(
+  () => import("./components/interactive/PhotosynthesisSimulator.vue"),
+);
+const CellDivisionTimeline = defineAsyncComponent(
+  () => import("./components/interactive/CellDivisionTimeline.vue"),
+);
+const PunnettSquarePuzzle = defineAsyncComponent(
+  () => import("./components/interactive/PunnettSquarePuzzle.vue"),
+);
+const MeselsonStahlCentrifuge = defineAsyncComponent(
+  () => import("./components/interactive/MeselsonStahlCentrifuge.vue"),
+);
+const HardyWeinbergSimulator = defineAsyncComponent(
+  () => import("./components/interactive/HardyWeinbergSimulator.vue"),
+);
+const ActionPotentialOscilloscope = defineAsyncComponent(
+  () => import("./components/interactive/ActionPotentialOscilloscope.vue"),
+);
+const AuxinSensitivityProbe = defineAsyncComponent(
+  () => import("./components/interactive/AuxinSensitivityProbe.vue"),
+);
+const PopulationGrowthSandbox = defineAsyncComponent(
+  () => import("./components/interactive/PopulationGrowthSandbox.vue"),
+);
+const EnergyFlowBalance = defineAsyncComponent(
+  () => import("./components/interactive/EnergyFlowBalance.vue"),
+);
+const PcrCycleVisualizer = defineAsyncComponent(
+  () => import("./components/interactive/PcrCycleVisualizer.vue"),
+);
+const BiochemicalStainingPalette = defineAsyncComponent(
+  () => import("./components/interactive/BiochemicalStainingPalette.vue"),
+);
 
 export default {
   extends: DefaultTheme,

@@ -24,31 +24,51 @@
 </template>
 
 <script setup lang="ts">
-import md5 from "blueimp-md5";
-import QRCodeVue from "qrcode.vue";
 import { useData } from "vitepress";
-import { computed, onMounted, ref } from "vue";
+import { computed, defineAsyncComponent, onBeforeUnmount, onMounted, ref, watch } from "vue";
 
 import { trackUmamiEvent } from "../../utils/umami";
+
+const QRCodeVue = defineAsyncComponent(() => import("qrcode.vue"));
 
 const { page, isDark } = useData();
 const origin = ref("");
 const expand = ref(false);
+const shortKey = ref<string | null>(null);
 let timer: ReturnType<typeof setTimeout> | null = null;
+let shortMapCache: Record<string, string> | null = null;
 
 const foreground = computed(() => (isDark.value ? "#D3D3CC" : "#3C3C43"));
 
+const normalizePagePath = (filePath: string) => filePath.replace(/(index)?\.md$/, "");
+
+async function resolveShortKey(normalizedPath: string) {
+  if (encodeURI(normalizedPath).length < 10) {
+    shortKey.value = null;
+    return;
+  }
+  try {
+    if (!shortMapCache) {
+      const res = await fetch("/shortmap.json");
+      if (!res.ok) return;
+      shortMapCache = (await res.json()) as Record<string, string>;
+    }
+    const hit = Object.entries(shortMapCache).find(([, v]) => v === normalizedPath);
+    shortKey.value = hit ? hit[0] : null;
+  } catch {
+    shortKey.value = null;
+  }
+}
+
 const link = computed(() => {
   const filePath = page.value.filePath ?? "";
-  const normalizedPath = filePath.replace(/(index)?\.md$/, "");
+  const normalizedPath = normalizePagePath(filePath);
   const encodedPath = encodeURI(normalizedPath);
   const baseUrl = origin.value;
 
   if (!baseUrl) return "";
-  if (encodedPath.length < 10) return `${baseUrl}/${encodedPath}`;
-
-  // Must match the short-link jump page route.
-  return `${baseUrl}/s?q=${md5(normalizedPath).slice(0, 10)}`;
+  if (shortKey.value) return `${baseUrl}/s?q=${shortKey.value}`;
+  return `${baseUrl}/${encodedPath}`;
 });
 
 function copyLink() {
@@ -71,6 +91,21 @@ function copyLink() {
 onMounted(() => {
   const base = (import.meta.env.BASE_URL || "/").replace(/\/$/, "");
   origin.value = window.location.origin + base;
+  void resolveShortKey(normalizePagePath(page.value.filePath ?? ""));
+});
+
+watch(
+  () => page.value.filePath,
+  (filePath) => {
+    void resolveShortKey(normalizePagePath(filePath ?? ""));
+  },
+);
+
+onBeforeUnmount(() => {
+  if (timer) {
+    clearTimeout(timer);
+    timer = null;
+  }
 });
 </script>
 
