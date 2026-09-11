@@ -80,7 +80,7 @@ const topicItems = computed(() => chapterLinkItems.value.filter((item) => isTopi
       <div v-if="mainItems.length" class="card-grid">
         <a v-for="item in mainItems" :key="item.link" :href="item.link" class="chapter-card">
           <span class="card-title">{{ item.text }}</span>
-          <span class="card-arrow">→</span>
+          <span class="card-arrow" aria-hidden="true">→</span>
         </a>
       </div>
 
@@ -94,7 +94,7 @@ const topicItems = computed(() => chapterLinkItems.value.filter((item) => isTopi
             class="chapter-card topic-card"
           >
             <span class="card-title">{{ item.text }}</span>
-            <span class="card-arrow">→</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
           </a>
         </div>
       </template>
@@ -131,8 +131,8 @@ const topicItems = computed(() => chapterLinkItems.value.filter((item) => isTopi
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  min-height: 46px;
-  padding: 0.55rem 0.75rem;
+  min-height: 48px;
+  padding: 0.65rem 0.85rem;
   border: 1px solid var(--vp-c-border);
   border-radius: 6px;
   background: var(--vp-c-bg);
@@ -148,12 +148,12 @@ const topicItems = computed(() => chapterLinkItems.value.filter((item) => isTopi
 .chapter-card:hover {
   border-color: color-mix(in srgb, var(--vp-c-brand-1) 45%, transparent);
   background: color-mix(in srgb, var(--vp-c-brand-1) 3%, var(--vp-c-bg));
-  transform: translateY(-1.5px);
+  transform: translateY(-2px);
 }
 
 .card-title {
-  font-size: 0.92rem;
-  line-height: 1.45;
+  font-size: 0.94rem;
+  line-height: 1.5;
 }
 
 .card-arrow {

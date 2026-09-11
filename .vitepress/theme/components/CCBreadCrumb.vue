@@ -3,7 +3,7 @@
     <span v-for="(item, index) in items" :key="index" class="bc-item">
       <a v-if="item.link" :href="item.link" class="bc-link">{{ item.name }}</a>
       <span v-else class="bc-current">{{ item.name }}</span>
-      <span v-if="index < items.length - 1" class="bc-sep">/</span>
+      <span v-if="index < items.length - 1" class="bc-sep" aria-hidden="true">›</span>
     </span>
   </nav>
 </template>

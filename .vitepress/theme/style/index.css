@@ -23,14 +23,14 @@ body {
 /* Document Content Typography */
 .vp-doc {
   color: var(--vp-c-text-1);
-  line-height: 1.75;
-  font-size: 16px;
+  line-height: 1.78;
+  font-size: 17px;
   letter-spacing: 0.01em;
 }
 
 .vp-doc p {
-  line-height: 1.75;
-  margin: 0.9rem 0;
+  line-height: 1.78;
+  margin: 1.1rem 0;
   color: var(--vp-c-text-1);
 }
 
@@ -58,7 +58,7 @@ body {
 .vp-doc h2 {
   font-size: 1.52rem;
   line-height: 1.35;
-  margin-top: 2.2rem;
+  margin-top: 2.6rem;
   margin-bottom: 0.9rem;
   padding-bottom: 0.4rem;
   border-bottom: 1px solid var(--vp-c-divider);
@@ -67,7 +67,7 @@ body {
 .vp-doc h3 {
   font-size: 1.22rem;
   line-height: 1.4;
-  margin-top: 1.75rem;
+  margin-top: 1.85rem;
   margin-bottom: 0.65rem;
 }
 
@@ -83,11 +83,11 @@ body {
 .vp-doc ol {
   padding-left: 1.35rem;
   margin: 0.8rem 0;
-  line-height: 1.75;
+  line-height: 1.78;
 }
 
 .vp-doc li + li {
-  margin-top: 0.35rem;
+  margin-top: 0.42rem;
 }
 
 /* Inline Links */
@@ -256,12 +256,28 @@ html.dark .flash-kw {
    4. Tables (Data & Comparison Grids)
    ============================================================ */
 .vp-doc table {
+  /* display:block 让 table 在移动端可横向滚动 */
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border-collapse: separate;
   border-spacing: 0;
   border: 1px solid var(--vp-c-border);
   border-radius: 8px;
-  overflow: hidden;
+  /* overflow:hidden + border-radius 在 block 模式下通过 outline 补偿 */
+  overflow-y: hidden;
   margin: 1.25rem 0;
+  min-width: 100%;
+  width: max-content;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* 确保 tbody/thead 内部布局正常 */
+.vp-doc table thead,
+.vp-doc table tbody,
+.vp-doc table tfoot {
+  display: table;
   width: 100%;
 }
 
@@ -516,3 +532,28 @@ html.dark .flash-kw {
   color: var(--vp-c-text-2) !important;
 }
 
+/* ============================================================
+   9. CJK 断行规则 — 防止中文全角括号悬挂分行 (P2)
+   ============================================================ */
+.vp-doc p,
+.vp-doc li,
+.vp-doc td,
+.vp-doc th,
+.vp-doc blockquote p {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  /* CJK 严格断行：遵循中文标点禁则，防止行首出现 ）】』或行尾出现 （【『 */
+  line-break: strict;
+}
+
+/* ============================================================
+   10. Serif 模式同步字号适配 (优化 cc-font-serif)
+   ============================================================ */
+html.cc-font-serif .vp-doc {
+  font-size: 18px;
+  line-height: 1.85;
+}
+
+html.cc-font-serif .vp-doc p {
+  line-height: 34px;
+}

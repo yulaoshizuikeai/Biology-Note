@@ -87,6 +87,21 @@ img {
   }
 }
 
+/* 用户偏好：减少动态效果 */
+@media (prefers-reduced-motion: reduce) {
+  .vp-doc > div,
+  .VPHome {
+    animation: none !important;
+  }
+
+  .VPNavBarTitle .logo,
+  .VPHomeFeatures .VPFeature,
+  .VPHomeHero .action .VPButton,
+  .chapter-card {
+    transition: none !important;
+  }
+}
+
 /* 打印适配 */
 @media print {
   .VPDocFooter .prev-next,
@@ -186,19 +201,19 @@ body {
   overflow-x: clip !important;
 }
 
-/* 2. MathJax 块级公式容器严格限制最大宽度与边界 */
-.vp-doc mjx-container,
+/* 2. MathJax 块级公式容器：横向居中 + 防溢出 */
 .vp-doc mjx-container[display="true"],
 .vp-doc mjx-container[jax="SVG"][display="true"],
 .vp-doc mjx-container[jax="CHTML"][display="true"] {
-  display: block !important;
+  display: flex !important;              /* flex 布局实现内容居中 */
+  justify-content: center !important;   /* 公式内容水平居中 */
+  align-items: center !important;
   max-width: 100% !important;
   width: 100% !important;
   box-sizing: border-box !important;
   overflow-x: auto !important;
   overflow-y: hidden !important;
-  contain: paint layout !important; /* 关键：彻底隔离尺寸计算，绝不撑大父级 flex/grid 容器 */
-  overscroll-behavior-x: contain !important; /* 防止在公式内横滑时触发外部视口滑动或虚空回弹 */
+  overscroll-behavior-x: contain !important;
   -webkit-overflow-scrolling: touch !important;
   padding: 0.85rem 1.1rem !important;
   margin: 1.2rem 0 !important;
@@ -209,13 +224,34 @@ body {
     box-shadow 0.25s ease !important;
 }
 
+/* 2b. MathJax 行内公式容器：保持行内显示 */
+.vp-doc mjx-container:not([display="true"]) {
+  display: inline-block !important;
+  white-space: nowrap !important;       /* 防止行内公式在括号处断行 */
+  vertical-align: middle !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
 .vp-doc mjx-container[display="true"]:hover {
   background: color-mix(in srgb, var(--vp-c-brand-1) 6%, var(--vp-c-bg-soft)) !important;
   box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--vp-c-brand-1) 25%, transparent) !important;
 }
 
-/* 3. 公式内部 SVG 保持自适应，不产生虚假延展 */
-.vp-doc mjx-container > svg {
+/* 3a. 块级公式内部 SVG：block + margin auto 确保居中 */
+.vp-doc mjx-container[display="true"] > svg {
+  display: block !important;
+  margin: 0 auto !important;            /* 双保险水平居中 */
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+  vertical-align: baseline !important;
+}
+
+/* 3b. 行内公式内部 SVG：保持行内对齐 */
+.vp-doc mjx-container:not([display="true"]) > svg {
   display: inline-block !important;
   max-width: none !important;
   overflow: visible !important;

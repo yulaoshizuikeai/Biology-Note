@@ -148,8 +148,8 @@
 
   /* Typography & Ink Scale */
   --vp-c-text-1: #e3e5e8;
-  --vp-c-text-2: #9ba1a6;
-  --vp-c-text-3: #687076;
+  --vp-c-text-2: #a8b0b8;  /* 提升: #9ba1a6 → #a8b0b8，对比度从 4.1:1 提升至 ~4.9:1，达到 WCAG AA */
+  --vp-c-text-3: #7a8490;  /* 提升: #687076 → #7a8490，用于装饰性文字/分隔符 */
 
   /* Borders & Dividers */
   --vp-c-border: rgba(255, 255, 255, 0.09);
