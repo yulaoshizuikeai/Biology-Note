@@ -159,7 +159,7 @@ input[type="range"] {
   text-align: center;
 }
 .stat-label {
-  font-size: 11.5px;
+  font-size: 12px;
   color: var(--vp-c-text-2);
   margin-bottom: 4px;
 }

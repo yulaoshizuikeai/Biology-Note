@@ -479,7 +479,7 @@ const handleCopy = async (event: MouseEvent) => {
 }
 
 .flash-badge-text {
-  font-size: 11.5px;
+  font-size: 12px;
   font-weight: 700;
   color: var(--vp-c-brand-1);
   letter-spacing: 0.02em;
@@ -530,7 +530,7 @@ const handleCopy = async (event: MouseEvent) => {
   border: 1px solid color-mix(in srgb, var(--vp-c-border) 80%, transparent);
   background: var(--vp-c-bg);
   color: var(--vp-c-text-2);
-  font-size: 11.5px;
+  font-size: 12px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -541,6 +541,16 @@ const handleCopy = async (event: MouseEvent) => {
   background: color-mix(in srgb, var(--vp-c-brand-1) 10%, var(--vp-c-bg));
   border-color: color-mix(in srgb, var(--vp-c-brand-1) 35%, transparent);
   color: var(--vp-c-brand-1);
+}
+
+/* 触屏设备：操作按钮扩大至 44px 触控目标 */
+@media (hover: none) and (pointer: coarse) {
+  .flash-action-btn {
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+    padding: 6px 12px;
+  }
 }
 
 .flash-action-btn.is-copied {
@@ -667,7 +677,7 @@ const handleCopy = async (event: MouseEvent) => {
   }
 
   .flash-footer-tip {
-    font-size: 10px;
+    font-size: 11px;
   }
 }
 </style>

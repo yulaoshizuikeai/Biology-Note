@@ -5,6 +5,7 @@ import DefaultTheme from "vitepress/theme";
 import { nextTick, onMounted, onBeforeUnmount, watch } from "vue";
 
 import Breadcrumb from "./components/CCBreadCrumb.vue";
+import CCBackToTop from "./components/CCBackToTop.vue";
 import CCDailyQuote from "./components/CCDailyQuote.vue";
 import CCFooter from "./components/CCFooter.vue";
 import CCHeroLogo from "./components/CCHeroLogo.vue";
@@ -60,6 +61,35 @@ const setupImageZoom = () => {
 const refreshPageEnhancements = () => {
   expandCurrentSidebarGroup();
   setupImageZoom();
+  attachScrollHints();
+};
+
+// 为可横向滚动的图解段落与宽表格插入滑动提示（幂等，路由切换后 DOM 重建自动重跑）
+const attachScrollHints = () => {
+  if (typeof window === "undefined") return;
+  const candidates = new Set<HTMLElement>();
+  document.querySelectorAll<HTMLElement>(".cc-table-wrap").forEach((wrap) => {
+    candidates.add(wrap);
+  });
+  document.querySelectorAll<HTMLElement>(".vp-doc img[src$='.svg']").forEach((image) => {
+    const parent = image.parentElement;
+    if (
+      parent instanceof HTMLElement &&
+      (parent.tagName === "DIV" || parent.tagName === "P" || parent.tagName === "FIGURE") &&
+      parent.children.length === 1
+    ) {
+      candidates.add(parent);
+    }
+  });
+  candidates.forEach((el) => {
+    if (el.dataset.ccScrollHint === "1") return;
+    if (el.scrollWidth - el.clientWidth <= 4) return;
+    el.dataset.ccScrollHint = "1";
+    const hint = document.createElement("div");
+    hint.className = "cc-scroll-hint";
+    hint.textContent = "↔ 左右滑动查看完整内容";
+    el.insertAdjacentElement("afterend", hint);
+  });
 };
 
 const onSectionTitleClick = (event: Event) => {
@@ -138,6 +168,11 @@ watch(
     <!-- 页脚信息 -->
     <template #doc-bottom>
       <CCFooter />
+    </template>
+
+    <!-- 返回顶部 -->
+    <template #layout-bottom>
+      <CCBackToTop />
     </template>
   </Layout>
 </template>

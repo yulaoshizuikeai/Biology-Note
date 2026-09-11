@@ -79,4 +79,12 @@ const kVal = ref(1000);
 .decision-guide { display: flex; flex-direction: column; gap: 8px; padding: 14px; border-radius: 8px; background: var(--vp-c-bg-alt); border-left: 3px solid var(--vp-c-brand-1); font-size: 12px; line-height: 1.5; }
 .guide-item strong { color: var(--vp-c-text-1); }
 .guide-item span { color: var(--vp-c-text-2); }
+
+/* 移动端：滑块占满控件宽度并扩大触控热区 */
+@media (max-width: 767px) {
+  .control-item input[type="range"] {
+    width: 100%;
+    min-height: 44px;
+  }
+}
 </style>

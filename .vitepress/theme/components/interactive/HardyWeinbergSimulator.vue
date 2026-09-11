@@ -74,5 +74,5 @@ const q2 = computed(() => q.value * q.value);
 .x-item { font-size: 12.5px; }
 .x-item strong { color: var(--vp-c-brand-1); font-family: monospace; }
 .x-item.ratio strong { color: #dc2626; }
-.x-note { margin: 0; font-size: 11.5px; color: var(--vp-c-text-2); line-height: 1.4; }
+.x-note { margin: 0; font-size: 12px; color: var(--vp-c-text-2); line-height: 1.4; }
 </style>

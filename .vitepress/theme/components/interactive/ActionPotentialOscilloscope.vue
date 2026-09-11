@@ -143,12 +143,12 @@ const triggerStimulation = () => {
 .dial-arc { width: 80px; height: 40px; margin: 0 auto 8px; border-top: 3px solid #94a3b8; border-radius: 40px 40px 0 0; position: relative; }
 .needle { width: 2px; height: 35px; background: #ef4444; position: absolute; bottom: 0; left: 39px; transform-origin: bottom center; transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
 .meter-readout { font-size: 20px; font-weight: 700; font-family: monospace; color: var(--vp-c-text-1); }
-.dial-labels { display: flex; justify-content: space-between; font-size: 10px; color: var(--vp-c-text-3); margin-top: 4px; }
+.dial-labels { display: flex; justify-content: space-between; font-size: 11px; color: var(--vp-c-text-3); margin-top: 4px; }
 .stage-info { padding: 16px; border-radius: 8px; background: var(--vp-c-bg); border: 1px solid var(--vp-c-divider); }
 .stage-badge { display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 700; margin-bottom: 6px; }
 .b-slate { background: #f1f5f9; color: #475569; }
 .b-red { background: #fee2e2; color: #b91c1c; }
 .b-blue { background: #dbeafe; color: #1e40af; }
 .stage-desc { font-size: 12.5px; color: var(--vp-c-text-1); line-height: 1.5; margin-bottom: 8px; }
-.ion-transport-pill { font-size: 11.5px; color: var(--vp-c-brand-1); background: var(--vp-c-brand-soft); padding: 4px 10px; border-radius: 6px; display: inline-block; }
+.ion-transport-pill { font-size: 12px; color: var(--vp-c-brand-1); background: var(--vp-c-brand-soft); padding: 4px 10px; border-radius: 6px; display: inline-block; }
 </style>

@@ -74,4 +74,25 @@ export function configureImageOptimization(md: MarkdownRenderer): void {
   wrapRule(md, "image");
   wrapRule(md, "html_inline");
   wrapRule(md, "html_block");
+  wrapTablesInScrollContainer(md);
+}
+
+/** 将 Markdown 表格包进 .cc-table-wrap 滚动容器，table 保持原生布局（表头与数据行共享列宽）。 */
+function wrapTablesInScrollContainer(md: MarkdownRenderer): void {
+  const fallbackOpen = md.renderer.rules.table_open;
+  const fallbackClose = md.renderer.rules.table_close;
+
+  md.renderer.rules.table_open = ((tokens, index, options, env, self) => {
+    const html = fallbackOpen
+      ? fallbackOpen(tokens, index, options, env, self)
+      : self.renderToken(tokens, index, options);
+    return `<div class="cc-table-wrap">${html}`;
+  }) satisfies RenderRule;
+
+  md.renderer.rules.table_close = ((tokens, index, options, env, self) => {
+    const html = fallbackClose
+      ? fallbackClose(tokens, index, options, env, self)
+      : self.renderToken(tokens, index, options);
+    return `${html}</div>`;
+  }) satisfies RenderRule;
 }

@@ -118,11 +118,11 @@ const curData = computed(() => reagentData[currentReagent.value]);
 .glass-tube { width: 36px; height: 140px; margin: 0 auto; border: 2px solid #94a3b8; border-top: none; border-radius: 0 0 18px 18px; position: relative; overflow: hidden; background: rgba(255, 255, 255, 0.4); }
 .liquid { position: absolute; bottom: 0; width: 100%; height: 60%; transition: background 0.4s ease; }
 .precipitate { position: absolute; bottom: 0; width: 100%; height: 20%; background: rgba(185, 28, 28, 0.9); }
-.tube-label { font-size: 11.5px; font-weight: 700; margin-top: 8px; color: var(--vp-c-text-1); }
+.tube-label { font-size: 12px; font-weight: 700; margin-top: 8px; color: var(--vp-c-text-1); }
 .reagent-details { padding: 14px; border-radius: 8px; background: var(--vp-c-bg); border: 1px solid var(--vp-c-divider); }
 .detail-row { font-size: 12.5px; margin-bottom: 6px; display: flex; justify-content: space-between; }
 .detail-row strong { color: var(--vp-c-text-1); }
 .cond-tag { background: #fef3c7; color: #b45309; padding: 2px 8px; border-radius: 4px; font-weight: 600; }
-.detail-warning { margin-top: 8px; padding: 10px; border-radius: 6px; background: #fef2f2; border-left: 3px solid #ef4444; font-size: 11.5px; line-height: 1.4; color: #991b1b; }
+.detail-warning { margin-top: 8px; padding: 10px; border-radius: 6px; background: #fef2f2; border-left: 3px solid #ef4444; font-size: 12px; line-height: 1.4; color: #991b1b; }
 .detail-warning p { margin: 4px 0 0; }
 </style>

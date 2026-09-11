@@ -108,5 +108,5 @@ const rqResult = computed(() => {
 .app-hint { font-size: 11px; color: var(--vp-c-text-2); }
 .rq-summary { padding: 14px; border-radius: 8px; background: var(--vp-c-bg-alt); border-left: 3px solid var(--vp-c-brand-1); }
 .rq-val { font-size: 14px; margin-bottom: 4px; color: var(--vp-c-text-1); }
-.rq-rule { font-size: 11.5px; color: var(--vp-c-text-2); }
+.rq-rule { font-size: 12px; color: var(--vp-c-text-2); }
 </style>

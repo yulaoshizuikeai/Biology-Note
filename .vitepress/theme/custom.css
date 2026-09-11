@@ -272,3 +272,115 @@ body {
   white-space: nowrap !important;
   border: 0 !important;
 }
+
+/* ============================================================
+   移动端图解阅读增强：SVG 图纸按 780px 设计稿原尺寸渲染，容器横滑
+   （内容图解统一为 <div>/<p> 独占包裹 img，覆盖 md 内联 max-width/width 需 !important；
+   PDF 导出视口 1280px 不受影响）
+   ============================================================ */
+@media (max-width: 767px) {
+  .vp-doc div:has(> img[src$=".svg"]:only-child),
+  .vp-doc p:has(> img[src$=".svg"]:only-child) {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+  }
+
+  .vp-doc div:has(> img[src$=".svg"]:only-child) > img,
+  .vp-doc p:has(> img[src$=".svg"]:only-child) > img {
+    min-width: 780px !important;
+    max-width: none !important;
+    width: 780px !important;
+  }
+}
+
+/* 横滑内容提示胶囊（layout.vue 检测到可滚动元素后插入，图解与宽表格通用） */
+.cc-scroll-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: max-content;
+  max-width: 100%;
+  margin: -0.7rem auto 1.05rem;
+  padding: 3px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--vp-c-text-3);
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 999px;
+  user-select: none;
+  pointer-events: none;
+}
+
+@media print {
+  .cc-scroll-hint {
+    display: none;
+  }
+}
+
+/* ============================================================
+   404 页面（中文本地化）
+   ============================================================ */
+.cc-404 {
+  min-height: 52vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.cc-404-code {
+  font-size: clamp(72px, 14vw, 120px);
+  font-weight: 750;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: color-mix(in srgb, var(--vp-c-brand-1) 32%, var(--vp-c-bg));
+}
+
+.cc-404-title {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  border: none;
+}
+
+.cc-404-desc {
+  margin: 0 0 1.5rem;
+  color: var(--vp-c-text-2);
+}
+
+.cc-404-link {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border-radius: 10px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.cc-404-link:hover {
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 40%, transparent);
+}
+
+/* ============================================================
+   触屏设备交互增强：交互组件按钮与滑块统一最小触控目标
+   ============================================================ */
+@media (hover: none) and (pointer: coarse) {
+  .vp-doc .interactive-card button {
+    min-height: 40px;
+  }
+
+  .vp-doc .interactive-card input[type="range"] {
+    min-height: 40px;
+  }
+}

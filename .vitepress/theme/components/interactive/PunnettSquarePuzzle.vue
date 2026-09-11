@@ -175,7 +175,7 @@ const getPhenoName = (cell: Cell) => {
   border: 1px solid var(--vp-c-divider); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .geno { font-size: 11px; font-weight: 700; font-family: monospace; }
-.pheno-tag { font-size: 9px; opacity: 0.8; }
+.pheno-tag { font-size: 11px; opacity: 0.8; }
 .c-blue { background: #dbeafe; color: #1e40af; border-color: #93c5fd; }
 .c-green { background: #dcfce7; color: #166534; border-color: #86efac; }
 .c-amber { background: #fef3c7; color: #92400e; border-color: #fde68a; }

@@ -209,9 +209,10 @@ html.dark .flash-kw {
   border: 1px solid var(--vp-c-border) !important;
   border-left-width: 3.5px !important;
   box-shadow: none !important;
-  /* 极简主义：中性表面 + 中性正文，语义色仅保留左边框与标题 */
+  /* 极简主义：中性表面 + 中性正文，语义色仅保留左边框与标题
+     color 需 !important 压过 VitePress 默认主题后加载的 .custom-block.warning 规则 */
   background-color: var(--vp-c-bg-soft) !important;
-  color: var(--vp-c-text-1);
+  color: var(--vp-c-text-1) !important;
 }
 
 .vp-doc .custom-block.info {
@@ -264,31 +265,25 @@ html.dark .flash-kw {
 
 /* ============================================================
    4. Tables (Data & Comparison Grids)
+   外层滚动容器 .cc-table-wrap 由 markdown 渲染器包裹（imageOptimization.ts），
+   table 保持原生布局使表头与数据行共享列宽（修复表头错位）
    ============================================================ */
-.vp-doc table {
-  /* display:block 让 table 在移动端可横向滚动 */
-  display: block;
+.cc-table-wrap {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  border-collapse: separate;
-  border-spacing: 0;
   border: 1px solid var(--vp-c-border);
   border-radius: 8px;
-  /* overflow:hidden + border-radius 在 block 模式下通过 outline 补偿 */
-  overflow-y: hidden;
   margin: 1.25rem 0;
-  min-width: 100%;
-  width: max-content;
-  max-width: 100%;
-  box-sizing: border-box;
 }
 
-/* 确保 tbody/thead 内部布局正常 */
-.vp-doc table thead,
-.vp-doc table tbody,
-.vp-doc table tfoot {
-  display: table;
-  width: 100%;
+.vp-doc table {
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0;
+  min-width: 100%;
+  width: max-content;
+  max-width: none;
+  box-sizing: border-box;
 }
 
 .vp-doc th {
