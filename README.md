@@ -78,8 +78,7 @@ npm run docs:build
 # 预览静态产物
 npm run docs:preview
 
-# 导出单篇 / 全量 PDF
-npm run pdf:single
+# 导出全量 PDF
 npm run pdf:all
 
 # 打包 PDF 全书与 ZIP 归档

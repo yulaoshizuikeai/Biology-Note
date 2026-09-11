@@ -6,6 +6,7 @@ export:
       - "public/**"
       - "data/**"
       - "package.json"
+      - "package-lock.json"
       - "bun.lock"
       - "config.yml"
     sourceExtensions:
