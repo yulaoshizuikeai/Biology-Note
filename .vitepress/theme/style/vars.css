@@ -75,27 +75,21 @@
   --vp-code-color: #274b3d;
 
   /* ------------------------------------------------------------
-     8. Custom Callouts (Light Mode: Subtle Paper Tints)
+     8. Custom Callouts（极简主义：中性表面，语义色仅用于边框与标题）
      ------------------------------------------------------------ */
   --vp-custom-block-info-border: rgba(46, 107, 86, 0.45);
   --vp-custom-block-info-text: #204638;
-  --vp-custom-block-info-bg: rgba(46, 107, 86, 0.05);
 
   --vp-custom-block-tip-border: #3b7a57;
   --vp-custom-block-tip-text: #1d4631;
-  --vp-custom-block-tip-bg: rgba(59, 122, 87, 0.06);
 
   --vp-custom-block-warning-border: #c27803;
   --vp-custom-block-warning-text: #724602;
-  --vp-custom-block-warning-bg: rgba(194, 120, 3, 0.06);
 
   --vp-custom-block-danger-border: #b9423b;
   --vp-custom-block-danger-text: #75201b;
-  --vp-custom-block-danger-bg: rgba(185, 66, 59, 0.06);
 
   --vp-custom-block-details-border: rgba(0, 0, 0, 0.1);
-  --vp-custom-block-details-text: var(--vp-c-text-1);
-  --vp-custom-block-details-bg: var(--vp-c-bg-soft);
 
   /* ------------------------------------------------------------
      9. Navigation & Sidebar
@@ -180,26 +174,20 @@
   --vp-code-bg: rgba(255, 255, 255, 0.08);
   --vp-code-color: #8ed6b1;
 
-  /* Custom Callouts */
+  /* Custom Callouts（极简主义：中性表面，语义色仅用于边框与标题） */
   --vp-custom-block-info-border: rgba(82, 183, 136, 0.4);
   --vp-custom-block-info-text: #a8dfc4;
-  --vp-custom-block-info-bg: rgba(82, 183, 136, 0.08);
 
   --vp-custom-block-tip-border: #52b788;
   --vp-custom-block-tip-text: #b7e8d0;
-  --vp-custom-block-tip-bg: rgba(82, 183, 136, 0.09);
 
   --vp-custom-block-warning-border: #d68f1c;
   --vp-custom-block-warning-text: #f0c37b;
-  --vp-custom-block-warning-bg: rgba(214, 143, 28, 0.09);
 
   --vp-custom-block-danger-border: #d45951;
   --vp-custom-block-danger-text: #f49f99;
-  --vp-custom-block-danger-bg: rgba(212, 89, 81, 0.09);
 
   --vp-custom-block-details-border: rgba(255, 255, 255, 0.1);
-  --vp-custom-block-details-text: var(--vp-c-text-1);
-  --vp-custom-block-details-bg: var(--vp-c-bg-soft);
 
   /* Navigation & Sidebar */
   --vp-nav-bg-color: rgba(21, 23, 24, 0.88);

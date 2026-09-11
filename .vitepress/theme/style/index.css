@@ -209,35 +209,29 @@ html.dark .flash-kw {
   border: 1px solid var(--vp-c-border) !important;
   border-left-width: 3.5px !important;
   box-shadow: none !important;
+  /* 极简主义：中性表面 + 中性正文，语义色仅保留左边框与标题 */
+  background-color: var(--vp-c-bg-soft) !important;
+  color: var(--vp-c-text-1);
 }
 
 .vp-doc .custom-block.info {
   border-left-color: var(--vp-custom-block-info-border) !important;
-  background-color: var(--vp-custom-block-info-bg) !important;
-  color: var(--vp-custom-block-info-text);
 }
 
 .vp-doc .custom-block.tip {
   border-left-color: var(--vp-custom-block-tip-border) !important;
-  background-color: var(--vp-custom-block-tip-bg) !important;
-  color: var(--vp-custom-block-tip-text);
 }
 
 .vp-doc .custom-block.warning {
   border-left-color: var(--vp-custom-block-warning-border) !important;
-  background-color: var(--vp-custom-block-warning-bg) !important;
-  color: var(--vp-custom-block-warning-text);
 }
 
 .vp-doc .custom-block.danger {
   border-left-color: var(--vp-custom-block-danger-border) !important;
-  background-color: var(--vp-custom-block-danger-bg) !important;
-  color: var(--vp-custom-block-danger-text);
 }
 
 .vp-doc .custom-block.details {
   border-left-color: var(--vp-custom-block-details-border) !important;
-  background-color: var(--vp-custom-block-details-bg) !important;
 }
 
 .vp-doc .custom-block .custom-block-title {
@@ -245,6 +239,22 @@ html.dark .flash-kw {
   font-size: 0.94rem;
   letter-spacing: -0.01em;
   margin-bottom: 0.35rem;
+}
+
+.vp-doc .custom-block.info .custom-block-title {
+  color: var(--vp-custom-block-info-text);
+}
+
+.vp-doc .custom-block.tip .custom-block-title {
+  color: var(--vp-custom-block-tip-text);
+}
+
+.vp-doc .custom-block.warning .custom-block-title {
+  color: var(--vp-custom-block-warning-text);
+}
+
+.vp-doc .custom-block.danger .custom-block-title {
+  color: var(--vp-custom-block-danger-text);
 }
 
 .vp-doc .custom-block p {
