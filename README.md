@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://vitepress.dev"><img src="https://img.shields.io/badge/VitePress-2.0-emerald?style=flat-square&logo=vitepress&logoColor=white" alt="VitePress" /></a>
   <a href="https://nodejs.org"><img src="https://img.shields.io/badge/Node.js-%E2%89%A520-green?style=flat-square&logo=node.js&logoColor=white" alt="Node.js" /></a>
-  <a href="./LICENSE"><img src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey?style=flat-square" alt="License" /></a>
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey?style=flat-square" alt="License" /></a>
 </p>
 
 1. **在线阅读**: [https://biology.indevs.in/](https://biology.indevs.in/)

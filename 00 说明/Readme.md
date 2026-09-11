@@ -1,4 +1,4 @@
-﻿# 关于 高考生物知识库
+# 关于 高中生物知识库
 
 > 欢迎来到 **Yulaoshizuikeai's Biology Note (高考生物知识库)**！
 >
