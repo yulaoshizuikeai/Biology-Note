@@ -1,6 +1,10 @@
 ---
 title: 正在跳转
 layout: page
+head:
+  - - meta
+    - name: robots
+      content: noindex, nofollow, noarchive
 ---
 
 <script setup>
