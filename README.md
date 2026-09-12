@@ -10,11 +10,18 @@
   <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey?style=flat-square" alt="License" /></a>
 </p>
 
+<p align="center">
+  <img src="./public/images/poster-neo-minimalism.png" alt="高考生物知识库 - Yulaoshizuikeai's Biology Note" width="640" />
+</p>
+
 1. **在线阅读**: [https://biology.indevs.in/](https://biology.indevs.in/)
 2. **最新 PDF 下载**:
    - 📕 **[完整版 PDF (单文件全书)](https://github.com/yulaoshizuikeai/Biology-Note/releases/download/latest-pdf/Biology-Note-Complete.pdf)** (由 GitHub Actions 随代码更新自动生成)
    - 📦 **[全套分册归档 (.zip)](https://github.com/yulaoshizuikeai/Biology-Note/releases/download/latest-pdf/Biology-Note-All-PDFs.zip)** (包含全书独立高清矢量 PDF)
 3. **知识架构**: 涵盖中国普通高中教科书生物学（人教版必修 2 册 + 选择性必修 3 册共 5 本官方教材），结合高考生物真题与核心题型模型，打造系统化、图解直观的高中生物知识库。
+
+> [!NOTE]
+> **🤖 项目声明**：本项目由 AI 自动构建工作流搭建。如有错误欢迎提交 [Issues](https://github.com/yulaoshizuikeai/Biology-Note/issues)！
 
 ---
 

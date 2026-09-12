@@ -1,0 +1,126 @@
+﻿/**
+ * ============================================================
+ * 高考生物知识库 - PDF 专属印刷与导出样式表 (pdf-custom.css)
+ * ============================================================
+ * 说明：此样式表仅在运行导出 PDF 时生效，完全不影响网页端的在线浏览。
+ * 您可以在此处自由调整 PDF 专属的底色、字体、排版、边距与断页行为。
+ */
+
+/* ------------------------------------------------------------
+   1. 彻底覆盖全局背景色为【纯白】，消除米黄色/暖黄色纸感底色
+   ------------------------------------------------------------ */
+:root {
+  --vp-c-bg: #ffffff !important;
+  --vp-c-bg-alt: #ffffff !important;
+  --vp-c-bg-elv: #ffffff !important;
+  --vp-c-bg-soft: #f8fafc !important; /* 冷白浅灰底，代替原本偏黄的 #f3f1ec */
+  --vp-code-block-bg: #f8fafc !important;
+  --vp-code-bg: rgba(0, 0, 0, 0.04) !important;
+}
+
+html,
+body,
+#app,
+.Layout,
+.VPContent,
+.VPDoc,
+.vp-doc {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+}
+
+/* ------------------------------------------------------------
+   2. 印刷级墨黑正文与高对比度文字
+   ------------------------------------------------------------ */
+.vp-doc {
+  color: #0f172a !important; /* 纯正冷调墨黑，打印极度清晰 */
+  line-height: 1.65 !important;
+}
+
+.vp-doc p,
+.vp-doc li {
+  color: #1e293b !important;
+}
+
+/* ------------------------------------------------------------
+   3. 提示块/引言块净化：冷白微灰背景 + 严谨纯正边框
+   ------------------------------------------------------------ */
+.custom-block {
+  background-color: #f8fafc !important;
+  border-left-width: 4px !important;
+}
+
+.custom-block.tip {
+  border-color: #10b981 !important;
+}
+
+.custom-block.warning {
+  border-color: #f59e0b !important;
+}
+
+.custom-block.danger {
+  border-color: #ef4444 !important;
+}
+
+.custom-block.info {
+  border-color: #0ea5e9 !important;
+}
+
+/* ------------------------------------------------------------
+   4. 表格打印排版加固：纯白底 + 清晰边框
+   ------------------------------------------------------------ */
+.vp-doc table {
+  background-color: #ffffff !important;
+}
+
+.vp-doc th {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+
+.vp-doc th,
+.vp-doc td {
+  border-color: #cbd5e1 !important;
+}
+
+/* ------------------------------------------------------------
+   5. 隐藏屏幕端网页专用控件与无意义打印组件
+   ------------------------------------------------------------ */
+.VPNav,
+.VPSidebar,
+.VPLocalNav,
+.waline-wrapper,
+.cc-back-to-top,
+.cc-share,
+.interactive-simulator-controls,
+.feedback-container,
+.doc-footer,
+.VPSkipLink {
+  display: none !important;
+}
+
+/* ------------------------------------------------------------
+   6. 专业智能分页控制（防止标题孤行截断、图表或代码块撕裂）
+   ------------------------------------------------------------ */
+@media print {
+  h1, h2, h3, h4, h5, h6 {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  .custom-block,
+  pre,
+  table,
+  svg,
+  .vp-doc figure,
+  .interactive-container {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* 展开可能被折叠的容器 */
+  details[open] summary ~ * {
+    animation: none !important;
+  }
+}

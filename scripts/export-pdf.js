@@ -130,7 +130,12 @@ const serverPort = await new Promise((resolve) => {
 const browser = await chromium.launch();
 try {
   const pagePool = [];
+  const customCssPath = path.resolve(__dirname, "pdf-custom.css");
+  const customCssContent = fs.existsSync(customCssPath) ? fs.readFileSync(customCssPath, "utf-8") : "";
+
   const pdfBaseStyle = `
+    ${customCssContent}
+
     :root {
         --vp-font-family-base: ${fontFamily};
     }

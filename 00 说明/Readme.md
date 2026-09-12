@@ -45,4 +45,8 @@
 
 ## ✍️ 勘误与贡献
 
+> [!NOTE]
+> **🤖 项目声明**：本项目由 AI 自动构建工作流搭建。如有错误欢迎提交 [Issues](https://github.com/yulaoshizuikeai/Biology-Note/issues)！
+
 若在阅读过程中发现任何笔误、科学概念歧义或图解瑕疵，欢迎随时提 Issue 或 Pull Request！
+

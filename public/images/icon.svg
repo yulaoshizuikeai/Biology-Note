@@ -1,164 +1,170 @@
-<svg width="330" height="380" viewBox="0 0 330 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="340" height="390" viewBox="0 0 340 390" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <filter id="shadow" x="30" y="0" width="300" height="375" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#047857" flood-opacity="0.16"/>
-      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000000" flood-opacity="0.06"/>
+    <filter id="card-shadow-true" x="15" y="8" width="315" height="375" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#14362A" flood-opacity="0.16"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.05"/>
     </filter>
+    <clipPath id="card-clip-true">
+      <rect x="56" y="16" width="250" height="330" rx="28"/>
+    </clipPath>
 
-    <pattern id="lines" width="100%" height="24" patternUnits="userSpaceOnUse">
-      <line x1="0" y1="23.5" x2="100%" y2="23.5" stroke="#F1F5F9" stroke-width="1.2"/>
-    </pattern>
-
-    <linearGradient id="strand-grad-1" x1="0" y1="0" x2="0" y2="1">
+    <!-- Strand 1 (Emerald to Mint) -->
+    <linearGradient id="dna-s1-grad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#34D399"/>
       <stop offset="50%" stop-color="#10B981"/>
-      <stop offset="100%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#2E6B56"/>
     </linearGradient>
 
-    <linearGradient id="strand-grad-2" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2DD4BF"/>
+    <!-- Strand 2 (Bright Cyan to Deep Teal) -->
+    <linearGradient id="dna-s2-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22D3EE"/>
       <stop offset="50%" stop-color="#0D9488"/>
-      <stop offset="100%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#134E48"/>
     </linearGradient>
 
-    <linearGradient id="node-grad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#A7F3D0"/>
-      <stop offset="100%" stop-color="#059669"/>
-    </linearGradient>
-
-    <linearGradient id="pedestal-grad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#10B981" stop-opacity="0.05"/>
-      <stop offset="25%" stop-color="#10B981" stop-opacity="0.75"/>
-      <stop offset="50%" stop-color="#059669"/>
-      <stop offset="75%" stop-color="#10B981" stop-opacity="0.75"/>
-      <stop offset="100%" stop-color="#10B981" stop-opacity="0.05"/>
-    </linearGradient>
+    <!-- Radial Jewel Beads -->
+    <radialGradient id="node-jewel-s1" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="40%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </radialGradient>
+    <radialGradient id="node-jewel-s2" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="40%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </radialGradient>
   </defs>
 
-  <!-- Layer 1: Back tilted emerald notebook page -->
-  <rect y="29.6" width="285.6" height="352" rx="18" transform="rotate(-5.75 0 29.6)" fill="#10B981"/>
+  <!-- 1. BACK TILTED NOTEBOOK CARD -->
+  <rect x="22" y="44" width="250" height="324" rx="28"
+        transform="rotate(-7 22 44)"
+        fill="#2E6B56"/>
 
-  <!-- Layer 2: Main tactile notebook page -->
-  <g filter="url(#shadow)">
-    <rect x="45.5" y="10" width="274" height="352" rx="18" fill="#FFFFFF"/>
-    <rect x="45.5" y="24" width="274" height="324" fill="url(#lines)"/>
+  <!-- 2. FRONT NOTEBOOK CARD -->
+  <g filter="url(#card-shadow-true)">
+    <rect x="56" y="16" width="250" height="330" rx="28" fill="#FFFFFF"/>
 
-    <!-- ================= DNA DOUBLE HELIX ================= -->
-    <g class="dna-helix-group">
-
-      <!-- 1. BASE PAIR RUNGS (Complementary Base Pairs) -->
-      <g class="base-pairs">
-        <g class="rung rung-1">
-          <line x1="147.28" y1="78" x2="180.75" y2="78" stroke="#10B981" stroke-width="4" stroke-linecap="round"/>
-          <line x1="184.25" y1="78" x2="217.72" y2="78" stroke="#34D399" stroke-width="4" stroke-linecap="round"/>
-          <circle cx="182.5" cy="78" r="1.5" fill="#10B981"/>
-        </g>
-        <g class="rung rung-2">
-          <line x1="156.40" y1="90" x2="180.75" y2="90" stroke="#0D9488" stroke-width="4" stroke-linecap="round"/>
-          <line x1="184.25" y1="90" x2="208.60" y2="90" stroke="#059669" stroke-width="4" stroke-linecap="round"/>
-          <circle cx="182.5" cy="90" r="1.5" fill="#10B981"/>
-        </g>
-        <g class="rung rung-3">
-          <line x1="156.40" y1="122" x2="180.75" y2="122" stroke="#10B981" stroke-width="4" stroke-linecap="round"/>
-          <line x1="184.25" y1="122" x2="208.60" y2="122" stroke="#34D399" stroke-width="4" stroke-linecap="round"/>
-          <circle cx="182.5" cy="122" r="1.5" fill="#10B981"/>
-        </g>
-        <g class="rung rung-4">
-          <line x1="142.75" y1="148" x2="180.75" y2="148" stroke="#0D9488" stroke-width="4" stroke-linecap="round"/>
-          <line x1="184.25" y1="148" x2="222.25" y2="148" stroke="#059669" stroke-width="4" stroke-linecap="round"/>
-          <circle cx="182.5" cy="148" r="1.5" fill="#10B981"/>
-        </g>
-        <g class="rung rung-5">
-          <line x1="148.60" y1="192" x2="180.75" y2="192" stroke="#10B981" stroke-width="4" stroke-linecap="round"/>
-          <line x1="184.25" y1="192" x2="216.40" y2="192" stroke="#34D399" stroke-width="4" stroke-linecap="round"/>
-          <circle cx="182.5" cy="192" r="1.5" fill="#10B981"/>
-        </g>
-        <g class="rung rung-6">
-          <line x1="164.20" y1="218" x2="180.75" y2="218" stroke="#0D9488" stroke-width="4" stroke-linecap="round"/>
-          <line x1="184.25" y1="218" x2="200.80" y2="218" stroke="#059669" stroke-width="4" stroke-linecap="round"/>
-          <circle cx="182.5" cy="218" r="1.5" fill="#10B981"/>
-        </g>
-        <g class="rung rung-7">
-          <line x1="160.20" y1="252" x2="180.75" y2="252" stroke="#10B981" stroke-width="4" stroke-linecap="round"/>
-          <line x1="184.25" y1="252" x2="204.80" y2="252" stroke="#34D399" stroke-width="4" stroke-linecap="round"/>
-          <circle cx="182.5" cy="252" r="1.5" fill="#10B981"/>
-        </g>
-        <g class="rung rung-8">
-          <line x1="145.40" y1="264" x2="180.75" y2="264" stroke="#0D9488" stroke-width="4" stroke-linecap="round"/>
-          <line x1="184.25" y1="264" x2="219.60" y2="264" stroke="#059669" stroke-width="4" stroke-linecap="round"/>
-          <circle cx="182.5" cy="264" r="1.5" fill="#10B981"/>
-        </g>
-      </g>
-
-      <!-- 2. STRANDS WITH SEAMLESS 3D DEPTH CUTOUT -->
-      <!-- Background Strands -->
-      <path d="M 140.50 65.00 L 140.91 67.33 L 142.14 69.67 L 144.17 72.00 L 146.97 74.33 L 150.48 76.67 L 154.67 79.00 L 159.45 81.33 L 164.76 83.67 L 170.52 86.00 L 176.62 88.33 L 182.97 90.67 L 189.47 93.00 L 195.99 95.33 L 202.43 97.67 L 208.67 100.00 L 214.59 102.33 L 220.08 104.67 L 225.02 107.00 L 229.33 109.33 L 232.92 111.67 L 235.70 114.00 L 237.62 116.33 L 238.63 118.67 L 238.70 121.00 L 237.84 123.33 L 236.05 125.67 L 233.36 128.00 L 229.80 130.33 L 225.43 132.67 L 220.30 135.00"
-            stroke="#A7F3D0" stroke-width="5.5" stroke-linecap="round" fill="none"/>
-
-      <path d="M 220.30 135.00 L 214.52 137.33 L 208.19 139.67 L 201.42 142.00 L 194.34 144.33 L 187.06 146.67 L 179.74 149.00 L 172.50 151.33 L 165.48 153.67 L 158.82 156.00 L 152.65 158.33 L 147.10 160.67 L 142.27 163.00 L 138.27 165.33 L 135.19 167.67 L 133.10 170.00 L 132.05 172.33 L 132.09 174.67 L 133.22 177.00 L 135.43 179.33 L 138.71 181.67 L 142.99 184.00 L 148.21 186.33 L 154.29 188.67 L 161.12 191.00 L 168.58 193.33 L 176.54 195.67 L 184.86 198.00 L 193.39 200.33 L 201.97 202.67 L 210.45 205.00"
-            stroke="#A7F3D0" stroke-width="5.5" stroke-linecap="round" fill="none"/>
-
-      <path d="M 210.45 205.00 L 217.47 207.33 L 223.77 209.67 L 229.23 212.00 L 233.72 214.33 L 237.15 216.67 L 239.45 219.00 L 240.54 221.33 L 240.40 223.67 L 239.02 226.00 L 236.42 228.33 L 232.65 230.67 L 227.76 233.00 L 221.85 235.33 L 215.02 237.67 L 207.41 240.00 L 199.15 242.33 L 190.41 244.67 L 181.36 247.00 L 172.18 249.33 L 163.05 251.67 L 154.17 254.00 L 145.72 256.33 L 137.89 258.67 L 130.86 261.00 L 124.78 263.33 L 119.82 265.67 L 116.10 268.00 L 113.72 270.33 L 112.78 272.67 L 113.33 275.00"
-            stroke="#A7F3D0" stroke-width="5.5" stroke-linecap="round" fill="none"/>
-
-      <!-- Foreground Strands (with 3D Cutout understroke) -->
-      <path d="M 224.50 65.00 L 224.09 67.33 L 222.86 69.67 L 220.83 72.00 L 218.03 74.33 L 214.52 76.67 L 210.33 79.00 L 205.55 81.33 L 200.24 83.67 L 194.48 86.00 L 188.38 88.33 L 182.03 90.67 L 175.53 93.00 L 169.01 95.33 L 162.57 97.67 L 156.33 100.00 L 150.41 102.33 L 144.92 104.67 L 139.98 107.00 L 135.67 109.33 L 132.08 111.67 L 129.30 114.00 L 127.38 116.33 L 126.37 118.67 L 126.30 121.00 L 127.16 123.33 L 128.95 125.67 L 131.64 128.00 L 135.20 130.33 L 139.57 132.67 L 144.70 135.00"
-            stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" fill="none"/>
-      <path d="M 224.50 65.00 L 224.09 67.33 L 222.86 69.67 L 220.83 72.00 L 218.03 74.33 L 214.52 76.67 L 210.33 79.00 L 205.55 81.33 L 200.24 83.67 L 194.48 86.00 L 188.38 88.33 L 182.03 90.67 L 175.53 93.00 L 169.01 95.33 L 162.57 97.67 L 156.33 100.00 L 150.41 102.33 L 144.92 104.67 L 139.98 107.00 L 135.67 109.33 L 132.08 111.67 L 129.30 114.00 L 127.38 116.33 L 126.37 118.67 L 126.30 121.00 L 127.16 123.33 L 128.95 125.67 L 131.64 128.00 L 135.20 130.33 L 139.57 132.67 L 144.70 135.00"
-            stroke="url(#strand-grad-1)" stroke-width="6.5" stroke-linecap="round" fill="none"/>
-
-      <path d="M 144.70 135.00 L 150.48 137.33 L 156.81 139.67 L 163.58 142.00 L 170.66 144.33 L 177.94 146.67 L 185.26 149.00 L 192.50 151.33 L 199.52 153.67 L 206.18 156.00 L 212.35 158.33 L 217.90 160.67 L 222.73 163.00 L 226.73 165.33 L 229.81 167.67 L 231.90 170.00 L 232.95 172.33 L 232.91 174.67 L 231.78 177.00 L 229.57 179.33 L 226.29 181.67 L 222.01 184.00 L 216.79 186.33 L 210.71 188.67 L 203.88 191.00 L 196.42 193.33 L 188.46 195.67 L 180.14 198.00 L 171.61 200.33 L 163.03 202.67 L 154.55 205.00"
-            stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" fill="none"/>
-      <path d="M 144.70 135.00 L 150.48 137.33 L 156.81 139.67 L 163.58 142.00 L 170.66 144.33 L 177.94 146.67 L 185.26 149.00 L 192.50 151.33 L 199.52 153.67 L 206.18 156.00 L 212.35 158.33 L 217.90 160.67 L 222.73 163.00 L 226.73 165.33 L 229.81 167.67 L 231.90 170.00 L 232.95 172.33 L 232.91 174.67 L 231.78 177.00 L 229.57 179.33 L 226.29 181.67 L 222.01 184.00 L 216.79 186.33 L 210.71 188.67 L 203.88 191.00 L 196.42 193.33 L 188.46 195.67 L 180.14 198.00 L 171.61 200.33 L 163.03 202.67 L 154.55 205.00"
-            stroke="url(#strand-grad-2)" stroke-width="6.5" stroke-linecap="round" fill="none"/>
-
-      <path d="M 154.55 205.00 L 147.53 207.33 L 141.23 209.67 L 135.77 212.00 L 131.28 214.33 L 127.85 216.67 L 125.55 219.00 L 124.46 221.33 L 124.60 223.67 L 125.98 226.00 L 128.58 228.33 L 132.35 230.67 L 137.24 233.00 L 143.15 235.33 L 149.98 237.67 L 157.59 240.00 L 165.85 242.33 L 174.59 244.67 L 183.64 247.00 L 192.82 249.33 L 201.95 251.67 L 210.83 254.00 L 219.28 256.33 L 227.11 258.67 L 234.14 261.00 L 240.22 263.33 L 245.18 265.67 L 248.90 268.00 L 251.28 270.33 L 252.22 272.67 L 251.67 275.00"
-            stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" fill="none"/>
-      <path d="M 154.55 205.00 L 147.53 207.33 L 141.23 209.67 L 135.77 212.00 L 131.28 214.33 L 127.85 216.67 L 125.55 219.00 L 124.46 221.33 L 124.60 223.67 L 125.98 226.00 L 128.58 228.33 L 132.35 230.67 L 137.24 233.00 L 143.15 235.33 L 149.98 237.67 L 157.59 240.00 L 165.85 242.33 L 174.59 244.67 L 183.64 247.00 L 192.82 249.33 L 201.95 251.67 L 210.83 254.00 L 219.28 256.33 L 227.11 258.67 L 234.14 261.00 L 240.22 263.33 L 245.18 265.67 L 248.90 268.00 L 251.28 270.33 L 252.22 272.67 L 251.67 275.00"
-            stroke="url(#strand-grad-1)" stroke-width="6.5" stroke-linecap="round" fill="none"/>
-
-      <!-- 3. PHOSPHODIESTER BACKBONE NODES -->
-      <g class="backbone-nodes">
-        <g transform="translate(147.28, 78)"><circle cx="0" cy="0" r="4.2" fill="url(#node-grad)"/><circle cx="-0.8" cy="-0.8" r="1.5" fill="#FFFFFF"/></g>
-        <g transform="translate(217.72, 78)"><circle cx="0" cy="0" r="4.2" fill="url(#node-grad)"/><circle cx="-0.8" cy="-0.8" r="1.5" fill="#FFFFFF"/></g>
-        <g transform="translate(156.40, 90)"><circle cx="0" cy="0" r="4.2" fill="url(#node-grad)"/><circle cx="-0.8" cy="-0.8" r="1.5" fill="#FFFFFF"/></g>
-        <g transform="translate(208.60, 90)"><circle cx="0" cy="0" r="4.2" fill="url(#node-grad)"/><circle cx="-0.8" cy="-0.8" r="1.5" fill="#FFFFFF"/></g>
-        <g transform="translate(156.40, 122)"><circle cx="0" cy="0" r="4.2" fill="url(#node-grad)"/><circle cx="-0.8" cy="-0.8" r="1.5" fill="#FFFFFF"/></g>
-        <g transform="translate(208.60, 122)"><circle cx="0" cy="0" r="4.2" fill="url(#node-grad)"/><circle cx="-0.8" cy="-0.8" r="1.5" fill="#FFFFFF"/></g>
-        <g transform="translate(142.75, 148)"><circle cx="0" cy="0" r="4.2" fill="url(#node-grad)"/><circle cx="-0.8" cy="-0.8" r="1.5" fill="#FFFFFF"/></g>
-        <g transform="translate(222.25, 148)"><circle cx="0" cy="0" r="4.2" fill="url(#node-grad)"/><circle cx="-0.8" cy="-0.8" r="1.5" fill="#FFFFFF"/></g>
-        <g transform="translate(148.60, 192)"><circle cx="0" cy="0" r="4.2" fill="url(#node-grad)"/><circle cx="-0.8" cy="-0.8" r="1.5" fill="#FFFFFF"/></g>
-        <g transform="translate(216.40, 192)"><circle cx="0" cy="0" r="4.2" fill="url(#node-grad)"/><circle cx="-0.8" cy="-0.8" r="1.5" fill="#FFFFFF"/></g>
-        <g transform="translate(164.20, 218)"><circle cx="0" cy="0" r="4.2" fill="url(#node-grad)"/><circle cx="-0.8" cy="-0.8" r="1.5" fill="#FFFFFF"/></g>
-        <g transform="translate(200.80, 218)"><circle cx="0" cy="0" r="4.2" fill="url(#node-grad)"/><circle cx="-0.8" cy="-0.8" r="1.5" fill="#FFFFFF"/></g>
-        <g transform="translate(160.20, 252)"><circle cx="0" cy="0" r="4.2" fill="url(#node-grad)"/><circle cx="-0.8" cy="-0.8" r="1.5" fill="#FFFFFF"/></g>
-        <g transform="translate(204.80, 252)"><circle cx="0" cy="0" r="4.2" fill="url(#node-grad)"/><circle cx="-0.8" cy="-0.8" r="1.5" fill="#FFFFFF"/></g>
-        <g transform="translate(145.40, 264)"><circle cx="0" cy="0" r="4.2" fill="url(#node-grad)"/><circle cx="-0.8" cy="-0.8" r="1.5" fill="#FFFFFF"/></g>
-        <g transform="translate(219.60, 264)"><circle cx="0" cy="0" r="4.2" fill="url(#node-grad)"/><circle cx="-0.8" cy="-0.8" r="1.5" fill="#FFFFFF"/></g>
-        <g transform="translate(140.50, 65)"><circle cx="0" cy="0" r="4.5" fill="url(#node-grad)"/><circle cx="-0.8" cy="-0.8" r="1.5" fill="#FFFFFF"/></g>
-        <g transform="translate(224.50, 65)"><circle cx="0" cy="0" r="4.5" fill="url(#node-grad)"/><circle cx="-0.8" cy="-0.8" r="1.5" fill="#FFFFFF"/></g>
-        <g transform="translate(113.33, 275)"><circle cx="0" cy="0" r="4.5" fill="url(#node-grad)"/><circle cx="-0.8" cy="-0.8" r="1.5" fill="#FFFFFF"/></g>
-        <g transform="translate(251.67, 275)"><circle cx="0" cy="0" r="4.5" fill="url(#node-grad)"/><circle cx="-0.8" cy="-0.8" r="1.5" fill="#FFFFFF"/></g>
-      </g>
-
-      <!-- 4. APEX SCIENTIFIC SPARK -->
-      <g transform="translate(182.5, 48)">
-        <circle cx="0" cy="0" r="2.5" fill="#10B981"/>
-        <line x1="0" y1="-6.5" x2="0" y2="6.5" stroke="#10B981" stroke-width="1.4" stroke-linecap="round"/>
-        <line x1="-6.5" y1="0" x2="6.5" y2="0" stroke="#10B981" stroke-width="1.4" stroke-linecap="round"/>
-      </g>
-
-      <!-- 5. REFINED BASELINE PEDESTAL -->
-      <rect x="110" y="296" width="145" height="3.5" rx="1.75" fill="url(#pedestal-grad)"/>
-      <circle cx="182.5" cy="297.75" r="3" fill="#059669"/>
-      <circle cx="182.5" cy="297.75" r="1.2" fill="#FFFFFF"/>
-
-      <!-- 6. MONOGRAM BRAND TEXT -->
-      <text x="182.5" y="320" text-anchor="middle"
-            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
-            font-size="9" font-weight="700" letter-spacing="2.8" fill="#059669">
-        BIOLOGY NOTE
-      </text>
+    <!-- Ruled Lines -->
+    <g clip-path="url(#card-clip-true)" stroke="#EAE5DB" stroke-width="2.5" stroke-linecap="round">
+      <line x1="56" y1="58" x2="306" y2="58"/>
+      <line x1="56" y1="92" x2="306" y2="92"/>
+      <line x1="56" y1="126" x2="306" y2="126"/>
+      <line x1="56" y1="160" x2="306" y2="160"/>
+      <line x1="56" y1="194" x2="306" y2="194"/>
+      <line x1="56" y1="228" x2="306" y2="228"/>
+      <line x1="56" y1="262" x2="306" y2="262"/>
+      <line x1="56" y1="296" x2="306" y2="296"/>
     </g>
+
+    <!-- 3. REAL DNA DOUBLE HELIX STRUCTURE -->
+    <g id="real-dna">
+      <!-- Soft ambient aura -->
+      <circle cx="181" cy="145" r="56" fill="#2E6B56" fill-opacity="0.08"/>
+
+      <!-- Background Strands -->
+      
+      <path d="M 147.14 73 L 148.44 74.2 L 149.91 75.4 L 151.53 76.6 L 153.3 77.8 L 155.21 79 L 157.24 80.2 L 159.39 81.4 L 161.66 82.6 L 164.01 83.8 L 166.46 85 L 168.97 86.2 L 171.55 87.4 L 174.17 88.6 L 176.83 89.8 L 179.51 91 L 182.19 92.2 L 184.87 93.4 L 187.53 94.6 L 190.16 95.8 L 192.74 97 L 195.27 98.2 L 197.72 99.4 L 200.09 100.6 L 202.36 101.8 L 204.53 103 L 206.57 104.2 L 208.5 105.4 L 210.28 106.6 L 211.92 107.8 L 213.4 109 L 214.72 110.2 L 215.87 111.4 L 216.85 112.6 L 217.65 113.8 L 218.27 115 L 218.7 116.2 L 218.94 117.4 L 218.99 118.33" stroke="#1A4234" stroke-width="6.5" stroke-linecap="round" fill="none" opacity="0.65"/>
+    
+
+      <path d="M 143.01 171.67 L 143.06 172.6 L 143.3 173.8 L 143.73 175 L 144.35 176.2 L 145.15 177.4 L 146.13 178.6 L 147.28 179.8 L 148.6 181 L 150.08 182.2 L 151.72 183.4 L 153.5 184.6 L 155.43 185.8 L 157.47 187 L 159.64 188.2 L 161.91 189.4 L 164.28 190.6 L 166.73 191.8 L 169.26 193 L 171.84 194.2 L 174.47 195.4 L 177.13 196.6 L 179.81 197.8 L 182.49 199 L 185.17 200.2 L 187.83 201.4 L 190.45 202.6 L 193.03 203.8 L 195.54 205 L 197.99 206.2 L 200.34 207.4 L 202.61 208.6 L 204.76 209.8 L 206.79 211 L 208.7 212.2 L 210.47 213.4 L 212.09 214.6 L 213.56 215.8 L 214.86 217" stroke="#1A4234" stroke-width="6.5" stroke-linecap="round" fill="none" opacity="0.65"/>
+    
+
+      <path d="M 143.01 118.33 L 143 118.6 L 143.14 119.8 L 143.47 121 L 143.98 122.2 L 144.68 123.4 L 145.56 124.6 L 146.62 125.8 L 147.85 127 L 149.24 128.2 L 150.79 129.4 L 152.5 130.6 L 154.34 131.8 L 156.32 133 L 158.42 134.2 L 160.64 135.4 L 162.96 136.6 L 165.36 137.8 L 167.85 139 L 170.4 140.2 L 173 141.4 L 175.65 142.6 L 178.32 143.8 L 181 145 L 183.68 146.2 L 186.35 147.4 L 189 148.6 L 191.6 149.8 L 194.15 151 L 196.64 152.2 L 199.04 153.4 L 201.36 154.6 L 203.58 155.8 L 205.68 157 L 207.66 158.2 L 209.5 159.4 L 211.21 160.6 L 212.76 161.8 L 214.15 163 L 215.38 164.2 L 216.44 165.4 L 217.32 166.6 L 218.02 167.8 L 218.53 169 L 218.86 170.2 L 219 171.4 L 218.99 171.67" stroke="#114B44" stroke-width="6.5" stroke-linecap="round" fill="none" opacity="0.65"/>
+    
+
+      <!-- Base Pair Steps -->
+      
+    <g class="base-pair">
+      <line x1="181" y1="91.67" x2="178.5" y2="91.67" stroke="#34D399" stroke-width="4.8" stroke-linecap="round"/>
+      <line x1="183.5" y1="91.67" x2="181" y2="91.67" stroke="#10B981" stroke-width="4.8" stroke-linecap="round"/>
+      <circle cx="181" cy="91.67" r="1.5" fill="#FFFFFF"/>
+    </g>
+
+    <g class="base-pair">
+      <line x1="158.66" y1="102.33" x2="178.5" y2="102.33" stroke="#22D3EE" stroke-width="4.8" stroke-linecap="round"/>
+      <line x1="183.5" y1="102.33" x2="203.34" y2="102.33" stroke="#0D9488" stroke-width="4.8" stroke-linecap="round"/>
+      <circle cx="181" cy="102.33" r="1.5" fill="#FFFFFF"/>
+    </g>
+
+    <g class="base-pair">
+      <line x1="144.86" y1="113" x2="178.5" y2="113" stroke="#34D399" stroke-width="4.8" stroke-linecap="round"/>
+      <line x1="183.5" y1="113" x2="217.14" y2="113" stroke="#10B981" stroke-width="4.8" stroke-linecap="round"/>
+      <circle cx="181" cy="113" r="1.5" fill="#FFFFFF"/>
+    </g>
+
+    <g class="base-pair">
+      <line x1="144.86" y1="123.67" x2="178.5" y2="123.67" stroke="#22D3EE" stroke-width="4.8" stroke-linecap="round"/>
+      <line x1="183.5" y1="123.67" x2="217.14" y2="123.67" stroke="#0D9488" stroke-width="4.8" stroke-linecap="round"/>
+      <circle cx="181" cy="123.67" r="1.5" fill="#FFFFFF"/>
+    </g>
+
+    <g class="base-pair">
+      <line x1="158.66" y1="134.33" x2="178.5" y2="134.33" stroke="#34D399" stroke-width="4.8" stroke-linecap="round"/>
+      <line x1="183.5" y1="134.33" x2="203.34" y2="134.33" stroke="#10B981" stroke-width="4.8" stroke-linecap="round"/>
+      <circle cx="181" cy="134.33" r="1.5" fill="#FFFFFF"/>
+    </g>
+
+    <g class="base-pair">
+      <line x1="158.66" y1="155.67" x2="178.5" y2="155.67" stroke="#0D9488" stroke-width="4.8" stroke-linecap="round"/>
+      <line x1="183.5" y1="155.67" x2="203.34" y2="155.67" stroke="#22D3EE" stroke-width="4.8" stroke-linecap="round"/>
+      <circle cx="181" cy="155.67" r="1.5" fill="#FFFFFF"/>
+    </g>
+
+    <g class="base-pair">
+      <line x1="144.86" y1="166.33" x2="178.5" y2="166.33" stroke="#10B981" stroke-width="4.8" stroke-linecap="round"/>
+      <line x1="183.5" y1="166.33" x2="217.14" y2="166.33" stroke="#34D399" stroke-width="4.8" stroke-linecap="round"/>
+      <circle cx="181" cy="166.33" r="1.5" fill="#FFFFFF"/>
+    </g>
+
+    <g class="base-pair">
+      <line x1="144.86" y1="177" x2="178.5" y2="177" stroke="#0D9488" stroke-width="4.8" stroke-linecap="round"/>
+      <line x1="183.5" y1="177" x2="217.14" y2="177" stroke="#22D3EE" stroke-width="4.8" stroke-linecap="round"/>
+      <circle cx="181" cy="177" r="1.5" fill="#FFFFFF"/>
+    </g>
+
+    <g class="base-pair">
+      <line x1="158.66" y1="187.67" x2="178.5" y2="187.67" stroke="#10B981" stroke-width="4.8" stroke-linecap="round"/>
+      <line x1="183.5" y1="187.67" x2="203.34" y2="187.67" stroke="#34D399" stroke-width="4.8" stroke-linecap="round"/>
+      <circle cx="181" cy="187.67" r="1.5" fill="#FFFFFF"/>
+    </g>
+
+    <g class="base-pair">
+      <line x1="181" y1="198.33" x2="178.5" y2="198.33" stroke="#22D3EE" stroke-width="4.8" stroke-linecap="round"/>
+      <line x1="183.5" y1="198.33" x2="181" y2="198.33" stroke="#0D9488" stroke-width="4.8" stroke-linecap="round"/>
+      <circle cx="181" cy="198.33" r="1.5" fill="#FFFFFF"/>
+    </g>
+
+      <!-- Foreground Strands (with 3D cutout understrokes) -->
+      
+      <path d="M 218.99 118.33 L 219 118.6 L 218.86 119.8 L 218.53 121 L 218.02 122.2 L 217.32 123.4 L 216.44 124.6 L 215.38 125.8 L 214.15 127 L 212.76 128.2 L 211.21 129.4 L 209.5 130.6 L 207.66 131.8 L 205.68 133 L 203.58 134.2 L 201.36 135.4 L 199.04 136.6 L 196.64 137.8 L 194.15 139 L 191.6 140.2 L 189 141.4 L 186.35 142.6 L 183.68 143.8 L 181 145 L 178.32 146.2 L 175.65 147.4 L 173 148.6 L 170.4 149.8 L 167.85 151 L 165.36 152.2 L 162.96 153.4 L 160.64 154.6 L 158.42 155.8 L 156.32 157 L 154.34 158.2 L 152.5 159.4 L 150.79 160.6 L 149.24 161.8 L 147.85 163 L 146.62 164.2 L 145.56 165.4 L 144.68 166.6 L 143.98 167.8 L 143.47 169 L 143.14 170.2 L 143 171.4 L 143.01 171.67" stroke="#FFFFFF" stroke-width="13" stroke-linecap="round" fill="none"/>
+    
+
+      <path d="M 214.86 73 L 213.56 74.2 L 212.09 75.4 L 210.47 76.6 L 208.7 77.8 L 206.79 79 L 204.76 80.2 L 202.61 81.4 L 200.34 82.6 L 197.99 83.8 L 195.54 85 L 193.03 86.2 L 190.45 87.4 L 187.83 88.6 L 185.17 89.8 L 182.49 91 L 179.81 92.2 L 177.13 93.4 L 174.47 94.6 L 171.84 95.8 L 169.26 97 L 166.73 98.2 L 164.28 99.4 L 161.91 100.6 L 159.64 101.8 L 157.47 103 L 155.43 104.2 L 153.5 105.4 L 151.72 106.6 L 150.08 107.8 L 148.6 109 L 147.28 110.2 L 146.13 111.4 L 145.15 112.6 L 144.35 113.8 L 143.73 115 L 143.3 116.2 L 143.06 117.4 L 143.01 118.33" stroke="#FFFFFF" stroke-width="13" stroke-linecap="round" fill="none"/>
+    
+
+      <path d="M 218.99 171.67 L 218.94 172.6 L 218.7 173.8 L 218.27 175 L 217.65 176.2 L 216.85 177.4 L 215.87 178.6 L 214.72 179.8 L 213.4 181 L 211.92 182.2 L 210.28 183.4 L 208.5 184.6 L 206.57 185.8 L 204.53 187 L 202.36 188.2 L 200.09 189.4 L 197.72 190.6 L 195.27 191.8 L 192.74 193 L 190.16 194.2 L 187.53 195.4 L 184.87 196.6 L 182.19 197.8 L 179.51 199 L 176.83 200.2 L 174.17 201.4 L 171.55 202.6 L 168.97 203.8 L 166.46 205 L 164.01 206.2 L 161.66 207.4 L 159.39 208.6 L 157.24 209.8 L 155.21 211 L 153.3 212.2 L 151.53 213.4 L 149.91 214.6 L 148.44 215.8 L 147.14 217" stroke="#FFFFFF" stroke-width="13" stroke-linecap="round" fill="none"/>
+    
+
+      <path d="M 218.99 118.33 L 219 118.6 L 218.86 119.8 L 218.53 121 L 218.02 122.2 L 217.32 123.4 L 216.44 124.6 L 215.38 125.8 L 214.15 127 L 212.76 128.2 L 211.21 129.4 L 209.5 130.6 L 207.66 131.8 L 205.68 133 L 203.58 134.2 L 201.36 135.4 L 199.04 136.6 L 196.64 137.8 L 194.15 139 L 191.6 140.2 L 189 141.4 L 186.35 142.6 L 183.68 143.8 L 181 145 L 178.32 146.2 L 175.65 147.4 L 173 148.6 L 170.4 149.8 L 167.85 151 L 165.36 152.2 L 162.96 153.4 L 160.64 154.6 L 158.42 155.8 L 156.32 157 L 154.34 158.2 L 152.5 159.4 L 150.79 160.6 L 149.24 161.8 L 147.85 163 L 146.62 164.2 L 145.56 165.4 L 144.68 166.6 L 143.98 167.8 L 143.47 169 L 143.14 170.2 L 143 171.4 L 143.01 171.67" stroke="url(#dna-s1-grad)" stroke-width="6.5" stroke-linecap="round" fill="none"/>
+      <path d="M 218.99 118.33 L 219 118.6 L 218.86 119.8 L 218.53 121 L 218.02 122.2 L 217.32 123.4 L 216.44 124.6 L 215.38 125.8 L 214.15 127 L 212.76 128.2 L 211.21 129.4 L 209.5 130.6 L 207.66 131.8 L 205.68 133 L 203.58 134.2 L 201.36 135.4 L 199.04 136.6 L 196.64 137.8 L 194.15 139 L 191.6 140.2 L 189 141.4 L 186.35 142.6 L 183.68 143.8 L 181 145 L 178.32 146.2 L 175.65 147.4 L 173 148.6 L 170.4 149.8 L 167.85 151 L 165.36 152.2 L 162.96 153.4 L 160.64 154.6 L 158.42 155.8 L 156.32 157 L 154.34 158.2 L 152.5 159.4 L 150.79 160.6 L 149.24 161.8 L 147.85 163 L 146.62 164.2 L 145.56 165.4 L 144.68 166.6 L 143.98 167.8 L 143.47 169 L 143.14 170.2 L 143 171.4 L 143.01 171.67" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.65"/>
+    
+
+      <path d="M 214.86 73 L 213.56 74.2 L 212.09 75.4 L 210.47 76.6 L 208.7 77.8 L 206.79 79 L 204.76 80.2 L 202.61 81.4 L 200.34 82.6 L 197.99 83.8 L 195.54 85 L 193.03 86.2 L 190.45 87.4 L 187.83 88.6 L 185.17 89.8 L 182.49 91 L 179.81 92.2 L 177.13 93.4 L 174.47 94.6 L 171.84 95.8 L 169.26 97 L 166.73 98.2 L 164.28 99.4 L 161.91 100.6 L 159.64 101.8 L 157.47 103 L 155.43 104.2 L 153.5 105.4 L 151.72 106.6 L 150.08 107.8 L 148.6 109 L 147.28 110.2 L 146.13 111.4 L 145.15 112.6 L 144.35 113.8 L 143.73 115 L 143.3 116.2 L 143.06 117.4 L 143.01 118.33" stroke="url(#dna-s2-grad)" stroke-width="6.5" stroke-linecap="round" fill="none"/>
+      <path d="M 214.86 73 L 213.56 74.2 L 212.09 75.4 L 210.47 76.6 L 208.7 77.8 L 206.79 79 L 204.76 80.2 L 202.61 81.4 L 200.34 82.6 L 197.99 83.8 L 195.54 85 L 193.03 86.2 L 190.45 87.4 L 187.83 88.6 L 185.17 89.8 L 182.49 91 L 179.81 92.2 L 177.13 93.4 L 174.47 94.6 L 171.84 95.8 L 169.26 97 L 166.73 98.2 L 164.28 99.4 L 161.91 100.6 L 159.64 101.8 L 157.47 103 L 155.43 104.2 L 153.5 105.4 L 151.72 106.6 L 150.08 107.8 L 148.6 109 L 147.28 110.2 L 146.13 111.4 L 145.15 112.6 L 144.35 113.8 L 143.73 115 L 143.3 116.2 L 143.06 117.4 L 143.01 118.33" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.65"/>
+    
+
+      <path d="M 218.99 171.67 L 218.94 172.6 L 218.7 173.8 L 218.27 175 L 217.65 176.2 L 216.85 177.4 L 215.87 178.6 L 214.72 179.8 L 213.4 181 L 211.92 182.2 L 210.28 183.4 L 208.5 184.6 L 206.57 185.8 L 204.53 187 L 202.36 188.2 L 200.09 189.4 L 197.72 190.6 L 195.27 191.8 L 192.74 193 L 190.16 194.2 L 187.53 195.4 L 184.87 196.6 L 182.19 197.8 L 179.51 199 L 176.83 200.2 L 174.17 201.4 L 171.55 202.6 L 168.97 203.8 L 166.46 205 L 164.01 206.2 L 161.66 207.4 L 159.39 208.6 L 157.24 209.8 L 155.21 211 L 153.3 212.2 L 151.53 213.4 L 149.91 214.6 L 148.44 215.8 L 147.14 217" stroke="url(#dna-s2-grad)" stroke-width="6.5" stroke-linecap="round" fill="none"/>
+      <path d="M 218.99 171.67 L 218.94 172.6 L 218.7 173.8 L 218.27 175 L 217.65 176.2 L 216.85 177.4 L 215.87 178.6 L 214.72 179.8 L 213.4 181 L 211.92 182.2 L 210.28 183.4 L 208.5 184.6 L 206.57 185.8 L 204.53 187 L 202.36 188.2 L 200.09 189.4 L 197.72 190.6 L 195.27 191.8 L 192.74 193 L 190.16 194.2 L 187.53 195.4 L 184.87 196.6 L 182.19 197.8 L 179.51 199 L 176.83 200.2 L 174.17 201.4 L 171.55 202.6 L 168.97 203.8 L 166.46 205 L 164.01 206.2 L 161.66 207.4 L 159.39 208.6 L 157.24 209.8 L 155.21 211 L 153.3 212.2 L 151.53 213.4 L 149.91 214.6 L 148.44 215.8 L 147.14 217" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.65"/>
+    
+
+      <!-- 5' and 3' Phosphate Terminal Beads (Top & Bottom Ends) -->
+      <circle cx="147.14" cy="73" r="4.8" fill="url(#node-jewel-s1)"/>
+      <circle cx="214.86" cy="73" r="4.8" fill="url(#node-jewel-s2)"/>
+      <circle cx="214.86" cy="217" r="4.8" fill="url(#node-jewel-s1)"/>
+      <circle cx="147.14" cy="217" r="4.8" fill="url(#node-jewel-s2)"/>
+    </g>
+
+    <!-- 4. CLEAN TITLE ACCENT PILL BAR -->
+    <rect x="108" y="250" width="144" height="9" rx="4.5" fill="#2E6B56"/>
   </g>
 </svg>
