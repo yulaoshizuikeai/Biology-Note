@@ -27,53 +27,76 @@
 
     <!-- 模式一：体液组分流向 -->
     <div v-if="activeMode === 'flow'" class="flow-panel">
-      <div class="flow-grid">
-        <div
-          class="fluid-node"
-          :class="[{ selected: selectedFluid === 'plasma' }, 'node-plasma']"
-          @click="selectedFluid = 'plasma'"
-        >
-          <div class="node-title">血浆 (Plasma)</div>
-          <div class="node-sub">含较多血浆蛋白</div>
+      <div class="flow-diagram">
+        <!-- 主干横向流动：血浆 <-> 组织液 <-> 细胞内液 -->
+        <div class="flow-main-row">
+          <!-- 节点 1：血浆 -->
+          <div
+            class="fluid-node node-plasma"
+            :class="{ selected: selectedFluid === 'plasma' }"
+            @click="selectedFluid = 'plasma'"
+          >
+            <div class="node-tag">内环境 (ECF)</div>
+            <div class="node-title">血浆 (Plasma)</div>
+            <div class="node-sub">含较多血浆蛋白</div>
+          </div>
+
+          <!-- 连接 1：双向渗透 -->
+          <div class="connector-block">
+            <span class="connector-arrow">⇄</span>
+            <span class="connector-text">毛细血管壁<br />双向渗透</span>
+          </div>
+
+          <!-- 节点 2：组织液 -->
+          <div
+            class="fluid-node node-interstitial"
+            :class="{ selected: selectedFluid === 'interstitial' }"
+            @click="selectedFluid = 'interstitial'"
+          >
+            <div class="node-tag">内环境 (ECF)</div>
+            <div class="node-title">组织液 (Interstitial)</div>
+            <div class="node-sub">细胞直接生活的液体</div>
+          </div>
+
+          <!-- 连接 2：细胞膜双向物质交换 -->
+          <div class="connector-block">
+            <span class="connector-arrow">⇄</span>
+            <span class="connector-text">细胞膜<br />双向交换</span>
+          </div>
+
+          <!-- 节点 3：细胞内液 -->
+          <div
+            class="fluid-node node-icf"
+            :class="{ selected: selectedFluid === 'icf' }"
+            @click="selectedFluid = 'icf'"
+          >
+            <div class="node-tag tag-icf">体液/非内环境</div>
+            <div class="node-title">细胞内液 (ICF)</div>
+            <div class="node-sub">占体液约 2/3</div>
+          </div>
         </div>
 
-        <div class="arrow-indicator bi-arrow">
-          <span>⇄ 双向交换 (毛细血管壁)</span>
-        </div>
+        <!-- 下方淋巴循环支路：组织液 -> 淋巴液 -> 锁骨下静脉 -> 血浆 -->
+        <div class="flow-lymph-loop">
+          <div class="lymph-return-arrow">
+            <span class="loop-arrow-symbol">⮤</span>
+            <span class="loop-arrow-text">左右锁骨下静脉<br />单向汇入血浆</span>
+          </div>
 
-        <div
-          class="fluid-node"
-          :class="[{ selected: selectedFluid === 'interstitial' }, 'node-interstitial']"
-          @click="selectedFluid = 'interstitial'"
-        >
-          <div class="node-title">组织液 (Interstitial)</div>
-          <div class="node-sub">绝大多数组织细胞直接生活的液体</div>
-        </div>
+          <div
+            class="fluid-node node-lymph"
+            :class="{ selected: selectedFluid === 'lymph' }"
+            @click="selectedFluid = 'lymph'"
+          >
+            <div class="node-tag">内环境 (ECF)</div>
+            <div class="node-title">淋巴液 (Lymph)</div>
+            <div class="node-sub">淋巴细胞与吞噬细胞</div>
+          </div>
 
-        <div class="arrow-indicator uni-arrow-1">
-          <span>➔ 单向渗入 (毛细淋巴管盲端)</span>
-        </div>
-
-        <div
-          class="fluid-node"
-          :class="[{ selected: selectedFluid === 'lymph' }, 'node-lymph']"
-          @click="selectedFluid = 'lymph'"
-        >
-          <div class="node-title">淋巴液 (Lymph)</div>
-          <div class="node-sub">含淋巴细胞与吞噬细胞</div>
-        </div>
-
-        <div class="arrow-indicator uni-arrow-2">
-          <span>➔ 单向汇入 (左右锁骨下静脉)</span>
-        </div>
-
-        <div
-          class="fluid-node node-icf"
-          :class="{ selected: selectedFluid === 'icf' }"
-          @click="selectedFluid = 'icf'"
-        >
-          <div class="node-title">细胞内液 (ICF)</div>
-          <div class="node-sub">与组织液双向渗透物质交换</div>
+          <div class="lymph-intake-arrow">
+            <span class="loop-arrow-symbol">⮡</span>
+            <span class="loop-arrow-text">毛细淋巴管盲端<br />单向渗入形成淋巴</span>
+          </div>
         </div>
       </div>
 
@@ -255,16 +278,85 @@ const currentCauseData = computed(() => edemaData[selectedCause.value]);
   color: #fff;
   border-color: var(--vp-c-brand-1);
 }
-.flow-grid {
+.flow-diagram {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 14px;
   margin-bottom: 16px;
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  padding: 16px;
+}
+.flow-main-row {
+  display: grid;
+  grid-template-columns: 1.2fr auto 1.2fr auto 1.2fr;
+  align-items: center;
+  gap: 8px;
+}
+.connector-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.connector-arrow {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--vp-c-brand-1);
+  line-height: 1;
+}
+.connector-text {
+  font-size: 10.5px;
+  color: var(--vp-c-text-3);
+  line-height: 1.2;
+  margin-top: 3px;
+}
+.flow-lymph-loop {
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 1.2fr;
+  align-items: center;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--vp-c-divider);
+}
+.lymph-return-arrow,
+.lymph-intake-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 3px;
+}
+.loop-arrow-symbol {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--vp-c-brand-1);
+}
+.loop-arrow-text {
+  font-size: 10.5px;
+  color: var(--vp-c-text-3);
+  line-height: 1.2;
+}
+.node-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  margin-bottom: 4px;
+}
+.tag-icf {
+  background: #f1f5f9;
+  color: #64748b;
 }
 .fluid-node {
-  padding: 12px 16px;
+  padding: 12px 14px;
   border-radius: 8px;
-  background: var(--vp-c-bg);
+  background: var(--vp-c-bg-soft);
   border: 2px solid var(--vp-c-divider);
   cursor: pointer;
   transition: all 0.2s;
@@ -277,20 +369,24 @@ const currentCauseData = computed(() => edemaData[selectedCause.value]);
   background: var(--vp-c-brand-soft);
 }
 .node-title {
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 700;
   color: var(--vp-c-text-1);
 }
 .node-sub {
-  font-size: 11.5px;
+  font-size: 11px;
   color: var(--vp-c-text-2);
   margin-top: 2px;
 }
-.arrow-indicator {
-  font-size: 11px;
-  color: var(--vp-c-text-3);
-  padding-left: 16px;
-  font-family: monospace;
+@media (max-width: 640px) {
+  .flow-main-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .flow-lymph-loop {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 }
 .fluid-detail-card {
   padding: 14px;

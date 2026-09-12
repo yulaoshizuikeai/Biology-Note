@@ -10,7 +10,10 @@
 
     <div class="slider-zone">
       <label
-        >生长素摩尔浓度 (mol/L): <span class="val">10^{{ exp }} mol/L</span></label
+        >生长素摩尔浓度 (mol/L):
+        <span class="val"
+          >10<sup>{{ exp }}</sup> mol/L</span
+        ></label
       >
       <input type="range" v-model.number="exp" min="-11" max="-2" step="1" />
     </div>

@@ -40,7 +40,11 @@ let shortMapCache: Record<string, string> | null = null;
 
 const foreground = computed(() => (isDark.value ? "#D3D3CC" : "#3C3C43"));
 
-const normalizePagePath = (filePath: string) => filePath.replace(/(index)?\.md$/, "");
+const normalizePagePath = (filePath: string) =>
+  filePath
+    .replace(/\\/g, "/")
+    .replace(/^\//, "")
+    .replace(/(index)?\.md$/, "");
 
 async function resolveShortKey(normalizedPath: string) {
   if (encodeURI(normalizedPath).length < 10) {
@@ -49,7 +53,8 @@ async function resolveShortKey(normalizedPath: string) {
   }
   try {
     if (!shortMapCache) {
-      const res = await fetch("/shortmap.json");
+      const base = (import.meta.env.BASE_URL || "/").replace(/\/$/, "");
+      const res = await fetch(`${base}/shortmap.json`.replace(/\/+/g, "/"));
       if (!res.ok) return;
       shortMapCache = (await res.json()) as Record<string, string>;
     }

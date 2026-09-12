@@ -63,8 +63,8 @@ const phases = [
     chromCount: "4",
     chromatidCount: "0 ➔ 8",
     dnaCount: "4 ➔ 8",
-    behavior: "DNA 复制与中心粒复制",
-    feature: "染色质呈细丝网状，完成 DNA 复制与蛋白质合成",
+    behavior: "DNA 复制与相关蛋白质合成 (动物/低等植物伴随中心体复制)",
+    feature: "染色质呈细丝网状；完成 DNA 复制与蛋白质合成，细胞适度生长",
   },
   {
     name: "前期 (Prophase)",
@@ -72,7 +72,7 @@ const phases = [
     chromatidCount: "8",
     dnaCount: "8",
     behavior: "散乱分布在纺锤体中央",
-    feature: "核仁解体、核膜消失，染色质高度螺旋形成染色体",
+    feature: "核仁解体、核膜消失，染色质高度螺旋为染色体 (植物两极发丝，动物中心体发星射线)",
   },
   {
     name: "中期 (Metaphase)",
@@ -80,7 +80,7 @@ const phases = [
     chromatidCount: "8",
     dnaCount: "8",
     behavior: "着丝粒整齐排列在赤道板",
-    feature: "染色体形态最固定、数目最清晰，最佳观察时期",
+    feature: "染色体形态最固定、数目最清晰，最佳观察时期 (赤道板为假想平面)",
   },
   {
     name: "后期 (Anaphase)",
@@ -95,8 +95,8 @@ const phases = [
     chromCount: "4 (每子细胞)",
     chromatidCount: "0",
     dnaCount: "4",
-    behavior: "细胞板形成细胞壁，均分完成",
-    feature: "两消两现：核膜核仁重现，纺锤体与染色体消失",
+    behavior: "植物细胞板形成细胞壁 / 动物细胞膜向内凹陷缢裂",
+    feature: "两消两现：核膜核仁重现，纺锤体与染色体消失 (植物由高尔基体参与细胞壁构建)",
   },
 ];
 </script>

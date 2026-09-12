@@ -78,7 +78,7 @@ const globToRegExp = (pattern) => {
     source += escapeRegExp(char);
   }
 
-  return new RegExp(`^${source}$`);
+  return new RegExp(`^${source}$`, "i");
 };
 
 const matchesPattern = (filePath, pattern) => globToRegExp(pattern).test(normalizePath(filePath));

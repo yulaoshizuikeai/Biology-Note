@@ -78,15 +78,21 @@ async function packagePdfs() {
   const zipPath = path.join(pdfRepoDir, "Biology-Note-All-PDFs.zip");
   try {
     console.log("Archiving all PDFs into Biology-Note-All-PDFs.zip...");
+    if (fs.existsSync(zipPath)) {
+      fs.unlinkSync(zipPath);
+    }
     if (process.platform === "win32") {
       execSync(
-        `powershell -NoProfile -Command "Compress-Archive -Path '${pdfRepoDir}/*' -DestinationPath '${zipPath}' -Force"`,
+        `powershell -NoProfile -Command "Get-ChildItem -Path '${pdfRepoDir}' -Exclude 'Biology-Note-Complete*.pdf','Biology-Note-All-PDFs.zip' | Compress-Archive -DestinationPath '${zipPath}' -Force"`,
         { stdio: "inherit" },
       );
     } else {
-      execSync(`cd "${pdfRepoDir}" && zip -r "${zipPath}" . -x "Biology-Note-All-PDFs.zip"`, {
-        stdio: "inherit",
-      });
+      execSync(
+        `cd "${pdfRepoDir}" && zip -r "${zipPath}" . -x "Biology-Note-All-PDFs.zip" -x "Biology-Note-Complete*.pdf"`,
+        {
+          stdio: "inherit",
+        },
+      );
     }
     console.log("✓ Successfully created Biology-Note-All-PDFs.zip");
   } catch (err) {

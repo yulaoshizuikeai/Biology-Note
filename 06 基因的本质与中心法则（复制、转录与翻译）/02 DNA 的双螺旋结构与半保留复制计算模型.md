@@ -46,7 +46,7 @@ description: "深度剖析DNA双螺旋空间结构与微观化学键（磷酸二
   \text{含}^{15}N\text{大肠杆菌} \xrightarrow{\text{转移到}^{14}N\text{培养基中繁殖}} \begin{cases}
   \textbf{亲代 (0代)}: \text{双链均为 }^{15}N \to \textbf{重带} (100\%) \\
   \textbf{第 1 代}: \text{一条 }^{15}N \text{ 链 + 一条 }^{14}N \text{ 链} \to \textbf{中带} (100\%) \implies \textbf{彻底否定全保留复制！} \\
-  \textbf{第 2 代}: 1/2 \text{条为}^{15}N\text{-}^{14}N (\textbf{中带}) + 1/2 \text{条为}^{14}N\text{-}^{14}N (\textbf{轻带}) \implies \textbf{彻底否定弥散复制！}
+  \textbf{第 2 代}: 1/2 \text{ 的分子为 }^{15}N\text{-}^{14}N (\textbf{中带}) + 1/2 \text{ 的分子为 }^{14}N\text{-}^{14}N (\textbf{轻带}) \implies \textbf{彻底否定弥散复制！}
   \end{cases}
   $$
 - **科学结论**：实验结果与**半保留复制（Semi-conservative Replication）**的假说演绎预期完全一致。

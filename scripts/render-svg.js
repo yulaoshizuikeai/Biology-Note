@@ -6,7 +6,13 @@ const chromePath =
   process.env.PLAYWRIGHT_CHROME_PATH ||
   "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
 
-export async function renderSvg(svgContent, outputPath, width = 780, height = 370, baseDir = process.cwd()) {
+export async function renderSvg(
+  svgContent,
+  outputPath,
+  width = 780,
+  height = 370,
+  baseDir = process.cwd(),
+) {
   const launchOptions = {};
   if (process.env.PLAYWRIGHT_CHROME_PATH) {
     launchOptions.executablePath = process.env.PLAYWRIGHT_CHROME_PATH;

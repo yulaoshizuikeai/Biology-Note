@@ -27,6 +27,7 @@
           <button
             type="button"
             :class="['pill-btn', { active: naLevel === 70 }]"
+            :disabled="isFiring"
             aria-label="低钠 70%"
             @click="naLevel = 70"
           >
@@ -35,6 +36,7 @@
           <button
             type="button"
             :class="['pill-btn', { active: naLevel === 100 }]"
+            :disabled="isFiring"
             aria-label="正常 100%"
             @click="naLevel = 100"
           >
@@ -43,6 +45,7 @@
           <button
             type="button"
             :class="['pill-btn', { active: naLevel === 130 }]"
+            :disabled="isFiring"
             aria-label="高钠 130%"
             @click="naLevel = 130"
           >
@@ -58,7 +61,7 @@
           <div class="needle" :style="{ transform: 'rotate(' + needleAngle + 'deg)' }"></div>
         </div>
         <div class="meter-readout">{{ currentVoltage }} mV</div>
-        <div class="dial-labels"><span>左偏</span><span>0</span><span>右偏</span></div>
+        <div class="dial-labels"><span>-90mV</span><span>0mV</span><span>+40mV</span></div>
       </div>
 
       <div class="stage-info">
@@ -78,7 +81,7 @@ import { ref, computed, onBeforeUnmount } from "vue";
 const isFiring = ref(false);
 const naLevel = ref(100);
 const currentVoltage = ref(-70);
-const needleAngle = ref(0);
+const needleAngle = ref(-30);
 const phaseIndex = ref(0); // 0: 静息, 1: 刺激去极化, 2: 峰值, 3: 复极化, 4: 恢复
 const timerIds: ReturnType<typeof setTimeout>[] = [];
 
@@ -113,13 +116,13 @@ const phaseName = computed(() => {
 const phaseDescription = computed(() => {
   switch (phaseIndex.value) {
     case 0:
-      return "膜对 K⁺ 通透性高，K⁺ 经通道蛋白外流，膜电位维持在【外正内负】(-70mV)。";
+      return "膜对 K⁺ 通透性高，K⁺ 经通道蛋白外流，膜电位维持在【外正内负】的静息状态 (-70mV)。";
     case 1:
-      return "受阈刺激激发，电压门控 Na⁺ 通道瞬间大开，Na⁺ 顺浓度差快速内流，膜电位倒转！";
+      return "受阈刺激激发，电压门控 Na⁺ 通道开放，Na⁺ 顺浓度差快速内流，膜电位迅速去极化倒转！";
     case 2:
-      return `膜内电位冲至峰值 (+${peakVoltage.value}mV)，电表发生第一次偏转！胞外高钠峰值更高，低钠峰值降低。`;
+      return `膜内电位冲至动作电位峰值 (+${peakVoltage.value}mV)，去极化完成！胞外高钠峰值更高，低钠峰值降低。`;
     case 3:
-      return "Na⁺ 通道失活关闭，电压门控 K⁺ 通道开放，K⁺ 快速外流，膜电位回归负值，电表发生第二次反向偏转！";
+      return "Na⁺ 通道失活关闭，电压门控 K⁺ 通道开放，K⁺ 快速外流，膜电位复极化并出现短暂超极化！";
     case 4:
       return "Na⁺-K⁺ 泵主动运输消耗 ATP，逆浓度泵出 3 个 Na⁺、泵入 2 个 K⁺，彻底恢复原始离子浓度梯度的静态平衡。";
     default:
@@ -155,14 +158,14 @@ const triggerStimulation = () => {
   clearAllTimers();
   isFiring.value = true;
   phaseIndex.value = 1;
-  currentVoltage.value = -30;
-  needleAngle.value = -35; // 偏转1
+  currentVoltage.value = -20;
+  needleAngle.value = -8;
 
   timerIds.push(
     setTimeout(() => {
       phaseIndex.value = 2;
       currentVoltage.value = peakVoltage.value;
-      needleAngle.value = -45;
+      needleAngle.value = Math.round(peakVoltage.value * 1.1);
     }, 400),
   );
 
@@ -170,7 +173,7 @@ const triggerStimulation = () => {
     setTimeout(() => {
       phaseIndex.value = 3;
       currentVoltage.value = -80;
-      needleAngle.value = 40; // 反向偏转2
+      needleAngle.value = -40;
     }, 900),
   );
 
@@ -178,7 +181,7 @@ const triggerStimulation = () => {
     setTimeout(() => {
       phaseIndex.value = 4;
       currentVoltage.value = -70;
-      needleAngle.value = 0;
+      needleAngle.value = -30;
     }, 1400),
   );
 
@@ -186,7 +189,6 @@ const triggerStimulation = () => {
     setTimeout(() => {
       phaseIndex.value = 0;
       isFiring.value = false;
-      clearAllTimers();
     }, 1900),
   );
 };
@@ -258,6 +260,10 @@ const triggerStimulation = () => {
   background: var(--vp-c-bg);
   color: var(--vp-c-text-2);
   cursor: pointer;
+}
+.pill-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 .pill-btn.active {
   background: var(--vp-c-brand-1);

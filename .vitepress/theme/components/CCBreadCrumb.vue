@@ -30,6 +30,21 @@ watchEffect(() => {
   const pathSegs = filePath.replace(/\\/g, "/").split("/").filter(Boolean);
   if (!pathSegs.length) return;
 
+  if (pathSegs.length === 1) {
+    const pageTitle = page.value.title || pathSegs[0].replace(/\.md$/, "");
+    items.value = [
+      {
+        name: "首页",
+        link: withBase("/"),
+      },
+      {
+        name: pageTitle,
+        link: "",
+      },
+    ];
+    return;
+  }
+
   const rawChapter = pathSegs[0];
   const cleanChapter = rawChapter.replace(/^\d{2}\s*/, "");
   const isChapterIndex = pathSegs.length === 2 && pathSegs[1] === "index.md";

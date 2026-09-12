@@ -59,9 +59,18 @@ const chapterItems = computed<SidebarItem[]>(() => {
   return currentChapter.value?.items || [];
 });
 
+const normalizeLink = (link?: string): string => {
+  if (!link) return "#";
+  const withBaseLink = withBase(link);
+  if (withBaseLink.endsWith("/") || withBaseLink.endsWith(".html") || withBaseLink.includes("#")) {
+    return withBaseLink;
+  }
+  return `${withBaseLink}.html`;
+};
+
 const toChapterLinkItem = (item: SidebarItem): ChapterLinkItem => ({
   text: item.text ?? "",
-  link: item.link ? withBase(item.link) : "#",
+  link: normalizeLink(item.link),
 });
 
 const chapterLinkItems = computed<ChapterLinkItem[]>(() => {

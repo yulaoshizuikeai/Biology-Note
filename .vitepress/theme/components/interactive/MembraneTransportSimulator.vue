@@ -102,7 +102,7 @@ const solution = ref("sucrose");
 const simpleRate = computed(() => Math.min(100, Math.round(conc.value * 1.0)));
 const facilitatedRate = computed(() => Math.round((conc.value / (conc.value + 20)) * 100));
 const activeRate = computed(() =>
-  Math.min(100, Math.round(35 + (conc.value / (conc.value + 15)) * 65)),
+  Math.min(100, Math.round((conc.value / (conc.value + 15)) * 100)),
 );
 
 const setSolution = (type: string) => {

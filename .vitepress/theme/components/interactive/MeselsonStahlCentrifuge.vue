@@ -17,18 +17,28 @@
 
     <div class="centrifuge-display">
       <div class="tube-visual">
-        <div class="tube-body">
-          <div class="band-line light-band" :style="{ opacity: lightOpacity }">
-            <span class="band-label">¹⁴N-¹⁴N 轻带 ({{ lightPercent }}%)</span>
+        <div class="tube-container">
+          <div class="tube-body">
+            <div class="band-line light-band" :style="{ opacity: lightOpacity }"></div>
+            <div class="band-line hybrid-band" :style="{ opacity: hybridOpacity }"></div>
+            <div class="band-line heavy-band" :style="{ opacity: heavyOpacity }"></div>
           </div>
-          <div class="band-line hybrid-band" :style="{ opacity: hybridOpacity }">
-            <span class="band-label">¹⁵N-¹⁴N 中带 ({{ hybridPercent }}%)</span>
-          </div>
-          <div class="band-line heavy-band" :style="{ opacity: heavyOpacity }">
-            <span class="band-label">¹⁵N-¹⁵N 重带 ({{ heavyPercent }}%)</span>
+          <div class="band-labels">
+            <div class="band-label-item" :style="{ opacity: lightOpacity }">
+              <span class="dot light-dot"></span>
+              <span class="label-text">¹⁴N-¹⁴N 轻带 ({{ lightPercent }}%)</span>
+            </div>
+            <div class="band-label-item" :style="{ opacity: hybridOpacity }">
+              <span class="dot hybrid-dot"></span>
+              <span class="label-text">¹⁵N-¹⁴N 中带 ({{ hybridPercent }}%)</span>
+            </div>
+            <div class="band-label-item" :style="{ opacity: heavyOpacity }">
+              <span class="dot heavy-dot"></span>
+              <span class="label-text">¹⁵N-¹⁵N 重带 ({{ heavyPercent }}%)</span>
+            </div>
           </div>
         </div>
-        <div class="tube-desc">氯化铯梯度离心管</div>
+        <div class="tube-desc">氯化铯梯度离心管分层</div>
       </div>
 
       <div class="calc-metrics">
@@ -123,23 +133,29 @@ const lightOpacity = computed(() =>
 }
 .centrifuge-display {
   display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 24px;
+  grid-template-columns: 220px 1fr;
+  gap: 20px;
   align-items: center;
 }
 .tube-visual {
   text-align: center;
 }
+.tube-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 165px;
+}
 .tube-body {
-  width: 50px;
+  width: 44px;
   height: 160px;
-  margin: 0 auto;
   border: 2px solid #94a3b8;
   border-top: none;
-  border-radius: 0 0 25px 25px;
+  border-radius: 0 0 22px 22px;
   background: #f8fafc;
   position: relative;
-  padding-top: 20px;
+  flex-shrink: 0;
 }
 .band-line {
   position: absolute;
@@ -160,14 +176,49 @@ const lightOpacity = computed(() =>
   top: 115px;
   background: #d97706;
 }
-.band-label {
+.band-labels {
+  position: relative;
+  height: 160px;
+  width: 135px;
+}
+.band-label-item {
   position: absolute;
-  left: 58px;
-  top: -4px;
-  white-space: nowrap;
-  font-size: 10.5px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
   font-weight: 600;
   color: var(--vp-c-text-2);
+  white-space: nowrap;
+  transition: opacity 0.3s;
+}
+.band-label-item:nth-child(1) {
+  top: 29px;
+}
+.band-label-item:nth-child(2) {
+  top: 69px;
+}
+.band-label-item:nth-child(3) {
+  top: 109px;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.light-dot {
+  background: #3b82f6;
+}
+.hybrid-dot {
+  background: #10b981;
+}
+.heavy-dot {
+  background: #d97706;
+}
+.label-text {
+  font-size: 11px;
 }
 .tube-desc {
   font-size: 11px;

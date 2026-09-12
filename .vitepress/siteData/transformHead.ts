@@ -23,7 +23,7 @@ function isChapterIndexPath(relativePath: string): boolean {
 }
 
 function toBreadcrumbItemPath(pathParts: string[], index: number): string {
-  if (index === 0) {
+  if (index === 0 && pathParts.length > 1) {
     return `/${pathParts[0]}/index.html`;
   }
   return `/${pathParts.slice(0, index + 1).join("/")}`;
@@ -71,7 +71,7 @@ export function buildTransformHead(siteUrl: string, siteName: string, defaultDes
     const pageTitle = pageData.title ? `${pageData.title} | ${siteName}` : siteName;
     const isHomePage = relativePath === "index.md";
     const is404Page = relativePath === "404.md";
-    const isHiddenUtilityPage = /^hidePage\//i.test(relativePath);
+    const isHiddenUtilityPage = /^(?:hidePage\/|s\.md$)/i.test(relativePath);
     const isChapterIndex = isChapterIndexPath(relativePath);
     const publishedTime = toIsoDate((pageData.frontmatter as Record<string, unknown>)?.date);
     const modifiedTime =
