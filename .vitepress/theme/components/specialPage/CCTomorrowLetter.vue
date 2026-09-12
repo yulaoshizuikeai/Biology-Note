@@ -27,8 +27,8 @@ import { CCWaline } from "../waline";
   padding: clamp(44px, 8vw, 92px) 24px 76px;
   background: linear-gradient(
     180deg,
-    var(--vp-c-bg) 0,
-    rgb(248 250 252 / 0.9) 46%,
+    var(--vp-c-bg) 0%,
+    color-mix(in srgb, var(--vp-c-brand-1) 2.5%, var(--vp-c-bg-soft)) 48%,
     var(--vp-c-bg) 100%
   );
   color: var(--vp-c-text-1);
@@ -37,8 +37,8 @@ import { CCWaline } from "../waline";
 .dark .tomorrow-page {
   background: linear-gradient(
     180deg,
-    var(--vp-c-bg) 0,
-    rgb(22 28 36 / 0.82) 48%,
+    var(--vp-c-bg) 0%,
+    color-mix(in srgb, var(--vp-c-brand-1) 3.5%, var(--vp-c-bg-soft)) 48%,
     var(--vp-c-bg) 100%
   );
 }
@@ -108,7 +108,7 @@ import { CCWaline } from "../waline";
   bottom: 0.42em;
   left: 0;
   width: 2px;
-  background: #0f766e;
+  background: var(--vp-c-brand-1);
   transform-origin: top;
   animation: tomorrow-quote-line-in 520ms ease-out 260ms both;
   content: "";

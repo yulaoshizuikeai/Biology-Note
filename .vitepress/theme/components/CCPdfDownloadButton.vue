@@ -57,6 +57,8 @@ const handlePrint = () => {
       <span class="CCPdfDownloadButtonBtnLabel">打印 / 导出本页</span>
       <span class="CCPdfDownloadButtonBtnHint">A4</span>
     </button>
+
+    <p class="cc-pdf-tip">注：完整版与分册由 GitHub Release 提供；单页可直接打印另存为 PDF</p>
   </div>
 </template>
 
@@ -116,6 +118,15 @@ const handlePrint = () => {
   font-weight: 500;
   color: var(--vp-c-text-2);
   background: color-mix(in srgb, var(--vp-c-bg-elv) 80%, transparent);
+}
+
+.cc-pdf-tip {
+  margin: 6px 0 2px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--vp-c-text-3);
+  text-align: center;
+  padding: 0 4px;
 }
 
 @media (max-width: 640px) {

@@ -1,6 +1,7 @@
+import type { Route } from "vitepress";
+
 import { useRoute } from "vitepress";
 import { computed, type ComputedRef } from "vue";
-import type { Route } from "vitepress";
 
 const serverURL = "" as string;
 

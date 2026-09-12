@@ -138,29 +138,7 @@ img {
   display: none;
 }
 
-html.cc-font-serif {
-  --vp-font-family-base: "Songti SC", "Noto Serif SC", STSong, SimSun, Georgia, serif;
-}
-
-html.cc-font-serif .vp-doc {
-  font-size: 18px;
-}
-
-html.cc-font-serif .vp-doc p {
-  line-height: 32px;
-}
-
-html.cc-font-serif .vp-doc blockquote > p {
-  font-size: 18px;
-}
-
-html.cc-font-serif .vp-doc th,
-html.cc-font-serif .vp-doc td {
-  font-size: 18px;
-}
-
 html.cc-hide-comments .cc-comments-region,
-html.cc-hide-contributors .cc-contributors-region,
 html.cc-hide-outline .VPDocAsideOutline,
 html.cc-hide-outline .VPLocalNavOutlineDropdown {
   display: none !important;
@@ -205,8 +183,8 @@ body {
 .vp-doc mjx-container[display="true"],
 .vp-doc mjx-container[jax="SVG"][display="true"],
 .vp-doc mjx-container[jax="CHTML"][display="true"] {
-  display: flex !important;              /* flex 布局实现内容居中 */
-  justify-content: center !important;   /* 公式内容水平居中 */
+  display: flex !important; /* flex 布局实现内容居中 */
+  justify-content: center !important; /* 公式内容水平居中 */
   align-items: center !important;
   max-width: 100% !important;
   width: 100% !important;
@@ -227,7 +205,7 @@ body {
 /* 2b. MathJax 行内公式容器：保持行内显示 */
 .vp-doc mjx-container:not([display="true"]) {
   display: inline-block !important;
-  white-space: nowrap !important;       /* 防止行内公式在括号处断行 */
+  white-space: nowrap !important; /* 防止行内公式在括号处断行 */
   vertical-align: middle !important;
   max-width: 100% !important;
   overflow-x: auto !important;
@@ -243,7 +221,7 @@ body {
 /* 3a. 块级公式内部 SVG：block + margin auto 确保居中 */
 .vp-doc mjx-container[display="true"] > svg {
   display: block !important;
-  margin: 0 auto !important;            /* 双保险水平居中 */
+  margin: 0 auto !important; /* 双保险水平居中 */
   max-width: 100% !important;
   overflow-x: auto !important;
   overflow-y: visible !important;
@@ -365,7 +343,9 @@ body {
   color: var(--vp-c-brand-1);
   font-weight: 600;
   text-decoration: none;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .cc-404-link:hover {

@@ -14,7 +14,7 @@ defineProps<{
 <template>
   <div class="CCAppreciatorsItem">
     <div class="header">
-      <h1 class="name">{{ item.name }}</h1>
+      <h3 class="name">{{ item.name }}</h3>
       <span class="amount">{{ item.amount }}</span>
     </div>
     <p class="message">{{ item.message }}</p>
@@ -50,6 +50,7 @@ defineProps<{
 
 .name {
   flex: 1;
+  margin: 0;
   font-weight: 600;
   font-size: 14px;
   color: var(--vp-c-text-1);

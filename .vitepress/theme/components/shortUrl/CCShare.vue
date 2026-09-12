@@ -9,10 +9,10 @@
       background="transparent"
       :foreground="foreground"
     />
-    <button class="copylink" @click="copyLink">
+    <button type="button" class="copylink" aria-label="复制当前页面分享链接" @click="copyLink">
       复制链接
       <span class="copy-indicator-wrapper" :class="expand ? 'expanded' : 'folded'">
-        <svg class="copy-indicator" viewBox="0 0 24 24" width="18" height="18">
+        <svg class="copy-indicator" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
           <path
             fill="currentColor"
             d="M9 18.25a.74.74 0 0 1-.53-.25l-5-5a.75.75 0 1 1 1.06-1L9 16.44L19.47 6a.75.75 0 0 1 1.06 1l-11 11a.74.74 0 0 1-.53.25"
@@ -123,7 +123,7 @@ onBeforeUnmount(() => {
   left: 0;
   bottom: 0;
   width: 18px;
-  color: var(--vp-c-green-1);
+  color: var(--vp-c-brand-1);
 }
 
 .share-panel .copy-indicator-wrapper {
@@ -161,19 +161,22 @@ onBeforeUnmount(() => {
     height: 40px;
 
     color: var(--vp-c-text-1);
-    background: #75798e10;
+    background: var(--vp-c-bg-soft);
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     border-top: var(--vp-c-divider) 1px solid;
 
-    transition: background 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s;
   }
   .share-panel .copylink:hover {
-    background: #c2c7e614;
+    background: var(--vp-c-bg-alt);
+    color: var(--vp-c-brand-1);
   }
   .share-panel .copylink:active {
-    background: #30323a10;
-    transition: background 0.05s;
+    background: color-mix(in srgb, var(--vp-c-brand-1) 12%, var(--vp-c-bg-alt));
+    transition: background-color 0.05s;
   }
 }
 
@@ -205,8 +208,8 @@ onBeforeUnmount(() => {
 
   .share-panel .copylink:hover {
     border-color: var(--vp-c-brand-1);
-    background: var(--vp-c-bg-soft-hover);
-    color: var(--vp-c-text-1);
+    background: var(--vp-c-bg-soft);
+    color: var(--vp-c-brand-1);
   }
 }
 </style>

@@ -159,6 +159,11 @@ const topicItems = computed(() => chapterLinkItems.value.filter((item) => isTopi
 .card-arrow {
   flex-shrink: 0;
   color: var(--vp-c-brand-1);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.chapter-card:hover .card-arrow {
+  transform: translateX(4px);
 }
 
 .topic-card {

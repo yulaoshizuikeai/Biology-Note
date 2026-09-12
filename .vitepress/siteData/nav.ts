@@ -17,6 +17,7 @@ export const buildNavItems = (rootDir: string): DefaultTheme.NavItem[] => {
       items: [
         { text: "50 大黄金结论与临界条件", link: "/golden-conclusions" },
         { text: "全专题防踩坑排雷白皮书", link: "/warning-cheatsheet" },
+        { text: "写给考前的自己（寄语）", link: encodeLink("/00 说明/写给考前的自己") },
       ],
     },
     {

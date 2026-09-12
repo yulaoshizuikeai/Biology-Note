@@ -287,6 +287,9 @@ html.dark .flash-kw {
 }
 
 .vp-doc th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
   background: var(--vp-c-bg-soft);
   font-weight: 650;
   font-size: 0.92rem;
@@ -309,6 +312,41 @@ html.dark .flash-kw {
 
 .vp-doc tr:nth-child(even) {
   background-color: color-mix(in srgb, var(--vp-c-bg-soft) 45%, transparent);
+}
+
+/* 考前速查模块极速跳查胶囊组 (design.md 5.1) */
+.module-quick-pills {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 8px;
+  padding: 6px 2px 14px;
+  margin: 1rem 0 1.25rem;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.quick-pill {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--vp-c-border);
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1) !important;
+  text-decoration: none !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.quick-pill:hover {
+  background: color-mix(in srgb, var(--vp-c-brand-1) 10%, var(--vp-c-bg-soft));
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1) !important;
+  transform: translateY(-1.5px);
 }
 
 /* ============================================================
@@ -447,6 +485,27 @@ html.dark .flash-kw {
   line-height: 1.62 !important;
 }
 
+/* 首页旗舰特性卡片分层设计 (design.md 4.3) */
+.VPHomeFeatures .items .item:nth-child(1) .VPFeature,
+.VPHomeFeatures .items .item:nth-child(2) .VPFeature {
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--vp-c-brand-1) 5%, var(--vp-c-bg-soft)) 0%,
+    var(--vp-c-bg-soft) 100%
+  ) !important;
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 22%, var(--vp-c-border)) !important;
+}
+
+.dark .VPHomeFeatures .items .item:nth-child(1) .VPFeature,
+.dark .VPHomeFeatures .items .item:nth-child(2) .VPFeature {
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--vp-c-brand-1) 8%, var(--vp-c-bg-soft)) 0%,
+    var(--vp-c-bg-soft) 100%
+  ) !important;
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 30%, var(--vp-c-border)) !important;
+}
+
 /* ============================================================
    6. Navigation, Sidebar, TOC & Search
    ============================================================ */
@@ -454,6 +513,14 @@ html.dark .flash-kw {
   border-bottom: 1px solid var(--vp-c-divider) !important;
   backdrop-filter: blur(14px) !important;
   -webkit-backdrop-filter: blur(14px) !important;
+}
+
+/* 长下拉菜单（目录16个专题）自适应最大高度与平滑滚动 (design.md 4.1) */
+.VPNavBar .VPMenu {
+  max-height: calc(100vh - var(--vp-nav-height) - 32px) !important;
+  overflow-y: auto !important;
+  overscroll-behavior: contain !important;
+  scrollbar-width: thin;
 }
 
 .VPSidebar {
@@ -468,6 +535,15 @@ html.dark .flash-kw {
 .VPSidebarItem .is-active > .link {
   color: var(--vp-c-brand-1) !important;
   font-weight: 600;
+}
+
+/* 侧边栏折叠箭头触控热区提升至 44px (design.md 6.1) */
+.VPSidebarItem .caret {
+  min-width: 44px !important;
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .VPDocAsideOutline .outline-link.active {
@@ -549,11 +625,16 @@ html.dark .flash-kw {
   overflow-wrap: break-word;
   /* CJK 严格断行：遵循中文标点禁则，防止行首出现 ）】』或行尾出现 （【『 */
   line-break: strict;
+  text-wrap: pretty;
 }
 
 /* ============================================================
    10. Serif 模式同步字号适配 (优化 cc-font-serif)
    ============================================================ */
+html.cc-font-serif {
+  --vp-font-family-base: "Songti SC", "Noto Serif SC", STSong, SimSun, Georgia, serif;
+}
+
 html.cc-font-serif .vp-doc {
   font-size: 18px;
   line-height: 1.85;
@@ -561,4 +642,163 @@ html.cc-font-serif .vp-doc {
 
 html.cc-font-serif .vp-doc p {
   line-height: 34px;
+}
+
+html.cc-font-serif .vp-doc blockquote > p {
+  font-size: 18px;
+}
+
+html.cc-font-serif .vp-doc th,
+html.cc-font-serif .vp-doc td {
+  font-size: 18px;
+}
+
+/* ============================================================
+   11. 交互式生物模型暗黑模式深度适配 (Dark Mode Contrast & Tone)
+   ============================================================ */
+.dark .interactive-card {
+  box-shadow: none;
+}
+
+/* 按钮与开关控制项 */
+.dark .interactive-card .toggle-btn {
+  background: var(--vp-c-bg-alt);
+  color: var(--vp-c-text-2);
+  border-color: var(--vp-c-border);
+}
+
+.dark .interactive-card .toggle-btn.on {
+  background: rgba(82, 183, 136, 0.16);
+  color: #74c69d;
+  border-color: rgba(82, 183, 136, 0.4);
+}
+
+/* 状态横幅 */
+.dark .interactive-card .bg-steady {
+  background: rgba(82, 183, 136, 0.14);
+  color: #a8dfc4;
+  border-color: rgba(82, 183, 136, 0.35);
+}
+
+.dark .interactive-card .bg-dark {
+  background: rgba(217, 119, 6, 0.15);
+  color: #fcd34d;
+  border-color: rgba(217, 119, 6, 0.35);
+}
+
+.dark .interactive-card .bg-nocarbon {
+  background: rgba(59, 130, 246, 0.15);
+  color: #93c5fd;
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+.dark .interactive-card .rule-hint {
+  color: #f87171;
+}
+
+/* 示波器阶段指示器 */
+.dark .interactive-card .b-slate {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--vp-c-text-2);
+}
+
+.dark .interactive-card .b-red {
+  background: rgba(239, 68, 68, 0.18);
+  color: #fca5a5;
+}
+
+.dark .interactive-card .b-blue {
+  background: rgba(59, 130, 246, 0.18);
+  color: #93c5fd;
+}
+
+/* 试剂染色与警告标签 */
+.dark .interactive-card .cond-tag {
+  background: rgba(245, 158, 11, 0.18);
+  color: #fcd34d;
+}
+
+.dark .interactive-card .detail-warning {
+  background: rgba(239, 68, 68, 0.12);
+  border-left-color: #ef4444;
+  color: #fca5a5;
+}
+
+.dark .interactive-card .critical-warning {
+  background: rgba(245, 158, 11, 0.14);
+  border-left-color: #f59e0b;
+  color: #fde68a;
+}
+
+/* 4x4 棋盘网格深色卡片 */
+.dark .interactive-card .c-blue {
+  background: rgba(59, 130, 246, 0.16);
+  color: #bfdbfe;
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+.dark .interactive-card .c-green {
+  background: rgba(34, 197, 94, 0.16);
+  color: #bbf7d0;
+  border-color: rgba(34, 197, 94, 0.35);
+}
+
+.dark .interactive-card .c-amber {
+  background: rgba(245, 158, 11, 0.16);
+  color: #fde68a;
+  border-color: rgba(245, 158, 11, 0.35);
+}
+
+.dark .interactive-card .c-purple {
+  background: rgba(168, 85, 247, 0.16);
+  color: #e9d5ff;
+  border-color: rgba(168, 85, 247, 0.35);
+}
+
+.dark .interactive-card .c-gray {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--vp-c-text-2);
+  border-color: var(--vp-c-border);
+}
+
+/* 能量平衡节点 */
+.dark .interactive-card .bg-valid {
+  background: rgba(34, 197, 94, 0.12);
+  border-color: rgba(34, 197, 94, 0.4);
+}
+
+.dark .interactive-card .bg-valid .node-val {
+  color: #86efac;
+}
+
+.dark .interactive-card .bg-invalid {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.dark .interactive-card .bg-invalid .node-val {
+  color: #fca5a5;
+}
+
+/* 测压装置管体 */
+.dark .interactive-card .pipe-tube {
+  background: var(--vp-c-bg-alt);
+  border-color: var(--vp-c-border);
+}
+
+/* 关键数据高对比度字色 */
+.dark .interactive-card .text-emerald {
+  color: #34d399;
+}
+
+.dark .interactive-card .text-blue {
+  color: #60a5fa;
+}
+
+.dark .interactive-card .text-amber {
+  color: #fbbf24;
+}
+
+.dark .interactive-card .text-purple {
+  color: #c084fc;
 }

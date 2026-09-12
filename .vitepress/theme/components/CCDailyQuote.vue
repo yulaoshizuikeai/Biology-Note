@@ -297,6 +297,7 @@ const handleCopy = async (event: MouseEvent) => {
             type="button"
             class="flash-action-btn"
             title="上一组"
+            aria-label="查看上一组速记卡片"
             :disabled="isChanging"
             @click="handlePrev"
           >
@@ -309,6 +310,7 @@ const handleCopy = async (event: MouseEvent) => {
               stroke-width="2.2"
               stroke-linecap="round"
               stroke-linejoin="round"
+              aria-hidden="true"
             >
               <polyline points="15 18 9 12 15 6"></polyline>
             </svg>
@@ -318,6 +320,7 @@ const handleCopy = async (event: MouseEvent) => {
             type="button"
             class="flash-action-btn"
             title="换一组 (点击或按空格)"
+            aria-label="切换下一组速记卡片"
             :disabled="isChanging"
             @click="handleNext"
           >
@@ -332,6 +335,7 @@ const handleCopy = async (event: MouseEvent) => {
               stroke-width="2.2"
               stroke-linecap="round"
               stroke-linejoin="round"
+              aria-hidden="true"
             >
               <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
             </svg>
@@ -343,6 +347,7 @@ const handleCopy = async (event: MouseEvent) => {
             class="flash-action-btn flash-copy-btn"
             :class="{ 'is-copied': copied }"
             :title="copied ? '已复制本组考点' : '复制整组考点'"
+            aria-label="复制当前整组速记要点"
             @click="handleCopy"
           >
             <svg
@@ -356,6 +361,7 @@ const handleCopy = async (event: MouseEvent) => {
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
+              aria-hidden="true"
             >
               <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
               <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
@@ -371,6 +377,7 @@ const handleCopy = async (event: MouseEvent) => {
               stroke-width="2.6"
               stroke-linecap="round"
               stroke-linejoin="round"
+              aria-hidden="true"
             >
               <polyline points="20 6 9 17 4 12"></polyline>
             </svg>

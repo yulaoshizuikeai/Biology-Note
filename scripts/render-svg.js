@@ -2,7 +2,9 @@ import fs from "node:fs";
 import path from "node:path";
 import { chromium } from "playwright";
 
-const chromePath = process.env.PLAYWRIGHT_CHROME_PATH || "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+const chromePath =
+  process.env.PLAYWRIGHT_CHROME_PATH ||
+  "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
 
 export async function renderSvg(svgContent, outputPath, width = 780, height = 370) {
   const launchOptions = {};

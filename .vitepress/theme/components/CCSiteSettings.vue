@@ -29,10 +29,7 @@ const onKeydown = (event: KeyboardEvent) => {
   if (event.key === "Escape" && isOpen.value) closeDialog();
 };
 
-const updateBooleanSetting = (
-  key: "showContributors" | "showOutline" | "showComments",
-  event: Event,
-) => {
+const updateBooleanSetting = (key: "showOutline" | "showComments", event: Event) => {
   updateSiteSettings(key, (event.target as HTMLInputElement).checked);
 };
 
@@ -118,22 +115,34 @@ onBeforeUnmount(() => {
         <div class="cc-settings-dialog__body">
           <label class="cc-settings-option">
             <span class="cc-settings-option__text">显示「大纲」</span>
-            <input
-              class="cc-settings-option__control"
-              type="checkbox"
-              :checked="settings.showOutline"
-              @change="updateBooleanSetting('showOutline', $event)"
-            />
+            <span class="cc-switch">
+              <input
+                class="cc-switch__input"
+                type="checkbox"
+                aria-label="切换显示大纲"
+                :checked="settings.showOutline"
+                @change="updateBooleanSetting('showOutline', $event)"
+              />
+              <span class="cc-switch__track">
+                <span class="cc-switch__thumb"></span>
+              </span>
+            </span>
           </label>
 
           <label class="cc-settings-option">
             <span class="cc-settings-option__text">显示「评论区」</span>
-            <input
-              class="cc-settings-option__control"
-              type="checkbox"
-              :checked="settings.showComments"
-              @change="updateBooleanSetting('showComments', $event)"
-            />
+            <span class="cc-switch">
+              <input
+                class="cc-switch__input"
+                type="checkbox"
+                aria-label="切换显示评论区"
+                :checked="settings.showComments"
+                @change="updateBooleanSetting('showComments', $event)"
+              />
+              <span class="cc-switch__track">
+                <span class="cc-switch__thumb"></span>
+              </span>
+            </span>
           </label>
 
           <label class="cc-settings-select">
@@ -275,7 +284,8 @@ onBeforeUnmount(() => {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  min-height: 36px;
+  min-height: 44px;
+  cursor: pointer;
 }
 
 .cc-settings-option__text,
@@ -283,12 +293,65 @@ onBeforeUnmount(() => {
   color: var(--vp-c-text-1);
   font-size: 14px;
   line-height: 1.5;
+  font-weight: 500;
 }
 
-.cc-settings-option__control {
-  width: 18px;
-  height: 18px;
-  accent-color: var(--vp-c-brand-1);
+.cc-switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 40px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.cc-switch__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.cc-switch__track {
+  position: relative;
+  width: 40px;
+  height: 22px;
+  border-radius: 999px;
+  background-color: var(--vp-c-bg-alt);
+  border: 1px solid var(--vp-c-border);
+  transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.cc-switch__thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cc-switch__input:checked + .cc-switch__track {
+  background-color: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+}
+
+.cc-switch__input:checked + .cc-switch__track .cc-switch__thumb {
+  transform: translateX(18px);
+}
+
+.cc-switch__input:focus-visible + .cc-switch__track {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
 }
 
 .cc-settings-select__control {

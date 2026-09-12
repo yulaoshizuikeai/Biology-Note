@@ -87,7 +87,7 @@ onBeforeUnmount(() => {
       :class="{ 'is-loading': isLoading }"
       >--</span
     >
-    views
+    <span class="waline-pageview-label">次阅读</span>
   </span>
 </template>
 

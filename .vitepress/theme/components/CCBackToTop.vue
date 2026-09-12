@@ -36,10 +36,7 @@ onBeforeUnmount(() => {
       @click="scrollToTop"
     >
       <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-        <path
-          fill="currentColor"
-          d="M12 4.6 4.6 12l1.4 1.4 5-5V20h2V8.4l5 5L19.4 12 12 4.6Z"
-        />
+        <path fill="currentColor" d="M12 4.6 4.6 12l1.4 1.4 5-5V20h2V8.4l5 5L19.4 12 12 4.6Z" />
       </svg>
     </button>
   </Transition>
@@ -49,7 +46,7 @@ onBeforeUnmount(() => {
 .cc-back-to-top {
   position: fixed;
   right: 20px;
-  bottom: 24px;
+  bottom: max(24px, calc(env(safe-area-inset-bottom, 24px) + 12px));
   z-index: 35;
   display: inline-flex;
   align-items: center;

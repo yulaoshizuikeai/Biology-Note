@@ -1,7 +1,7 @@
 import type { App } from "vue";
-import { defineAsyncComponent } from "vue";
 
 import DefaultTheme from "vitepress/theme";
+import { defineAsyncComponent } from "vue";
 
 import CCActivitySparkline from "./components/CCActivitySparkline.vue";
 import CCChapterOverview from "./components/CCChapterOverview.vue";
@@ -13,6 +13,7 @@ import "@waline/client/style";
 import CCPdfDownloadButton from "./components/CCPdfDownloadButton.vue";
 import CCSiteSettings from "./components/CCSiteSettings.vue";
 import CCShare from "./components/shortUrl/CCShare.vue";
+import CCTomorrowLetter from "./components/specialPage/CCTomorrowLetter.vue";
 import layout from "./layout.vue";
 
 // Interactive Biology Components（按需懒加载，避免首屏全量打包）
@@ -58,6 +59,12 @@ const PcrCycleVisualizer = defineAsyncComponent(
 const BiochemicalStainingPalette = defineAsyncComponent(
   () => import("./components/interactive/BiochemicalStainingPalette.vue"),
 );
+const TissueEdemaDiagnoser = defineAsyncComponent(
+  () => import("./components/interactive/TissueEdemaDiagnoser.vue"),
+);
+const PedigreeAnalysisSolver = defineAsyncComponent(
+  () => import("./components/interactive/PedigreeAnalysisSolver.vue"),
+);
 
 export default {
   extends: DefaultTheme,
@@ -69,6 +76,7 @@ export default {
     app.component("CCChapterOverview", CCChapterOverview);
     app.component("CCActivitySparkline", CCActivitySparkline);
     app.component("CCDailyQuote", CCDailyQuote);
+    app.component("CCTomorrowLetter", CCTomorrowLetter);
 
     // Interactive Biology Models
     app.component("ProteinCondensationCalc", ProteinCondensationCalc);
@@ -85,5 +93,7 @@ export default {
     app.component("EnergyFlowBalance", EnergyFlowBalance);
     app.component("PcrCycleVisualizer", PcrCycleVisualizer);
     app.component("BiochemicalStainingPalette", BiochemicalStainingPalette);
+    app.component("TissueEdemaDiagnoser", TissueEdemaDiagnoser);
+    app.component("PedigreeAnalysisSolver", PedigreeAnalysisSolver);
   },
 };

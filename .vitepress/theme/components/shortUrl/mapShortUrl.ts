@@ -15,9 +15,25 @@ const normalizePagePath = (pagePath: string): string =>
     .replace(/^\//, "")
     .replace(/(index)?\.md$/, "");
 
+const isIgnoredPage = (pagePath: string): boolean => {
+  const p = pagePath.replace(/\\/g, "/").replace(/^\//, "");
+  return (
+    p === "404.md" ||
+    p === "404" ||
+    p === "s.md" ||
+    p === "s" ||
+    p.startsWith("hidePage/") ||
+    p === "README.md" ||
+    p === "AGENTS.md" ||
+    p === "TARGET_PROMPT.md" ||
+    p === "design.md"
+  );
+};
+
 const buildShortUrlMap = (pages: string[]): ShortUrlMap => {
   const shortMap: ShortUrlMap = {};
   for (const page of pages) {
+    if (isIgnoredPage(page)) continue;
     const normalizedPath = normalizePagePath(page);
     shortMap[md5(normalizedPath).slice(0, 10)] = normalizedPath;
   }

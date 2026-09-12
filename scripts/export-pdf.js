@@ -129,8 +129,8 @@ const serverPort = await new Promise((resolve) => {
 
 const browser = await chromium.launch();
 try {
-const pagePool = [];
-const pdfBaseStyle = `
+  const pagePool = [];
+  const pdfBaseStyle = `
     :root {
         --vp-font-family-base: ${fontFamily};
     }
@@ -196,95 +196,95 @@ const pdfBaseStyle = `
         }
     }
 `;
-for (let i = 0; i < concurrency; i += 1) {
-  const page = await browser.newPage();
-  pagePool.push(page);
-}
+  for (let i = 0; i < concurrency; i += 1) {
+    const page = await browser.newPage();
+    pagePool.push(page);
+  }
 
-let cursor = 0;
-const worker = async (page) => {
-  while (true) {
-    const index = cursor;
-    if (index >= files.length) break;
-    cursor += 1;
+  let cursor = 0;
+  const worker = async (page) => {
+    while (true) {
+      const index = cursor;
+      if (index >= files.length) break;
+      cursor += 1;
 
-    const file = files[index];
-    const inputPath = path.join(distDir, file);
-    const outputPath = path.join(outDir, file.replace(/\.html$/, ".pdf"));
+      const file = files[index];
+      const inputPath = path.join(distDir, file);
+      const outputPath = path.join(outDir, file.replace(/\.html$/, ".pdf"));
 
-    fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+      fs.mkdirSync(path.dirname(outputPath), { recursive: true });
 
-    const urlPath = encodeURI(file.replace(/\\/g, "/"));
-    const fileUrl = `http://127.0.0.1:${serverPort}/${urlPath}`;
+      const urlPath = encodeURI(file.replace(/\\/g, "/"));
+      const fileUrl = `http://127.0.0.1:${serverPort}/${urlPath}`;
 
-    console.log("Exporting:", file);
+      console.log("Exporting:", file);
 
-    await page.goto(fileUrl, { waitUntil: "load", timeout: 120000 });
-    await page.evaluate(
-      ({ styleText, enableGoogleFont, googleFontHref }) => {
-        if (enableGoogleFont && !document.getElementById("pdf-google-font")) {
-          const link = document.createElement("link");
-          link.id = "pdf-google-font";
-          link.rel = "stylesheet";
-          link.href = googleFontHref;
-          document.head.appendChild(link);
-        }
+      await page.goto(fileUrl, { waitUntil: "load", timeout: 120000 });
+      await page.evaluate(
+        ({ styleText, enableGoogleFont, googleFontHref }) => {
+          if (enableGoogleFont && !document.getElementById("pdf-google-font")) {
+            const link = document.createElement("link");
+            link.id = "pdf-google-font";
+            link.rel = "stylesheet";
+            link.href = googleFontHref;
+            document.head.appendChild(link);
+          }
 
-        const existingStyle = document.getElementById("pdf-font-override");
-        if (existingStyle) {
-          existingStyle.textContent = styleText;
-          return;
-        }
+          const existingStyle = document.getElementById("pdf-font-override");
+          if (existingStyle) {
+            existingStyle.textContent = styleText;
+            return;
+          }
 
-        const style = document.createElement("style");
-        style.id = "pdf-font-override";
-        style.textContent = styleText;
-        document.head.appendChild(style);
-      },
-      {
-        styleText: pdfBaseStyle,
-        enableGoogleFont: useGoogleFont,
-        googleFontHref: googleFontUrl,
-      },
-    );
-    await page.evaluate(async (fontPreloadList) => {
-      if (!document.fonts) return;
-      await Promise.allSettled(fontPreloadList.map((font) => document.fonts.load(font)));
-      await document.fonts.ready;
-    }, fontPreloadList);
-    if (debugPdfFonts) {
-      const fontDebug = await page.evaluate(() => {
-        const sample = document.createElement("strong");
-        sample.textContent = "加粗测试Abc123";
-        document.body.appendChild(sample);
+          const style = document.createElement("style");
+          style.id = "pdf-font-override";
+          style.textContent = styleText;
+          document.head.appendChild(style);
+        },
+        {
+          styleText: pdfBaseStyle,
+          enableGoogleFont: useGoogleFont,
+          googleFontHref: googleFontUrl,
+        },
+      );
+      await page.evaluate(async (fontPreloadList) => {
+        if (!document.fonts) return;
+        await Promise.allSettled(fontPreloadList.map((font) => document.fonts.load(font)));
+        await document.fonts.ready;
+      }, fontPreloadList);
+      if (debugPdfFonts) {
+        const fontDebug = await page.evaluate(() => {
+          const sample = document.createElement("strong");
+          sample.textContent = "加粗测试Abc123";
+          document.body.appendChild(sample);
 
-        const computed = window.getComputedStyle(sample);
-        const result = {
-          googleFontLink: !!document.getElementById("pdf-google-font"),
-          boldCheck: document.fonts?.check('700 16px "Noto Sans SC"'),
-          normalCheck: document.fonts?.check('400 16px "Noto Sans SC"'),
-          computedFontFamily: computed.fontFamily,
-          computedFontWeight: computed.fontWeight,
-        };
-        sample.remove();
-        return result;
-      });
-      console.log("Font debug:", file, JSON.stringify(fontDebug));
-    }
-    try {
-      await page.waitForLoadState("networkidle", { timeout: 10000 });
-    } catch {
-      // Best-effort: proceed even if network doesn't go idle.
-    }
+          const computed = window.getComputedStyle(sample);
+          const result = {
+            googleFontLink: !!document.getElementById("pdf-google-font"),
+            boldCheck: document.fonts?.check('700 16px "Noto Sans SC"'),
+            normalCheck: document.fonts?.check('400 16px "Noto Sans SC"'),
+            computedFontFamily: computed.fontFamily,
+            computedFontWeight: computed.fontWeight,
+          };
+          sample.remove();
+          return result;
+        });
+        console.log("Font debug:", file, JSON.stringify(fontDebug));
+      }
+      try {
+        await page.waitForLoadState("networkidle", { timeout: 10000 });
+      } catch {
+        // Best-effort: proceed even if network doesn't go idle.
+      }
 
-    await page.pdf({
-      path: outputPath,
-      format: pdfConfig.page.format,
-      printBackground: true,
-      margin: pdfConfig.page.margin,
-      displayHeaderFooter: true,
-      headerTemplate: "<div></div>",
-      footerTemplate: `
+      await page.pdf({
+        path: outputPath,
+        format: pdfConfig.page.format,
+        printBackground: true,
+        margin: pdfConfig.page.margin,
+        displayHeaderFooter: true,
+        headerTemplate: "<div></div>",
+        footerTemplate: `
                 <style>
                     .pdf-footer {
                         box-sizing: border-box;
@@ -300,11 +300,11 @@ const worker = async (page) => {
                     <span class="pageNumber"></span> / <span class="totalPages"></span>
                 </div>
             `,
-    });
-  }
-};
+      });
+    }
+  };
 
-await Promise.all(pagePool.map((page) => worker(page)));
+  await Promise.all(pagePool.map((page) => worker(page)));
 } finally {
   await browser.close().catch(() => {});
   await new Promise((resolve) => server.close(resolve));

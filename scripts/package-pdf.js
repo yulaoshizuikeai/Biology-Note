@@ -27,7 +27,7 @@ async function packagePdfs() {
     return;
   }
 
-  // 按章节与文件名自然数排序（确保 00 -> 01 -> ... -> 19 完美顺序）
+  // 按章节与文件名自然数排序（确保 00 -> 01 -> ... -> 16 完美顺序）
   pdfFiles.sort((a, b) => a.localeCompare(b, "zh-Hans-CN", { numeric: true }));
 
   console.log(`Found ${pdfFiles.length} chapter PDFs. Preparing packaging...`);

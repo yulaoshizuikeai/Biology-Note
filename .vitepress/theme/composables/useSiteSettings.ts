@@ -3,7 +3,6 @@ import { readonly, reactive } from "vue";
 export type SiteFontFamily = "default" | "serif";
 
 export type SiteSettings = {
-  showContributors: boolean;
   showOutline: boolean;
   showComments: boolean;
   fontFamily: SiteFontFamily;
@@ -12,7 +11,6 @@ export type SiteSettings = {
 const STORAGE_KEY = "cc-site-settings";
 
 const defaultSettings: SiteSettings = {
-  showContributors: true,
   showOutline: true,
   showComments: true,
   fontFamily: "default",
@@ -29,10 +27,6 @@ const normalizeSettings = (value: unknown): Partial<SiteSettings> => {
 
   const rawSettings = value as Partial<Record<keyof SiteSettings, unknown>>;
   const nextSettings: Partial<SiteSettings> = {};
-
-  if (typeof rawSettings.showContributors === "boolean") {
-    nextSettings.showContributors = rawSettings.showContributors;
-  }
 
   if (typeof rawSettings.showOutline === "boolean") {
     nextSettings.showOutline = rawSettings.showOutline;
@@ -58,7 +52,6 @@ const applySiteSettings = () => {
   if (typeof document === "undefined") return;
 
   const root = document.documentElement;
-  root.classList.toggle("cc-hide-contributors", !settings.showContributors);
   root.classList.toggle("cc-hide-outline", !settings.showOutline);
   root.classList.toggle("cc-hide-comments", !settings.showComments);
   root.classList.toggle("cc-font-serif", settings.fontFamily === "serif");

@@ -3,28 +3,44 @@
     <div class="card-header">
       <div class="badge">专题 01 · 分子计算</div>
       <h3 class="card-title">蛋白质脱水缩合与分子量秒算仪</h3>
-      <p class="card-desc">输入氨基酸数、肽链数与二硫键数，即时推导肽键数、脱水数与蛋白质相对分子质量。</p>
+      <p class="card-desc">
+        输入氨基酸数、肽链数与二硫键数，即时推导肽键数、脱水数与蛋白质相对分子质量。
+      </p>
     </div>
 
     <div class="control-grid">
       <div class="control-item">
-        <label>氨基酸数 (n): <span class="val">{{ n }}</span></label>
+        <label
+          >氨基酸数 (n): <span class="val">{{ n }}</span></label
+        >
         <input type="range" v-model.number="n" min="2" max="200" step="1" />
       </div>
       <div class="control-item">
-        <label>肽链数 (m): <span class="val">{{ m }}</span></label>
+        <label
+          >肽链数 (m): <span class="val">{{ m }}</span></label
+        >
         <div class="pill-group">
-          <button v-for="chain in [1, 2, 3, 4]" :key="chain" :class="['pill-btn', { active: m === chain }]" @click="m = chain">
+          <button
+            v-for="chain in [1, 2, 3, 4]"
+            :key="chain"
+            :class="['pill-btn', { active: m === chain }]"
+            :disabled="chain > n"
+            @click="m = chain"
+          >
             {{ chain }} 条链
           </button>
         </div>
       </div>
       <div class="control-item">
-        <label>二硫键数 (-S-S-): <span class="val">{{ k }}</span></label>
-        <input type="range" v-model.number="k" min="0" max="10" step="1" />
+        <label
+          >二硫键数 (-S-S-): <span class="val">{{ k }}</span> (最多 {{ maxK }} 个)</label
+        >
+        <input type="range" v-model.number="k" min="0" :max="maxK" step="1" />
       </div>
       <div class="control-item">
-        <label>氨基酸平均分子量 (a): <span class="val">{{ a }}</span></label>
+        <label
+          >氨基酸平均分子量 (a): <span class="val">{{ a }}</span></label
+        >
         <input type="range" v-model.number="a" min="100" max="140" step="1" />
       </div>
     </div>
@@ -50,18 +66,28 @@
 
     <div class="formula-banner">
       <strong>计算公式推导：</strong>
-      <span>相对分子质量 = {{ n }} × {{ a }} - 18 × ({{ n }} - {{ m }}) - 2 × {{ k }} = <strong>{{ proteinMw }}</strong></span>
+      <span
+        >相对分子质量 = {{ n }} × {{ a }} - 18 × ({{ n }} - {{ m }}) - 2 × {{ k }} =
+        <strong>{{ proteinMw }}</strong></span
+      >
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { ref, computed, watch } from "vue";
 
 const n = ref(100);
 const m = ref(2);
 const k = ref(3);
 const a = ref(128);
+
+const maxK = computed(() => Math.min(10, Math.floor(n.value / 2)));
+
+watch(n, (newN) => {
+  if (m.value > newN) m.value = Math.max(1, newN);
+  if (k.value > maxK.value) k.value = maxK.value;
+});
 
 const peptideBonds = computed(() => Math.max(0, n.value - m.value));
 const proteinMw = computed(() => {
@@ -168,10 +194,18 @@ input[type="range"] {
   font-weight: 700;
   font-family: monospace;
 }
-.text-emerald { color: #059669; }
-.text-blue { color: #2563eb; }
-.text-amber { color: #d97706; }
-.text-purple { color: #7c3aed; }
+.text-emerald {
+  color: #059669;
+}
+.text-blue {
+  color: #2563eb;
+}
+.text-amber {
+  color: #d97706;
+}
+.text-purple {
+  color: #7c3aed;
+}
 .formula-banner {
   padding: 12px 16px;
   border-radius: 8px;

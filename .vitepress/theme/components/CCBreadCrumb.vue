@@ -36,6 +36,10 @@ watchEffect(() => {
 
   const list: Breadcrumb[] = [
     {
+      name: "首页",
+      link: withBase("/"),
+    },
+    {
       name: cleanChapter,
       link: isChapterIndex ? "" : withBase(`/${encodeURI(rawChapter)}/index`),
     },
@@ -63,30 +67,36 @@ watchEffect(() => {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.25rem;
+  min-height: 44px;
 }
 
 .bc-item {
   display: inline-flex;
   align-items: center;
+  min-height: 44px;
 }
 
 .bc-link {
   color: var(--vp-c-text-2);
   text-decoration: none;
-  transition: color 0.2s;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
 }
 
 .bc-link:hover {
   color: var(--vp-c-brand-1);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 8%, transparent);
 }
 
 .bc-current {
   color: var(--vp-c-text-1);
   font-weight: 500;
+  padding: 4px 6px;
 }
 
 .bc-sep {
-  margin: 0 0.45rem;
+  margin: 0 0.25rem;
   font-size: 0.75rem;
   color: var(--vp-c-text-3);
   user-select: none;

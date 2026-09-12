@@ -56,7 +56,6 @@ export default defineConfig({
         try {
           const settings = JSON.parse(localStorage.getItem("cc-site-settings") || "{}");
           const root = document.documentElement;
-          root.classList.toggle("cc-hide-contributors", settings.showContributors === false);
           root.classList.toggle("cc-hide-outline", settings.showOutline === false);
           root.classList.toggle("cc-hide-comments", settings.showComments === false);
           root.classList.toggle("cc-font-serif", settings.fontFamily === "serif");
@@ -69,7 +68,16 @@ export default defineConfig({
     siteTitle: "高考生物知识库",
     nav: navItems,
     sidebar: { "/": sidebarItems },
-    socialLinks: [{ icon: "github", link: "https://github.com/yulaoshizuikeai/Biology-Note" }],
+    socialLinks: [
+      { icon: "github", link: "https://github.com/yulaoshizuikeai/Biology-Note" },
+      {
+        icon: {
+          svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>',
+        },
+        link: "mailto:imharlanyu@gmail.com",
+        ariaLabel: "邮件勘误与交流反馈 (imharlanyu@gmail.com)",
+      },
+    ],
     search: {
       provider: "local",
       options: {
@@ -110,6 +118,7 @@ export default defineConfig({
     "README.md",
     "AGENTS.md",
     "TARGET_PROMPT.md",
+    "design.md",
     "scripts/**",
     "pdf-repo/**",
     "pdf-repo-single/**",
