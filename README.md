@@ -14,7 +14,7 @@
   <img src="./public/images/poster-neo-minimalism.png" alt="高考生物知识库 - Yulaoshizuikeai's Biology Note" width="640" />
 </p>
 
-1. **在线阅读**: [https://biology.indevs.in/](https://biology.indevs.in/)
+1. **在线阅读**: [https://biology.yunet.cfd/](https://biology.yunet.cfd/)
 2. **最新 PDF 下载**:
    - 📕 **[完整版 PDF (单文件全书)](https://github.com/yulaoshizuikeai/Biology-Note/releases/download/latest-pdf/Biology-Note-Complete.pdf)** (由 GitHub Actions 随代码更新自动生成)
    - 📦 **[全套分册归档 (.zip)](https://github.com/yulaoshizuikeai/Biology-Note/releases/download/latest-pdf/Biology-Note-All-PDFs.zip)** (包含全书独立高清矢量 PDF)

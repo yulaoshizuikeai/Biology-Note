@@ -4,7 +4,7 @@
     <footer class="cc-footer">
       <p class="cc-footer__title">{{ pageTitle }}</p>
       <p class="cc-footer__meta">
-        <span>biology.indevs.in</span>
+        <span>biology.yunet.cfd</span>
         <span class="cc-footer__dot">•</span>
         <span>Yulaoshizuikeai's Biology Note</span>
       </p>

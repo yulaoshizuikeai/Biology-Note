@@ -13,6 +13,15 @@ export const buildNavItems = (rootDir: string): DefaultTheme.NavItem[] => {
   return [
     { text: "首页", link: "/" },
     {
+      text: "📚 学科切换",
+      items: [
+        { text: "🪐 高中物理", link: "https://physics.yunet.cfd" },
+        { text: "🧬 高中生物 (当前)", link: "/" },
+        { text: "🧪 高中化学", link: "https://intv.indevs.in" },
+        { text: "🌐 全科中枢门户", link: "https://note.yunet.cfd" },
+      ],
+    },
+    {
       text: "考前速查",
       items: [
         { text: "50 大黄金结论与临界条件", link: "/golden-conclusions" },

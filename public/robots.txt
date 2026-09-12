@@ -1,4 +1,4 @@
-# Robots.txt for biology.indevs.in
+# Robots.txt for biology.yunet.cfd
 User-agent: *
 Allow: /
 
@@ -11,4 +11,4 @@ Disallow: /hashmap.json
 Disallow: /shortmap.json
 
 # Sitemap location
-Sitemap: https://biology.indevs.in/sitemap.xml
+Sitemap: https://biology.yunet.cfd/sitemap.xml
