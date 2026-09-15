@@ -346,7 +346,8 @@ html.dark .flash-kw {
 /* ============================================================
    4. Tables (Data & Comparison Grids)
    外层滚动容器 .cc-table-wrap 由 markdown 渲染器包裹（imageOptimization.ts），
-   table 保持原生布局使表头与数据行共享列宽（修复表头错位）
+   table 默认按容器宽度自适应换行（width:100% + table-layout:auto），
+   长文本纵向换行不再强制横滑；仅极宽表格（多列长英文/公式不换行）才触发横向滚动兜底。
    ============================================================ */
 .cc-table-wrap {
   overflow-x: auto;
@@ -357,13 +358,23 @@ html.dark .flash-kw {
 }
 
 .vp-doc table {
+  /* 覆盖 VitePress 默认 display:block + overflow-x:auto：恢复原生表格布局，
+     由外层 .cc-table-wrap 统一承担兜底滚动，table 本体按容器宽度自适应换行 */
+  display: table;
   border-collapse: separate;
   border-spacing: 0;
   margin: 0;
+  width: 100%;
   min-width: 100%;
-  width: max-content;
-  max-width: none;
+  max-width: 100%;
+  table-layout: auto;
   box-sizing: border-box;
+  overflow-x: visible;
+}
+
+.vp-doc tr {
+  background-color: transparent;
+  border: none;
 }
 
 .vp-doc th {
@@ -373,17 +384,44 @@ html.dark .flash-kw {
   background: var(--vp-c-bg-soft);
   font-weight: 650;
   font-size: 0.92rem;
+  line-height: 1.6;
   color: var(--vp-c-text-1);
+  border: none;
   border-bottom: 1px solid var(--vp-c-border);
   padding: 0.65rem 0.95rem;
   text-align: left;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  vertical-align: top;
 }
 
 .vp-doc td {
   padding: 0.65rem 0.95rem;
   font-size: 0.92rem;
+  line-height: 1.65;
+  border: none;
   border-bottom: 1px solid var(--vp-c-divider);
   color: var(--vp-c-text-1);
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  vertical-align: top;
+}
+
+/* 窄屏下收紧单元格内边距，给长文本留出更多换行宽度 */
+@media (max-width: 767px) {
+  .vp-doc th,
+  .vp-doc td {
+    padding: 0.55rem 0.7rem;
+    font-size: 0.88rem;
+  }
+
+  /* ≥5 列的宽表在窄屏上仍允许横滑兜底，避免被挤成单字一列无法阅读；
+     ≤4 列的表格保持自适应换行、无需滑动。横滑时 layout.vue 自动追加滑动提示。 */
+  .cc-table-wrap:has(table tr:first-child > :nth-child(5)) table {
+    min-width: 560px;
+  }
 }
 
 .vp-doc tr:last-child td {

@@ -91,6 +91,20 @@ const attachScrollHints = () => {
     hint.textContent = "↔ 左右滑动查看完整内容";
     el.insertAdjacentElement("afterend", hint);
   });
+  // 延迟复核：MathJax 排版/字体加载完成后，自适应换行的表格可能已回缩到容器内，
+  // 此时移除误标的滑动提示，避免在无需滑动的表格下显示多余胶囊。
+  window.setTimeout(() => {
+    document
+      .querySelectorAll<HTMLElement>(".cc-table-wrap[data-cc-scroll-hint='1']")
+      .forEach((wrap) => {
+        if (wrap.scrollWidth - wrap.clientWidth > 4) return;
+        const hint = wrap.nextElementSibling;
+        if (hint instanceof HTMLElement && hint.classList.contains("cc-scroll-hint")) {
+          hint.remove();
+        }
+        delete wrap.dataset.ccScrollHint;
+      });
+  }, 1800);
 };
 
 const onSectionTitleClick = (event: Event) => {
