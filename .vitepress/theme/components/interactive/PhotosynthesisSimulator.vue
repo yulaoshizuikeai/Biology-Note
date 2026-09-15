@@ -209,7 +209,7 @@ const reasoningChain = computed(() => {
 }
 .toggle-btn.on .indicator {
   background: #22c55e;
-  box-shadow: 0 0 6px #22c55e;
+  box-shadow: none;
 }
 .status-banner {
   padding: 10px 16px;

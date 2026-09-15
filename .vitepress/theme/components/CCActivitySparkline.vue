@@ -261,11 +261,11 @@ onMounted(() => {
   transform: translateY(-1.5px);
   background: color-mix(in srgb, var(--vp-c-brand-1) 3%, var(--vp-c-bg-soft));
   border-color: color-mix(in srgb, var(--vp-c-brand-1) 35%, transparent);
-  box-shadow: 0 4px 14px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--vp-shadow-2);
 }
 
 .dark .cycle-sparkline-card:hover {
-  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--vp-shadow-2);
 }
 
 .sparkline-svg {

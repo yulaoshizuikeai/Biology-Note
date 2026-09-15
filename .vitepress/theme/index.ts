@@ -4,6 +4,7 @@ import DefaultTheme from "vitepress/theme";
 import { defineAsyncComponent } from "vue";
 
 import CCActivitySparkline from "./components/CCActivitySparkline.vue";
+import CCBentoGrid from "./components/CCBentoGrid.vue";
 import CCChapterOverview from "./components/CCChapterOverview.vue";
 import CCDailyQuote from "./components/CCDailyQuote.vue";
 import "./style/index.css";
@@ -74,6 +75,7 @@ export default {
     app.component("CCSiteSettings", CCSiteSettings);
     app.component("CCShare", CCShare);
     app.component("CCChapterOverview", CCChapterOverview);
+    app.component("CCBentoGrid", CCBentoGrid);
     app.component("CCActivitySparkline", CCActivitySparkline);
     app.component("CCDailyQuote", CCDailyQuote);
     app.component("CCTomorrowLetter", CCTomorrowLetter);

@@ -102,7 +102,7 @@ const proteinMw = computed(() => {
   border-radius: 12px;
   background: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-divider);
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--vp-shadow-1);
 }
 .card-header {
   margin-bottom: 20px;

@@ -58,7 +58,7 @@ onBeforeUnmount(() => {
   background: var(--vp-c-bg-soft);
   color: var(--vp-c-text-2);
   cursor: pointer;
-  box-shadow: 0 4px 14px rgb(0 0 0 / 12%);
+  box-shadow: var(--vp-shadow-2);
   transition:
     color 0.2s ease,
     border-color 0.2s ease,

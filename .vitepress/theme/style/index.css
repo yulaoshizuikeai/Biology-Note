@@ -6,6 +6,7 @@
  */
 
 @import "./vars.css";
+@import "./fonts.css";
 
 /* ============================================================
    1. Typography & Global Flow (Type-Driven Interface)
@@ -34,16 +35,17 @@ body {
   color: var(--vp-c-text-1);
 }
 
-/* Headings with Magazine Solid Stature */
+/* Headings with Academic Serif Stature & Tight Tracking */
 .vp-doc h1,
 .vp-doc h2,
 .vp-doc h3,
 .vp-doc h4,
 .vp-doc h5,
 .vp-doc h6 {
+  font-family: var(--vp-font-family-serif);
   color: var(--vp-c-text-1);
   font-weight: 650;
-  letter-spacing: -0.022em;
+  letter-spacing: -0.025em;
   position: relative;
 }
 
@@ -200,62 +202,140 @@ html.dark .flash-kw {
 }
 
 /* ============================================================
-   3. Custom Callouts (Containers): Paper Decluttering
+   3. Custom Callouts (Containers): Muted Pastels & Vector Masks
    ============================================================ */
 .vp-doc .custom-block {
   border-radius: 8px !important;
-  padding: 0.85rem 1.15rem !important;
-  margin: 1.2rem 0 !important;
+  padding: 0.95rem 1.25rem !important;
+  margin: 1.3rem 0 !important;
   border: 1px solid var(--vp-c-border) !important;
   border-left-width: 3.5px !important;
   box-shadow: none !important;
-  /* 极简主义：中性表面 + 中性正文，语义色仅保留左边框与标题
-     color 需 !important 压过 VitePress 默认主题后加载的 .custom-block.warning 规则 */
-  background-color: var(--vp-c-bg-soft) !important;
   color: var(--vp-c-text-1) !important;
 }
 
 .vp-doc .custom-block.info {
-  border-left-color: var(--vp-custom-block-info-border) !important;
+  background-color: var(--vp-custom-block-info-bg) !important;
+  border-color: var(--vp-custom-block-info-border) !important;
+  border-left-color: var(--vp-custom-block-info-text) !important;
 }
 
 .vp-doc .custom-block.tip {
-  border-left-color: var(--vp-custom-block-tip-border) !important;
+  background-color: var(--vp-custom-block-tip-bg) !important;
+  border-color: var(--vp-custom-block-tip-border) !important;
+  border-left-color: var(--vp-custom-block-tip-text) !important;
 }
 
 .vp-doc .custom-block.warning {
-  border-left-color: var(--vp-custom-block-warning-border) !important;
+  background-color: var(--vp-custom-block-warning-bg) !important;
+  border-color: var(--vp-custom-block-warning-border) !important;
+  border-left-color: var(--vp-custom-block-warning-text) !important;
 }
 
 .vp-doc .custom-block.danger {
-  border-left-color: var(--vp-custom-block-danger-border) !important;
+  background-color: var(--vp-custom-block-danger-bg) !important;
+  border-color: var(--vp-custom-block-danger-border) !important;
+  border-left-color: var(--vp-custom-block-danger-text) !important;
 }
 
 .vp-doc .custom-block.details {
-  border-left-color: var(--vp-custom-block-details-border) !important;
+  background-color: var(--vp-custom-block-details-bg) !important;
+  border-color: var(--vp-custom-block-details-border) !important;
+  border-left-width: 1px !important;
 }
 
 .vp-doc .custom-block .custom-block-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-weight: 650;
   font-size: 0.94rem;
   letter-spacing: -0.01em;
   margin-bottom: 0.35rem;
 }
 
+/* 矢量细线 SVG 遮罩图标（替代 Emoji） */
+.vp-doc .custom-block .custom-block-title::before {
+  content: "" !important;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  flex-shrink: 0;
+}
+
 .vp-doc .custom-block.info .custom-block-title {
   color: var(--vp-custom-block-info-text);
+}
+.vp-doc .custom-block.info .custom-block-title::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 16v-4m0-4h.01'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 16v-4m0-4h.01'/%3E%3C/svg%3E");
 }
 
 .vp-doc .custom-block.tip .custom-block-title {
   color: var(--vp-custom-block-tip-text);
 }
+.vp-doc .custom-block.tip .custom-block-title::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='m9 12 2 2 4-4'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='m9 12 2 2 4-4'/%3E%3C/svg%3E");
+}
 
 .vp-doc .custom-block.warning .custom-block-title {
   color: var(--vp-custom-block-warning-text);
 }
+.vp-doc .custom-block.warning .custom-block-title::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z'/%3E%3Cline x1='12' y1='9' x2='12' y2='13'/%3E%3Cline x1='12' y1='17' x2='12.01' y2='17'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z'/%3E%3Cline x1='12' y1='9' x2='12' y2='13'/%3E%3Cline x1='12' y1='17' x2='12.01' y2='17'/%3E%3C/svg%3E");
+}
 
 .vp-doc .custom-block.danger .custom-block-title {
   color: var(--vp-custom-block-danger-text);
+}
+.vp-doc .custom-block.danger .custom-block-title::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cline x1='15' y1='9' x2='9' y2='15'/%3E%3Cline x1='9' y1='9' x2='15' y2='15'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cline x1='15' y1='9' x2='9' y2='15'/%3E%3Cline x1='9' y1='9' x2='15' y2='15'/%3E%3C/svg%3E");
+}
+
+/* Details 折叠面板：移除三角，改为极简等宽 + 与 − */
+.vp-doc details.custom-block summary {
+  list-style: none !important;
+  cursor: pointer;
+  position: relative;
+  padding-right: 1.5rem;
+  font-weight: 600;
+  user-select: none;
+}
+
+.vp-doc details.custom-block summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.vp-doc details.custom-block summary::before {
+  display: none !important;
+}
+
+.vp-doc details.custom-block summary::after {
+  content: "+";
+  font-family: var(--vp-font-family-mono);
+  font-size: 1.15rem;
+  font-weight: 400;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--vp-c-text-2);
+  line-height: 1;
+  transition: transform 0.18s ease;
+}
+
+.vp-doc details.custom-block[open] summary::after {
+  content: "−";
 }
 
 .vp-doc .custom-block p {
@@ -360,18 +440,20 @@ html.dark .flash-kw {
 }
 
 .VPHomeHero .name.clip {
-  background: linear-gradient(135deg, var(--vp-c-brand-1) 0%, var(--vp-c-brand-2) 100%) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  animation: none !important; /* Cancel rainbow flicker */
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: var(--vp-c-brand-1) !important;
+  color: var(--vp-c-brand-1) !important;
+  animation: none !important;
 }
 
 .dark .VPHomeHero .name.clip {
-  background: linear-gradient(135deg, var(--vp-c-brand-1) 0%, #74c69d 100%) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: var(--vp-c-brand-1) !important;
+  color: var(--vp-c-brand-1) !important;
 }
 
 .VPHomeHero .text {
@@ -485,25 +567,17 @@ html.dark .flash-kw {
   line-height: 1.62 !important;
 }
 
-/* 首页旗舰特性卡片分层设计 (design.md 4.3) */
+/* 首页卡片统一极简 1px 微边框无渐变 */
 .VPHomeFeatures .items .item:nth-child(1) .VPFeature,
 .VPHomeFeatures .items .item:nth-child(2) .VPFeature {
-  background: linear-gradient(
-    145deg,
-    color-mix(in srgb, var(--vp-c-brand-1) 5%, var(--vp-c-bg-soft)) 0%,
-    var(--vp-c-bg-soft) 100%
-  ) !important;
-  border-color: color-mix(in srgb, var(--vp-c-brand-1) 22%, var(--vp-c-border)) !important;
+  background-color: var(--vp-c-bg-soft) !important;
+  border-color: var(--vp-c-border) !important;
 }
 
 .dark .VPHomeFeatures .items .item:nth-child(1) .VPFeature,
 .dark .VPHomeFeatures .items .item:nth-child(2) .VPFeature {
-  background: linear-gradient(
-    145deg,
-    color-mix(in srgb, var(--vp-c-brand-1) 8%, var(--vp-c-bg-soft)) 0%,
-    var(--vp-c-bg-soft) 100%
-  ) !important;
-  border-color: color-mix(in srgb, var(--vp-c-brand-1) 30%, var(--vp-c-border)) !important;
+  background-color: var(--vp-c-bg-soft) !important;
+  border-color: var(--vp-c-border) !important;
 }
 
 /* ============================================================

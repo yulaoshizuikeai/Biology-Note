@@ -24,6 +24,19 @@ export default defineConfig({
   lang: "zh-CN",
   head: [
     ["link", { rel: "icon", type: "image/svg+xml", href: "/images/icon.svg" }],
+    // 性能：字体本地自托管（public/fonts + theme/style/fonts.css，font-display: swap），
+    // 全站零 Google Fonts 外部请求；仅预加载正文字体，其余按需加载。
+    [
+      "link",
+      {
+        rel: "preload",
+        href: "/fonts/geist-latin.woff2",
+        as: "font",
+        type: "font/woff2",
+        crossorigin: "",
+      },
+    ],
+    ["link", { rel: "preload", href: "/images/icon.svg", as: "image", type: "image/svg+xml" }],
     ["meta", { name: "author", content: "Yulaoshizuikeai" }],
     [
       "meta",
@@ -33,7 +46,7 @@ export default defineConfig({
           "高考生物知识库,高中生物知识库,高考生物,高中生物,生物知识库,生物模型,光合作用,有氧呼吸,减数分裂,伴性遗传,中心法则,内环境稳态,神经调节,免疫调节,基因工程,PCR,生物实验,Yulaoshizuikeai",
       },
     ],
-    ["meta", { name: "theme-color", content: "#2E6B56" }],
+    ["meta", { name: "theme-color", content: "#2D6A4F" }],
     ["meta", { name: "robots", content: "index, follow, max-image-preview:large" }],
     ["meta", { property: "og:site_name", content: siteName }],
     ["meta", { property: "og:type", content: "website" }],

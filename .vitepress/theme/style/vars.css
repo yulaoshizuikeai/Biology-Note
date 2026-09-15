@@ -1,21 +1,21 @@
 /**
  * ============================================================
- * Warm Neo-Minimalism Design System - CSS Custom Properties
+ * Minimalist Neo-Academic Design System - CSS Custom Properties
  * 高考生物知识库 (Yulaoshizuikeai's Biology Note)
  * ============================================================
  */
 
 :root {
   /* ------------------------------------------------------------
-     1. Brand Accent: Sage / Deep Moss Green (鼠尾草 / 自然苔藓绿)
+     1. Brand Accent: Deep Forest / Sage Green (深森林绿 / 鼠尾草灰绿)
      ------------------------------------------------------------ */
-  --vp-c-brand-1: #2e6b56;
-  --vp-c-brand-2: #245745;
-  --vp-c-brand-3: #1a4234;
-  --vp-c-brand-soft: rgba(46, 107, 86, 0.12);
+  --vp-c-brand-1: #2d6a4f;
+  --vp-c-brand-2: #245741;
+  --vp-c-brand-3: #1b3f2f;
+  --vp-c-brand-soft: rgba(45, 106, 79, 0.12);
 
   /* ------------------------------------------------------------
-     2. Surface System (Light Mode: Warm Alabaster Paper / 纸本白)
+     2. Surface System (Light Mode: Warm Alabaster Paper / 暖纸本白)
      ------------------------------------------------------------ */
   --vp-c-bg: #faf9f5;
   --vp-c-bg-alt: #ebe8e1;
@@ -37,29 +37,58 @@
   --vp-c-gutter: rgba(0, 0, 0, 0.04);
 
   /* ------------------------------------------------------------
-     5. Font Stacks (Modern Humanist System First)
+     5. Font Stacks (Geist + Instrument Serif + Geist Mono)
      ------------------------------------------------------------ */
   --vp-font-family-base:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "PingFang SC",
-    "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+    "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Noto Sans SC", sans-serif;
   --vp-font-family-mono:
-    "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+    "Geist Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", monospace;
+  --vp-font-family-serif:
+    "Instrument Serif", "Songti SC", "Noto Serif SC", STSong, SimSun, Georgia, serif;
 
   /* ------------------------------------------------------------
-     6. Soft Diffused Shadows (Eliminating heavy harsh black shadows)
+     6. Soft Diffused Shadows (0.02 ~ 0.04 opacity diffuse)
      ------------------------------------------------------------ */
-  --vp-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.03);
-  --vp-shadow-2: 0 3px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
-  --vp-shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
-  --vp-shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
-  --vp-shadow-5: 0 25px 50px -12px rgba(0, 0, 0, 0.07);
+  --vp-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.02);
+  --vp-shadow-2: 0 2px 5px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --vp-shadow-3: 0 4px 12px rgba(0, 0, 0, 0.035);
+  --vp-shadow-4: 0 8px 16px rgba(0, 0, 0, 0.04);
+  --vp-shadow-5: 0 12px 24px rgba(0, 0, 0, 0.04);
 
   /* ------------------------------------------------------------
-     7. Code Blocks (Light Mode: Paper Embedded Tone)
+     7. Biology Four-Quadrant Muted Pastels (Light Mode)
+     ------------------------------------------------------------ */
+  /* Quadrant 1: 分子与细胞 (Molecular & Cellular) */
+  --bio-q1-bg: #eaf5ee;
+  --bio-q1-text: #246b46;
+  --bio-q1-border: rgba(36, 107, 70, 0.2);
+
+  /* Quadrant 2: 遗传与变异 (Genetics & Variation) */
+  --bio-q2-bg: #f6f3ec;
+  --bio-q2-text: #7a6234;
+  --bio-q2-border: rgba(122, 98, 52, 0.2);
+
+  /* Quadrant 3: 稳态与调节 (Homeostasis & Regulation) */
+  --bio-q3-bg: #fdf0ee;
+  --bio-q3-text: #9e3e37;
+  --bio-q3-border: rgba(158, 62, 55, 0.2);
+
+  /* Quadrant 4: 生态与生物工程 (Ecology & Bioengineering) */
+  --bio-q4-bg: #edf4ea;
+  --bio-q4-text: #34633b;
+  --bio-q4-border: rgba(52, 99, 59, 0.2);
+
+  --bio-q4-alt-bg: #f1effc;
+  --bio-q4-alt-text: #533ea6;
+  --bio-q4-alt-border: rgba(83, 62, 166, 0.2);
+
+  /* ------------------------------------------------------------
+     8. Code Blocks (Light Mode: Paper Embedded Tone)
      ------------------------------------------------------------ */
   --vp-code-block-bg: #f2efe9;
-  --vp-code-line-highlight-color: rgba(46, 107, 86, 0.08);
+  --vp-code-line-highlight-color: rgba(45, 106, 79, 0.08);
   --vp-code-line-number-color: #9a9489;
   --vp-code-copy-code-bg: #e6e2da;
   --vp-code-copy-code-hover-bg: #dad5cb;
@@ -75,57 +104,57 @@
   --vp-code-color: #274b3d;
 
   /* ------------------------------------------------------------
-     8. Custom Callouts（极简主义：中性表面，语义色仅用于边框与标题。
-     -bg 变量保留并指向中性色，防止 VitePress 默认主题规则回退到内置黄色）
+     9. Custom Callouts (Light Mode: Muted Pastels + 1px border)
      ------------------------------------------------------------ */
-  --vp-custom-block-info-border: rgba(46, 107, 86, 0.45);
+  --vp-custom-block-info-border: rgba(45, 106, 79, 0.25);
   --vp-custom-block-info-text: #204638;
-  --vp-custom-block-info-bg: var(--vp-c-bg-soft);
+  --vp-custom-block-info-bg: #f4f8f5;
 
-  --vp-custom-block-tip-border: #3b7a57;
-  --vp-custom-block-tip-text: #1d4631;
-  --vp-custom-block-tip-bg: var(--vp-c-bg-soft);
+  --vp-custom-block-tip-border: rgba(36, 107, 70, 0.28);
+  --vp-custom-block-tip-text: #246b46;
+  --vp-custom-block-tip-bg: #eaf5ee;
 
-  --vp-custom-block-warning-border: #c27803;
-  --vp-custom-block-warning-text: #724602;
-  --vp-custom-block-warning-bg: var(--vp-c-bg-soft);
+  --vp-custom-block-warning-border: rgba(180, 120, 20, 0.25);
+  --vp-custom-block-warning-text: #7a6234;
+  --vp-custom-block-warning-bg: #fbf7ee;
 
-  --vp-custom-block-danger-border: #b9423b;
-  --vp-custom-block-danger-text: #75201b;
-  --vp-custom-block-danger-bg: var(--vp-c-bg-soft);
+  --vp-custom-block-danger-border: rgba(185, 66, 59, 0.25);
+  --vp-custom-block-danger-text: #9e3e37;
+  --vp-custom-block-danger-bg: #fdf2f0;
 
-  --vp-custom-block-details-border: rgba(0, 0, 0, 0.1);
+  --vp-custom-block-details-border: rgba(0, 0, 0, 0.08);
+  --vp-custom-block-details-bg: var(--vp-c-bg-soft);
 
   /* ------------------------------------------------------------
-     9. Navigation & Sidebar
+     10. Navigation & Sidebar
      ------------------------------------------------------------ */
   --vp-nav-bg-color: rgba(250, 249, 245, 0.88);
   --vp-nav-screen-bg-color: #faf9f5;
   --vp-sidebar-bg-color: #faf9f5;
   --vp-home-hero-image-background-image: radial-gradient(
     circle at center,
-    rgba(46, 107, 86, 0.16) 0%,
-    rgba(46, 107, 86, 0) 70%
+    rgba(45, 106, 79, 0.12) 0%,
+    rgba(45, 106, 79, 0) 70%
   );
   --vp-home-hero-image-filter: blur(48px);
 
   /* ------------------------------------------------------------
-     10. Hero Notebook SVG Tokens (Light Mode)
+     11. Hero Notebook SVG Tokens (Light Mode)
      ------------------------------------------------------------ */
   --dna-card-bg: #faf9f5;
   --dna-lines: #ebe7df;
   --dna-cutout: #faf9f5;
   --dna-back-strand: #a3c9b8;
-  --dna-rung-1: #2e6b56;
+  --dna-rung-1: #2d6a4f;
   --dna-rung-2: #52b788;
-  --dna-text: #2e6b56;
+  --dna-text: #2d6a4f;
   --dna-title: #1f2328;
-  --dna-cover: #2e6b56;
-  --dna-ribbon: #3b7a57;
+  --dna-cover: #2d6a4f;
+  --dna-ribbon: #245741;
   --dna-back-card-outer: #1e3a2f;
   --dna-back-card-bg: #f3f1ec;
   --dna-back-card-border: #e0ddd5;
-  --dna-pea-bg: rgba(46, 107, 86, 0.12);
+  --dna-pea-bg: rgba(45, 106, 79, 0.12);
   --dna-tag: #c27803;
 }
 
@@ -135,9 +164,9 @@
 .dark {
   /* Brand Accent: Luminous Sage */
   --vp-c-brand-1: #52b788;
-  --vp-c-brand-2: #419b70;
+  --vp-c-brand-2: #40916c;
   --vp-c-brand-3: #74c69d;
-  --vp-c-brand-soft: rgba(82, 183, 136, 0.14);
+  --vp-c-brand-soft: rgba(82, 183, 136, 0.15);
 
   /* Surfaces */
   --vp-c-bg: #151718;
@@ -147,8 +176,8 @@
 
   /* Typography & Ink Scale */
   --vp-c-text-1: #e3e5e8;
-  --vp-c-text-2: #a8b0b8; /* 提升: #9ba1a6 → #a8b0b8，对比度从 4.1:1 提升至 ~4.9:1，达到 WCAG AA */
-  --vp-c-text-3: #7a8490; /* 提升: #687076 → #7a8490，用于装饰性文字/分隔符 */
+  --vp-c-text-2: #a8b0b8;
+  --vp-c-text-3: #7a8490;
 
   /* Borders & Dividers */
   --vp-c-border: rgba(255, 255, 255, 0.09);
@@ -156,11 +185,32 @@
   --vp-c-gutter: rgba(255, 255, 255, 0.05);
 
   /* Soft Diffused Shadows */
-  --vp-shadow-1: 0 1px 3px rgba(0, 0, 0, 0.35);
-  --vp-shadow-2: 0 4px 8px -1px rgba(0, 0, 0, 0.4);
-  --vp-shadow-3: 0 10px 20px -4px rgba(0, 0, 0, 0.45);
-  --vp-shadow-4: 0 20px 30px -6px rgba(0, 0, 0, 0.5);
-  --vp-shadow-5: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+  --vp-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.25);
+  --vp-shadow-2: 0 2px 6px rgba(0, 0, 0, 0.3);
+  --vp-shadow-3: 0 6px 14px rgba(0, 0, 0, 0.35);
+  --vp-shadow-4: 0 10px 20px rgba(0, 0, 0, 0.4);
+  --vp-shadow-5: 0 16px 28px rgba(0, 0, 0, 0.45);
+
+  /* Biology Four-Quadrant Muted Pastels (Dark Mode) */
+  --bio-q1-bg: rgba(36, 107, 70, 0.16);
+  --bio-q1-text: #86efac;
+  --bio-q1-border: rgba(134, 239, 172, 0.22);
+
+  --bio-q2-bg: rgba(122, 98, 52, 0.16);
+  --bio-q2-text: #fde68a;
+  --bio-q2-border: rgba(253, 230, 138, 0.22);
+
+  --bio-q3-bg: rgba(158, 62, 55, 0.16);
+  --bio-q3-text: #fca5a5;
+  --bio-q3-border: rgba(252, 165, 165, 0.22);
+
+  --bio-q4-bg: rgba(52, 99, 59, 0.16);
+  --bio-q4-text: #a7f3d0;
+  --bio-q4-border: rgba(167, 243, 208, 0.22);
+
+  --bio-q4-alt-bg: rgba(83, 62, 166, 0.18);
+  --bio-q4-alt-text: #c4b5fd;
+  --bio-q4-alt-border: rgba(196, 181, 253, 0.22);
 
   /* Code Blocks */
   --vp-code-block-bg: #1c1f21;
@@ -179,24 +229,25 @@
   --vp-code-bg: rgba(255, 255, 255, 0.08);
   --vp-code-color: #8ed6b1;
 
-  /* Custom Callouts（极简主义：中性表面，语义色仅用于边框与标题） */
-  --vp-custom-block-info-border: rgba(82, 183, 136, 0.4);
-  --vp-custom-block-info-text: #a8dfc4;
-  --vp-custom-block-info-bg: var(--vp-c-bg-soft);
+  /* Custom Callouts (Dark Mode: Muted Pastels + 1px border) */
+  --vp-custom-block-info-border: rgba(82, 183, 136, 0.3);
+  --vp-custom-block-info-text: #86efac;
+  --vp-custom-block-info-bg: rgba(45, 106, 79, 0.14);
 
-  --vp-custom-block-tip-border: #52b788;
-  --vp-custom-block-tip-text: #b7e8d0;
-  --vp-custom-block-tip-bg: var(--vp-c-bg-soft);
+  --vp-custom-block-tip-border: rgba(82, 183, 136, 0.35);
+  --vp-custom-block-tip-text: #a7f3d0;
+  --vp-custom-block-tip-bg: rgba(36, 107, 70, 0.16);
 
-  --vp-custom-block-warning-border: #d68f1c;
-  --vp-custom-block-warning-text: #f0c37b;
-  --vp-custom-block-warning-bg: var(--vp-c-bg-soft);
+  --vp-custom-block-warning-border: rgba(214, 143, 28, 0.3);
+  --vp-custom-block-warning-text: #fde68a;
+  --vp-custom-block-warning-bg: rgba(180, 120, 20, 0.15);
 
-  --vp-custom-block-danger-border: #d45951;
-  --vp-custom-block-danger-text: #f49f99;
-  --vp-custom-block-danger-bg: var(--vp-c-bg-soft);
+  --vp-custom-block-danger-border: rgba(212, 89, 81, 0.3);
+  --vp-custom-block-danger-text: #fca5a5;
+  --vp-custom-block-danger-bg: rgba(185, 66, 59, 0.15);
 
-  --vp-custom-block-details-border: rgba(255, 255, 255, 0.1);
+  --vp-custom-block-details-border: rgba(255, 255, 255, 0.08);
+  --vp-custom-block-details-bg: var(--vp-c-bg-soft);
 
   /* Navigation & Sidebar */
   --vp-nav-bg-color: rgba(21, 23, 24, 0.88);
@@ -204,7 +255,7 @@
   --vp-sidebar-bg-color: #151718;
   --vp-home-hero-image-background-image: radial-gradient(
     circle at center,
-    rgba(82, 183, 136, 0.18) 0%,
+    rgba(82, 183, 136, 0.15) 0%,
     rgba(82, 183, 136, 0) 70%
   );
   --vp-home-hero-image-filter: blur(52px);

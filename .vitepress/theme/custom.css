@@ -202,15 +202,20 @@ body {
     box-shadow 0.25s ease !important;
 }
 
-/* 2b. MathJax 行内公式容器：保持行内显示 */
-.vp-doc mjx-container:not([display="true"]) {
-  display: inline-block !important;
-  white-space: nowrap !important; /* 防止行内公式在括号处断行 */
-  vertical-align: middle !important;
+/* 2b. MathJax 行内公式容器：保持行内自然流式排版并贴合中文字体基线 */
+.vp-doc mjx-container:not([display="true"]),
+.vp-doc mjx-container[jax="SVG"]:not([display="true"]),
+.vp-doc mjx-container[jax="CHTML"]:not([display="true"]) {
+  display: inline !important;
+  width: auto !important;
   max-width: 100% !important;
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-  -webkit-overflow-scrolling: touch !important;
+  padding: 0 !important;
+  margin: 0 0.15em !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  contain: none !important;
+  vertical-align: baseline !important;
 }
 
 .vp-doc mjx-container[display="true"]:hover {
@@ -225,15 +230,14 @@ body {
   max-width: 100% !important;
   overflow-x: auto !important;
   overflow-y: visible !important;
-  vertical-align: baseline !important;
+  vertical-align: middle !important;
 }
 
-/* 3b. 行内公式内部 SVG：保持行内对齐 */
+/* 3b. 行内公式内部 SVG：保持 inline 并放行 MathJax 原生计算的 vertical-align 基线 */
 .vp-doc mjx-container:not([display="true"]) > svg {
-  display: inline-block !important;
+  display: inline !important;
   max-width: none !important;
   overflow: visible !important;
-  vertical-align: middle !important;
 }
 
 /* 4. Assistive MathML 标签绝对限定为 0 尺寸，防止参与布局计算 */

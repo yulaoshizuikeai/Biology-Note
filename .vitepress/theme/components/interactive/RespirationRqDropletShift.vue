@@ -215,7 +215,7 @@ const rqResult = computed(() => {
   top: -2px;
   transform: translateX(-50%);
   transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 0 6px rgba(239, 68, 68, 0.6);
+  box-shadow: var(--vp-shadow-1);
 }
 .pipe-labels {
   display: flex;
