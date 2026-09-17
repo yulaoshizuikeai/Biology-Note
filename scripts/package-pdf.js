@@ -100,7 +100,7 @@ async function packagePdfs() {
   }
 
   // 4. 将生成的完整版 PDF、ZIP 归档包及各单章节 PDF 复制至 .vitepress/dist/pdf
-  // 供 GitHub Pages 静态网站直接托管与高速下载
+  // 供 Cloudflare Pages 静态网站直接托管与高速下载
   fs.mkdirSync(distPdfDir, { recursive: true });
 
   if (fs.existsSync(completePdfPath)) {
@@ -117,7 +117,7 @@ async function packagePdfs() {
     fs.copyFileSync(src, dest);
   }
 
-  console.log("✓ All PDF assets copied to .vitepress/dist/pdf/ for GitHub Pages hosting.");
+  console.log("✓ All PDF assets copied to .vitepress/dist/pdf/ for Cloudflare Pages hosting.");
 }
 
 packagePdfs().catch((e) => {

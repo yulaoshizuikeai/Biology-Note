@@ -4,10 +4,8 @@ export:
     globalChange:
       - ".vitepress/**"
       - "public/**"
-      - "data/**"
       - "package.json"
       - "package-lock.json"
-      - "bun.lock"
       - "config.yml"
     sourceExtensions:
       - ".md"

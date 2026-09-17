@@ -4,10 +4,11 @@ Allow: /
 
 # Disallow internal redirect utility and hidden routes
 # 注意：使用精确路径而非 /s 前缀，避免误禁 sitemap.xml
+# /s$ 仅屏蔽短链跳转页本身（Google 支持 $ 行尾锚点），不影响 /sitemap.xml
 Disallow: /s.html
+Disallow: /s$
 Disallow: /s/
 Disallow: /hidePage/
-Disallow: /hashmap.json
 Disallow: /shortmap.json
 
 # Sitemap location

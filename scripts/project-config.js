@@ -8,7 +8,7 @@ const defaultConfig = {
       distDir: ".vitepress/dist",
       outDir: "pdf-repo",
       concurrency: {
-        default: 8,
+        default: 2,
         min: 1,
         max: 8,
       },
@@ -29,10 +29,8 @@ const defaultConfig = {
       globalChange: [
         ".vitepress/**",
         "public/**",
-        "data/**",
         "package.json",
         "package-lock.json",
-        "bun.lock",
         "config.yml",
       ],
       sourceExtensions: [".md"],

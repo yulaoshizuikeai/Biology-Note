@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img src="./public/images/poster-neo-minimalism.png" alt="高考生物知识库 - Yulaoshizuikeai's Biology Note" width="640" />
+  <img src="./public/images/poster-neo-minimalism.jpg" alt="高考生物知识库 - Yulaoshizuikeai's Biology Note" width="640" />
 </p>
 
 1. **在线阅读与全科矩阵**:
@@ -46,6 +46,7 @@
 
 - **00 说明**
   - [Readme](00%20说明/Readme.md)
+  - [写给考前的自己](00%20说明/写给考前的自己.md)
   - [错误反馈](00%20说明/错误反馈.md)
   - [高考生物全景图与生命观念](00%20说明/高考生物全景图与生命观念.md)
 - **01 走进细胞与组成细胞的分子**

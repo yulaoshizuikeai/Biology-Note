@@ -43,7 +43,7 @@ export default defineConfig({
       {
         name: "keywords",
         content:
-          "高考生物知识库,高中生物知识库,高考生物,高中生物,生物知识库,生物模型,光合作用,有氧呼吸,减数分裂,伴性遗传,中心法则,内环境稳态,神经调节,免疫调节,基因工程,PCR,生物实验,Yulaoshizuikeai",
+          "高考生物知识库,高中生物知识库,高考生物,高中生物,生物知识库,生物模型,光合作用,遗传定律,有氧呼吸,减数分裂,伴性遗传,中心法则,内环境稳态,神经调节,免疫调节,基因工程,PCR,生物实验,Yulaoshizuikeai",
       },
     ],
     ["meta", { name: "theme-color", content: "#2D6A4F" }],
@@ -52,8 +52,8 @@ export default defineConfig({
     ["meta", { property: "og:type", content: "website" }],
     ["meta", { property: "og:locale", content: "zh_CN" }],
     ["meta", { property: "og:image", content: `${siteUrl}/images/og-image.png` }],
-    ["meta", { property: "og:image:width", content: "1200" }],
-    ["meta", { property: "og:image:height", content: "630" }],
+    ["meta", { property: "og:image:width", content: "3517" }],
+    ["meta", { property: "og:image:height", content: "634" }],
     ["meta", { name: "twitter:card", content: "summary_large_image" }],
     ["meta", { name: "twitter:image", content: `${siteUrl}/images/og-image.png` }],
     ["meta", { name: "twitter:title", content: siteName }],
@@ -142,7 +142,8 @@ export default defineConfig({
     hostname: siteUrl,
     transformItems(items) {
       return items.filter((item) => {
-        const pathname = item.url.split(/[?#]/)[0];
+        // VitePress 传入的 url 为相对路径（如 s.html），先统一补前导斜杠再匹配
+        const pathname = `/${item.url.split(/[?#]/)[0].replace(/^\/+/, "")}`;
         // 排除 404、短链跳转页及任何内部隐藏页面
         if (
           pathname.includes("/404") ||

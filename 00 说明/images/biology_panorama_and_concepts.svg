@@ -1,4 +1,4 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 380" width="100%" height="100%">
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" height="100%">
   <defs>
     <linearGradient id="bio-head-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#064e3b" />
@@ -14,7 +14,7 @@
   </defs>
 
   <!-- 背景底板 -->
-  <rect width="780" height="380" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect width="780" height="370" fill="#f8fafc" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
 
   <!-- 顶部标题栏 -->
   <g transform="translate(15, 12)">
@@ -26,7 +26,7 @@
 
   <!-- 左侧：四大生命观念核心立足点 -->
   <g transform="translate(15, 58)">
-    <rect width="230" height="308" rx="10" fill="url(#bio-card-grad1)" stroke="#a7f3d0" stroke-width="1.2" filter="url(#bio-shadow)"/>
+    <rect width="230" height="298" rx="10" fill="url(#bio-card-grad1)" stroke="#a7f3d0" stroke-width="1.2" filter="url(#bio-shadow)"/>
     
     <!-- 标题 -->
     <rect x="0" y="0" width="230" height="32" rx="10" fill="#047857"/>
@@ -35,7 +35,7 @@
     </text>
 
     <!-- 观念 1: 结构与功能观 -->
-    <g transform="translate(12, 42)">
+    <g transform="translate(12, 40)">
       <rect width="206" height="58" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
       <text x="10" y="18" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#065f46">1. 结构与功能观</text>
       <text x="10" y="35" font-family="system-ui, sans-serif" font-size="9.5" fill="#475569">形式服务于功能，微观区室化保障</text>
@@ -43,7 +43,7 @@
     </g>
 
     <!-- 观念 2: 物质与能量观 -->
-    <g transform="translate(12, 107)">
+    <g transform="translate(12, 102)">
       <rect width="206" height="58" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
       <text x="10" y="18" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#065f46">2. 物质与能量观</text>
       <text x="10" y="35" font-family="system-ui, sans-serif" font-size="9.5" fill="#475569">生命是高度有序的开放耗散系统</text>
@@ -51,7 +51,7 @@
     </g>
 
     <!-- 观念 3: 稳态与平衡观 -->
-    <g transform="translate(12, 172)">
+    <g transform="translate(12, 164)">
       <rect width="206" height="58" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
       <text x="10" y="18" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#065f46">3. 稳态与平衡观</text>
       <text x="10" y="35" font-family="system-ui, sans-serif" font-size="9.5" fill="#475569">动态负反馈调控内环境与生态自稳</text>
@@ -59,7 +59,7 @@
     </g>
 
     <!-- 观念 4: 进化与适应观 -->
-    <g transform="translate(12, 237)">
+    <g transform="translate(12, 226)">
       <rect width="206" height="58" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
       <text x="10" y="18" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#065f46">4. 进化与适应观</text>
       <text x="10" y="35" font-family="system-ui, sans-serif" font-size="9.5" fill="#475569">突变提供原料，自然选择定向演化</text>
@@ -69,7 +69,7 @@
 
   <!-- 右侧：六大体系与 16 大专题全景矩阵 (2列 x 3行) -->
   <g transform="translate(258, 58)">
-    <rect width="507" height="308" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#bio-shadow)"/>
+    <rect width="507" height="298" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#bio-shadow)"/>
     
     <!-- 标题 -->
     <rect x="0" y="0" width="507" height="32" rx="10" fill="#065f46"/>
@@ -96,7 +96,7 @@
     </g>
 
     <!-- 块 3: 遗传信息与中心法则 (Row 2 Col 1) -->
-    <g transform="translate(12, 128)">
+    <g transform="translate(12, 124)">
       <rect width="235" height="78" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
       <text x="10" y="18" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#0f172a">③ 遗传因子的传递 (专题05~06)</text>
       <text x="10" y="36" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 分离定律假说演绎、自由组合9331变式</text>
@@ -105,7 +105,7 @@
     </g>
 
     <!-- 块 4: 变异育种与进化 (Row 2 Col 2) -->
-    <g transform="translate(260, 128)">
+    <g transform="translate(260, 124)">
       <rect width="235" height="78" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
       <text x="10" y="18" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#0f172a">④ 变异、育种与演化 (专题07)</text>
       <text x="10" y="36" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 基因突变/重组/染色体变异三维辨析</text>
@@ -114,8 +114,8 @@
     </g>
 
     <!-- 块 5: 稳态调节与生态网络 (Row 3 Col 1) -->
-    <g transform="translate(12, 216)">
-      <rect width="235" height="80" rx="6" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1"/>
+    <g transform="translate(12, 208)">
+      <rect width="235" height="78" rx="6" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1"/>
       <text x="10" y="18" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#065f46">⑤ 调节机制与生态 (专题08~12)</text>
       <text x="10" y="36" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 内环境金三角稳态与组织水肿成因</text>
       <text x="10" y="52" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 神经膜电位、激素轴、体液细胞免疫</text>
@@ -123,8 +123,8 @@
     </g>
 
     <!-- 块 6: 现代生物工程与实验 (Row 3 Col 2) -->
-    <g transform="translate(260, 216)">
-      <rect width="235" height="80" rx="6" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1"/>
+    <g transform="translate(260, 208)">
+      <rect width="235" height="78" rx="6" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1"/>
       <text x="10" y="18" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#065f46">⑥ 生物工程与经典实验 (专题13~16)</text>
       <text x="10" y="36" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 传统发酵与微生物无菌培养平板技术</text>
       <text x="10" y="52" font-family="system-ui, sans-serif" font-size="9.5" fill="#334155">• 植物组织培养、单克隆抗体与PCR工程</text>
