@@ -1195,17 +1195,15 @@ const experimentChapter = computed(() => {
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.1;
-  color: var(--vp-c-text-1);
-  background: var(
-    --vp-home-hero-name-background,
-    linear-gradient(135deg, #1b4332 0%, #2d6a4f 50%, #40916c 100%)
-  );
+  color: #1b4332;
+  background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 50%, #40916c 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .dark .ci-hero-title-main {
+  color: #52b788;
   background: linear-gradient(135deg, #52b788 0%, #74c69d 50%, #95d5b2 100%);
   -webkit-background-clip: text;
   background-clip: text;

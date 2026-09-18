@@ -137,6 +137,7 @@
     rgba(45, 106, 79, 0) 70%
   );
   --vp-home-hero-image-filter: blur(48px);
+  --vp-home-hero-name-background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 50%, #40916c 100%);
 
   /* ------------------------------------------------------------
      11. Hero Notebook SVG Tokens (Light Mode)
@@ -259,6 +260,7 @@
     rgba(82, 183, 136, 0) 70%
   );
   --vp-home-hero-image-filter: blur(52px);
+  --vp-home-hero-name-background: linear-gradient(135deg, #52b788 0%, #74c69d 50%, #95d5b2 100%);
 
   /* Hero Notebook SVG Tokens (Dark Mode) */
   --dna-card-bg: #1c1f21;
