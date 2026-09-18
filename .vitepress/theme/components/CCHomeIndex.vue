@@ -50,6 +50,9 @@ const chapters: ChapterItem[] = [
       "原核真核对比",
       "自由水结合水",
       "还原糖鉴定",
+      "还原糖斐林试剂鉴定",
+      "蛋白质双缩脲试剂",
+      "核酸多样性与DNA/RNA",
       "脱水缩合计算",
       "原子守恒",
       "核酸多样性",
@@ -73,6 +76,8 @@ const chapters: ChapterItem[] = [
       "核孔选择性",
       "质壁分离复原",
       "主动运输",
+      "被动与主动运输",
+      "自由扩散协助扩散",
       "囊泡胞吞胞吐",
     ],
     link: "/02%20细胞的基本结构与物质跨膜运输/index",
@@ -89,6 +94,9 @@ const chapters: ChapterItem[] = [
     focusLink:
       "/03%20细胞代谢与能量供应（酶、ATP与呼吸光合）/05%20光合呼吸综合曲线与环境因子调控模型",
     keywords: [
+      "光合作用微观机理",
+      "光合与细胞呼吸综合",
+      "有氧呼吸与无氧呼吸",
       "酶降低活化能",
       "ATP能量偶联",
       "有氧呼吸三阶段",
@@ -112,10 +120,13 @@ const chapters: ChapterItem[] = [
     keywords: [
       "细胞周期",
       "有丝分裂曲线",
+      "有丝分裂与减数分裂",
+      "洋葱根尖有丝分裂实验",
       "减数分裂联会",
       "精卵形成差异",
       "三看识别法",
       "基因选择性表达",
+      "细胞全能性与干细胞",
       "细胞凋亡自噬",
     ],
     link: "/04%20细胞的生命历程（增殖、分化、衰老与凋亡）/index",
@@ -135,10 +146,11 @@ const chapters: ChapterItem[] = [
       "假说演绎法",
       "分离定律配子法",
       "自由组合实质",
-      "9331变式矩阵",
+      "自由组合9331变式矩阵",
       "致死突变模型",
       "伴性遗传区段",
       "系谱图三步排查",
+      "伴性遗传与遗传系谱图",
     ],
     link: "/05%20孟德尔遗传规律与伴性遗传/index",
   },
@@ -158,7 +170,9 @@ const chapters: ChapterItem[] = [
       "噬菌体侵染示踪",
       "双螺旋反向平行",
       "半保留复制模型",
+      "DNA半保留复制计算模型",
       "同位素离心条带",
+      "中心法则与RNA转录翻译",
       "中心法则五向流",
       "表观遗传DNA甲基化",
     ],
@@ -176,11 +190,13 @@ const chapters: ChapterItem[] = [
     focusLink: "/07%20生物的变异、育种与现代生物进化理论/02%20染色体变异与现代育种方案全景",
     keywords: [
       "碱基增添替换缺失",
-      "基因重组类型",
+      "基因突变与基因重组",
       "染色体结构变异",
+      "染色体变异与现代育种",
       "单倍体多倍体育种",
       "杂交诱变育种",
       "哈迪温伯格平衡",
+      "哈代-温伯格平衡哈迪温伯格",
       "基因频率计算",
     ],
     link: "/07%20生物的变异、育种与现代生物进化理论/index",
@@ -200,7 +216,9 @@ const chapters: ChapterItem[] = [
       "内环境成分四看",
       "渗透压与酸碱缓冲",
       "稳态调节机制",
+      "内环境稳态调节机制",
       "组织水肿成因",
+      "组织水肿五大诱因模型",
       "跨膜层数计算",
     ],
     link: "/08%20人体内环境与稳态/index",
@@ -217,10 +235,12 @@ const chapters: ChapterItem[] = [
     focusLink: "/09%20动物生命活动的神经、体液与免疫调节/01%20神经调节微观机理与膜电位分析模型",
     keywords: [
       "静息电位与动作电位",
+      "神经调节与膜电位分析",
       "突触单向传递",
       "双极电流计偏转",
       "下丘脑调节枢纽",
       "体液免疫双信号",
+      "特异性体液免疫与细胞免疫",
       "细胞毒性T细胞",
       "二次免疫应答",
     ],
@@ -239,7 +259,9 @@ const chapters: ChapterItem[] = [
     keywords: [
       "生长素经典实验",
       "极性运输机理",
+      "生长素两重性模型",
       "两重性敏感曲线",
+      "生长素极性运输与根芽茎敏感度",
       "顶端优势根向重力",
       "五大植物激素协同",
       "光敏色素信号转导",
@@ -259,10 +281,12 @@ const chapters: ChapterItem[] = [
     keywords: [
       "种群密度调查误差",
       "J型与S型增长方程",
+      "种群增长J型S型方程与K值",
       "K值与K/2实践决策",
       "群落演替动力学",
       "生态位分化",
       "能量同化摄入方程",
+      "生态系统能量流动收支最值",
       "碳循环与生态稳定性",
     ],
     link: "/11%20种群、群落与生态系统结构功能/index",
@@ -279,10 +303,13 @@ const chapters: ChapterItem[] = [
     focusLink: "/12%20人与环境及生态工程/02%20生态工程基本原理与典型应用案例",
     keywords: [
       "生态足迹核算",
+      "生态足迹核算与全球生态问题",
       "全球性生态问题",
       "生物多样性三价值",
+      "生物多样性三价值与就地保护",
       "就地与易地保护",
       "生态工程四大原理",
+      "生态工程四大基本原理",
       "桑基鱼塘循环",
       "能量利用率提高",
     ],
@@ -302,11 +329,13 @@ const chapters: ChapterItem[] = [
     keywords: [
       "传统发酵三大菌种",
       "果酒果醋泡菜机理",
+      "传统发酵果酒果醋泡菜",
       "亚硝酸盐消长曲线",
       "选择与鉴别培养基",
       "消毒与灭菌决策树",
       "平板划线稀释涂布",
       "活菌计数数学模型",
+      "稀释涂布与活菌计数定量模型",
     ],
     link: "/13%20传统发酵技术与微生物培养应用/index",
   },
@@ -323,11 +352,14 @@ const chapters: ChapterItem[] = [
       "/14%20细胞工程（植物与动物细胞工程）/02%20动物细胞工程（细胞培养、核移植克隆与单克隆抗体制备）",
     keywords: [
       "植物组织培养脱毒",
+      "植物组织培养脱毒与体细胞杂交",
       "植物体细胞杂交",
       "动物细胞贴壁接触抑制",
+      "动物细胞培养核移植克隆",
       "核移植重构胚克隆",
       "HAT筛选杂交瘤",
       "单克隆抗体生物导弹",
+      "单克隆抗体制备二次筛选",
       "胚胎移植与均等分割",
     ],
     link: "/14%20细胞工程（植物与动物细胞工程）/index",
@@ -345,7 +377,10 @@ const chapters: ChapterItem[] = [
       "/15%20基因工程与生物技术安全性与伦理/01%20基因工程工具、PCR%20定量模型与表达载体构建",
     keywords: [
       "限制酶连接酶",
+      "限制酶与DNA连接酶质粒载体",
+      "PCR定量",
       "PCR扩增定量",
+      "PCR定量与热循环倍增模型",
       "质粒表达载体构建",
       "农杆菌转化法",
       "四级分子检测",
@@ -367,12 +402,17 @@ const chapters: ChapterItem[] = [
       "/16%20高中生物经典实验专题与科学探究方法/02%20高考实验设计原则、对照方法与满分答题模板",
     keywords: [
       "试剂显色矩阵",
+      "显微镜使用与装片制作",
+      "洋葱质壁分离复原引流法",
       "还原糖双缩脲脂肪",
+      "斐林试剂双缩脲苏丹Ⅲ显色矩阵",
       "质壁分离引流法",
       "根尖有丝分裂解离漂洗",
       "色素提取层析四带",
+      "绿叶色素提取纸层析四带",
       "单一变量与四大对照",
       "实验设计四步法",
+      "实验设计满分答题模板",
     ],
     link: "/16%20高中生物经典实验专题与科学探究方法/index",
   },
@@ -401,9 +441,9 @@ const specialCards: SpecialItem[] = [
     title: "16 款微观生命动态仿真模型",
     badge: "交互探究空间",
     tagClass: "blue",
-    desc: "覆盖光合碳反应动力学、呼吸熵液滴移动、动作电位示波器、减数分裂与遗传系谱分析器等 16 大微观动态探究模型。",
-    link: "/03%20细胞代谢与能量供应（酶、ATP与呼吸光合）/04%20光合作用微观机理与瞬时突变动态模型",
-    actionText: "探索动态模型",
+    desc: "覆盖光合碳反应动力学、呼吸熵液滴移动、动作电位示波器、减数分裂、哈温平衡与PCR热循环等 16 大微观动态生命探究模型，支持全景调参实验。",
+    link: "/interactive",
+    actionText: "进入空间",
     iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m3.6 9 16.8 6"/><path d="m3.6 15 16.8-6"/></svg>`,
   },
 ];
@@ -500,6 +540,40 @@ onUnmounted(() => {
   }
 });
 
+// 智能匹配词元判定辅助算法
+const matchSearchToken = (tok: string, targetText: string): boolean => {
+  if (targetText.includes(tok)) return true;
+
+  // 1. 常见领域后缀剥离匹配（如 "光合作用" -> "光合", "分离定律" -> "分离", "PCR技术" -> "pcr"）
+  const stripped = tok.replace(/(作用|模型|定律|实验|技术|方法)$/, "");
+  if (stripped && stripped.length >= 2 && targetText.includes(stripped)) return true;
+
+  // 2. 字母/数字与中文混合拆分（如 "PCR定量" -> "pcr" + "定量", "9331变式" -> "9331" + "变式"）
+  const alphaMatch = tok.match(/[a-z0-9]+/g);
+  const hanMatch = tok.match(/[\u4e00-\u9fa5]+/g);
+  if (alphaMatch && hanMatch) {
+    const allAlpha = alphaMatch.every((a) => targetText.includes(a));
+    const allHan = hanMatch.every((h) => targetText.includes(h));
+    if (allAlpha && allHan) return true;
+  }
+
+  // 3. 多字中文复合词拆分检索（如 "生长素两重性" -> "生长素" + "两重性"）
+  if (tok.length >= 4) {
+    const mid = Math.floor(tok.length / 2);
+    const part1 = tok.slice(0, mid);
+    const part2 = tok.slice(mid);
+    if (targetText.includes(part1) && targetText.includes(part2)) return true;
+
+    if (tok.length === 5) {
+      const p1 = tok.slice(0, 3);
+      const p2 = tok.slice(3);
+      if (targetText.includes(p1) && targetText.includes(p2)) return true;
+    }
+  }
+
+  return false;
+};
+
 // 智能多词检索与学科分类过滤计算属性
 const filteredChapters = computed(() => {
   const query = searchQuery.value.trim().toLowerCase();
@@ -524,16 +598,7 @@ const filteredChapters = computed(() => {
         .join(" ")
         .toLowerCase();
 
-      return tokens.every((tok) => {
-        if (targetText.includes(tok)) return true;
-        // 支持 4 字中文复合词拆分检索（如 "光合呼吸" 命中 "光合" + "呼吸"）
-        if (tok.length === 4) {
-          const part1 = tok.slice(0, 2);
-          const part2 = tok.slice(2);
-          if (targetText.includes(part1) && targetText.includes(part2)) return true;
-        }
-        return false;
-      });
+      return tokens.every((tok) => matchSearchToken(tok, targetText));
     }
     return true;
   });
@@ -624,14 +689,7 @@ const experimentChapter = computed(() => {
           <span>防踩坑排雷</span>
         </a>
 
-        <a
-          :href="
-            withBase(
-              '/03%20细胞代谢与能量供应（酶、ATP与呼吸光合）/04%20光合作用微观机理与瞬时突变动态模型',
-            )
-          "
-          class="ci-btn ci-btn-ghost"
-        >
+        <a :href="withBase('/interactive')" class="ci-btn ci-btn-ghost">
           <svg
             class="ci-btn-icon"
             viewBox="0 0 24 24"
@@ -643,7 +701,7 @@ const experimentChapter = computed(() => {
             <path d="m3.6 9 16.8 6" />
             <path d="m3.6 15 16.8-6" />
           </svg>
-          <span>交互探究模型</span>
+          <span>交互探究空间</span>
         </a>
       </div>
 
@@ -914,7 +972,7 @@ const experimentChapter = computed(() => {
                 <a
                   :href="
                     withBase(
-                      '/16%20高中生物经典实验专题与科学探究方法/01%20高中生物教材必做实验全景速查与试剂显色矩阵',
+                      '/16%20高中生物经典实验专题与科学探究方法/01%20高中生物教材必做实验全景速查与试剂显色矩阵#一-第一性原理高中生物核心化学试剂与显色反应矩阵',
                     )
                   "
                   class="ci-pano-subcard"
@@ -931,7 +989,7 @@ const experimentChapter = computed(() => {
                 <a
                   :href="
                     withBase(
-                      '/16%20高中生物经典实验专题与科学探究方法/01%20高中生物教材必做实验全景速查与试剂显色矩阵',
+                      '/16%20高中生物经典实验专题与科学探究方法/01%20高中生物教材必做实验全景速查与试剂显色矩阵#二-细胞学显微观察类实验深度解构',
                     )
                   "
                   class="ci-pano-subcard"
@@ -948,7 +1006,7 @@ const experimentChapter = computed(() => {
                 <a
                   :href="
                     withBase(
-                      '/16%20高中生物经典实验专题与科学探究方法/01%20高中生物教材必做实验全景速查与试剂显色矩阵',
+                      '/16%20高中生物经典实验专题与科学探究方法/01%20高中生物教材必做实验全景速查与试剂显色矩阵#四-生理与生化定量实验核心考点',
                     )
                   "
                   class="ci-pano-subcard"
@@ -965,7 +1023,7 @@ const experimentChapter = computed(() => {
                 <a
                   :href="
                     withBase(
-                      '/16%20高中生物经典实验专题与科学探究方法/02%20高考实验设计原则、对照方法与满分答题模板',
+                      '/16%20高中生物经典实验专题与科学探究方法/02%20高考实验设计原则、对照方法与满分答题模板#四-实验设计标准四步法解题模板',
                     )
                   "
                   class="ci-pano-subcard"
@@ -2285,6 +2343,23 @@ const experimentChapter = computed(() => {
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ci-stats-strip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ci-hero-title-main {
+    font-size: 2.15rem;
+  }
+  .ci-directory-title {
+    font-size: 1.65rem;
   }
 }
 </style>

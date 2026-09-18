@@ -67,6 +67,9 @@ const TissueEdemaDiagnoser = defineAsyncComponent(
 const PedigreeAnalysisSolver = defineAsyncComponent(
   () => import("./components/interactive/PedigreeAnalysisSolver.vue"),
 );
+const CCInteractiveLab = defineAsyncComponent(
+  () => import("./components/interactive/CCInteractiveLab.vue"),
+);
 
 export default {
   extends: DefaultTheme,
@@ -99,5 +102,6 @@ export default {
     app.component("BiochemicalStainingPalette", BiochemicalStainingPalette);
     app.component("TissueEdemaDiagnoser", TissueEdemaDiagnoser);
     app.component("PedigreeAnalysisSolver", PedigreeAnalysisSolver);
+    app.component("CCInteractiveLab", CCInteractiveLab);
   },
 };
