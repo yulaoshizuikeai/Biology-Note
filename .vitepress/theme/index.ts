@@ -7,6 +7,7 @@ import CCActivitySparkline from "./components/CCActivitySparkline.vue";
 import CCBentoGrid from "./components/CCBentoGrid.vue";
 import CCChapterOverview from "./components/CCChapterOverview.vue";
 import CCDailyQuote from "./components/CCDailyQuote.vue";
+import CCHomeIndex from "./components/CCHomeIndex.vue";
 import "./style/index.css";
 import "./custom.css";
 import "@waline/client/style";
@@ -78,6 +79,7 @@ export default {
     app.component("CCBentoGrid", CCBentoGrid);
     app.component("CCActivitySparkline", CCActivitySparkline);
     app.component("CCDailyQuote", CCDailyQuote);
+    app.component("CCHomeIndex", CCHomeIndex);
     app.component("CCTomorrowLetter", CCTomorrowLetter);
 
     // Interactive Biology Models

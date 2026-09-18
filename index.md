@@ -1,25 +1,32 @@
 ---
 layout: home
-
+title: "高考生物知识库 - Yulaoshizuikeai's Biology Note"
 description: "Yulaoshizuikeai's 高考生物知识库 是基于中国普通高中生物教科书（人教版）与现代生命科学前沿思维的免费高中生物知识库项目，涵盖分子与细胞、代谢与能量、遗传与进化、稳态与调节、生态与环境、生物工程与经典实验等 16 大板块，提供生命观念提炼、核心生物模型、解题逻辑与避坑算法。"
-
-hero:
-  name: "高考生物知识库"
-  text: "Yulaoshizuikeai's Biology Note"
-  tagline: "结合人教版新课标课本与科学探究思维，覆盖高考生物 16 大板块，打造系统化高中生物知识库"
-  image:
-    src: /images/icon.svg
-    alt: Yulaoshizuikeai's Biology Note - 高考生物知识库
-  actions:
-    - theme: brand
-      text: 开始阅读
-      link: /00%20说明/index
-    - theme: alt
-      text: 50 大黄金结论
-      link: /golden-conclusions
-    - theme: alt
-      text: 防踩坑排雷白皮书
-      link: /warning-cheatsheet
 ---
 
-<CCBentoGrid />
+<CCHomeIndex />
+
+## 项目设计与创作说明
+
+### 创作来源（教材体系）
+
+本项目全面基于中国普通高中生物教科书（人教版新课标，涵盖**必修第一、二册**与**选择性必修第一、二、三册**全套 5 册官方教材）进行系统化梳理与深度重构。严格对齐高中新课程标准与高考评价体系，涵盖基础概念、生理微观机理、实验规程以及典型题型生物学模型。
+
+### 灵感来源（第一性原理与生命系统观）
+
+深度融入现代生命系统论与可汗学院（Khan Academy）直观认知思维：
+
+- **微观物理化学机制**：从氢键、分子极性、电化学势能梯度深刻理解跨膜转运动力学、光合水光解与神经元动作电位；
+- **动态平衡与负反馈**：从酶促反应动力学、内环境自稳态调节、激素轴向反馈深刻理解生物机体动态平衡的本质；
+- **信息流与守恒演化**：从 DNA 反向平行半保留复制、中心法则五向信息流、孟德尔离散因子重组深入理解生命的代际延续与自然演变。
+
+### 工程基础与致敬
+
+本项目工程框架与设计风格基于优秀开源项目 [Physics-Note (高中物理知识库)](https://github.com/yulaoshizuikeai/Physics-Note) 与 [Chemistry-Note (高中化学笔记)](https://github.com/yulaoshizuikeai/Chemistry-Note) 修改定制而来。继承其成熟现代的 VitePress 2.0 文档系统、MathJax 公式排版规范、组件化考点展示模块（`<CCChapterOverview />`）、短链重定向与极速本地搜索系统，并针对生物学科特性研发了全套高清矢量 SVG 图解与高考 16 大专题模型。
+
+## 核心贡献者 (Contributors)
+
+本项目由以下 AI 智能体与开发者协同研发构建：
+
+- **Codex**（OpenAI）—— 架构规划、概念梳理与工程转化支持
+- **Claude Code**（Anthropic） —— 深度生理推导、知识架构对齐与生物模型沉淀
