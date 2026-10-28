@@ -176,12 +176,8 @@ const handleCopy = async (event: MouseEvent) => {
   <div class="cc-biology-flash-wrap">
     <div
       class="cc-biology-flash-card"
-      role="button"
-      tabindex="0"
       title="点击换一条高中生物速记"
       @click="handleNext"
-      @keydown.enter="handleNext"
-      @keydown.space.prevent="handleNext"
     >
       <!-- 左侧极简徽章 -->
       <div class="flash-badge">
@@ -388,6 +384,7 @@ const handleCopy = async (event: MouseEvent) => {
 }
 
 .flash-action-icon-btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -399,6 +396,15 @@ const handleCopy = async (event: MouseEvent) => {
   color: var(--vp-c-text-3);
   cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.flash-action-icon-btn::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  bottom: -8px;
+  left: -8px;
+  right: -8px;
 }
 
 .flash-action-icon-btn:hover {

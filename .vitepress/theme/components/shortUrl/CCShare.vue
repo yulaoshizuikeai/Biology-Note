@@ -114,7 +114,7 @@ onBeforeUnmount(() => {
 });
 </script>
 
-<style>
+<style scoped>
 .share-panel > svg {
   border-radius: 3px;
   margin: 0 auto;
@@ -164,6 +164,7 @@ onBeforeUnmount(() => {
     right: 0;
     bottom: 0;
     height: 40px;
+    cursor: pointer;
 
     color: var(--vp-c-text-1);
     background: var(--vp-c-bg-soft);
@@ -176,7 +177,7 @@ onBeforeUnmount(() => {
       color 0.2s;
   }
   .share-panel .copylink:hover {
-    background: var(--vp-c-bg-alt);
+    background: var(--vp-c-bg-mute, var(--vp-c-default-soft, var(--vp-c-bg-alt)));
     color: var(--vp-c-brand-1);
   }
   .share-panel .copylink:active {
@@ -213,7 +214,7 @@ onBeforeUnmount(() => {
 
   .share-panel .copylink:hover {
     border-color: var(--vp-c-brand-1);
-    background: var(--vp-c-bg-soft);
+    background: var(--vp-c-bg-mute, var(--vp-c-default-soft, var(--vp-c-bg-soft)));
     color: var(--vp-c-brand-1);
   }
 }
